@@ -1,0 +1,1 @@
+# Geometriske rekker
