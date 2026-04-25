@@ -1,1 +1,0 @@
-# Oppgaver: Funksjoner med delt forskrift
