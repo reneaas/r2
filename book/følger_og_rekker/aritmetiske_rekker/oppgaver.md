@@ -1,0 +1,1 @@
+# Oppgaver: Aritmetiske rekker

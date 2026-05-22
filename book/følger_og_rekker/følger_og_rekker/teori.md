@@ -1,0 +1,382 @@
+# Følger og rekker
+
+:::{admonition} Læringsmål
+---
+class: tip
+---
+* Kunne veksle mellom eksplisitte summer og summetegn, og regne ut summen av rekker skrevet med summetegn. 
+* Kunne finne formelen for det $n$-te leddet i en følge.
+* Kunne finne rekursive formler for leddene i en følge.
+* Kunne finne rekursive formler for summen av rekker.
+:::
+
+
+## Følger
+
+En **følge** er en ordnet liste med tall som følger et bestemt mønster. For eksempel er 
+
+$$
+2, 4, 6, 8, 10
+$$ 
+
+en tallfølge som består av fem **ledd**. Vi kaller det første tallet $a_1$ i følgen for det første **leddet**, det andre tallet $a_2$ for det andre leddet, og så videre. Det $n$-te leddet i en følge skriver vi gjerne som $a_n$. Følgen kan bestå av endelig mange ledd, eller det kan være uendelig mange ledd. Vi kaller $n$ for **indeksen** til leddet $a_n$. 
+
+
+:::::::::::::::{summary} Følger
+En (tall)følge $\{a_n\}_{n=1}^N$ er en ordnet liste med tall som følger et bestemt mønster. Det $n$-te leddet i en følge skriver vi som $a_n$, og skriver følgen som
+
+$$
+\{a_n\}_{n=1}^N = a_1, \, a_2, \, a_3, \, \ldots, \, a_N
+$$
+
+> Når verdiene som $n$ kan ha i en følge er underforstått, så skriver vi ofte bare $\{a_n\}$ for å betegne følgen.
+
+
+:::::::::::::::
+
+
+---
+
+
+:::::::::::::::{example} Eksempel 1
+Nedenfor vises noen kjente tallfølger.
+
+::::::::{grid}
+---
+gutter: 2
+columns: 12
+---
+::::::{grid-item-card}
+---
+columns: 6
+---
+**Partallene**
+^^^
+$$
+2, 4, 6, 8, 10, \ldots, 2n, \ldots
+$$
+
+::::::
+
+::::::{grid-item-card}
+---
+columns: 6
+---
+**Oddetallene**
+^^^
+$$
+1, 3, 5, 7, 9, \ldots, 2n-1, \ldots
+$$
+
+::::::
+
+
+::::::{grid-item-card}
+---
+columns: 6
+---
+**Kvadrattallene**
+^^^
+$$
+1, 4, 9, 16, 25, \ldots, n^2, \ldots
+$$
+
+::::::
+
+
+::::::{grid-item-card}
+---
+columns: 6
+---
+**Fibonaccitallene**
+^^^
+$$
+1, 1, 2, 3, 5, 8, 13, \ldots
+$$
+
+::::::
+::::::::
+
+
+:::::::::::::::
+
+
+## Rekker
+En **rekke** er en sum av leddene i en følge. 
+
+
+:::::::::::::::{summary} Definisjon: Rekke
+En rekke $S_N$ med $N$ ledd er summen av tallene i en tallfølge $a_1, a_2, \ldots, a_N$. Det vil si
+
+$$
+S_N = a_1 + a_2 + a_3 + \ldots + a_N
+$$
+
+Vi kaller $S_N$ for **delsummen** (med $N$ ledd) til rekka
+
+$$
+S = a_1 + a_2 + a_3 + \ldots
+$$
+:::::::::::::::
+
+Så en rekke er altså summen av leddene i en følge. Vi kan illustrere sammenhengen mellom følger og rekker slik:
+
+::::::::{grid}
+---
+gutter: 2
+columns: 12
+---
+::::::{grid-item-card}
+---
+columns: 6
+---
+**Følge**
+^^^
+$$
+\{a_n\} = a_1, a_2, a_3, \ldots, a_N
+$$
+
+
+**Eksempel**:
+
+$$
+\{a_n\} = 1, 4, 9, 16, 25
+$$
+
+::::::
+
+::::::{grid-item-card}
+---
+columns: 6
+---
+**Rekke**
+^^^
+$$
+S_N = a_1 + a_2 + a_3 + \ldots + a_N
+$$
+
+**Eksempel**:
+
+$$
+S_5 = 1 + 4 + 9 + 16 + 25
+$$
+
+::::::
+
+::::::::
+
+
+
+## Summetegn og rekker
+
+Vi bruker ofte summetegnet $\sum$ til å skrive rekker på en mer kompakt måte.
+
+
+:::::::::::::::{summary} Summetegn
+En rekke $S_N = a_1 + a_2 + a_3 + \ldots + a_N$ kan skrives som
+
+$$
+S_N = \sum_{n=1}^N a_n
+$$
+
+der notasjonen forteller oss at vi skal plusse sammen leddene $a_n$ for $n = 1, 2, 3, \ldots, N$.
+:::::::::::::::
+
+
+---
+
+
+:::::::::::::::{example} Eksempel 2
+En rekke er gitt ved
+
+$$
+S_4 = \sum_{n = 1}^4 (2n + 1)
+$$
+
+Bestem verdien til $S_4$.
+
+
+::::{solution}
+---
+dropdown: 0
+---
+Vi har at
+
+$$
+\begin{align*}
+S_4 &= \sum_{n = 1}^4 (2 \cdot \textcolor{red}{n} + 1) \\
+\\
+&= (2 \cdot \textcolor{red}{1} + 1) + (2 \cdot \textcolor{red}{2} + 1) + (2 \cdot \textcolor{red}{3} + 1) + (2 \cdot \textcolor{red}{4} + 1) \\
+\\
+&= 3 + 5 + 7 + 9 \\
+\\
+&= 24
+\end{align*}
+$$
+::::
+:::::::::::::::
+
+
+
+---
+
+
+
+:::::::::::::::{example} Eksempel 3
+Skriv rekken nedenfor med summetegn:
+
+$$
+S = 1 + 4 + 9 + 16 + 25
+$$
+
+
+::::{solution}
+---
+dropdown: 0
+---
+Vi kan merke oss at leddene i rekka er tallfølgen
+
+$$
+1, 4, 9, 16, 25 = 1^2, 2^2, 3^2, 4^2, 5^2
+$$
+
+Dermed kan vi skrive om rekka som følger
+
+$$
+S = 1^2 + 2^2 + 3^2 + 4^2 + 5^2 = \sum_{n = 1}^5 n^2
+$$
+
+der vi har brukt at hvert ledd er gitt ved
+
+$$
+a_n = n^2 \qfor n = 1, 2, 3, 4, 5
+$$
+::::
+:::::::::::::::
+
+
+
+---
+
+
+## Rekursjonsformler 
+I mange følger er det enklere å beskrive hvordan vi går fra ett ledd til det neste. Det vil si at vi har en sammenheng mellom to naboledd $a_n$ og $a_{n + 1}$ i følgen.
+Dette gir oss en formel som vi kan bruke til å regne ut $a_{n + 1}$ dersom vi kjenner til verdien til $a_n$. En slik sammenheng kalles for en **rekursjonsformel**, eller en **rekursiv sammenheng**.
+
+:::::::::::::::{example} Eksempel 4
+En tallfølge er definert som 
+
+$$
+a_{n + 1} = 2 a_n + 1 \qfor n = 1, 2, 3, \ldots \qder a_1 = 4.
+$$
+
+Bestem $a_4$ (det fjerde leddet i følgen).
+
+::::{solution}
+---
+dropdown: 0
+---
+Vi bruker rekursjonsformelen til å regne ut $a_2$, $a_3$ og $a_4$.
+
+$$
+\begin{align*}
+a_2 &= 2 a_1 + 1 = 2 \cdot 4 + 1 = 9 \\
+\\
+a_3 &= 2 a_2 + 1 = 2 \cdot 9 + 1 = 19 \\
+\\
+a_4 &= 2 a_3 + 1 = 2 \cdot 19 + 1 = 39
+\end{align*}
+$$
+
+Altså er $a_4 = 39$.
+::::
+
+:::::::::::::::
+
+
+---
+
+Vi kan også finne en rekursiv formel ut ifra en formel for det $n$-te leddet i en følge.
+
+
+:::::::::::::::{example} Eksempel 5
+En tallfølge er gitt ved formelen
+
+$$
+a_n = 3n + 2 \qfor n = 1, 2, 3, \ldots
+$$
+
+Finn en rekursiv formel for leddene i følgen.
+
+::::{solution}
+---
+dropdown: 0
+---
+Vi regner ut differansen mellom det $n$-te og det $(n + 1)$-te leddet i følgen.
+
+$$
+\begin{align*}
+a_{n + 1} - a_n &= (3(n + 1) + 2) - (3n + 2) \\
+\\
+&= 3n + 3 + 2 - 3n - 2 \\
+\\
+&= 3
+\end{align*}
+$$
+
+Altså har vi at 
+
+$$
+a_{n + 1} = a_n + 3 \qfor n = 1, 2, 3, \ldots \qder a_1 = 5
+$$
+::::
+:::::::::::::::
+
+
+
+---
+
+
+I mange tilfeller er det enklest å finne en rekursiv formel for leddene i en følge. 
+
+
+:::::::::::::::{example} Eksempel 6
+En følge $\{a_n\}$ er gitt ved
+
+$$
+\{a_n\} = 1, 2, 4, 7, 11, \ldots
+$$
+
+Finn en rekursiv formel for leddene i følgen.
+
+::::{solution}
+---
+dropdown: 0
+---
+Her kan vi se etter et mønster i differansen mellom naboledd i følgen:
+
+$$
+\begin{align*}
+a_2 - a_1 &= 2 - 1 = 1 \\
+\\
+a_3 - a_2 &= 4 - 2 = 2 \\
+\\
+a_4 - a_3 &= 7 - 4 = 3 \\
+\\
+a_5 - a_4 &= 11 - 7 = 4 
+\end{align*}
+$$
+
+Ut ifra differansene, så kan vi se at 
+
+$$
+a_{n + 1} - a_n = n \qfor n = 1, 2, 3, \ldots
+$$
+
+Altså har vi en rekursiv formel for leddene i følgen:
+
+$$
+a_{n + 1} = a_n + n \qfor n = 1, 2, 3, \ldots \qder a_1 = 1
+$$
+::::
+:::::::::::::::

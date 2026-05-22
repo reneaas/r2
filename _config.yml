@@ -26,7 +26,7 @@ parse:
 
 
 repository:
-  url: https://github.com/reneaas/matematikk_r2/
+  url: https://github.com/reneaas/r2/
   path_to_book: book/
   branch: main/
 
@@ -66,7 +66,7 @@ sphinx:
   config:
     language: norwegian
     html_favicon: favicon.ico
-    html_baseurl: "https://r2.munchboka.no"
+    html_baseurl: "https://www.munchboka.no/r2"
     mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3.2/es5/tex-mml-chtml.js
     mathjax3_config:
       loader:
@@ -107,6 +107,7 @@ sphinx:
           v: ["\\left[#1, #2\\right]", 2]
           proj: ["\\mathrm{proj}_{#1}\\left(#2\\right)", 2]
           mstack: ["\\begin{array}{c}#1\\end{array}", 1]
+          d: ["\\, \\mathrm{d}"]
 
 
 
