@@ -58,6 +58,7 @@ sphinx:
     - sphinx_jupyterbook_latex
     - sphinxcontrib.video
     - munchboka_edutools
+    - sphinx_sitemap
 
 
 
@@ -66,7 +67,7 @@ sphinx:
   config:
     language: norwegian
     html_favicon: favicon.ico
-    html_baseurl: "https://www.munchboka.no/r2"
+    html_baseurl: "https://www.munchboka.no/r2/"
     mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3.2/es5/tex-mml-chtml.js
     mathjax3_config:
       loader:
