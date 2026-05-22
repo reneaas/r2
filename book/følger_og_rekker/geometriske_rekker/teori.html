@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>1. Geometriske rekker &#8212; Matematikk R2</title>
+    <title>3. Geometriske rekker &#8212; Matematikk R2</title>
   
   
   
@@ -73,12 +73,13 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/popup.css?v=26181dfd" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/timedQuiz.css?v=89e27729" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/cas_popup.css?v=bae4ad7e" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/github-light.css?v=f75ab0f7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/github-light.css?v=0cccc4aa" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/github-dark.css?v=2454bc3f" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/github-dark-high-contrast.css?v=4c0c1b0f" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/table.css?v=30eed71c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/pairPuzzle/style.css?v=f77426ac" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/parsons/parsonsPuzzle.css?v=8c5c5c21" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/part.css?v=4d5252b1" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/print_pdf.css?v=448841f9" />
     <link id="highlight-theme-light" rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/github.min.css" />
     <link id="highlight-theme-dark" rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/github-dark.min.css" />
@@ -126,6 +127,8 @@
     <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"loader": {"load": ["[tex]/physics"]}, "tex": {"packages": {"[+]": ["physics"]}, "macros": {"annotateAbove": ["\\mathrel{\\overset{\\substack{\\text{#2} \\\\ \\Bigg\\downarrow}}{#1}}", 2], "annotateBelow": ["\\mathrel{\\underset{\\substack{\\Bigg\\uparrow \\\\ \\text{#2}}}{#1}}", 2], "cline": ["\\underline{\\phantom{#1}}", 1], "and": ["\\quad \\land \\quad"], "or": ["\\quad \\lor \\quad"], "liff": ["\\quad \\iff \\quad"], "limplies": ["\\quad \\implies \\quad"], "limpliedby": ["\\quad \\impliedby \\quad"], "lland": ["\\; \\land \\;"], "degree": ["^\\circ"], "qog": ["\\quad \\text{og} \\quad"], "qder": ["\\quad \\text{der} \\quad"], "qeller": ["\\quad \\text{eller} \\quad"], "qhvis": ["\\quad \\text{hvis} \\quad"], "qfor": ["\\quad \\text{for} \\quad"], "natural": ["\\mathbb{N}"], "integer": ["\\mathbb{Z}"], "rational": ["\\mathbb{Q}"], "real": ["\\mathbb{R}"], "irrational": ["\\mathbb{Q}^c"], "qcomma": [",\\quad"], "nimplies": ["\\quad\\mathrel{\\not\\!\\!\\!\\implies}\\quad"], "nimpliedby": ["\\quad\\mathrel{\\not\\!\\!\\!\\impliedby}\\quad"], "niff": ["\\quad\\mathrel{\\not\\!\\!\\!\\iff}\\quad"], "cubica": ["\\raisebox{-0.4ex}{\\small\\(\\frown\\!\\smile\\)}", 0], "cubicb": ["\\raisebox{-0.4ex}{\\small\\(\\smile\\!\\frown\\)}", 0], "t": ["\\mathrm{#1}", 1], "dot": ["\\vec{#1} \\cdot \\vec{#2}", 2], "len": ["\\abs{\\vec{#1}}", 1], "lvec": ["\\overrightarrow{#1}", 1], "v": ["\\left[#1, #2\\right]", 2], "proj": ["\\mathrm{proj}_{#1}\\left(#2\\right)", 2], "mstack": ["\\begin{array}{c}#1\\end{array}", 1], "d": ["\\, \\mathrm{d}"]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3.2/es5/tex-mml-chtml.js"></script>
     <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'book/følger_og_rekker/geometriske_rekker/teori';</script>
     <script>mermaid.initialize({"startOnLoad": true})</script>
@@ -143,12 +146,12 @@
     <script src="../../../_static/munchboka/js/geogebra-setup.js?v=8e77fc11"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/python/python.min.js"></script>
-    <link rel="canonical" href="https://r2.munchboka.no/book/følger_og_rekker/geometriske_rekker/teori.html" />
+    <link rel="canonical" href="https://www.munchboka.no/r2/book/følger_og_rekker/geometriske_rekker/teori.html" />
     <link rel="icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Oppgaver: Geometriske rekker" href="oppgaver.html" />
-    <link rel="prev" title="Matematikk R2" href="../../../index.html" />
+    <link rel="prev" title="Oppgaver: Aritmetiske rekker" href="../aritmetiske_rekker/oppgaver.html" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="norwegian"/>
@@ -283,16 +286,121 @@
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">I. Følger og rekker</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">1. Geometriske rekker</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../f%C3%B8lger_og_rekker/teori.html">1. Følger og rekker</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../f%C3%B8lger_og_rekker/oppgaver.html">Oppgaver</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../aritmetiske_rekker/teori.html">2. Aritmetiske rekker</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../aritmetiske_rekker/oppgaver.html">Oppgaver</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">3. Geometriske rekker</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="oppgaver.html">Oppgaver</a></li>
 </ul>
 </details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../anvendelser/teori.html">4. Anvendelser av rekketeori</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../anvendelser/oppgaver.html">Oppgaver</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../programmering/teori.html">5. Programmering med følger og rekker</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../programmering/oppgaver.html">Oppgaver</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../induksjonsbevis/teori.html">6. Induksjonsbevis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../induksjonsbevis/oppgaver.html">Oppgaver</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">II. Integrasjon</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../integrasjon/integraler/teori.html">7. Bestemte og ubestemte integraler</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../integrasjon/integraler/oppgaver.html">Oppgaver</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../integrasjon/delvis_integrasjon/teori.html">8. Delvis integrasjon</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../integrasjon/delvis_integrasjon/oppgaver.html">Oppgaver</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../integrasjon/substitusjon/teori.html">9. Substitusjon</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../integrasjon/substitusjon/oppgaver.html">Oppgaver</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../integrasjon/delbr%C3%B8koppspalting/teori.html">10. Delbrøkoppspalting</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../integrasjon/delbr%C3%B8koppspalting/oppgaver.html">Oppgaver</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../integrasjon/anvendelser/teori.html">11. Anvendelser av integrasjon</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../integrasjon/anvendelser/oppgaver.html">Oppgaver</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../integrasjon/numerisk_integrasjon/teori.html">12. Numerisk integrasjon</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../integrasjon/numerisk_integrasjon/oppgaver.html">Oppgaver</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">III. Romgeometri</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../romgeometri/regneregler/teori.html">13. Regneregler</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../romgeometri/regneregler/oppgaver.html">Oppgaver</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../romgeometri/vektorproduktet/teori.html">14. Kryssproduktet</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../romgeometri/vektorproduktet/oppgaver.html">Oppgaver</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../romgeometri/linjer/teori.html">15. Linjer</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../romgeometri/linjer/oppgaver.html">Oppgaver</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../romgeometri/plan/teori.html">16. Plan</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../romgeometri/plan/oppgaver.html">Oppgaver</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../romgeometri/kuler/teori.html">17. Kuler</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../romgeometri/kuler/oppgaver.html">Oppgaver</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">IV. Trigonometri</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../trigonometri/enhetssirkelen/teori.html">18. Enhetssirkelen og radianer</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../trigonometri/enhetssirkelen/oppgaver.html">Oppgaver</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../trigonometri/likninger/teori.html">19. Likninger</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../trigonometri/likninger/oppgaver.html">Oppgaver</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../trigonometri/identiteter/teori.html">20. Trigonometriske identiteter</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../trigonometri/identiteter/oppgaver.html">Oppgaver</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../trigonometri/funksjoner/teori.html">21. Trigonometriske funksjoner</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../trigonometri/funksjoner/oppgaver.html">Oppgaver</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../trigonometri/derivasjon/teori.html">22. Derivasjon</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../trigonometri/derivasjon/oppgaver.html">Oppgaver</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../trigonometri/integrasjon/teori.html">23. Integrasjon</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../trigonometri/integrasjon/oppgaver.html">Oppgaver</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Eksamensøving</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../eksamens%C3%B8ving/v%C3%A5r_26/oppgaver.html">Eksamen vår 2026</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Eksamensressurser</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../eksamensressurser/python.html">Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../eksamensressurser/cas.html">CAS (Geogebra)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../eksamensressurser/geogebra.html">Geogebra</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Dev</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../dev.html">Dev</a></li>
 </ul>
 
     </div>
@@ -415,7 +523,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -431,6 +541,16 @@
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Innhold </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#endelige-geometriske-rekker">Endelige geometriske rekker</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uendelige-geometriske-rekker">Uendelige geometriske rekker</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-kvotienter-og-konvergensomrader">Variable kvotienter og konvergensområder</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -441,7 +561,554 @@
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="geometriske-rekker">
-<h1><span class="section-number">1. </span>Geometriske rekker<a class="headerlink" href="#geometriske-rekker" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">3. </span>Geometriske rekker<a class="headerlink" href="#geometriske-rekker" title="Link to this heading">#</a></h1>
+<div class="tip admonition">
+<p class="admonition-title">Læringsmål</p>
+<ul class="simple">
+<li><p>Kunne bestemme et uttrykk for det <span class="math notranslate nohighlight">\(n\)</span>-te leddet i en geometrisk følge.</p></li>
+<li><p>Kunne bestemme summen av endelige geometriske rekker.</p></li>
+<li><p>Kunne bestemme summen av uendelige geometriske rekker.</p></li>
+<li><p>Kunne avgjøre om en uendelig geometrisk rekke konvergerer eller divergerer.</p></li>
+<li><p>Kunne bestemme konvergensområdet for uendelige geometriske rekker med variable kvotienter.</p></li>
+<li><p>Kunne bruke geometriske rekker i praktiske anvendelser.</p></li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Eksempel 1</p>
+<figure class="adaptive-figure plot-figure no-click align-right">
+<div class="graph-image no-click no-scaled-link"><?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 432 432" xmlns="http://www.w3.org/2000/svg" version="1.1" class="graph-inline-svg" role="img" aria-label="Tilpasset figur" style="width:100%; height:auto; display:block; margin:0 auto;">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-04-25T21:21:12.563159</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="cpl_def7f84922bf_f0df87_figure_1">
+  <g id="cpl_def7f84922bf_f0df87_patch_1">
+   <path d="M 0 432 
+L 432 432 
+L 432 0 
+L 0 0 
+L 0 432 
+z
+" style="fill: none"/>
+  </g>
+  <g id="cpl_def7f84922bf_f0df87_axes_1">
+   <g id="cpl_def7f84922bf_f0df87_patch_2">
+    <path d="M 28.942204 385.28829 
+L 391.786281 385.28829 
+L 391.786281 22.444213 
+L 28.942204 22.444213 
+L 28.942204 385.28829 
+z
+" clip-path="url(#cpl_def7f84922bf_f0df87_p33e8d4e5d4)" style="fill: none; opacity: 0"/>
+   </g>
+   <g id="cpl_def7f84922bf_f0df87_line2d_1">
+    <path d="M 210.364242 385.28829 
+L 210.364242 22.444213 
+" clip-path="url(#cpl_def7f84922bf_f0df87_p33e8d4e5d4)" style="fill: none; stroke-dasharray: 9.25,4; stroke-dashoffset: 0; stroke: #0072b2; stroke-width: 2.5"/>
+   </g>
+   <g id="cpl_def7f84922bf_f0df87_line2d_2">
+    <path d="M 119.653223 385.28829 
+L 119.653223 203.866251 
+" clip-path="url(#cpl_def7f84922bf_f0df87_p33e8d4e5d4)" style="fill: none; stroke-dasharray: 9.25,4; stroke-dashoffset: 0; stroke: #0072b2; stroke-width: 2.5"/>
+   </g>
+   <g id="cpl_def7f84922bf_f0df87_line2d_3">
+    <path d="M 74.297713 385.28829 
+L 74.297713 294.57727 
+" clip-path="url(#cpl_def7f84922bf_f0df87_p33e8d4e5d4)" style="fill: none; stroke-dasharray: 9.25,4; stroke-dashoffset: 0; stroke: #0072b2; stroke-width: 2.5"/>
+   </g>
+   <g id="cpl_def7f84922bf_f0df87_line2d_4">
+    <path d="M 51.619959 385.28829 
+L 51.619959 339.93278 
+" clip-path="url(#cpl_def7f84922bf_f0df87_p33e8d4e5d4)" style="fill: none; stroke-dasharray: 9.25,4; stroke-dashoffset: 0; stroke: #0072b2; stroke-width: 2.5"/>
+   </g>
+   <g id="cpl_def7f84922bf_f0df87_line2d_5">
+    <path d="M 40.281081 385.28829 
+L 40.281081 362.610535 
+" clip-path="url(#cpl_def7f84922bf_f0df87_p33e8d4e5d4)" style="fill: none; stroke-dasharray: 9.25,4; stroke-dashoffset: 0; stroke: #0072b2; stroke-width: 2.5"/>
+   </g>
+   <g id="cpl_def7f84922bf_f0df87_line2d_6">
+    <path d="M 34.611643 385.28829 
+L 34.611643 373.949412 
+" clip-path="url(#cpl_def7f84922bf_f0df87_p33e8d4e5d4)" style="fill: none; stroke-dasharray: 9.25,4; stroke-dashoffset: 0; stroke: #0072b2; stroke-width: 2.5"/>
+   </g>
+   <g id="cpl_def7f84922bf_f0df87_line2d_7">
+    <path d="M 31.776923 385.28829 
+L 31.776923 379.618851 
+" clip-path="url(#cpl_def7f84922bf_f0df87_p33e8d4e5d4)" style="fill: none; stroke-dasharray: 9.25,4; stroke-dashoffset: 0; stroke: #0072b2; stroke-width: 2.5"/>
+   </g>
+   <g id="cpl_def7f84922bf_f0df87_line2d_8">
+    <path d="M 30.359564 385.28829 
+L 30.359564 382.45357 
+" clip-path="url(#cpl_def7f84922bf_f0df87_p33e8d4e5d4)" style="fill: none; stroke-dasharray: 9.25,4; stroke-dashoffset: 0; stroke: #0072b2; stroke-width: 2.5"/>
+   </g>
+   <g id="cpl_def7f84922bf_f0df87_line2d_9">
+    <path d="M 29.650884 385.28829 
+L 29.650884 383.87093 
+" clip-path="url(#cpl_def7f84922bf_f0df87_p33e8d4e5d4)" style="fill: none; stroke-dasharray: 9.25,4; stroke-dashoffset: 0; stroke: #0072b2; stroke-width: 2.5"/>
+   </g>
+   <g id="cpl_def7f84922bf_f0df87_line2d_10">
+    <path d="M 29.296544 385.28829 
+L 29.296544 384.57961 
+" clip-path="url(#cpl_def7f84922bf_f0df87_p33e8d4e5d4)" style="fill: none; stroke-dasharray: 9.25,4; stroke-dashoffset: 0; stroke: #0072b2; stroke-width: 2.5"/>
+   </g>
+   <g id="cpl_def7f84922bf_f0df87_line2d_11">
+    <path d="M 28.942204 203.866251 
+L 210.364242 203.866251 
+" clip-path="url(#cpl_def7f84922bf_f0df87_p33e8d4e5d4)" style="fill: none; stroke-dasharray: 9.25,4; stroke-dashoffset: 0; stroke: #0072b2; stroke-width: 2.5"/>
+   </g>
+   <g id="cpl_def7f84922bf_f0df87_line2d_12">
+    <path d="M 28.942204 294.57727 
+L 119.653223 294.57727 
+" clip-path="url(#cpl_def7f84922bf_f0df87_p33e8d4e5d4)" style="fill: none; stroke-dasharray: 9.25,4; stroke-dashoffset: 0; stroke: #0072b2; stroke-width: 2.5"/>
+   </g>
+   <g id="cpl_def7f84922bf_f0df87_line2d_13">
+    <path d="M 28.942204 339.93278 
+L 74.297713 339.93278 
+" clip-path="url(#cpl_def7f84922bf_f0df87_p33e8d4e5d4)" style="fill: none; stroke-dasharray: 9.25,4; stroke-dashoffset: 0; stroke: #0072b2; stroke-width: 2.5"/>
+   </g>
+   <g id="cpl_def7f84922bf_f0df87_line2d_14">
+    <path d="M 28.942204 362.610535 
+L 51.619959 362.610535 
+" clip-path="url(#cpl_def7f84922bf_f0df87_p33e8d4e5d4)" style="fill: none; stroke-dasharray: 9.25,4; stroke-dashoffset: 0; stroke: #0072b2; stroke-width: 2.5"/>
+   </g>
+   <g id="cpl_def7f84922bf_f0df87_line2d_15">
+    <path d="M 28.942204 373.949412 
+L 40.281081 373.949412 
+" clip-path="url(#cpl_def7f84922bf_f0df87_p33e8d4e5d4)" style="fill: none; stroke-dasharray: 9.25,4; stroke-dashoffset: 0; stroke: #0072b2; stroke-width: 2.5"/>
+   </g>
+   <g id="cpl_def7f84922bf_f0df87_line2d_16">
+    <path d="M 28.942204 379.618851 
+L 34.611643 379.618851 
+" clip-path="url(#cpl_def7f84922bf_f0df87_p33e8d4e5d4)" style="fill: none; stroke-dasharray: 9.25,4; stroke-dashoffset: 0; stroke: #0072b2; stroke-width: 2.5"/>
+   </g>
+   <g id="cpl_def7f84922bf_f0df87_line2d_17">
+    <path d="M 28.942204 382.45357 
+L 31.776923 382.45357 
+" clip-path="url(#cpl_def7f84922bf_f0df87_p33e8d4e5d4)" style="fill: none; stroke-dasharray: 9.25,4; stroke-dashoffset: 0; stroke: #0072b2; stroke-width: 2.5"/>
+   </g>
+   <g id="cpl_def7f84922bf_f0df87_line2d_18">
+    <path d="M 28.942204 383.87093 
+L 30.359564 383.87093 
+" clip-path="url(#cpl_def7f84922bf_f0df87_p33e8d4e5d4)" style="fill: none; stroke-dasharray: 9.25,4; stroke-dashoffset: 0; stroke: #0072b2; stroke-width: 2.5"/>
+   </g>
+   <g id="cpl_def7f84922bf_f0df87_line2d_19">
+    <path d="M 28.942204 384.57961 
+L 29.650884 384.57961 
+" clip-path="url(#cpl_def7f84922bf_f0df87_p33e8d4e5d4)" style="fill: none; stroke-dasharray: 9.25,4; stroke-dashoffset: 0; stroke: #0072b2; stroke-width: 2.5"/>
+   </g>
+   <g id="cpl_def7f84922bf_f0df87_line2d_20">
+    <path d="M 28.942204 384.93395 
+L 29.296544 384.93395 
+" clip-path="url(#cpl_def7f84922bf_f0df87_p33e8d4e5d4)" style="fill: none; stroke-dasharray: 9.25,4; stroke-dashoffset: 0; stroke: #0072b2; stroke-width: 2.5"/>
+   </g>
+   <g id="cpl_def7f84922bf_f0df87_line2d_21">
+    <path d="M 28.942204 385.28829 
+L 391.786281 385.28829 
+L 391.786281 22.444213 
+L 28.942204 22.444213 
+L 28.942204 385.28829 
+" clip-path="url(#cpl_def7f84922bf_f0df87_p33e8d4e5d4)" style="fill: none; stroke: #000000; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="cpl_def7f84922bf_f0df87_text_1">
+    <!-- $A_1$ -->
+    <g transform="translate(286.359716 210.83921) scale(0.28 -0.28)">
+     <defs>
+      <path id="CMMI12-41" d="M 1088 691 
+C 864 314 646 186 339 186 
+C 269 180 218 180 218 58 
+C 218 24 250 0 294 0 
+C 410 0 698 0 813 0 
+C 998 0 1203 0 1382 0 
+C 1421 0 1498 0 1498 122 
+C 1498 180 1446 186 1408 186 
+C 1261 186 1139 236 1139 388 
+C 1139 476 1178 546 1261 685 
+L 1747 1479 
+L 3379 1479 
+C 3386 1423 3386 1373 3392 1316 
+C 3411 1152 3488 495 3488 376 
+C 3488 186 3162 186 3059 186 
+C 2989 186 2918 186 2918 70 
+C 2918 0 2976 0 3014 0 
+C 3123 0 3251 0 3360 0 
+L 3725 0 
+C 4115 0 4397 0 4403 0 
+C 4448 0 4518 0 4518 122 
+C 4518 186 4461 186 4365 186 
+C 4013 186 4006 244 3987 434 
+L 3597 4404 
+C 3584 4531 3558 4544 3488 4544 
+C 3424 4544 3386 4531 3328 4435 
+L 1088 691 
+z
+M 1856 1664 
+L 3142 3819 
+L 3360 1664 
+L 1856 1664 
+z
+" transform="scale(0.015625)"/>
+      <path id="CMR17-31" d="M 1702 4058 
+C 1702 4192 1696 4192 1606 4192 
+C 1357 3916 979 3827 621 3827 
+C 602 3827 570 3827 563 3808 
+C 557 3795 557 3782 557 3648 
+C 755 3648 1088 3686 1344 3839 
+L 1344 461 
+C 1344 236 1331 160 781 160 
+L 589 160 
+L 589 0 
+C 896 0 1216 0 1523 0 
+C 1830 0 2150 0 2458 0 
+L 2458 160 
+L 2266 160 
+C 1715 160 1702 230 1702 458 
+L 1702 4058 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#CMMI12-41" transform="scale(0.996264)"/>
+     <use xlink:href="#CMR17-31" transform="translate(73.127885 -14.943915) scale(0.697382)"/>
+    </g>
+   </g>
+   <g id="cpl_def7f84922bf_f0df87_text_2">
+    <!-- $A_2$ -->
+    <g transform="translate(104.937677 120.128191) scale(0.28 -0.28)">
+     <defs>
+      <path id="CMR17-32" d="M 2669 989 
+L 2554 989 
+C 2490 536 2438 459 2413 420 
+C 2381 369 1920 369 1830 369 
+L 602 369 
+C 832 619 1280 1072 1824 1597 
+C 2214 1967 2669 2402 2669 3035 
+C 2669 3790 2067 4224 1395 4224 
+C 691 4224 262 3604 262 3030 
+C 262 2780 448 2748 525 2748 
+C 589 2748 781 2787 781 3010 
+C 781 3207 614 3264 525 3264 
+C 486 3264 448 3258 422 3245 
+C 544 3790 915 4058 1306 4058 
+C 1862 4058 2227 3617 2227 3035 
+C 2227 2479 1901 2000 1536 1584 
+L 262 146 
+L 262 0 
+L 2515 0 
+L 2669 989 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#CMMI12-41" transform="scale(0.996264)"/>
+     <use xlink:href="#CMR17-32" transform="translate(73.127885 -14.943915) scale(0.697382)"/>
+    </g>
+   </g>
+   <g id="cpl_def7f84922bf_f0df87_text_3">
+    <!-- $A_3$ -->
+    <g transform="translate(150.293187 301.550229) scale(0.28 -0.28)">
+     <defs>
+      <path id="CMR17-33" d="M 1414 2157 
+C 1984 2157 2234 1662 2234 1090 
+C 2234 320 1824 25 1453 25 
+C 1114 25 563 194 390 693 
+C 422 680 454 680 486 680 
+C 640 680 755 782 755 948 
+C 755 1133 614 1216 486 1216 
+C 378 1216 211 1165 211 926 
+C 211 335 787 -128 1466 -128 
+C 2176 -128 2720 430 2720 1085 
+C 2720 1707 2208 2157 1600 2227 
+C 2086 2328 2554 2756 2554 3329 
+C 2554 3820 2048 4179 1472 4179 
+C 890 4179 378 3829 378 3329 
+C 378 3110 544 3072 627 3072 
+C 762 3072 877 3155 877 3321 
+C 877 3486 762 3569 627 3569 
+C 602 3569 570 3569 544 3557 
+C 730 3959 1235 4032 1459 4032 
+C 1683 4032 2106 3925 2106 3320 
+C 2106 3143 2080 2828 1862 2550 
+C 1670 2304 1453 2304 1242 2284 
+C 1210 2284 1062 2269 1037 2269 
+C 992 2263 966 2257 966 2208 
+C 966 2163 973 2157 1101 2157 
+L 1414 2157 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#CMMI12-41" transform="scale(0.996264)"/>
+     <use xlink:href="#CMR17-33" transform="translate(73.127885 -14.943915) scale(0.697382)"/>
+    </g>
+   </g>
+   <g id="cpl_def7f84922bf_f0df87_text_4">
+    <!-- $A_4$ -->
+    <g transform="translate(59.582168 256.19472) scale(0.28 -0.28)">
+     <defs>
+      <path id="CMR17-34" d="M 2150 4122 
+C 2150 4256 2144 4256 2029 4256 
+L 128 1254 
+L 128 1088 
+L 1779 1088 
+L 1779 457 
+C 1779 224 1766 160 1318 160 
+L 1197 160 
+L 1197 0 
+C 1402 0 1747 0 1965 0 
+C 2182 0 2528 0 2733 0 
+L 2733 160 
+L 2611 160 
+C 2163 160 2150 224 2150 457 
+L 2150 1088 
+L 2803 1088 
+L 2803 1254 
+L 2150 1254 
+L 2150 4122 
+z
+M 1798 3703 
+L 1798 1254 
+L 256 1254 
+L 1798 3703 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#CMMI12-41" transform="scale(0.996264)"/>
+     <use xlink:href="#CMR17-34" transform="translate(73.127885 -14.943915) scale(0.697382)"/>
+    </g>
+   </g>
+   <g id="cpl_def7f84922bf_f0df87_text_5">
+    <!-- $1$ -->
+    <g transform="translate(203.967575 420.88273) scale(0.28 -0.28)">
+     <use xlink:href="#CMR17-31" transform="scale(0.996264)"/>
+    </g>
+   </g>
+   <g id="cpl_def7f84922bf_f0df87_text_6">
+    <!-- $1$ -->
+    <g transform="translate(408.114264 210.83921) scale(0.28 -0.28)">
+     <use xlink:href="#CMR17-31" transform="scale(0.996264)"/>
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="cpl_def7f84922bf_f0df87_p33e8d4e5d4">
+   <rect x="10.8" y="10.8" width="399.128485" height="386.132502"/>
+  </clipPath>
+ </defs>
+</svg>
+</div></figure>
+<p>I figuren til høyre vises et kvadrat med sidelengder <span class="math notranslate nohighlight">\(1\)</span>. Arealet av kvadratet er derfor bare <span class="math notranslate nohighlight">\(A = 1\)</span>.</p>
+<p>Figuren er delt opp i mindre områder med areal <span class="math notranslate nohighlight">\(A_1\)</span>, <span class="math notranslate nohighlight">\(A_2\)</span>, <span class="math notranslate nohighlight">\(A_3\)</span>, <span class="math notranslate nohighlight">\(A_4\)</span> og så videre der de fire første områdene er merket i figuren. Arealet av det neste området er alltid halvparten av det forrige området slik at</p>
+<div class="math notranslate nohighlight">
+\[
+A_1 = \dfrac{1}{2}, \quad A_2 = \dfrac{1}{4}, \quad A_3 = \dfrac{1}{8}, \quad A_4 = \dfrac{1}{16}, \quad \ldots
+\]</div>
+<p>Slik fortsetter mønsteret for alltid siden vi kan alltid dele opp det siste området i to mindre områder. Men summen av alle disse arealene <em>må</em> jo være lik <span class="math notranslate nohighlight">\(1\)</span> siden arealet av hele kvadratet er <span class="math notranslate nohighlight">\(1\)</span>. Det må i så fall bety at</p>
+<div class="math notranslate nohighlight">
+\[
+1 = A_1 + A_2 + A_3 + A_4 + \ldots = \dfrac{1}{2} + \dfrac{1}{4} + \dfrac{1}{8} + \dfrac{1}{16} + \ldots
+\]</div>
+<p>Vi kan se at hvert ledd bare er det forrige leddet ganget med <span class="math notranslate nohighlight">\(\dfrac{1}{2}\)</span>. Vi sier at dette er en <strong>geometrisk rekke</strong> og at den har <strong>kvotienten</strong> <span class="math notranslate nohighlight">\(\dfrac{1}{2}\)</span>.</p>
+</div>
+<hr class="docutils" />
+<div class="admonition summary">
+<p class="admonition-title">Definisjon: Geometriske rekker</p>
+<p>En geometriske rekke med <span class="math notranslate nohighlight">\(n\)</span> ledd er en rekke på formen</p>
+<div class="math notranslate nohighlight">
+\[
+S_n = a + ak + ak^2 + ak^3 + \ldots + ak^{n - 1}
+\]</div>
+<p>der det <span class="math notranslate nohighlight">\(n\)</span>-te leddet er gitt ved</p>
+<div class="math notranslate nohighlight">
+\[
+a_n = ak^{n - 1} \qfor n = 1, 2, 3, \ldots
+\]</div>
+</div>
+<hr class="docutils" />
+<div class="admonition example">
+<p class="admonition-title">Eksempel 2</p>
+<p>La oss ta for oss den geometriske rekka fra eksempel 1 og se hvordan vi kan vise at det må være lik <span class="math notranslate nohighlight">\(1\)</span> selv uten den geometriske figuren. Vi har at arealet av figuren er lik</p>
+<div class="math notranslate nohighlight">
+\[
+A = \dfrac{1}{2} + \dfrac{1}{4} + \dfrac{1}{8} + \dfrac{1}{16} + \ldots
+\]</div>
+<p>Hvis vi nå ganger hele likningen med <span class="math notranslate nohighlight">\(\dfrac{1}{2}\)</span> får vi</p>
+<div class="math notranslate nohighlight">
+\[
+\dfrac{1}{2} \cdot A = \dfrac{1}{4} + \dfrac{1}{8} + \dfrac{1}{16} + \dfrac{1}{32} + \ldots
+\]</div>
+<p>Trekker vi den første likningen fra den siste likningen får vi:</p>
+<div class="math notranslate nohighlight">
+\[
+A - \dfrac{1}{2} \cdot A = \dfrac{1}{2} + \dfrac{1}{4} + \dfrac{1}{8} + \dfrac{1}{16} + \ldots - \left( \dfrac{1}{4} + \dfrac{1}{8} + \dfrac{1}{16} + \dfrac{1}{32} + \ldots \right)
+\]</div>
+<p>Omrokkerer vi på leddene på høyre side får vi:</p>
+<div class="math notranslate nohighlight">
+\[
+A - \dfrac{1}{2} \cdot A = \dfrac{1}{2} + \left( \dfrac{1}{4} - \dfrac{1}{4} \right) + \left( \dfrac{1}{8} - \dfrac{1}{8} \right) + \left( \dfrac{1}{16} - \dfrac{1}{16} \right) + \ldots
+\]</div>
+<p>Så alle ledd kansellerer hverandre bortsett fra ett som gir:</p>
+<div class="math notranslate nohighlight">
+\[
+\dfrac{1}{2}\cdot A = \dfrac{1}{2}
+\]</div>
+<p>Men da må <span class="math notranslate nohighlight">\(A = 1\)</span>.</p>
+</div>
+<hr class="docutils" />
+<p>Strategien i eksempel 2 gir oss en strategi for å komme fram til en generell formel for summen av en geometrisk rekke. Rekka i eksempel 1 og 2 har uendelig mange ledd, men en geometrisk rekke kan også ha et endelig antall ledd. Vi snur oss nå mot å finne en generell formel for begge tilfeller.</p>
+<section id="endelige-geometriske-rekker">
+<h2>Endelige geometriske rekker<a class="headerlink" href="#endelige-geometriske-rekker" title="Link to this heading">#</a></h2>
+<div class="admonition summary">
+<p class="admonition-title">Formel for en endelig geometrisk rekke</p>
+<p>For en endelig geometrisk rekke med <span class="math notranslate nohighlight">\(n\)</span> ledd og kvotient <span class="math notranslate nohighlight">\(k\)</span> på formen</p>
+<div class="math notranslate nohighlight">
+\[
+S_n = a + ak + ak^2 + ak^3 + \ldots + ak^{n - 1}
+\]</div>
+<p>er summen av alle leddene gitt ved formelen</p>
+<div class="math notranslate nohighlight">
+\[
+S_n = a \cdot \dfrac{1 - k^n}{1 - k} \qfor k \neq 1
+\]</div>
+<div class="theory dropdown admonition">
+<p class="admonition-title">Bevis</p>
+<p>Vi har at</p>
+<div class="math notranslate nohighlight">
+\[
+S_n = a + ak + ak^2 + \ldots + ak^{n - 1}
+\]</div>
+<p>Ganger vi hver side av likningen med kvotienten <span class="math notranslate nohighlight">\(k\)</span> får vi</p>
+<div class="math notranslate nohighlight">
+\[
+k \cdot S_n = ak + ak^2 + \ldots + ak^{n - 1} + ak^n
+\]</div>
+<p>Trekker vi den første likningen fra den siste likningen får vi:</p>
+<div class="math notranslate nohighlight">
+\[
+S_n - k \cdot S_n = a + ak + ak^2 + \ldots + ak^{n - 1} - \left( ak + ak^2 + \ldots + ak^{n - 1} + ak^n \right)
+\]</div>
+<p>Omrokkerer vi på leddene på høyre side får vi:</p>
+<div class="math notranslate nohighlight">
+\[
+S_n - k \cdot S_n = a + \left( ak - ak \right) + \left( ak^2 - ak^2 \right) + \ldots + \left( ak^{n - 1} - ak^{n - 1} \right) - ak^n
+\]</div>
+<p>Så alle ledd kansellerer hverandre bort bortsett fra det første og det siste leddet som gir:</p>
+<div class="math notranslate nohighlight">
+\[
+S_n - k \cdot S_n = a - ak^n
+\]</div>
+<p>Vi kan faktorisere på hver side og forenkle likningen til:</p>
+<div class="math notranslate nohighlight">
+\[
+S_n \cdot (1 - k) = a \cdot (1 - k^n)
+\]</div>
+<p>Løser vi denne likningen for <span class="math notranslate nohighlight">\(S_n\)</span> får vi:</p>
+<div class="math notranslate nohighlight">
+\[
+S_n = a \cdot \dfrac{1 - k^n}{1 - k}
+\]</div>
+<p>som var det vi skulle vise.</p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="admonition example">
+<p class="admonition-title">Eksempel 3</p>
+<p>Bestem summen av rekka</p>
+<div class="math notranslate nohighlight">
+\[
+S = 1 + \dfrac{1}{2} + \dfrac{1}{4} + \dfrac{1}{8} + \ldots + \dfrac{1}{2048}
+\]</div>
+<div class="admonition solution">
+<p class="admonition-title">Løsning</p>
+<p>Rekka er en geometrisk rekke med startledd <span class="math notranslate nohighlight">\(a = 1\)</span> og kvotient <span class="math notranslate nohighlight">\(k = \dfrac{1}{2}\)</span>. Vi trenger antall ledd i rekka som vi kan finne ved å bruke at</p>
+<div class="math notranslate nohighlight">
+\[
+a_n = 1\cdot \left(\dfrac{1}{2}\right)^{n - 1} = \dfrac{1}{2048}
+\]</div>
+<p>Vi har at <span class="math notranslate nohighlight">\(2048 = 2^{11}\)</span>, så vi kan skrive som betyr at</p>
+<div class="math notranslate nohighlight">
+\[
+\dfrac{1}{2^{n - 1}} = \dfrac{1}{2^{11}}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+n - 1 = 11 \liff n = 10
+\]</div>
+<p>Altså består rekka av <span class="math notranslate nohighlight">\(10\)</span> ledd. Da kan vi bruke formelen for en endelig geometrisk rekke:</p>
+<div class="math notranslate nohighlight">
+\[
+S_{10} = 1 \cdot \dfrac{1 - \left( \dfrac{1}{2} \right)^{10}}{1 - \dfrac{1}{2}} = 2 \cdot \left( 1 - \dfrac{1}{1024} \right) = 2 - \dfrac{1}{512} = \dfrac{1023}{512}
+\]</div>
+</div>
+</div>
+</section>
+<section id="uendelige-geometriske-rekker">
+<h2>Uendelige geometriske rekker<a class="headerlink" href="#uendelige-geometriske-rekker" title="Link to this heading">#</a></h2>
+<p>Som i eksempel 1 og 2, så kan en geometrisk rekke også ha uendelig mange ledd. I mange situasjoner vil rekka nærme seg et bestemt tall, og da sier vi at rekka <strong>konvergerer</strong> – eller kaller rekka for <strong>konvergent</strong>. Hvis summen av rekka går mot <span class="math notranslate nohighlight">\(\pm \infty\)</span>, så sier vi at rekka <strong>divergerer</strong> – eller kaller rekka for <strong>divergent</strong>.</p>
+<div class="admonition summary">
+<p class="admonition-title">Uendelige geometriske rekker</p>
+<p>En uendelig geometrisk rekke <span class="math notranslate nohighlight">\(S\)</span> med startledd <span class="math notranslate nohighlight">\(a\)</span> og kvotient <span class="math notranslate nohighlight">\(k\)</span> på formen</p>
+<div class="math notranslate nohighlight">
+\[
+S = a + ak + ak^2 + ak^3 + \ldots
+\]</div>
+<p>konvergerer hvis og bare hvis <span class="math notranslate nohighlight">\(\abs{k} &lt; 1\)</span>.</p>
+<p>Da er summen av rekka gitt ved</p>
+<div class="math notranslate nohighlight">
+\[
+S = \dfrac{a}{1 - k}
+\]</div>
+<div class="theory dropdown admonition">
+<p class="admonition-title">Bevis</p>
+<p>Vi starter med summen av de første <span class="math notranslate nohighlight">\(n\)</span> leddene i rekka:</p>
+<div class="math notranslate nohighlight">
+\[
+S_n = a \cdot \dfrac{1 - k^n}{1 - k}
+\]</div>
+<p>Dersom <span class="math notranslate nohighlight">\(\abs{k} &lt; 1\)</span> så vil <span class="math notranslate nohighlight">\(k^n\)</span> bli mindre og mindre jo større <span class="math notranslate nohighlight">\(n\)</span> blir. I grensen der <span class="math notranslate nohighlight">\(n \to \infty\)</span>, så vil <span class="math notranslate nohighlight">\(k^n \to 0\)</span>. Da får vi at</p>
+<div class="math notranslate nohighlight">
+\[
+S = \lim_{n \to \infty} S_n = \lim_{n \to \infty} a \cdot \dfrac{1 - k^n}{1 - k} = a \cdot \dfrac{1 - 0}{1 - k} = \dfrac{a}{1 - k}
+\]</div>
+<p>som var det vi skulle vise.</p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="admonition example">
+<p class="admonition-title">Eksempel 4</p>
+<p>En rekke er gitt ved</p>
+<div class="math notranslate nohighlight">
+\[
+S = 1 + \dfrac{1}{3} + \dfrac{1}{9} + \dfrac{1}{27} + \ldots
+\]</div>
+<p>Bestem summen av rekka.</p>
+<div class="admonition solution">
+<p class="admonition-title">Løsning</p>
+<p>Rekka er en geometrisk rekke med startledd <span class="math notranslate nohighlight">\(a = 1\)</span> og kvotient <span class="math notranslate nohighlight">\(k = \dfrac{1}{3}\)</span>. Siden <span class="math notranslate nohighlight">\(\abs{k} &lt; 1\)</span>, så konvergerer rekka og summen av rekka er gitt ved formelen for uendelige geometriske rekker:</p>
+<div class="math notranslate nohighlight">
+\[
+S = \dfrac{a}{1 - k} = \dfrac{1}{1 - \dfrac{1}{3}} = \dfrac{1}{2/3} = \dfrac{3}{2}
+\]</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="variable-kvotienter-og-konvergensomrader">
+<h2>Variable kvotienter og konvergensområder<a class="headerlink" href="#variable-kvotienter-og-konvergensomrader" title="Link to this heading">#</a></h2>
+</section>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -477,12 +1144,12 @@
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../../../index.html"
+       href="../aritmetiske_rekker/oppgaver.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Matematikk R2</p>
+        <p class="prev-next-title">Oppgaver: Aritmetiske rekker</p>
       </div>
     </a>
     <a class="right-next"
@@ -500,6 +1167,25 @@
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Innhold
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#endelige-geometriske-rekker">Endelige geometriske rekker</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uendelige-geometriske-rekker">Uendelige geometriske rekker</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-kvotienter-og-konvergensomrader">Variable kvotienter og konvergensområder</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

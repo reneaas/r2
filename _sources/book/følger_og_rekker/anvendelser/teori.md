@@ -1,0 +1,1 @@
+# Anvendelser av rekketeori
