@@ -1357,7 +1357,7 @@ Vil fuglen treffe flyet?
 
 
 ::::{answer}
-Nei.
+Ja!
 ::::
 
 ::::{solution}
@@ -1388,8 +1388,10 @@ width: 90%
 ---
 :::
 
-Vi ser at ved å løse $\vec{r}(t) = \vec{f}(s)$ får vi forskjellige verdier for $s$ og $t$ som betyr at de ikke møtes. Altså vil ikke fuglen treffe flyet.
+Både fuglen og flyet er i skjæringspunktet mellom kurvene sine omtrent ved $t = 5$ sekunder som betyr at fuglen vil treffe flyet. 
 
+
+> Merk at selv om fuglen er i punktet 0.02 sekunder senere, så vil det i praksis bety at fuglen og flyet treffer hverandre siden det er så liten tidsforskjell. 
 ::::
 
 :::::::::::::

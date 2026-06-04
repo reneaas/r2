@@ -127,6 +127,8 @@
     <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"loader": {"load": ["[tex]/physics"]}, "tex": {"packages": {"[+]": ["physics"]}, "macros": {"annotateAbove": ["\\mathrel{\\overset{\\substack{\\text{#2} \\\\ \\Bigg\\downarrow}}{#1}}", 2], "annotateBelow": ["\\mathrel{\\underset{\\substack{\\Bigg\\uparrow \\\\ \\text{#2}}}{#1}}", 2], "cline": ["\\underline{\\phantom{#1}}", 1], "and": ["\\quad \\land \\quad"], "or": ["\\quad \\lor \\quad"], "liff": ["\\quad \\iff \\quad"], "limplies": ["\\quad \\implies \\quad"], "limpliedby": ["\\quad \\impliedby \\quad"], "lland": ["\\; \\land \\;"], "degree": ["^\\circ"], "qog": ["\\quad \\text{og} \\quad"], "qder": ["\\quad \\text{der} \\quad"], "qeller": ["\\quad \\text{eller} \\quad"], "qhvis": ["\\quad \\text{hvis} \\quad"], "qfor": ["\\quad \\text{for} \\quad"], "natural": ["\\mathbb{N}"], "integer": ["\\mathbb{Z}"], "rational": ["\\mathbb{Q}"], "real": ["\\mathbb{R}"], "irrational": ["\\mathbb{Q}^c"], "qcomma": [",\\quad"], "nimplies": ["\\quad\\mathrel{\\not\\!\\!\\!\\implies}\\quad"], "nimpliedby": ["\\quad\\mathrel{\\not\\!\\!\\!\\impliedby}\\quad"], "niff": ["\\quad\\mathrel{\\not\\!\\!\\!\\iff}\\quad"], "cubica": ["\\raisebox{-0.4ex}{\\small\\(\\frown\\!\\smile\\)}", 0], "cubicb": ["\\raisebox{-0.4ex}{\\small\\(\\smile\\!\\frown\\)}", 0], "t": ["\\mathrm{#1}", 1], "dot": ["\\vec{#1} \\cdot \\vec{#2}", 2], "len": ["\\abs{\\vec{#1}}", 1], "lvec": ["\\overrightarrow{#1}", 1], "v": ["\\left[#1, #2\\right]", 2], "proj": ["\\mathrm{proj}_{#1}\\left(#2\\right)", 2], "mstack": ["\\begin{array}{c}#1\\end{array}", 1], "d": ["\\, \\mathrm{d}"]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3.2/es5/tex-mml-chtml.js"></script>
     <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'book/følger_og_rekker/anvendelser/oppgaver';</script>
     <script>mermaid.initialize({"startOnLoad": true})</script>
@@ -386,6 +388,17 @@
 </ul>
 </details></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">V. Modellering</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../modellering/trigonometriske_modeller/teori.html">24. Trigonometriske modeller</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../modellering/trigonometriske_modeller/oppgaver.html">Oppgaver</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../modellering/vektorfunksjoner/teori.html">25. Vektorfunksjoner</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../modellering/vektorfunksjoner/oppgaver.html">Oppgaver</a></li>
+</ul>
+</details></li>
+</ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Eksamensøving</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../eksamens%C3%B8ving/v%C3%A5r_26/oppgaver.html">Eksamen vår 2026</a></li>
@@ -393,8 +406,7 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Eksamensressurser</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../eksamensressurser/python.html">Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../eksamensressurser/cas.html">CAS (Geogebra)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../eksamensressurser/geogebra.html">Geogebra</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.geogebra.org/classic">Geogebra</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Dev</span></p>
 <ul class="nav bd-sidenav">
@@ -548,6 +560,47 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="oppgaver-anvendelser-av-rekketeori">
 <h1>Oppgaver: Anvendelser av rekketeori<a class="headerlink" href="#oppgaver-anvendelser-av-rekketeori" title="Link to this heading">#</a></h1>
+<div class="admonition exercise">
+<p class="admonition-title">Oppgave X</p>
+<p>Boligsparing for ungdom (BSU) er en spareordning for ungdom mellom 18 og 34 år for å hjelpe dem å komme inn på boligmarkedet. Om ordningen får du vite at</p>
+<ul class="simple">
+<li><p>Du kan sette inn et samlet innskudd på <span class="math notranslate nohighlight">\(27~500\)</span> kr hvert år.</p></li>
+<li><p>I perioden hvor du sparer kan du maksimalt sette inn innskudd på til sammen <span class="math notranslate nohighlight">\(300~000\)</span> kr.</p></li>
+<li><p>En typisk årlig rente på en BSU-konto er ca. <span class="math notranslate nohighlight">\(6~\%\)</span>.</p></li>
+<li><p>Sparebeløpet <em>må</em> brukes til boligformål – enten å kjøpe bolig eller nedbetaling av boliglån.</p></li>
+</ul>
+<p>Tenk deg at du begynner å spare i en BSU-konto 1.januar det året du fyller 18 år og at du setter inn det maksimale innskuddet du kan hvert år.</p>
+<div class="part docutils container">
+<div class="part-label docutils container">
+a)</div>
+<div class="part-body docutils container">
+<p>Sett opp en rekke for hvor stort sparebeløpet ditt blir etter at du har spart i 10 år.</p>
+</div>
+</div>
+<div class="part docutils container">
+<div class="part-label docutils container">
+b)</div>
+<div class="part-body docutils container">
+<p>Regn ut hvor stort sparebeløp du har når du er 30 år gammel.</p>
+</div>
+</div>
+<p>Tenk deg at du skal kjøpe en bolig til <span class="math notranslate nohighlight">\(3~000~000\)</span> kr når du er 30 år gammel. For å ta opp et lån kreves det at du har <span class="math notranslate nohighlight">\(10~\%\)</span> av kjøpesummen spart opp. Dette kaller vi for en egenkapital. Resten av kjøpesummen tar du opp som et lån.</p>
+<div class="part docutils container">
+<div class="part-label docutils container">
+c)</div>
+<div class="part-body docutils container">
+<p>Finn hvor stort lånebeløp du må ta opp.</p>
+</div>
+</div>
+<p>Vi går ut ifra at du skal betale ned lånet over 20 år. I nedbetalingsplanen din har du en fast rente på <span class="math notranslate nohighlight">\(5~\%\)</span> på lånet. Hvert år betaler du et fast beløp terminbeløp.</p>
+<div class="part docutils container">
+<div class="part-label docutils container">
+d)</div>
+<div class="part-body docutils container">
+<p>Finn terminbeløpet du må betale hvert år.</p>
+</div>
+</div>
+</div>
 </section>
 
     <script type="text/x-thebe-config">
