@@ -311,3 +311,94 @@ $$
 
 
 ## Variable kvotienter og konvergensområder
+
+Noen ganger jobber vi med geometriske rekker der kvotienten er en funksjon $k(x)$. 
+
+
+:::::::::::::::{summary} Uendelig geometrisk rekke med variabel kvotient
+En uendelig geometrisk rekke $S(x)$ med startledd $a$ og kvotient $k(x)$ på formen
+
+$$
+S(x) = a + a\cdot k(x) + a \cdot k(x)^2 + a \cdot k(x)^3 + \ldots
+$$
+
+konvergerer hvis og bare hvis
+
+$$
+\abs{k(x)} \lt 1
+$$
+
+De verdiene av $x$ som tilfredsstiller at $\abs{k(x)} \lt 1$ kalles for **konvergensområdet** til rekka.
+:::::::::::::::
+
+
+
+---
+
+
+:::::::::::::::{example} Eksempel 5
+Gitt rekka
+
+$$
+S(x) = 1 + \dfrac{x}{2} + \dfrac{x^2}{4} + \dfrac{x^3}{8} + \ldots
+$$
+
+Bestem konvergensområdet til rekka.
+
+
+
+::::{solution}
+---
+dropdown: 0
+---
+Vi kan se at kvotienten til rekka er
+
+$$
+k(x) = \dfrac{x}{2}
+$$
+
+Konvergensområdet til rekka må tilfredsstille at
+
+$$
+\abs{k(x)} \lt 1 \liff \abs{\dfrac{x}{2}} \lt 1
+$$
+
+Dette betyr at konvergensområdet til rekka er
+
+$$
+\abs{x} \lt 2 \liff -2 \lt x \lt 2
+$$
+
+::::
+
+:::::::::::::::
+
+
+---
+
+Vi tar et litt mer omfattende eksempel der vi må gjøre litt mer analyse for å finne konvergensområdet til rekka.
+
+
+:::::::::::::::{example} Eksempel 6
+En geometrisk rekke er gitt ved
+
+$$
+S(x) = 2 + 4(x - 2)^2 + 8(x - 2)^4 + 16(x - 2)^6 + \ldots
+$$
+
+Bestem konvergensområdet til rekka.
+
+::::{solution}
+---
+dropdown: 0
+---
+
+Vi kan se at kvotienten til rekka er
+
+$$
+k(x) = 2(x - 2)^2
+$$
+
+
+::::
+:::::::::::::::

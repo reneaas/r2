@@ -115,3 +115,4 @@ Om en geometrisk rekke får du vite at
 Bestem det første leddet i rekka.
 
 :::::::::::::::
+

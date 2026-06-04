@@ -40,6 +40,8 @@ parts:
         title: Oppgaver
 
 
+
+
   - caption: II. Integrasjon
     numbered: 1
     chapters:
@@ -75,6 +77,8 @@ parts:
       - file: book/integrasjon/numerisk_integrasjon/oppgaver.md
         title: Oppgaver
 
+
+
   - caption: III. Romgeometri
     numbered: 1
     chapters:
@@ -103,6 +107,8 @@ parts:
       sections:
       - file: book/romgeometri/kuler/oppgaver.md
         title: Oppgaver
+
+
 
   - caption: IV. Trigonometri
     numbered: 1
@@ -139,6 +145,23 @@ parts:
         title: Oppgaver
 
 
+
+
+  - caption: V. Modellering
+    numbered: 1
+    chapters:
+
+    - file: book/modellering/trigonometriske_modeller/teori.md
+      sections:
+      - file: book/modellering/trigonometriske_modeller/oppgaver.md
+        title: Oppgaver
+
+    - file: book/modellering/vektorfunksjoner/teori.md
+      sections:
+      - file: book/modellering/vektorfunksjoner/oppgaver.md
+        title: Oppgaver
+
+
   - caption: Eksamensøving
     numbered: false
     chapters:
@@ -150,9 +173,8 @@ parts:
     numbered: false
     chapters:
     - file: book/eksamensressurser/python.md
-    - file: book/eksamensressurser/cas.md
-    - file: book/eksamensressurser/geogebra.md
-
+    - url: https://www.geogebra.org/classic
+      title: Geogebra
 
   - caption: Dev
     numbered: false

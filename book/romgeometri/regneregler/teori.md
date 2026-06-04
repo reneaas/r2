@@ -10,3 +10,10 @@ class: tip
 * Kunne bestemme lengden av en vektor.
 * Kunne regne ut skalarproduktet mellom to vektorer. 
 :::
+
+
+
+
+## Lengden av en vektor
+
+

@@ -1,9 +1,14 @@
 # Aritmetiske rekker
 
-:::{admonition} Læringsmål
+:::{admonition} Relevante kompetansemål
 ---
 class: tip
 ---
-* Kunne finne formelen for det $n$-te leddet i en aritmetisk følge.
-* Kunne finne formelen for summen av de $n$ første leddene i en aritmetisk rekke.
+* utforske egenskaper ved ulike rekker og gjøre rede for praktiske anvendelser av egenskaper ved rekker
 :::
+
+
+
+En **aritmetisk** rekke er en rekke der differansen mellom to påfølgende ledd alltid er den samme.
+
+
