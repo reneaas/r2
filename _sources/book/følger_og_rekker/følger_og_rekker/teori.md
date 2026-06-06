@@ -26,7 +26,7 @@ en tallfølge som består av fem **ledd**. Vi kaller det første tallet $a_1$ i 
 En (tall)følge $\{a_n\}_{n=1}^N$ er en ordnet liste med tall som følger et bestemt mønster. Det $n$-te leddet i en følge skriver vi som $a_n$, og skriver følgen som
 
 $$
-\{a_n\}_{n=1}^N = a_1, \, a_2, \, a_3, \, \ldots, \, a_N
+a_1, \, a_2, \, a_3, \, \ldots, \, a_N
 $$
 
 > Når verdiene som $n$ kan ha i en følge er underforstått, så skriver vi ofte bare $\{a_n\}$ for å betegne følgen.
@@ -133,14 +133,14 @@ columns: 6
 **Følge**
 ^^^
 $$
-\{a_n\} = a_1, a_2, a_3, \ldots, a_N
+a_1, a_2, a_3, \ldots, a_N
 $$
 
 
 **Eksempel**:
 
 $$
-\{a_n\} = 1, 4, 9, 16, 25
+1, 4, 9, 16, 25
 $$
 
 ::::::
@@ -344,7 +344,7 @@ I mange tilfeller er det enklest å finne en rekursiv formel for leddene i en f�
 En følge $\{a_n\}$ er gitt ved
 
 $$
-\{a_n\} = 1, 2, 4, 7, 11, \ldots
+1, 2, 4, 7, 11, \ldots
 $$
 
 Finn en rekursiv formel for leddene i følgen.

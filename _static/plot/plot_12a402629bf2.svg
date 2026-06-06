@@ -6,7 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-06-04T18:37:08.010848</dc:date>
+    <dc:date>2026-06-06T17:45:54.030144</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -36,7 +36,7 @@ L 243.929908 341.720689
 L 405.845722 298.335478 
 L 260.675974 214.521685 
 z
-" clip-path="url(#p4c7931ad0d)" style="fill: #0072b2; opacity: 0.1; stroke: #0072b2; stroke-linejoin: miter"/>
+" clip-path="url(#p25e79e2e40)" style="fill: #0072b2; opacity: 0.1; stroke: #0072b2; stroke-linejoin: miter"/>
    </g>
    <g id="line2d_1">
     <path d="M 135.052597 278.860345 
@@ -52,42 +52,42 @@ L 140.297962 252.357213
 L 139.78312 249.34508 
 L 139.239114 247.060594 
 L 139.239114 247.060594 
-" clip-path="url(#p4c7931ad0d)" style="fill: none; stroke: #000000; stroke-width: 2.5; stroke-linecap: square"/>
+" clip-path="url(#p25e79e2e40)" style="fill: none; stroke: #000000; stroke-width: 2.5; stroke-linecap: square"/>
    </g>
    <g id="line2d_2">
     <path d="M 243.929908 341.720689 
 L 405.845722 298.335478 
-" clip-path="url(#p4c7931ad0d)" style="fill: none; stroke-dasharray: 9.25,4; stroke-dashoffset: 0; stroke: #808080; stroke-width: 2.5"/>
+" clip-path="url(#p25e79e2e40)" style="fill: none; stroke-dasharray: 9.25,4; stroke-dashoffset: 0; stroke: #808080; stroke-width: 2.5"/>
    </g>
    <g id="line2d_3">
     <path d="M 260.675974 214.521685 
 L 405.845722 298.335478 
-" clip-path="url(#p4c7931ad0d)" style="fill: none; stroke-dasharray: 9.25,4; stroke-dashoffset: 0; stroke: #808080; stroke-width: 2.5"/>
+" clip-path="url(#p25e79e2e40)" style="fill: none; stroke-dasharray: 9.25,4; stroke-dashoffset: 0; stroke: #808080; stroke-width: 2.5"/>
    </g>
    <g id="line2d_4">
     <path d="M 98.76016 257.906896 
 L 98.76016 90.279311 
-" clip-path="url(#p4c7931ad0d)" style="fill: none; stroke-dasharray: 9.25,4; stroke-dashoffset: 0; stroke: #ffffff; stroke-width: 2.5"/>
+" clip-path="url(#p25e79e2e40)" style="fill: none; stroke-dasharray: 9.25,4; stroke-dashoffset: 0; stroke: #ffffff; stroke-width: 2.5"/>
    </g>
    <g id="line2d_5">
     <path d="M 98.76016 216 
 L 139.239114 205.153697 
-" clip-path="url(#p4c7931ad0d)" style="fill: none; stroke-dasharray: 9.25,4; stroke-dashoffset: 0; stroke: #808080; stroke-width: 2.5"/>
+" clip-path="url(#p25e79e2e40)" style="fill: none; stroke-dasharray: 9.25,4; stroke-dashoffset: 0; stroke: #808080; stroke-width: 2.5"/>
    </g>
    <g id="line2d_6">
     <path d="M 139.239114 205.153697 
 L 139.239114 247.060594 
-" clip-path="url(#p4c7931ad0d)" style="fill: none; stroke-dasharray: 9.25,4; stroke-dashoffset: 0; stroke: #808080; stroke-width: 2.5"/>
+" clip-path="url(#p25e79e2e40)" style="fill: none; stroke-dasharray: 9.25,4; stroke-dashoffset: 0; stroke: #808080; stroke-width: 2.5"/>
    </g>
    <g id="line2d_7">
     <path d="M 98.76016 216 
 L 135.052597 236.953448 
-" clip-path="url(#p4c7931ad0d)" style="fill: none; stroke-dasharray: 9.25,4; stroke-dashoffset: 0; stroke: #808080; stroke-width: 2.5"/>
+" clip-path="url(#p25e79e2e40)" style="fill: none; stroke-dasharray: 9.25,4; stroke-dashoffset: 0; stroke: #808080; stroke-width: 2.5"/>
    </g>
    <g id="line2d_8">
     <path d="M 135.052597 236.953448 
 L 135.052597 278.860345 
-" clip-path="url(#p4c7931ad0d)" style="fill: none; stroke-dasharray: 9.25,4; stroke-dashoffset: 0; stroke: #808080; stroke-width: 2.5"/>
+" clip-path="url(#p25e79e2e40)" style="fill: none; stroke-dasharray: 9.25,4; stroke-dashoffset: 0; stroke: #808080; stroke-width: 2.5"/>
    </g>
    <g id="text_1">
     <!-- $\vec{{a}} \times \vec{{b}}$ -->
@@ -278,7 +278,7 @@ L 232.620303 341.041852
 L 235.524683 338.038084 
 L 98.253469 258.784511 
 L 99.266851 257.029282 
-" clip-path="url(#p4c7931ad0d)" style="fill: #0072b2"/>
+" clip-path="url(#p25e79e2e40)" style="fill: #0072b2"/>
    </g>
    <g id="Quiver_2">
     <path d="M 98.497877 256.928044 
@@ -289,7 +289,7 @@ L 252.198866 222.038772
 L 252.128587 217.861081 
 L 99.022443 258.885749 
 L 98.497877 256.928044 
-" clip-path="url(#p4c7931ad0d)" style="fill: #dc5e8b"/>
+" clip-path="url(#p25e79e2e40)" style="fill: #dc5e8b"/>
    </g>
    <g id="Quiver_3">
     <path d="M 97.746778 257.906896 
@@ -300,12 +300,12 @@ L 103.827072 100.413134
 L 99.773542 99.399752 
 L 99.773542 257.906896 
 L 97.746778 257.906896 
-" clip-path="url(#p4c7931ad0d)" style="fill: #d95f02"/>
+" clip-path="url(#p25e79e2e40)" style="fill: #d95f02"/>
    </g>
   </g>
  </g>
  <defs>
-  <clipPath id="p4c7931ad0d">
+  <clipPath id="p25e79e2e40">
    <rect x="83.405882" y="10.8" width="337.794118" height="410.4"/>
   </clipPath>
  </defs>

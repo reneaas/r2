@@ -372,33 +372,3 @@ $$
 ::::
 
 :::::::::::::::
-
-
----
-
-Vi tar et litt mer omfattende eksempel der vi må gjøre litt mer analyse for å finne konvergensområdet til rekka.
-
-
-:::::::::::::::{example} Eksempel 6
-En geometrisk rekke er gitt ved
-
-$$
-S(x) = 2 + 4(x - 2)^2 + 8(x - 2)^4 + 16(x - 2)^6 + \ldots
-$$
-
-Bestem konvergensområdet til rekka.
-
-::::{solution}
----
-dropdown: 0
----
-
-Vi kan se at kvotienten til rekka er
-
-$$
-k(x) = 2(x - 2)^2
-$$
-
-
-::::
-:::::::::::::::
