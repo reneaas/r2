@@ -1,25 +1,28 @@
 # Eksamen vår 2026
 
+
+
+
 ## Del 1 – 3 timer – Uten hjelpemidler
 
 
-:::::::::::::::{exercise-2} Oppgave 1 (4 poeng)
-Bestem integralene. 
-
+:::::::::::::::{exercise} Oppgave 1 (4 poeng)
+Bestem integralene.
 
 :::::::::::::{part} a
+
 $$
 \int\limits_0^2 \left(e^{2x} + x\right) \d x
 $$
 
 
-:::::{answer-2}
+::::{answer}
 $$
 \int\limits_0^2 \left(e^{2x} + x\right) \d x = \dfrac{e^4 + 3}{2}
 $$
+::::
 
-
-::::{solution-2}
+::::{solution}
 Vi finner først en antiderivert til integranden:
 
 $$
@@ -50,30 +53,23 @@ $$
 \int\limits_0^2 (e^{2x} + x) \d x = F(2) - F(0) = \left(\dfrac{1}{2} e^4 + 2\right) - \dfrac{1}{2} = \dfrac{e^4 + 3}{2}.
 $$
 ::::
-:::::
 :::::::::::::
 
 
-
-
 :::::::::::::{part} b
----
-open:
----
-
 $$
 \int \dfrac{\sin (\ln x)}{x} \d x
 $$
 
 
-
-:::::{answer-2}
+::::{answer}
 $$
 \int \dfrac{\sin (\ln x)}{x} \d x = -\cos (\ln x) + C
 $$
+::::
 
 
-::::{solution-2}
+::::{solution}
 Vi bruker substitusjon:
 
 $$
@@ -94,9 +90,14 @@ $$
 \end{align*}
 $$
 ::::
-:::::
+
+
 :::::::::::::
+
+
+
 :::::::::::::::
+
 
 
 
@@ -104,9 +105,7 @@ $$
 
 
 
-
-
-:::::::::::::::{exercise-2} Oppgave 2 (4 poeng)
+:::::::::::::::{exercise} Oppgave 2 (4 poeng)
 Du får vite dette om en funksjon $f$
 
 * Funksjonen er definert for $x > 0$
@@ -118,13 +117,13 @@ Du får vite dette om en funksjon $f$
 Bestem $f(x)$.
 
 
-:::::{answer-2}
+::::{answer}
 $$
 f(x) = -\dfrac{2}{x} + 3.
 $$
+::::
 
-
-::::{solution-2}
+::::{solution}
 Fra analysens fundamentalteorem har vi at
 
 $$
@@ -165,29 +164,25 @@ $$
 f(x) = -\dfrac{2}{x} + 3.
 $$
 ::::
-:::::
+
 :::::::::::::
 
 
 To andre funksjoner, $g$ og $h$, er gitt ved $g(x) = x$ og $h(x) = -\dfrac{3}{x} + 4$ for $x > 0$.
 
 
-
 :::::::::::::{part} b
----
-open:
----
-
 Finn arealet av området avgrenset av grafene til $g$ og $h$.
 
 
-:::::{answer-2}
+
+::::{answer}
 $$
 -3 \ln 3 + 4.
 $$
+::::
 
-
-::::{solution-2}
+::::{solution}
 Vi finner først skjæringspunktene mellom grafene til $g$ og $h$ ved å løse likningen
 
 $$
@@ -264,30 +259,29 @@ A &= F(3) - F(1) \\
 \end{align*}
 $$
 ::::
-:::::
+
+
 :::::::::::::
 :::::::::::::::
-
 
 
 ---
 
 
+:::::::::::::::{exercise} Oppgave 3 (4 poeng)
 
 
-
-:::::::::::::::{exercise-2} Oppgave 3 (4 poeng)
 :::::::::::::{part} a
 Bestem $\sin v$ og $\tan v$ når $\cos v = \dfrac{2}{3}$ og $v$ er en vinkel i 4. kvadrant.
 
 
-:::::{answer-2}
+::::{answer}
 $$
 \sin v = -\dfrac{\sqrt{5}}{3} \qog \tan v = -\dfrac{\sqrt{5}}{2}
 $$
+::::
 
-
-::::{solution-2}
+::::{solution}
 Fra Pytagoras' identitet har vi at
 
 $$
@@ -318,18 +312,12 @@ $$
 \sin v = -\dfrac{\sqrt{5}}{3} \qog \tan v = -\dfrac{\sqrt{5}}{2}
 $$
 ::::
-:::::
+
+
 :::::::::::::
 
 
-
-
-
 :::::::::::::{part} b
----
-open:
----
-
 Løs likningen
 
 $$
@@ -337,15 +325,14 @@ $$
 $$
 
 
-
-:::::{answer-2}
+::::{answer}
 $$
 x = \dfrac{1}{2} \or x = \dfrac{11}{2} \or x = \dfrac{13}{2}
 $$
+::::
 
 
-
-::::{solution-2}
+::::{solution}
 Vi løser likningen generelt først:
 
 $$
@@ -401,9 +388,16 @@ Det betyr at løsningen av likningen er
 $$
 x = \dfrac{1}{2} \or x = \dfrac{11}{2} \or x = \dfrac{13}{2}
 $$
+
+
 ::::
-:::::
+
+
 :::::::::::::
+
+
+::::::::::::::
+
 :::::::::::::::
 
 
@@ -411,15 +405,12 @@ $$
 ---
 
 
-
-
-
-:::::::::::::::{exercise-2} Oppgave 4 (2 poeng)
+:::::::::::::::{exercise} Oppgave 4 (2 poeng)
 I koordinatsystemet nedenfor ser du grafen til en funksjon $f$.
 
 
 :::{plot}
-width: 70%
+width: 80%
 function: 2 * cos(2 * x - pi) - 1, (-2 * pi, 3 * pi), f
 xmin: -3 * pi/2
 xmax: 2 * pi + pi/2
@@ -433,13 +424,14 @@ ymax: 3
 Bestem et mulig funksjonsuttrykk $f(x)$.
 
 
-:::::{answer-2}
+
+::::{answer}
 $$
 f(x) = 2 \sin \left(2x - \dfrac{\pi}{2}\right) - 1.
 $$
+::::
 
-
-::::{solution-2}
+::::{solution}
 Vi starter med et generelt uttrykk for funksjonen gitt ved 
 
 $$
@@ -494,19 +486,16 @@ $$
 f(x) = 2 \sin \left(2x - \dfrac{\pi}{2}\right) - 1.
 $$
 ::::
-:::::
+
 
 :::::::::::::::
-
-
 
 
 ---
 
 
+:::::::::::::::{exercise} Oppgave 5 (2 poeng)
 
-
-:::::::::::::::{exercise-2} Oppgave 5 (2 poeng)
 :::{plot}
 width: 70%
 function: 2 * x - 1
@@ -519,7 +508,6 @@ ymax: 8
 
 I koordinatsystemet ovenfor ser du grafen til funksjonen $f$ gitt ved
 
-
 $$
 f(x) = 2x - 1.
 $$
@@ -529,13 +517,14 @@ Et omdreiningslegeme framkommer ved at grafen til $f$ fra $x = 1$ til $x = 3$, d
 Regn ut volumet til omdreiningslegemet.
 
 
-:::::{answer-2}
+::::{answer}
 $$
 V = \dfrac{62\pi}{3}.
 $$
+::::
 
 
-::::{solution-2}
+::::{solution}
 Volumet av omdreiningslegemet er gitt ved 
 
 $$
@@ -564,18 +553,19 @@ V &= \pi \int\limits_{1}^3 (2x - 1)^2 \d x = \pi \int\limits_{1}^3 u^2 \cdot \df
 \end{align*}
 $$
 ::::
-:::::
+
+
 :::::::::::::::
 
 
 ---
 
 
-:::::::::::::::{exercise-2} Oppgave 6 (4 poeng)
+
+:::::::::::::::{exercise} Oppgave 6 (4 poeng)
 I et kunstprosjekt skal Selma bygge et stort tårn ved å legge kvadratiske treplater oppå hverandre. Hun starter med en treplate med sidelengde $5~\mathrm{m}$. 
 
 Når hun bygger videre, skal sidelengden til hver ny treplate være $0.1~\mathrm{m}$ kortere enn sidelengden til treplaten under.
-
 
 :::::::::::::{part} a
 Sett opp en aritmetisk rekke som viser summen av sidelengdene til treplatene i tårnet. 
@@ -583,15 +573,15 @@ Sett opp en aritmetisk rekke som viser summen av sidelengdene til treplatene i t
 Hvor mange treplater kan det maksimalt bli i tårnet til Selma?
 
 
-:::::{answer-2}
+::::{answer}
 Rekke
 : $S = 4\cdot \left(5 + 4.9 + 4.8 + \ldots + 0.1\right)$
 
 Maks antall ledd
 : $n = 50$
+::::
 
-
-::::{solution-2}
+::::{solution}
 Vi har at startverdien til rekka er $a_1 = 5$ og at differansen er $d = -0.1$. Rekka vil derfor være gitt ved 
 
 $$
@@ -618,7 +608,6 @@ $$
 
 Altså kan det maksimalt bli $50$ treplater i tårnet til Selma.
 ::::
-:::::
 :::::::::::::
 
 
@@ -626,19 +615,15 @@ Vilfred skal bygge et annet stort tårn ved å legge kvadratiske treplater oppå
 
 Når han bygger videre, skal sidelengden til hver ny treplate være $10~\%$ kortere enn sidelengden til treplaten under.
 
-
 :::::::::::::{part} b
----
-open:
----
 Hvor stort kan det samlede arealet av platene bli i tårnet til Vilfred?
 
 
-:::::{answer-2}
+::::{answer}
 $100~\mathrm{m}^2$
+::::
 
-
-::::{solution-2}
+::::{solution}
 Vi har at startverdien til rekka er $a_1 = 19$. Siden sidelengden til hver ny plate er $10~\%$ kortere enn sidelengden til treplaten under, vil kvotienten i rekka være
 
 $$
@@ -665,17 +650,19 @@ $$
 
 Altså vil det samlede arealet av platene i tårnet til Vilfred kunne bli $100~\mathrm{m}^2$.
 ::::
-:::::
-:::::::::::::
-:::::::::::::::
 
+
+:::::::::::::
+
+
+:::::::::::::::
 
 
 ---
 
 
 
-:::::::::::::::{exercise-2} Oppgave 7 (7 poeng)
+:::::::::::::::{exercise} Oppgave 7 (7 poeng)
 Et plan $\alpha$ er gitt ved likningen
 
 $$
@@ -685,16 +672,15 @@ $$
 Punktene $A(1, 2, 1)$, $B(2, 0, -2)$ og $C(-1, 2, 2)$ ligger i planet.
 
 
-
 :::::::::::::{part} a
 Avgjør om punktet $D(3, 1, -1)$ ligger i planet $\alpha$.
 
 
-:::::{answer-2}
+::::{answer}
 Nei.
+::::
 
-
-::::{solution-2}
+::::{solution}
 Vi setter inn $(x, y, z) = (3, 1, -1)$ i planlikningen og ser om den er tilfredsstilt:
 
 $$
@@ -703,20 +689,12 @@ $$
 
 Altså er ikke likningen tilfredsstilt som betyr at punktet $D$ ikke ligger i planet $\alpha$.
 ::::
-:::::
 :::::::::::::
 
-
-
 :::::::::::::{part} b
----
-open:
----
-
 Bruk kryssprodukt til å vise at $[2, -5, 4]$ er en normalvektor til planet.
 
-
-::::{solution-2}
+::::{solution}
 En mulig normalvektor til planet vil være $\lvec{AB} \times \lvec{AC}$. Vi regner ut de to vektorene først: 
 
 $$
@@ -760,7 +738,6 @@ Altså får vi en vektor som er antiparallell med $[2, -5, 4]$ som betyr at $[2,
 
 :::::::::::::
 
-
 En kule tangerer planet $\alpha$ i et punkt $P$.
 
 Kuleflaten er gitt ved likningen
@@ -771,13 +748,10 @@ $$
 
 
 :::::::::::::{part} c
----
-open:
----
 Vis at punktet $(0, 9, -1)$ er sentrum i kulen.
 
 
-::::{solution-2}
+::::{solution}
 Generelt er likningen til en kule gitt ved med sentrum $(x_0, y_0, z_0)$ og radius $r$ gitt ved
 
 $$
@@ -810,47 +784,42 @@ $$
 Ved avlesning finner vi derfor at sentrum i kulen er gitt ved $(x_0, y_0, z_0) = (0, 9, -1)$.
 ::::
 
+
 :::::::::::::
 
-
 :::::::::::::{part} d
----
-open:
----
 Bestem en parameterframstilling for linjen som går gjennom sentrum i kulen og punktet $P$
 
 
-:::::{answer-2}
+::::{answer}
 $$
 \vec{r} = [2t, 9 - 5t, -1 + 4t].
 $$
+::::
 
-
-::::{solution-2}
+::::{solution}
 Siden planet $\alpha$ tangerer kulen, vil normalvektoren $\vec{n}_\alpha$ til $\alpha$ være en retningsvektor til linja gjennom sentrum $S$ og tangeringspunktet $P$. Dermed vil en parameterframstilling for linja være gitt ved 
 
 $$
 \vec{r}(t) = \lvec{OS} + \vec{n}_\alpha \cdot t = [0, 9, -1] + [2, -5, 4] \cdot t = [2t, 9 - 5t, -1 + 4t].
 $$
 ::::
-:::::
+
+
 :::::::::::::
 
 
 :::::::::::::{part} e
----
-open:
----
 Bestem konstanten $k$ i likningen for kuleflaten.
 
 
-:::::{answer-2}
+::::{answer}
 $$
 k = 37
 $$
+::::
 
-
-::::{solution-2}
+::::{solution}
 Fra oppgave **c** har vi at radius til kula tilfredsstiller:
 
 $$
@@ -904,9 +873,11 @@ Altså må
 $$
 k = 37
 $$
+
 ::::
-:::::
 :::::::::::::
+
+
 :::::::::::::::
 
 
@@ -915,7 +886,7 @@ $$
 
 
 
-:::::::::::::::{exercise-2} Oppgave 8 (3 poeng)
+:::::::::::::::{exercise} Oppgave 8 (3 poeng)
 :::::::::::::{summary} Påstand
 Dersom to vektorer $\vec{p}$ og $\vec{q}$ er ortogonale, er $\abs{\vec{p} + \vec{q}}^2 = \abs{\vec{p}}^2 + \abs{\vec{q}}^2$.
 :::::::::::::
@@ -950,21 +921,19 @@ Altså er påstanden riktig.
 Forklar hvorfor dette ikke er et gyldig matematisk bevis for påstanden.
 
 
-::::{solution-2}
+::::{solution}
 Elevens bevis tar utgangspunkt i ett eksempel. Dette er ikke nok til å bevise påstanden. Det kan *tenkes* at det finnes moteksempler der påstanden ikke er riktig, og ett eksempel er ikke nok til å utelukke dette. For at beviset skal være gyldig, må det vise at påstanden er riktig for alle ortogonale vektorer, og ikke bare for ett spesifikt eksempel.
 ::::
+
+
 :::::::::::::
 
-
-
 :::::::::::::{part} b
----
-open:
----
 Bevis påstanden ved hjelp av vektorregning.
 
 
-::::{solution-2}
+
+::::{solution}
 La $\vec{p}$ og $\vec{q}$ være ortogonale vektorer. Da har vi at 
 
 $$
@@ -987,20 +956,22 @@ er dersom $\vec{p} \cdot \vec{q} = 0$. Dette skjer dersom de to vektorene er ort
 
 Ergo er påstanden sann.
 ::::
+
+
 :::::::::::::
+
+
+
 
 :::::::::::::::
 
 
 ---
 
-
 ## Del 2 – 2 timer – Med hjelpemidler
 
 
-
-
-:::::::::::::::{exercise-2} Oppgave 1 (6 poeng)
+:::::::::::::::{exercise} Oppgave 1 (6 poeng)
 Selskapet IntCom er en internettleverandør. Selskapet sørger for overføring av data mellom kundene og internett. Datatrafikken varierer gjennom døgnet.
 
 Tabellen nedenfor viser datatrafikken (gigabit per time) et døgn i mai.
@@ -1020,12 +991,12 @@ labels: Tidspunkt (klokkeslett), Datatrafikk (gigabit per time)
 22:00, $87~810$
 :::
 
-
 :::::::::::::{part} a
 Lag en god modell for datatrafikken $S(t)$ gigabit per time, $t$ timer etter midnatt dette døgnet.
 
 
-::::{solution-2}
+
+::::{solution}
 Vi bruker regresjon med en modell på formen
 
 $$
@@ -1056,9 +1027,11 @@ En god modell for datatrafikken er derfor gitt ved
 $$
 S(t) = 63~190 + 37~228 \cdot \sin\left(0.24t - 2.96\right)
 $$
-::::
-:::::::::::::
 
+
+::::
+
+:::::::::::::
 
 Videre i oppgaven skal du bruke modellen
 
@@ -1068,20 +1041,15 @@ $$
 
 for datatrafikken $D(t)$, $t$ timer etter midnatt dette døgnet.
 
-
-
 :::::::::::::{part} b
----
-open:
----
 Når var datatrafikken ut fra selskapet mer enn $90~000$ gigabit per time ifølge modellen?
 
 
-:::::{answer-2}
+::::{answer}
 Mellom klokken 16 og 22.
+::::
 
-
-::::{solution-2}
+::::{solution}
 Vi løser ulikheten $D(t) > 90~000$ for $t \in \langle 0, 24\rangle$ med CAS: 
 
 
@@ -1093,24 +1061,21 @@ width: 70%
 :::
 
 Altså er datatrafikken fra selskapet mer enn $90~000$ gigabit per time for $t \in \langle 15.9, 22.2\rangle$ som vil si ca. mellom klokken 16 og klokken 22.
+
 ::::
-:::::
+
 :::::::::::::
 
 
-
 :::::::::::::{part} c
----
-open:
----
 Når økte datatrafikken raskest, og hvor stor var denne økningen ifølge modellen?
 
 
-:::::{answer-2}
+::::{answer}
 Når klokken er ca. 12:30 øker datatrafikken raskest. Da øker den med ca. $8~880$ gigabit per time *per* time.
+::::
 
-
-::::{solution-2}
+::::{solution}
 Datatrafikken øker raskest når $D(t)'' = 0$ og $D'(t) > 0$. Vi løser den første likningen med CAS og sjekker at den deriverte er positiv:
 
 :::{figure} ./figurer/1/c/sol.png
@@ -1121,25 +1086,22 @@ width: 60%
 :::
 
 Når klokken er ca. 12:30 øker datatrafikken raskest. Da øker den med ca. $8~880$ gigabit per time *per* time.
+
+
 ::::
-:::::
+
 :::::::::::::
 
-
-
-
 :::::::::::::{part} d
----
-open:
----
 Hvor stor del av den totale datamengden som IntCom overførte dette døgnet, ble overført i løpet av arbeidsdagen, det vil si mellom klokken 8 og klokken 16, ifølge modellen?
 
 
-:::::{answer-2}
+::::{answer}
 Ca. $31.5~\%$. 
+::::
 
 
-::::{solution-2}
+::::{solution}
 Den totale datamengden som overføres i løpet av hele døgnet kan tilnærmes som
 
 $$
@@ -1164,29 +1126,28 @@ width: 60%
 
 Altså blir omtrent $31.5~\%$ av den totale datamengden overført i løpet av arbeidsdagen.
 ::::
-:::::
-:::::::::::::
-:::::::::::::::
 
+:::::::::::::
+
+
+:::::::::::::::
 
 
 ---
 
 
-
-:::::::::::::::{exercise-2} Oppgave 2 (4 poeng)
+:::::::::::::::{exercise} Oppgave 2 (4 poeng)
 Leddene i en uendelige rekke er gitt ved den rekursive sammenhengen
 
 $$
 a_n = (a_{n - 1} - 1)^2
 $$
 
-
 :::::::::::::{part} a
 Lag et program som skriver ut de 6 første leddene i rekken dersom $a_1 = 5$.
 
 
-::::{solution-2}
+::::{solution}
 Et mulig program som løser oppgaven er
 
 :::{code-block} python
@@ -1211,19 +1172,18 @@ som gir utskriften
 2517530625
 6337960442777829376
 :::
+
 ::::
+
 :::::::::::::
 
 
 
 :::::::::::::{part} b
----
-open:
----
 Avgjør om det finnes et heltall $a_1$ som gjør at rekken blir konvergent.
 
 
-::::{solution-2}
+::::{solution}
 Rekka $S$ er gitt ved 
 
 $$
@@ -1285,21 +1245,26 @@ Dermed vil $a_n$ vokse uten begrensning som betyr at rekka heller ikke konverger
 
 Dermed finnes det ikke et heltall $a_1$ som gjør at rekken blir konvergent.
 ::::
-:::::::::::::
-:::::::::::::::
 
+:::::::::::::
+
+
+:::::::::::::::
 
 
 ---
 
 
-:::::::::::::::{exercise-2} Oppgave 3 (6 poeng)
+:::::::::::::::{exercise} Oppgave 3 (6 poeng)
+
+
 :::{figure} ./bilder/fly.jpg
 ---
 class: no-click
 width: 40%
 ---
 :::
+
 
 Et lite propellfly må nødlande på en motorvei. Posisjonen $\vec{r}(t)$ til flyet $t$ sekunder etter at nødlandingen har startet, er gitt ved
 
@@ -1314,11 +1279,11 @@ Motorveien ligger i $xy$-planet. Enhetene langs aksene er meter.
 Hvor høyt over motorveien er flyet $4$ sekunder etter at nødlandingen har startet?
 
 
-:::::{answer-2}
+::::{answer}
 $18$ meter.
+::::
 
-
-::::{solution-2}
+::::{solution}
 Høyden over motorveien vil være gitt ved $z(4)$ som er 
 
 $$
@@ -1327,26 +1292,21 @@ $$
 
 Altså er flyet $18~\mathrm{m}$ over motorveien $4$ sekunder etter at nødlandingen har startet.
 ::::
-:::::
+
 :::::::::::::
 
 
-
 :::::::::::::{part} b
----
-open:
----
-
 Bestem banefarten idet flyet lander på motorveien.
 
 > Banefart er lengden av fartsvektoren.
 
 
-:::::{answer-2}
+::::{answer}
 $10.3~\mathrm{m/s}$.
+::::
 
-
-::::{solution-2}
+::::{solution}
 Vi må først finne ved hvilket tidspunkt flyet lander på motorveien ved å løse $z(t) = 0$. Deretter regner vi ut banefarten $\abs{\vec{r}'(t)}$ ved dette tidspunktet. Vi gjør dette med CAS: 
 
 :::{figure} ./figurer/3/b/sol.png
@@ -1357,20 +1317,20 @@ width: 70%
 :::
 
 Altså finner vi at flyet har en banefart på $10.3~\mathrm{m/s}$ idet det lander på motorveien.
-::::
-:::::
-:::::::::::::
 
+::::
+
+:::::::::::::
 
 :::::::::::::{part} c
 Ved hvilket tidspunkt under nødlandingen er banefarten $14.3~\mathrm{m/s}$? 
 
 
-:::::{answer-2}
+::::{answer}
 Ca. $8$ sekunder etter at nødlandingen startet.
+::::
 
-
-::::{solution-2}
+::::{solution}
 Vi løser likningen $\abs{\vec{r}'(t)} = 14.3$ med CAS:
 
 :::{figure} ./figurer/3/c/sol.png
@@ -1383,7 +1343,8 @@ width: 80%
 I oppgave **b** fant vi at flyet lander når $t = 10$, så det må bety at banefarten til flyet er $14.3~\mathrm{m/s}$ når $t \approx 8$ sekunder etter at nødlandingen har startet.
 
 ::::
-:::::
+
+
 :::::::::::::
 
 
@@ -1391,19 +1352,15 @@ En fugl er i posisjonen $(131, 67, 23)$ idet flyet starter nødlandingen. Fuglen
 
 Fuglen holder en jevn banefart på $12~\mathrm{m/s}$.
 
-
 :::::::::::::{part} d
----
-open:
----
 Vil fuglen treffe flyet?
 
 
-:::::{answer-2}
+::::{answer}
 Ja!
+::::
 
-
-::::{solution-2}
+::::{solution}
 Vi lar $\lvec{OA} = [131, 67, 23]$ være startposisjonen til fuglen. Flyet og fuglen kan møtes i $\lvec{OB} = \left[125, 8, \dfrac{25}{2}\right]$. Vi finner derfor først en retningsvektor 
 
 $$
@@ -1436,17 +1393,17 @@ Både fuglen og flyet er i skjæringspunktet mellom kurvene sine omtrent ved $t 
 
 > Merk at selv om fuglen er i punktet 0.02 sekunder senere, så vil det i praksis bety at fuglen og flyet treffer hverandre siden det er så liten tidsforskjell. 
 ::::
-:::::
-:::::::::::::
-:::::::::::::::
 
+:::::::::::::
+
+
+:::::::::::::::
 
 
 ---
 
 
-
-:::::::::::::::{exercise-2} Oppgave 4 (3 poeng)
+:::::::::::::::{exercise} Oppgave 4 (3 poeng)
 Du får i oppdrag å lage en vase med form som på bildet nedenfor.
 
 Vasen skal romme omtrent $1.5~\mathrm{L}$ vann og ha høyde $20~\mathrm{cm}$.
@@ -1471,8 +1428,7 @@ Tegn grafen til funksjonen i et koordinatsystem der enhetene langs aksene er cen
 Husk å begrunne ditt valg av parameterne $A$, $c$, $\varphi$ og $d$, og la funksjonsuttrykket komme tydelig fram i besvarelsen din.
 
 
-
-::::{solution-2}
+::::{solution}
 Vi forestiller oss at vi skal dreie en sinusfunksjon om førsteaksen som vist nedenfor.
 
 
@@ -1554,13 +1510,8 @@ xlabel: $x/\mathrm{cm}$
 ylabel: $y/\mathrm{cm}$
 fontsize: 24
 :::
+
+
 ::::
+
 :::::::::::::::
-
-
-
-
-
-
-
-
