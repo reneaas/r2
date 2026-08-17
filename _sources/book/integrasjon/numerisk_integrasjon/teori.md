@@ -79,8 +79,9 @@ Fellestrekket for alle rektangelmetodene er at de har to komponenter:
 Hvis vi bruker stadig flere rektangler med mindre bredde, så vil tilnærmingen komme nærmere og nærmere den faktiske verdien til integralet. I grensen der vi lar antall rektangler $N \to \infty$, så vil tilnærmingen konvergere mot den ekte verdien av integralet.
 
 
-### Venstretilnærming
-Å bruke en **venstretilnærming** handler om å bruke det venstre endepunktet på hvert intervall til å bestemme høyden på rektangelet. Høyden av rektangelet vil være lik funksjonsverdien i dette punktet.
+:::::::::::::::{summary} Venstretilnærming
+
+Å bruke en **venstretilnærming** handler om å bruke det venstre endepunktet på hvert intervall til å bestemme høyden på rektangelet. Høyden av rektangelet vil være lik funksjonsverdien i venstre endepunkt på hvert intervall.
 
 
 ::::{multi-plot2}
@@ -126,6 +127,12 @@ text: b, 0, "$b$", bottom-center
 :::
 
 ::::
+
+
+
+
+
+:::::::::::::::
 
 
 

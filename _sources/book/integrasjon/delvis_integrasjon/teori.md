@@ -1,19 +1,15 @@
 # Delvis integrasjon
 
 
-:::{admonition} Læringsmål
----
-class: tip
----
-* Kunne bruke delvis integrasjon til å løse ubestemte og bestemte integraler.
-* Kunne begrunne delvis integrasjon som en konsekvens av produktregelen for derivasjon og analysens fundamentalteorem.
+:::{goals} Læringsmål
+* kunne regne ut ubestemte og bestemte integraler ved bruk av delvis integrasjon
 :::
 
 
 Siden integrasjon handler om å finne antideriverte, er det naturlig å snu seg mot derivasjonsreglene for å utvikle teknikker for å løse integraler. Her skal vi ta utgangspunkt i produktregelen for derivasjon for å utvikle en teknikk for å løse integraler som kalles **delvis integrasjon**.
 
 
-:::::::::::::::{summary} Delvis integrasjon
+:::::::::::::::{summary} Integrasjonsteknikk: Delvis integrasjon
 For to funksjoner $u$ og $v$ gjelder
 
 $$
@@ -27,10 +23,7 @@ $$
 $$
 
 
-::::{admonition} Forklaring av formelen
----
-class: theory, dropdown
----
+::::{proof}
 Produktregelen for derivasjon sier at
 
 $$
@@ -75,19 +68,21 @@ $$
 \underbrace{\int u' \cdot v}_{\text{vanskelig integral}} = u\cdot v - \underbrace{\int u \cdot v'}_{\text{enkelt integral}}
 $$
 
+Vi ser derfor på venstresiden av formelen som vårt integral, og så bruker vi formelen til å omgjøre det til et enklere integral på høyresiden. Vi står fritt til å velge hvilken av funksjonene som skal være $u'$ og hvilken som skal være $v$.
+
 
 
 :::::::::::::::{example} Eksempel 1
 Finn integralet
 
-$$
+$$ 
 \int x \cdot e^x \, \d x
 $$
 
 
 ::::{solution}
 ---
-dropdown: 0
+open:
 ---
 Her kan vi ikke umiddelbart se noen enkel antiderivert. Men siden integralet er et produkt av to funksjoner, kan vi prøve oss på delvis integrasjon
 
@@ -152,6 +147,232 @@ $$
 $$
 
 ::::
+
+
+:::::::::::::::
+
+
+
+---
+
+
+
+:::::::::::::::{exercise} Underveisoppgave 1
+Regn ut 
+
+$$
+\int x \ln x \d x
+$$
+
+
+:::::{answer}
+$$
+\int x \ln x \d x = \frac{1}{4}x^2(2\ln x - 1) + C
+$$
+
+
+::::{solution}
+Vi prøver delvis integrasjon med
+
+$$
+u' = x \limplies u = \frac{1}{2}x^2
+$$
+
+$$
+v = \ln x \limplies v' = \frac{1}{x}
+$$
+
+Setter vi dette inn i formelen for delvis integrasjon får vi
+
+$$
+\int u' \cdot v = u \cdot v - \int u \cdot v'
+$$
+
+$$
+\begin{align*}
+\int x \ln x \d x &= \frac{1}{2}x^2 \ln x - \int \frac{1}{2}x^2 \cdot \frac{1}{x} \d x \\
+\\
+&= \frac{1}{2}x^2 \ln x - \int \frac{1}{2}x \d x \\
+\\
+&= \frac{1}{2}x^2 \ln x - \frac{1}{2} \cdot \frac{1}{2}x^2 + C \\
+\\
+&= \frac{1}{2}x^2 \ln x - \frac{1}{4}x^2 + C \\
+\\
+&= \frac{1}{4}x^2(2\ln x - 1) + C
+\end{align*}
+$$
+::::
+:::::
+
+:::::::::::::::
+
+
+
+---
+
+
+
+:::::::::::::::{example} Eksempel 2
+Regn ut
+
+$$
+\int\limits_1^e 2x \ln x \d x
+$$
+
+
+::::{solution}
+---
+open:
+---
+Vi finner det ubestemte integralet først:
+
+$$
+\int 2x \ln x \d x
+$$
+
+Vi bruker delvis integrasjon med
+
+$$
+u' = 2x \limplies u = x^2
+$$
+
+$$
+v = \ln x \limplies v' = \frac{1}{x}
+$$
+
+Setter vi dette inn i formelen for delvis integrasjon får vi
+
+$$
+\int u' \cdot v = u \cdot v - \int u \cdot v'
+$$
+
+$$
+\begin{align*}
+\int 2x \ln x \d x &= x^2 \ln x - \int x^2 \cdot \frac{1}{x} \d x \\
+\\
+&= x^2 \ln x - \int x \d x \\
+\\
+&= x^2 \ln x - \frac{1}{2}x^2 + C \\
+\\
+&= \frac{1}{2}x^2(2\ln x - 1) + C
+\end{align*}
+$$
+
+En antiderivert er derfor $F(x) = \dfrac{1}{2}x^2(2\ln x - 1)$. Vi kan nå bruke dette til å regne ut det bestemte integralet:
+
+$$
+F(1) = \frac{1}{2} \cdot 1^2 (2\ln 1 - 1) = -\frac{1}{2}
+$$
+
+$$
+F(e) = \frac{1}{2} \cdot e^2 (2\ln e - 1) = \frac{1}{2} \cdot e^2 (2 - 1) = \frac{1}{2}e^2
+$$
+
+Dermed er 
+
+$$
+\begin{align*}
+\int\limits_1^e 2x \ln x \d x &= F(e) - F(1) \\
+\\
+&= \frac{1}{2}e^2 - \left(-\frac{1}{2}\right) \\
+\\
+&= \frac{1}{2}e^2 + \frac{1}{2} \\
+\\
+&= \frac{1}{2}(e^2 + 1)
+\end{align*}
+$$
+::::
+
+:::::::::::::::
+
+
+---
+
+
+
+:::::::::::::::{exercise} Underveisoppgave 2
+Regn ut
+
+$$
+\int\limits_1^{e} x^2 \ln x \d x
+$$
+
+
+
+:::::{answer}
+$$
+\int\limits_1^{e} x^2 \ln x \d x = \frac{1}{9}(2e^3 + 1)
+$$
+
+::::{solution}
+Vi finner det ubestemte integralet først:
+
+$$
+\int x^2 \ln x \d x
+$$
+
+Vi prøver delvis integrasjon med 
+
+$$
+u' = x^2 \limplies u = \frac{1}{3}x^3
+$$
+
+$$
+v = \ln x \limplies v' = \frac{1}{x}
+$$
+
+Så setter vi dette inn i formelen for delvis integrasjon:
+
+$$
+\int u' \cdot v = u \cdot v - \int u \cdot v'
+$$
+
+$$
+\begin{align*}
+\int x^2 \ln x \d x &= \frac{1}{3}x^3 \ln x - \int \frac{1}{3}x^3 \cdot \frac{1}{x} \d x \\
+\\
+&= \frac{1}{3}x^3 \ln x - \int \frac{1}{3}x^2 \d x \\
+\\
+&= \frac{1}{3}x^3 \ln x - \frac{1}{3} \cdot \frac{1}{3}x^3 + C \\
+\\
+&= \frac{1}{3}x^3 \ln x - \frac{1}{9}x^3 + C \\
+\\
+&= \frac{1}{9}x^3(3\ln x - 1) + C
+\end{align*}
+$$
+
+Siden vi skal regne ut et bestemt integral, setter vi $C = 0$ for å få en så enkel antiderivert som mulig. Vi har da at 
+
+$$
+F(x) = \frac{1}{9}x^3(3\ln x - 1)
+$$
+
+som gir
+
+$$
+F(1) = \frac{1}{9} \cdot 1^3 (3\ln 1 - 1) = -\frac{1}{9}
+$$
+
+$$
+F(e) = \frac{1}{9} \cdot e^3 (3\ln e - 1) = \frac{1}{9} \cdot e^3 (3 - 1) = \frac{2}{9}e^3
+$$
+
+Dermed blir det bestemte integralet
+
+
+$$
+\begin{align*}
+\int\limits_1^{e} x^2 \ln x \d x &= F(e) - F(1) \\
+\\
+&= \frac{2}{9}e^3 - \left(-\frac{1}{9}\right) \\
+\\
+&= \frac{2}{9}e^3 + \frac{1}{9} \\
+\\
+&= \frac{1}{9}(2e^3 + 1)
+\end{align*}
+$$
+::::
+:::::
 
 
 :::::::::::::::
