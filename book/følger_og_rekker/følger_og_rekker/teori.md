@@ -1,9 +1,6 @@
 # Følger og rekker
 
-:::{admonition} Læringsmål
----
-class: tip
----
+:::{goals} Læringsmål
 * Kunne veksle mellom eksplisitte summer og summetegn, og regne ut summen av rekker skrevet med summetegn. 
 * Kunne finne formelen for det $n$-te leddet i en følge.
 * Kunne finne rekursive formler for leddene i en følge.
@@ -101,6 +98,126 @@ $$
 :::::::::::::::
 
 
+:::::::::::::::{summary} Representasjoner av følger
+Følger kan representeres på to måter med
+
+1. en **eksplisitt formel** som gir verdien til det $n$-te leddet direkte.
+2. en **rekursjonsformel** som forteller hvordan vi finner det neste leddet dersom vi kjenner verdien til det forrige leddet.
+
+
+::::::::{grid}
+---
+gutter: 2
+columns: 12
+---
+::::::{grid-item-card}
+---
+columns: 6
+---
+**Eksplisitt formel**
+^^^
+$$
+a_n = 3 + 2(n - 1)
+$$
+
+::::::
+
+::::::{grid-item-card}
+---
+columns: 6
+---
+**Rekursjonsformel**
+^^^
+$$
+a_{n + 1} = a_n + 2 \qder a_1 = 3
+$$
+
+::::::
+
+::::::::
+
+
+
+:::::::::::::::
+
+
+
+
+:::::::::::::::{example} Eksempel 2
+En følge $\{a_n\}$ er gitt ved den eksplisitte formelen 
+
+$$
+a_n = 2n - 1 \qfor n = 1, 2, 3, \ldots
+$$
+
+Finn de fem første leddene i følgen.
+
+
+::::{solution}
+---
+open:
+---
+Vi regner ut verdiene i følgen for $n = 1, 2, 3, 4, 5$
+
+:::{table}
+width: 50%
+labels: $n$, $a_n = 2n - 1$
+$1$, $2 \cdot 1 - 1 = 1$
+$2$, $2 \cdot 2 - 1 = 3$
+$3$, $2 \cdot 3 - 1 = 5$
+$4$, $2 \cdot 4 - 1 = 7$
+$5$, $2 \cdot 5 - 1 = 9$
+:::
+
+Altså er de fem første leddene i følgen gitt ved 
+
+$$
+1, 3, 5, 7, 9
+$$
+
+som er de fem første oddetallene.
+
+
+::::
+
+
+:::::::::::::::
+
+
+---
+
+
+:::::::::::::::{example} Eksempel 3
+En tallfølge er definert som 
+
+$$
+a_{n + 1} = 2 a_n + 1 \qfor n = 1, 2, 3, \ldots \qder a_1 = 4.
+$$
+
+Bestem $a_4$ (det fjerde leddet i følgen).
+
+::::{solution}
+---
+open:
+---
+Vi bruker rekursjonsformelen til å regne ut $a_2$, $a_3$ og $a_4$.
+
+$$
+\begin{align*}
+a_2 &= 2 a_1 + 1 = 2 \cdot 4 + 1 = 9 \\
+\\
+a_3 &= 2 a_2 + 1 = 2 \cdot 9 + 1 = 19 \\
+\\
+a_4 &= 2 a_3 + 1 = 2 \cdot 19 + 1 = 39
+\end{align*}
+$$
+
+Altså er $a_4 = 39$.
+::::
+
+:::::::::::::::
+
+
 ## Rekker
 En **rekke** er en sum av leddene i en følge. 
 
@@ -186,7 +303,7 @@ der notasjonen forteller oss at vi skal plusse sammen leddene $a_n$ for $n = 1, 
 ---
 
 
-:::::::::::::::{example} Eksempel 2
+:::::::::::::::{example} Eksempel 4
 En rekke er gitt ved
 
 $$
@@ -198,7 +315,7 @@ Bestem verdien til $S_4$.
 
 ::::{solution}
 ---
-dropdown: 0
+open:
 ---
 Vi har at
 
@@ -222,7 +339,7 @@ $$
 
 
 
-:::::::::::::::{example} Eksempel 3
+:::::::::::::::{example} Eksempel 5
 Skriv rekken nedenfor med summetegn:
 
 $$
@@ -232,7 +349,7 @@ $$
 
 ::::{solution}
 ---
-dropdown: 0
+open:
 ---
 Vi kan merke oss at leddene i rekka er tallfølgen
 
@@ -250,133 +367,6 @@ der vi har brukt at hvert ledd er gitt ved
 
 $$
 a_n = n^2 \qfor n = 1, 2, 3, 4, 5
-$$
-::::
-:::::::::::::::
-
-
-
----
-
-
-## Rekursjonsformler 
-I mange følger er det enklere å beskrive hvordan vi går fra ett ledd til det neste. Det vil si at vi har en sammenheng mellom to naboledd $a_n$ og $a_{n + 1}$ i følgen.
-Dette gir oss en formel som vi kan bruke til å regne ut $a_{n + 1}$ dersom vi kjenner til verdien til $a_n$. En slik sammenheng kalles for en **rekursjonsformel**, eller en **rekursiv sammenheng**.
-
-:::::::::::::::{example} Eksempel 4
-En tallfølge er definert som 
-
-$$
-a_{n + 1} = 2 a_n + 1 \qfor n = 1, 2, 3, \ldots \qder a_1 = 4.
-$$
-
-Bestem $a_4$ (det fjerde leddet i følgen).
-
-::::{solution}
----
-dropdown: 0
----
-Vi bruker rekursjonsformelen til å regne ut $a_2$, $a_3$ og $a_4$.
-
-$$
-\begin{align*}
-a_2 &= 2 a_1 + 1 = 2 \cdot 4 + 1 = 9 \\
-\\
-a_3 &= 2 a_2 + 1 = 2 \cdot 9 + 1 = 19 \\
-\\
-a_4 &= 2 a_3 + 1 = 2 \cdot 19 + 1 = 39
-\end{align*}
-$$
-
-Altså er $a_4 = 39$.
-::::
-
-:::::::::::::::
-
-
----
-
-Vi kan også finne en rekursiv formel ut ifra en formel for det $n$-te leddet i en følge.
-
-
-:::::::::::::::{example} Eksempel 5
-En tallfølge er gitt ved formelen
-
-$$
-a_n = 3n + 2 \qfor n = 1, 2, 3, \ldots
-$$
-
-Finn en rekursiv formel for leddene i følgen.
-
-::::{solution}
----
-dropdown: 0
----
-Vi regner ut differansen mellom det $n$-te og det $(n + 1)$-te leddet i følgen.
-
-$$
-\begin{align*}
-a_{n + 1} - a_n &= (3(n + 1) + 2) - (3n + 2) \\
-\\
-&= 3n + 3 + 2 - 3n - 2 \\
-\\
-&= 3
-\end{align*}
-$$
-
-Altså har vi at 
-
-$$
-a_{n + 1} = a_n + 3 \qfor n = 1, 2, 3, \ldots \qder a_1 = 5
-$$
-::::
-:::::::::::::::
-
-
-
----
-
-
-I mange tilfeller er det enklest å finne en rekursiv formel for leddene i en følge. 
-
-
-:::::::::::::::{example} Eksempel 6
-En følge $\{a_n\}$ er gitt ved
-
-$$
-1, 2, 4, 7, 11, \ldots
-$$
-
-Finn en rekursiv formel for leddene i følgen.
-
-::::{solution}
----
-dropdown: 0
----
-Her kan vi se etter et mønster i differansen mellom naboledd i følgen:
-
-$$
-\begin{align*}
-a_2 - a_1 &= 2 - 1 = 1 \\
-\\
-a_3 - a_2 &= 4 - 2 = 2 \\
-\\
-a_4 - a_3 &= 7 - 4 = 3 \\
-\\
-a_5 - a_4 &= 11 - 7 = 4 
-\end{align*}
-$$
-
-Ut ifra differansene, så kan vi se at 
-
-$$
-a_{n + 1} - a_n = n \qfor n = 1, 2, 3, \ldots
-$$
-
-Altså har vi en rekursiv formel for leddene i følgen:
-
-$$
-a_{n + 1} = a_n + n \qfor n = 1, 2, 3, \ldots \qder a_1 = 1
 $$
 ::::
 :::::::::::::::

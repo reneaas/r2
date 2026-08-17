@@ -1,10 +1,7 @@
 # Anvendelser av integrasjon
 
 
-:::{admonition} Læringsmål
----
-class: tip
----
+:::{goals} Læringsmål
 * Kunne bestemme volumet til omdreiningslegemer som er dreid om $x$-aksen eller $y$-aksen med integrasjon
 * Kunne bestemme arealet avgrenset av to funksjonsgrafer.
 * Kunne bestemme lengden av en kurve med integrasjon
@@ -13,11 +10,11 @@ class: tip
 
 
 
-## Areal avgrenset funksjonsgrafer
+## Areal avgrenset av funksjonsgrafer
 
 
 
-:::::::::::::::{summary} Areal mellom funksjonsgrafer
+:::::::::::::::{summary} Areal avgrenset av to funksjonsgrafer
 
 :::{plot}
 width: 100%
@@ -44,6 +41,101 @@ Dersom funksjonsgrafene til to funksjoner $f$ og $g$ skjærer hverandre i $x = a
 $$
 A = \int\limits_a^b \abs{f(x) - g(x)} \, \d x
 $$
+
+
+:::::::::::::::
+
+
+
+:::::::::::::::{example} Eksempel 1
+:::{plot}
+width: 100%
+align: right
+function: x**2, f
+function: sqrt(x), g
+xmin: -0.5
+xmax: 1.5
+ymin: -0.5
+ymax: 2
+ticks: off
+fill-between: g(x), f(x), (0, 1), purple, where=above
+fontsize: 26
+:::
+
+
+Til høyre vises grafene til funksjonene
+
+$$
+f(x) = x^2 \qog g(x) = \sqrt{x}
+$$
+
+
+Finn arealet avgrenset av de to grafene.
+
+
+::::{solution}
+---
+open:
+---
+Vi starter med å finne skjæringspunktene mellom de to funksjonsgrafene slik at vi vet hva integrasjonsgrensene skal være:
+
+$$
+f(x) = g(x) \liff x^2 = \sqrt{x} \limplies x^4 = x
+$$
+
+$$
+x^4 - x = 0 \limplies x(x^3 - 1) = 0 
+$$
+
+som gir 
+
+$$
+x = 0 \or x^3 = 1 \limplies x = 0 \or x = 1.
+$$
+
+
+På intervallet $[0, 1]$ vil $g(x) > f(x)$. Da blir arealet av området avgrenset av de to grafene gitt ved
+
+$$
+A = \int\limits_0^1 \abs{f(x) - g(x)} \d x = \int\limits_0^1 (g(x) - f(x)) \d x
+$$
+
+Vi løser det ubestemte integralet først: 
+
+$$
+\begin{align*}
+\int (g(x) - f(x)) \d x &= \int (\sqrt{x} - x^2) \d x \\
+\\
+&= \int \sqrt{x} \d x - \int x^2 \d x \\
+\\
+&= \int x^{1/2} \d x - \dfrac{1}{3}x^3 \\
+\\
+&= \dfrac{1}{3/2}x^{3/2} - \dfrac{1}{3}x^3 + C \\
+\\
+&= \dfrac{2}{3}x^{3/2} - \dfrac{1}{3}x^3 + C.
+\end{align*}
+$$
+
+Vi velger den enkleste antideriverte ved å sette $C = 0$. Den er da gitt ved 
+
+$$
+F(x) = \dfrac{2}{3}x^{3/2} - \dfrac{1}{3}x^3
+$$
+
+Arealet blir da
+
+$$
+\begin{align*}
+A &= F(1) - F(0) \\
+\\
+&= \left(\dfrac{2}{3} \cdot 1^{3/2} - \dfrac{1}{3} \cdot 1^3\right) - \left(\dfrac{2}{3} \cdot 0^{3/2} - \dfrac{1}{3} \cdot 0^3\right) \\
+\\
+&= \dfrac{2}{3} - \dfrac{1}{3} \\
+\\
+&= \dfrac{1}{3}
+\end{align*}
+$$
+::::
 
 
 :::::::::::::::
@@ -99,64 +191,87 @@ $$
 ---
 
 
-:::::::::::::::{example} Eksempel 1
+:::::::::::::::{example} Eksempel 2
 
+Grafen til funksjonen $f(x) = 2x + 1$ dreies om 360 grader om $x$-aksen på intervallet $[1, 3]$. 
+
+
+::::{multi-plot2}
+---
+rows: 1
+cols: 2
+---
 :::{plot}
-axis: equal
 width: 100%
-align: right
-let: R = 4
-function: sqrt(R**2 - x**2), (-R, R), blue, f
-xmin: -(R + 1)
-xmax: R + 1
-ymin: -R
-ymax: R
-fontsize: 32
-text: -R, 0, "$-R$", bottom-center
-text: R, 0, "$R$", bottom-left
-ticks: off
+function: 2*x + 1, (1, 3), f, blue
+xmin: 0
+ymin: 0
+xmax: 4
+ymax: 8
 :::
 
 
-
-Funksjonen $f$ viser en halvsirkel med radius $R$ som har sentrum i origo:
-
-$$
-f(x) = \sqrt{R^2 - x^2} \qfor x \in [-R, R].
-$$
-
-Bestem volumet til omdreiningslegemet vi får om vi dreier grafen til $f$ $360\degree$ om $x$-aksen på intervallet $[-R, R]$.
-
-
-
-:::{clear}
+:::{plot3d}
+layout: symmetric
+xrange: (0, 8)
+yrange: (-2.5, 8)
+zrange: (-2.5, 8)
+ticks: false
+xlabel: $x$
+ylabel: $y$
+zlabel: $z$
+solid-of-revolution: x + 1, (1, 5), blue, alpha=0.35, disks=6
 :::
+
+
+::::
+
+Finn volumet av omdreiningslegemet.
+
+
 
 ::::{solution}
 ---
-dropdown: 0
+open:
 ---
-Når vi dreier halvsirkelen 360 grader om $x$-aksen, så får vi en kule med radius $R$.
+Volumet av omdreiningslegemet er gitt ved
 
-Volumet til omdreiningslegemet er gitt ved
+$$
+V = \pi \int\limits_1^3 f(x)^2 \d x = \pi \int\limits_1^3 (2x + 1)^2 \d x
+$$
+
+Vi kan bruke substitusjon for å løse integralet enklest mulig:
+
+$$
+u = 2x + 1 \limplies \d u = 2\d x \liff \d x = \dfrac{\d u}{2}
+$$
+
+De nye integrasjonsgrensene blir da
+
+$$
+u(1) = 2 \cdot 1 + 1 = 3 \qog u(3) = 2\cdot 3 + 1 = 7
+$$
+
+Dermed blir volumet
 
 $$
 \begin{align*}
-V &= \pi \int\limits_{-R}^R f(x)^2 \, \d x \\
+V &= \pi \int\limits_3^7 u^2 \dfrac{\d u}{2} \\
 \\
-&= \pi \int\limits_{-R}^R \left(\sqrt{R^2 - x^2}\right)^2 \, \d x \\
+&= \dfrac{\pi}{2} \int\limits_3^7 u^2 \d u \\
 \\
-&= \pi \int\limits_{-R}^R \left(R^2 - x^2\right) \, \d x \\
+&= \dfrac{\pi}{2} \left[\dfrac{1}{3}u^3\right]_3^7 \\
 \\
-&= \pi \left[ R^2 x - \dfrac{1}{3} x^3 \right]_{-R}^R \\
+&= \dfrac{\pi}{6} \left(7^3 - 3^3\right) \\
 \\
-&= \pi \left( R^3 - \dfrac{1}{3} R^3 - \left(-R^3 + \dfrac{1}{3} R^3\right) \right) \\
+&= \dfrac{\pi}{6} \left(343 - 27\right) \\
 \\
-&= \dfrac{4}{3}\pi R^3
+&= \dfrac{\pi}{6} \cdot 316 \\
+\\
+&= \dfrac{158\pi}{3}
 \end{align*}
 $$
 ::::
-
 
 :::::::::::::::
 

@@ -10,7 +10,7 @@ class: tip
 * Kunne regne ut ubestemte integraler for enkle elementærfunksjoner.
 :::
 
-## Integraler som arealer med fortegn
+## Bestemte integraler: Areal med fortegn
 
 :::{plot}
 fontsize: 32
@@ -63,22 +63,19 @@ Grafen til funksjonen $f$ er vist til høyre.
 Regn ut integralet
 
 $$
-\int\limits_0^5 f(x) \, \d x
+\int\limits_0^5 f(x) \dx
 $$
 
-
-:::{clear}
-:::
 
 
 ::::{solution}
 ---
-dropdown: 0
+open:
 ---
 Vi finner arealet mellom grafen til $f$ og $x$-aksen. Da får vi en trekant med grunnlinje $5$ og høyde $5$ som betyr at integralet (som er lik arealet) er 
 
 $$
-\int\limits_0^5 f(x) \, \d x = \dfrac{1}{2} \cdot 5 \cdot 5 = \frac{25}{2}
+\int\limits_0^5 f(x) \dx = \dfrac{1}{2} \cdot 5 \cdot 5 = \frac{25}{2}
 $$
 ::::
 
@@ -143,29 +140,25 @@ Grafen til funksjonen $f$ er vist til høyre.
 Regn ut
 
 $$
-\int\limits_0^5 f(x) \, \d x
+\int\limits_0^5 f(x) \dx
 $$
 
-
-
-:::{clear}
-:::
 
 
 ::::{solution}
 ---
-dropdown: 0
+open:
 ---
 Integralet
 
 $$
-\int\limits_0^5 f(x) \, \d x
+\int\limits_0^5 f(x) \dx
 $$
 
 kan deles opp i to mindre integraler
 
 $$
-\int\limits_0^5 f(x) \, \d x = \int\limits_0^3 f(x) \, \d x + \int\limits_3^5 f(x) \, \d x
+\int\limits_0^5 f(x) \dx = \int\limits_0^3 f(x) \dx + \int\limits_3^5 f(x) \dx
 $$
 
 Med det første integralet ligger grafen til $f$ på oversiden av $x$-aksen, så dette integralet blir positivt. Med det andre integralet ligger grafen til $f$ på undersiden av $x$-aksen, så dette integralet blir negativt. 
@@ -173,19 +166,19 @@ Med det første integralet ligger grafen til $f$ på oversiden av $x$-aksen, så
 For det første integralet, så har vi en trekant med grunnlinje $3$ og høyde $+2$ som betyr at 
 
 $$
-\int\limits_0^3 f(x) \, \d x = \dfrac{1}{2} \cdot 3 \cdot 2 = 3
+\int\limits_0^3 f(x) \dx = \dfrac{1}{2} \cdot 3 \cdot 2 = 3
 $$
 
 For det andre integralet, så har vi en trekant med grunnlinje $2$ og høyde $-4$ som betyr at
 
 $$
-\int\limits_3^5 f(x) \, \d x = \dfrac{1}{2} \cdot 2 \cdot (-4) = -4
+\int\limits_3^5 f(x) \dx = \dfrac{1}{2} \cdot 2 \cdot (-4) = -4
 $$
 
 Dermed er det samlede integralet lik
 
 $$
-\int\limits_0^5 f(x) \, \d x = 3 + (-4) = -1
+\int\limits_0^5 f(x) \dx = 3 + (-4) = -1
 $$
 ::::
 
@@ -199,11 +192,11 @@ $$
 I eksempel 1 og 2 er funksjonene bygget opp av rette linjer som gjør det mulig å regne ut integralene med geometri. Men de fleste funksjoner vi jobber med er jo ikke så enkle. For å regne ut integralet av mer kompliserte funksjoner trenger vi en mer generell sammenheng. Dette får vi ved hjelp av det som kalles for **analysens fundamentalteorem**.
 
 
-## Analysens fundamentalteorem: Bestemte integraler
+## Analysens fundamentalteorem
 Analysens fundamentalteorem forteller oss at å regne ut et integral 
 
 $$
-\int\limits_a^b f(x) \, \d x
+\int\limits_a^b f(x) \dx
 $$
 
 er det samme som å derivere baklengs. Vi kaller det å **antiderivere**. Det vil si at det finnes en funksjon $F$ slik at $F'(x) = f(x)$. Integrasjon handler derfor om å lete etter *hvilken* funksjon $F$ vi må derivere for å få $f(x)$. Vi kaller $f(x)$ for **integranden** og $F(x)$ for den **antideriverte** til $f(x)$.
@@ -214,17 +207,26 @@ Integrasjon og derivasjon er derfor motsatte regnearter.
 For en funksjon $f$ finnes det en funksjon $F$ slik at $F'(x) = f(x)$ for alle $x$. Da gjelder:
 
 $$
-\int\limits_a^b f(x) \, \d x = F(b) - F(a)
+\int\limits_a^b f(x) \dx = F(b) - F(a)
 $$
 
 der $F$ er en **antiderivert** til $f$.
 
+Skrivemåten nedenfor er svært vanlig:
+
+$$
+\left[ F(x) \right]_a^b = F(b) - F(a)
+$$
+
+som lar oss skrive setningen som
 
 
-::::{admonition} Forklaring
----
-class: theory, dropdown
----
+$$
+\int\limits_a^b f(x) \dx = \left[ F(x) \right]_a^b
+$$
+
+
+::::{proof}
 :::{plot}
 width: 100%
 fontsize: 32
@@ -257,7 +259,7 @@ annotate: (b, f(b) + 1), (a + 0.5 * (b - a), 0.5 * f(a)), "$F(x + \Delta x)$", 0
 La oss tenke oss at vi har en funksjon $f$ og vi skal regne ut integralet på et intervall $[a, x]$. Arealet mellom grafen til $f$ og $x$-aksen på dette intervallet er da en funksjon $F(x)$ gitt ved
 
 $$
-F(x) = \int\limits_a^x f(x) \, \d x
+F(x) = \int\limits_a^x f(x) \dx
 $$
 
 Regner vi ut integralet på intervallet $[a, x + \Delta x]$ får vi i stedet
@@ -338,13 +340,13 @@ $$
 Regn ut integralet
 
 $$
-\int\limits_0^1 x^2 \, \d x
+\int\limits_0^1 x^2 \, \dx
 $$
 
 
 ::::{solution}
 ---
-dropdown: 0
+open:
 ---
 Vi må finne en funksjon $F$ slik at $F'(x) = x^2$. En slik funksjon er 
 
@@ -374,26 +376,25 @@ $$
 ---
 
 
-## Analysens fundamentalteorem: Ubestemte integraler
+
 Siden vi kan løse integraler ved å lete etter antideriverte, er det ganske viktig å ha gode strategier for å antiderivere funksjoner. Når vi vil finne den mest generelle antideriverte til en funksjon $f$ – det vil si at $F'(x) = f(x)$ – sier vi at vi løser et **ubestemt integral**. Dersom $F(x)$ er en antiderivert til $f(x)$, så vil også $F(x) + C$, der $C$ er en konstant, være en antiderivert siden
 
 $$
 \left[F(x) + C\right]' = F'(x) + 0 = f(x)
 $$
 
-Helt generelt har vi derfor at
+Vi sier at å finne den mest generelle antideriverte til $f(x)$ er å løse et **ubestemt integral**.
 
 
 :::::::::::::::{summary} Analysens fundamentalteorem: Ubestemte integraler
 La $F$ være en antiderivert til $f$ slik at $F'(x) = f(x)$. Da er det **ubestemte integralet** til $f$ gitt ved
 
 $$
-\int f(x) \, \d x = F(x) + C
+\int f(x) \dx = F(x) + C
 $$
 
 Konstanten $C$ kaller vi for en **integrasjonskonstant**.
 
-> Vi skriver altså ubestemte integraler uten grenser og tenker på det som at vi skal finne den mest generelle antideriverte til $f$ som gjør at $F'(x) = f(x)$.
 :::::::::::::::
 
 
@@ -408,9 +409,12 @@ Nedenfor vises en oversikt over de viktigste antideriverte vi må huske utenat.
 labels: $f(x)$, $\int f(x) \, \mathrm{d} x$
 $x^n$, $\dfrac{1}{n + 1} x^{n + 1} + C$, $n \neq -1$
 $e^x$, $e^x + C$
-$a^x$, $\dfrac{a^x}{\ln(a)} + C$, $a > 0$, $a \neq 1$
 $e^{kx}$, $\dfrac{1}{k} e^{kx} + C$, $k \neq 0$
 $\dfrac{1}{x}$, $\ln|x| + C$
+$\sin x$, $-\cos x + C$
+$\cos x$, $\sin x + C$
+$\sin (\omega x)$, $-\dfrac{1}{\omega} \cos (\omega x) + C$
+$\cos (\omega x)$, $\dfrac{1}{\omega} \sin (\omega x) + C$
 :::
 
 
@@ -448,7 +452,7 @@ $$
 
 ::::{solution}
 ---
-dropdown: 0
+open:
 ---
 Vi har at
 

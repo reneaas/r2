@@ -5,44 +5,110 @@ options:
   numbered: True
 
 parts:
-  - caption: I. Følger og rekker
+
+
+  - caption: I. Romgeometri
     numbered: 1
     chapters:
 
-    - file: book/følger_og_rekker/følger_og_rekker/teori.md
+    - file: book/romgeometri/regneregler/teori.md
       sections:
-      - file: book/følger_og_rekker/følger_og_rekker/oppgaver.md
+      - file: book/romgeometri/regneregler/oppgaver.md
         title: Oppgaver
 
-    - file: book/følger_og_rekker/aritmetiske_rekker/teori.md
+    - file: book/romgeometri/vektorproduktet/teori.md
       sections:
-      - file: book/følger_og_rekker/aritmetiske_rekker/oppgaver.md
-        title: Oppgaver
-    
-    - file: book/følger_og_rekker/geometriske_rekker/teori.md
-      sections:
-      - file: book/følger_og_rekker/geometriske_rekker/oppgaver.md
+      - file: book/romgeometri/vektorproduktet/oppgaver.md
         title: Oppgaver
 
-    - file: book/følger_og_rekker/anvendelser/teori.md
+    - file: book/romgeometri/linjer/teori.md
       sections:
-      - file: book/følger_og_rekker/anvendelser/oppgaver.md
+      - file: book/romgeometri/linjer/oppgaver.md
         title: Oppgaver
 
-    - file: book/følger_og_rekker/programmering/teori.md
+    - file: book/romgeometri/plan/teori.md
       sections:
-      - file: book/følger_og_rekker/programmering/oppgaver.md
+      - file: book/romgeometri/plan/oppgaver.md
         title: Oppgaver
 
-    # - file: book/følger_og_rekker/induksjonsbevis/teori.md
+    - file: book/romgeometri/kuler/teori.md
+      sections:
+      - file: book/romgeometri/kuler/oppgaver.md
+        title: Oppgaver
+
+    # - file: book/romgeometri/digitale_verktøy/teori.md
     #   sections:
-    #   - file: book/følger_og_rekker/induksjonsbevis/oppgaver.md
+    #   - file: book/romgeometri/digitale_verktøy/oppgaver.md
     #     title: Oppgaver
 
+    # - file: book/romgeometri/sammendrag/teori.md
 
 
 
-  # - caption: II. Integrasjon
+  - caption: II. Trigonometri
+    numbered: 1
+    chapters:
+
+    - file: book/trigonometri/enhetssirkelen/teori.md
+      sections:
+      - file: book/trigonometri/enhetssirkelen/oppgaver.md
+        title: Oppgaver
+
+    - file: book/trigonometri/identiteter/teori.md
+      sections:
+      - file: book/trigonometri/identiteter/oppgaver.md
+        title: Oppgaver
+
+    - file: book/trigonometri/likninger/teori.md
+      sections:
+      - file: book/trigonometri/likninger/oppgaver.md
+        title: Oppgaver
+
+    - file: book/trigonometri/funksjoner/teori.md
+      sections:
+      - file: book/trigonometri/funksjoner/oppgaver.md
+        title: Oppgaver
+
+    - file: book/trigonometri/derivasjon/teori.md
+      sections:
+      - file: book/trigonometri/derivasjon/oppgaver.md
+        title: Oppgaver
+
+
+  # - caption: III. Følger og rekker
+  #   numbered: 1
+  #   chapters:
+
+  #   - file: book/følger_og_rekker/følger_og_rekker/teori.md
+  #     sections:
+  #     - file: book/følger_og_rekker/følger_og_rekker/oppgaver.md
+  #       title: Oppgaver
+
+  #   - file: book/følger_og_rekker/aritmetiske_rekker/teori.md
+  #     sections:
+  #     - file: book/følger_og_rekker/aritmetiske_rekker/oppgaver.md
+  #       title: Oppgaver
+    
+  #   - file: book/følger_og_rekker/geometriske_rekker/teori.md
+  #     sections:
+  #     - file: book/følger_og_rekker/geometriske_rekker/oppgaver.md
+  #       title: Oppgaver
+
+
+  #   - file: book/følger_og_rekker/programmering/teori.md
+  #     sections:
+  #     - file: book/følger_og_rekker/programmering/oppgaver.md
+  #       title: Oppgaver
+
+  #   - file: book/følger_og_rekker/induksjonsbevis/teori.md
+  #     sections:
+  #     - file: book/følger_og_rekker/induksjonsbevis/oppgaver.md
+  #       title: Oppgaver
+
+
+
+
+  # - caption: IV. Integrasjon
   #   numbered: 1
   #   chapters:
 
@@ -77,72 +143,11 @@ parts:
   #     - file: book/integrasjon/numerisk_integrasjon/oppgaver.md
   #       title: Oppgaver
 
-
-
-  # - caption: III. Romgeometri
-  #   numbered: 1
-  #   chapters:
-
-  #   - file: book/romgeometri/regneregler/teori.md
+  #   - file: book/integrasjon/oppsummering/teori.md
   #     sections:
-  #     - file: book/romgeometri/regneregler/oppgaver.md
+  #     - file: book/integrasjon/oppsummering/oppgaver.md
   #       title: Oppgaver
 
-  #   - file: book/romgeometri/vektorproduktet/teori.md
-  #     sections:
-  #     - file: book/romgeometri/vektorproduktet/oppgaver.md
-  #       title: Oppgaver
-
-  #   - file: book/romgeometri/linjer/teori.md
-  #     sections:
-  #     - file: book/romgeometri/linjer/oppgaver.md
-  #       title: Oppgaver
-
-  #   - file: book/romgeometri/plan/teori.md
-  #     sections:
-  #     - file: book/romgeometri/plan/oppgaver.md
-  #       title: Oppgaver
-
-  #   - file: book/romgeometri/kuler/teori.md
-  #     sections:
-  #     - file: book/romgeometri/kuler/oppgaver.md
-  #       title: Oppgaver
-
-
-
-  # - caption: IV. Trigonometri
-  #   numbered: 1
-  #   chapters:
-
-  #   - file: book/trigonometri/enhetssirkelen/teori.md
-  #     sections:
-  #     - file: book/trigonometri/enhetssirkelen/oppgaver.md
-  #       title: Oppgaver
-
-  #   - file: book/trigonometri/likninger/teori.md
-  #     sections:
-  #     - file: book/trigonometri/likninger/oppgaver.md
-  #       title: Oppgaver
-
-  #   - file: book/trigonometri/identiteter/teori.md
-  #     sections:
-  #     - file: book/trigonometri/identiteter/oppgaver.md
-  #       title: Oppgaver
-
-  #   - file: book/trigonometri/funksjoner/teori.md
-  #     sections:
-  #     - file: book/trigonometri/funksjoner/oppgaver.md
-  #       title: Oppgaver
-
-  #   - file: book/trigonometri/derivasjon/teori.md
-  #     sections:
-  #     - file: book/trigonometri/derivasjon/oppgaver.md
-  #       title: Oppgaver
-
-  #   - file: book/trigonometri/integrasjon/teori.md
-  #     sections:
-  #     - file: book/trigonometri/integrasjon/oppgaver.md
-  #       title: Oppgaver
 
 
 

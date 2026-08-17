@@ -1,10 +1,7 @@
-# Geometriske rekker
+# Geometriske følger og rekker
 
 
-:::{admonition} Læringsmål
----
-class: tip
----
+:::{goals} Læringsmål
 * Kunne bestemme et uttrykk for det $n$-te leddet i en geometrisk følge.
 * Kunne bestemme summen av endelige geometriske rekker.
 * Kunne bestemme summen av uendelige geometriske rekker.
@@ -13,6 +10,8 @@ class: tip
 * Kunne bruke geometriske rekker i praktiske anvendelser. 
 :::
 
+
+En geometrisk følge $\{a_n\}$ er en følge der forholdet mellom to naboledd $a_{n + 1} / a_n$ alltid er lik en fast konstant $k$ som vi kaller for **kvotienten** til følgen. En geometrisk rekke er summen $\sum a_n$ av leddene i en geometrisk følge.
 
 
 :::::::::::::::{example} Eksempel 1
@@ -54,73 +53,235 @@ Vi kan se at hvert ledd bare er det forrige leddet ganget med $\dfrac{1}{2}$. Vi
 
 
 
----
+## Geometriske følger
 
 
-:::::::::::::::{summary} Definisjon: Geometriske rekker
-En geometriske rekke med $n$ ledd er en rekke på formen
-
-$$
-S_n = a + ak + ak^2 + ak^3 + \ldots + ak^{n - 1}
-$$
-
-
-der det $n$-te leddet er gitt ved
+:::::::::::::::{summary} Rekursiv formel for geometriske følger
+For en geometrisk følge $\{a_n\}$, gjelder
 
 $$
-a_n = ak^{n - 1} \qfor n = 1, 2, 3, \ldots
+a_{n + 1} = a_n \cdot k \qfor n = 1, 2, 3, \ldots 
 $$
 
-
+der $k$ kalles for **kvotienten** til følgen. 
 :::::::::::::::
 
 
 ---
-
 
 
 :::::::::::::::{example} Eksempel 2
-La oss ta for oss den geometriske rekka fra eksempel 1 og se hvordan vi kan vise at det må være lik $1$ selv uten den geometriske figuren. Vi har at arealet av figuren er lik
+En geometrisk følge $\{a_n\}$ er gitt ved
 
 $$
-A = \dfrac{1}{2} + \dfrac{1}{4} + \dfrac{1}{8} + \dfrac{1}{16} + \ldots
+3, 6, 12, 24, 48, \ldots
 $$
 
-Hvis vi nå ganger hele likningen med $\dfrac{1}{2}$ får vi
+Finn en rekursiv formel for leddene i følgen.
+
+::::{solution}
+---
+open:
+---
+Vi finner kvotienten ved å dele to naboledd med hverandre siden
 
 $$
-\dfrac{1}{2} \cdot A = \dfrac{1}{4} + \dfrac{1}{8} + \dfrac{1}{16} + \dfrac{1}{32} + \ldots
+a_{n + 1} = a_n \cdot k \liff k = \dfrac{a_{n + 1}}{a_n}
 $$
 
-Trekker vi den første likningen fra den siste likningen får vi:
+Da får vi
 
 $$
-A - \dfrac{1}{2} \cdot A = \dfrac{1}{2} + \dfrac{1}{4} + \dfrac{1}{8} + \dfrac{1}{16} + \ldots - \left( \dfrac{1}{4} + \dfrac{1}{8} + \dfrac{1}{16} + \dfrac{1}{32} + \ldots \right)
+k = \dfrac{6}{3} = 2
 $$
 
-Omrokkerer vi på leddene på høyre side får vi:
+Dermed har vi at 
 
 $$
-A - \dfrac{1}{2} \cdot A = \dfrac{1}{2} + \left( \dfrac{1}{4} - \dfrac{1}{4} \right) + \left( \dfrac{1}{8} - \dfrac{1}{8} \right) + \left( \dfrac{1}{16} - \dfrac{1}{16} \right) + \ldots
+a_{n + 1} = 2 \cdot a_n \qfor n = 1, 2, 3, \ldots \qder a_1 = 3
 $$
+::::
 
-Så alle ledd kansellerer hverandre bortsett fra ett som gir: 
-
-$$
-\dfrac{1}{2}\cdot A = \dfrac{1}{2}
-$$
-
-Men da må $A = 1$. 
 :::::::::::::::
 
 
 ---
 
 
-Strategien i eksempel 2 gir oss en strategi for å komme fram til en generell formel for summen av en geometrisk rekke. Rekka i eksempel 1 og 2 har uendelig mange ledd, men en geometrisk rekke kan også ha et endelig antall ledd. Vi snur oss nå mot å finne en generell formel for begge tilfeller.
+:::::::::::::::{exercise} Underveisoppgave 1
+En geometrisk følge $\{a_n\}$ er gitt ved 
+
+$$
+9, 27, 81, 243, 729, \ldots
+$$
+
+Finn en rekursiv formel for leddene i følgen.
+
+:::::{answer}
+$$
+a_{n + 1} = 3 \cdot a_n \qfor n = 1, 2, 3, \ldots \qder a_1 = 9
+$$
+
+::::{solution}
+Vi finner kvotienten $k$ ved å dele to naboledd med hverandre:
+
+$$
+k = \dfrac{a_2}{a_1} = \dfrac{27}{9} = 3
+$$
+
+Dermed har vi at 
+
+$$
+a_{n + 1} = 3 \cdot a_n \qfor n = 1, 2, 3, \ldots \qder a_1 = 9
+$$
+::::
+:::::
+
+:::::::::::::::
+
+
+
+:::::::::::::::{summary} Eksplisitt formel for geometriske følger
+For geometrisk følge $\{a_n\}$ med startledd $a_1$ og kvotient $k$, er det $n$-te leddet i følgen gitt ved
+
+$$
+a_n = a_1 \cdot k^{n - 1} \qfor n = 1, 2, 3, \ldots
+$$
+:::::::::::::::
+
+
+---
+
+
+:::::::::::::::{example} Eksempel 3
+En geometrisk følge $\{a_n\}$ er gitt ved
+
+$$
+3, 6, 12, 24, 48, \ldots
+$$
+
+Bestem $a_n$.
+
+::::{solution}
+---
+open:
+---
+Vi har at $a_1 = 3$ og $a_2 = 6$. Da blir kvotienten
+
+$$
+k = \dfrac{a_2}{a_1} = \dfrac{6}{3} = 2
+$$
+
+Dermed får vi 
+
+$$
+a_n = a_1 \cdot k^{n - 1} = 3 \cdot 2^{n - 1} \qfor n = 1, 2, 3, \ldots
+$$
+
+
+::::
+
+:::::::::::::::
+
+
+---
+
+
+:::::::::::::::{exercise} Underveisoppgave 2
+En geometrisk følge $\{a_n\}$ er gitt ved
+
+$$
+4, 2, 1, \dfrac{1}{2}, \dfrac{1}{4}, \ldots
+$$
+
+Finn en eksplisitt formel for $a_n$.
+
+:::::{answer}
+$$
+a_n = 4 \cdot \left( \dfrac{1}{2} \right)^{n - 1} = \dfrac{4}{2^{n - 1}} \qfor n = 1, 2, 3, \ldots
+$$
+
+::::{solution}
+Kvotienten $k$ er gitt ved
+
+$$
+k = \dfrac{a_{2}}{a_1} = \dfrac{2}{4} = \dfrac{1}{2} 
+$$
+
+Dermed er en eksplisitt formel for $a_n$ gitt ved
+
+$$
+a_n = a_1 \cdot k^{n - 1} = 4 \cdot \left( \dfrac{1}{2} \right)^{n - 1} = \dfrac{4}{2^{n - 1}} \qfor n = 1, 2, 3, \ldots
+$$
+::::
+:::::
+
+:::::::::::::::
+
+
+---
+
+
+## Geometriske rekker
+
+En geometrisk rekke er summen av leddene i en geometrisk følge. Den kan enten ha endelig mange ledd, eller den kan ha uendelig mange ledd. Vi tar et motiverende eksempel før vi ser på det generelle tilfellet.
+
+
+:::::::::::::::{example} Eksempel 4
+En geometrisk rekke er gitt ved
+
+$$
+S = 1 + 2 + 4 + 8 + 16 + \ldots + 1024
+$$
+
+Finn summen av rekka.
+
+
+::::{solution}
+---
+open:
+---
+Vi kan se at kvotienten er lik $2$ siden hvert ledd er det dobbelte av det forrige leddet. Vi skriver først opp rekka slik den er, deretter skriver vi opp rekka på nytt ganget med kvotienten $2$:
+
+$$
+\begin{align*}
+S &= 1 + 2 + 4 + 8 + 16 + \ldots + 1024 \\
+\\
+2\cdot S &= 2 + 4 + 8 + 16 + \ldots + 1024 + 2048
+\end{align*}
+$$
+
+Trekker vi den siste likningen fra den første likningen får vi:
+
+$$
+2S - S = 2 + 4 + 8 + 16 + \ldots + 1024 + 2048 - \left( 1 + 2 + 4 + 8 + 16 + \ldots + 1024 \right)
+$$
+
+som vi kan skrive som
+
+$$
+S = 2048 - 1 + (2 - 2) + (4 - 4) + (8 - 8) + \ldots + (1024 - 1024)
+$$
+
+som gir
+
+$$
+S = 2048 - 1 = 2047
+$$
+
+
+
+
+::::
+
+:::::::::::::::
+
+
+Strategien i eksempel 4 er det vi skal bruke til å finne en helt generell formel for summen av en endelig geometrisk rekke, som er det neste vi skal se på.
+
+
 
 ## Endelige geometriske rekker
-
 
 
 :::::::::::::::{summary} Formel for en endelig geometrisk rekke
@@ -136,12 +297,15 @@ $$
 S_n = a \cdot \dfrac{1 - k^n}{1 - k} \qfor k \neq 1
 $$
 
+Hvis første $a_1$ og siste ledd $a_n$ i rekka er kjent, kan formelen også skrives som
+
+$$
+S_n = \dfrac{a_1 - a_n \cdot k}{1 - k} \qfor k \neq 1
+$$
 
 
-::::{admonition} Bevis
----
-class: theory, dropdown
----
+
+::::{proof} Vis forklaring
 Vi har at 
 
 $$
@@ -197,7 +361,7 @@ som var det vi skulle vise.
 
 
 
-:::::::::::::::{example} Eksempel 3
+:::::::::::::::{example} Eksempel 5
 Bestem summen av rekka 
 
 $$
@@ -206,28 +370,24 @@ $$
 
 ::::{solution}
 ---
-dropdown: 0
+open:
 ---
-Rekka er en geometrisk rekke med startledd $a = 1$ og kvotient $k = \dfrac{1}{2}$. Vi trenger antall ledd i rekka som vi kan finne ved å bruke at
+Rekka er en geometrisk rekke med startledd $a_1 = 1$ og kvotient $k = \dfrac{1}{2}$. Det siste leddet er gitt ved $a_n = \dfrac{1}{2048}$. Vi kan bruke formelen for summen av en endelig geometrisk rekke:
 
 $$
-a_n = 1\cdot \left(\dfrac{1}{2}\right)^{n - 1} = \dfrac{1}{2048}
-$$
-
-Vi har at $2048 = 2^{11}$, så vi kan skrive som betyr at 
-
-$$
-\dfrac{1}{2^{n - 1}} = \dfrac{1}{2^{11}}
-$$
-
-$$
-n - 1 = 11 \liff n = 10
-$$
-
-Altså består rekka av $10$ ledd. Da kan vi bruke formelen for en endelig geometrisk rekke:
-
-$$
-S_{10} = 1 \cdot \dfrac{1 - \left( \dfrac{1}{2} \right)^{10}}{1 - \dfrac{1}{2}} = 2 \cdot \left( 1 - \dfrac{1}{1024} \right) = 2 - \dfrac{1}{512} = \dfrac{1023}{512}
+\begin{align*}
+S &= \dfrac{a_1 - a_n \cdot k}{1 - k} \\
+\\
+&= \dfrac{1 - \dfrac{1}{2048} \cdot \dfrac{1}{2}}{1 - \dfrac{1}{2}} \\
+\\
+&= \dfrac{1 - \dfrac{1}{4096}}{\dfrac{1}{2}} \\
+\\
+&= 2\cdot \left(1 - \dfrac{1}{4096}\right) \\
+\\
+&= 2 - \dfrac{1}{2048} \\
+\\
+&= \dfrac{4095}{2048}
+\end{align*}
 $$
 ::::
 
@@ -236,8 +396,50 @@ $$
 
 
 
+---
+
+
+:::::::::::::::{exercise} Underveisoppgave 3
+En geometrisk rekke er gitt ved
+
+$$
+S = 3 + 1 + \dfrac{1}{3} + \dfrac{1}{9} + \ldots + \dfrac{1}{729}
+$$
+
+
+:::::{answer}
+$$
+S = \dfrac{6560}{1458}
+$$
+
+::::{solution}
+Det første leddet er $a_1 = 3$ og det siste leddet er $a_n = \dfrac{1}{729}$. Kvotienten er gitt ved $k = \dfrac{1}{3}$ siden det neste leddet alltid er $1/3$ av det forrige. Dermed er summen av rekka gitt ved
+
+$$
+\begin{align*}
+S &= \dfrac{a_1 - a_n \cdot k}{1 - k} \\
+\\
+&= \dfrac{3 - \dfrac{1}{729} \cdot \dfrac{1}{3}}{1 - \dfrac{1}{3}} \\
+\\
+&= \dfrac{3 - \dfrac{1}{2187}}{\dfrac{2}{3}} \\
+\\
+&= \dfrac{3}{2} \cdot \left( 3 - \dfrac{1}{2187} \right) \\
+\\
+&= \dfrac{9}{2} - \dfrac{1}{1458} \\
+\\
+&= \dfrac{6560}{1458}
+\end{align*}
+$$
+::::
+:::::
+
+
+:::::::::::::::
+
+
+
 ## Uendelige geometriske rekker
-Som i eksempel 1 og 2, så kan en geometrisk rekke også ha uendelig mange ledd. I mange situasjoner vil rekka nærme seg et bestemt tall, og da sier vi at rekka **konvergerer** – eller kaller rekka for **konvergent**. Hvis summen av rekka går mot $\pm \infty$, så sier vi at rekka **divergerer** – eller kaller rekka for **divergent**.
+Som vi så i eksempel 1 og 2, så kan en geometrisk rekke også ha uendelig mange ledd. I mange situasjoner vil rekka nærme seg et bestemt tall, og da sier vi at rekka **konvergerer** – eller kaller rekka for **konvergent**. Hvis summen av rekka går mot $\pm \infty$, så sier vi at rekka **divergerer** – eller kaller rekka for **divergent**.
 
 
 :::::::::::::::{summary} Uendelige geometriske rekker
@@ -256,10 +458,7 @@ S = \dfrac{a}{1 - k}
 $$
 
 
-::::{admonition} Bevis
----
-class: theory, dropdown
----
+::::{proof} Vis forklaring
 Vi starter med summen av de første $n$ leddene i rekka:
 
 $$
@@ -283,7 +482,7 @@ som var det vi skulle vise.
 
 
 
-:::::::::::::::{example} Eksempel 4
+:::::::::::::::{example} Eksempel 6
 En rekke er gitt ved
 
 $$
@@ -295,7 +494,7 @@ Bestem summen av rekka.
 
 ::::{solution}
 ---
-dropdown: 0
+open:
 ---
 Rekka er en geometrisk rekke med startledd $a = 1$ og kvotient $k = \dfrac{1}{3}$. Siden $\abs{k} < 1$, så konvergerer rekka og summen av rekka er gitt ved formelen for uendelige geometriske rekker:
 
@@ -303,6 +502,38 @@ $$
 S = \dfrac{a}{1 - k} = \dfrac{1}{1 - \dfrac{1}{3}} = \dfrac{1}{2/3} = \dfrac{3}{2}
 $$
 ::::
+:::::::::::::::
+
+
+---
+
+
+
+:::::::::::::::{exercise} Underveisoppgave 4
+En geometrisk rekke er gitt ved
+
+$$
+S = 2 + \dfrac{2}{5} + \dfrac{2}{25} + \dfrac{2}{125} + \ldots
+$$
+
+Finn summen av rekka.
+
+
+:::::{answer}
+$$
+S = \dfrac{5}{2}
+$$
+
+::::{solution}
+Vi har startledd $a = 2$ og kvotient $k = 1/5$ siden hvert ledd alltid blir en $1/5$ av det forrige. Summen av rekka er da
+
+$$
+S = \dfrac{a}{1 - k} = \dfrac{2}{1 - \dfrac{1}{5}} = \dfrac{2}{4/5} = \dfrac{10}{2} = \dfrac{5}{2}
+$$
+::::
+:::::
+
+
 :::::::::::::::
 
 
@@ -336,7 +567,7 @@ De verdiene av $x$ som tilfredsstiller at $\abs{k(x)} \lt 1$ kalles for **konver
 ---
 
 
-:::::::::::::::{example} Eksempel 5
+:::::::::::::::{example} Eksempel 7
 Gitt rekka
 
 $$
@@ -349,7 +580,7 @@ Bestem konvergensområdet til rekka.
 
 ::::{solution}
 ---
-dropdown: 0
+open:
 ---
 Vi kan se at kvotienten til rekka er
 
@@ -370,5 +601,42 @@ $$
 $$
 
 ::::
+
+:::::::::::::::
+
+
+
+---
+
+
+:::::::::::::::{exercise} Underveisoppgave 5
+Gitt rekka 
+
+$$
+S(x) = 1 + \dfrac{3x}{4} + \dfrac{9x^2}{16} + \dfrac{27x^3}{64} + \ldots
+$$
+
+Finn konvergensområdet til rekka.
+
+
+:::::{answer}
+$$
+\abs{x} \lt \dfrac{4}{3}
+$$
+
+::::{solution}
+Kvotienten til rekka er gitt ved
+
+$$
+k(x) = \dfrac{3x}{4}
+$$
+
+Konvergensområdet til rekka må tilfredsstille at
+
+$$
+\abs{k(x)} \lt 1 \liff \abs{\dfrac{3x}{4}} \lt 1 \liff \abs{x} \lt \dfrac{4}{3}
+$$
+::::
+:::::
 
 :::::::::::::::

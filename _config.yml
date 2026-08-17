@@ -110,6 +110,12 @@ sphinx:
           proj: ["\\mathrm{proj}_{#1}\\left(#2\\right)", 2]
           mstack: ["\\begin{array}{c}#1\\end{array}", 1]
           d: ["\\, \\mathrm{d}"]
+          dx: ["\\, \\mathrm{d} x"]
+          du: ["\\, \\mathrm{d} u"]
+          dz: ["\\, \\mathrm{d} z"]
+          dt: ["\\, \\mathrm{d} t"]
+          dy: ["\\, \\mathrm{d} y"]
+          ds: ["\\, \\mathrm{d} s"]
 
 
 
