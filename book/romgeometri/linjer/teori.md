@@ -675,7 +675,7 @@ $$
 $$
 
 $$
-s = -\dfrac{8}{2} = -2
+s = -\dfrac{4}{2} = -2
 $$
 
 Vi trenger strengt tatt ikke å finne verdien til $t$, men vi må huske på at verdien til $s$ hører til $\vec r_m(s)$. Koordinatene til skjæringspunktet blir derfor
