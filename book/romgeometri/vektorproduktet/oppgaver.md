@@ -346,8 +346,292 @@ Siden begge prikkprodukter er lik null, så betyr det at $\vec a \times \vec b$ 
 ---
 
 
-
 :::::::::::::::{exercise} Oppgave 4
+Tre vektorer er gitt ved 
+
+$$
+\vec{a} = \mqty[-2, 1, 3] \qog \vec{b} = \mqty[1, 2, -1] \qog \vec{c} = \mqty[3, 0, 2]
+$$
+
+
+:::::::::::::{part} a
+Finn $\vec{a} \times \vec{b}$.
+
+
+:::::{answer}
+$$
+\vec{a} \times \vec{b} = [-7, 1, -5]
+$$
+
+::::{solution}
+$$
+\begin{align*}
+\vec{a} \times \vec{b} &= \mqty|\vec{e}_x & \vec{e}_y & \vec{e}_z \\ -2 & 1 & 3 \\ 1 & 2 & -1| \\
+\\
+&= \vec{e}_x \cdot \underbrace{\mqty|1 & 3 \\ 2 & -1|}_{=-7} - \vec{e}_y \cdot \underbrace{\mqty|-2 & 3 \\ 1 & -1|}_{=-1} + \vec{e}_z \cdot \underbrace{\mqty|-2 & 1 \\ 1 & 2|}_{=-5} \\
+\\
+&= -7 \cdot \vec{e}_x + 1 \cdot \vec{e}_y - 5 \cdot \vec{e}_z \\
+\\
+&= [-7, 1, -5]
+\end{align*}
+$$
+::::
+:::::
+
+:::::::::::::
+
+
+:::::::::::::{part} b
+Finn $\vec{b} \times \vec{c}$.
+
+
+:::::{answer}
+$$
+\vec{b} \times \vec{c} = [4, -5, -6]
+$$
+
+
+::::{solution}
+$$
+\begin{align*}
+\vec{b} \times \vec{c} &= \mqty|\vec{e}_x & \vec{e}_y & \vec{e}_z \\ 1 & 2 & -1 \\ 3 & 0 & 2| \\
+\\
+&= \vec{e}_x \cdot \mqty|2 & -1 \\ 0 & 2| - \vec{e}_y \cdot \mqty|1 & -1 \\ 3 & 2| + \vec{e}_z \cdot \mqty|1 & 2 \\ 3 & 0| \\
+\\
+&= \vec{e}_x \cdot (4 - 0) - \vec{e}_y \cdot (2 + 3) + \vec{e}_z \cdot (0 - 6) \\
+\\
+&= 4 \cdot \vec{e}_x - 5 \cdot \vec{e}_y - 6 \cdot \vec{e}_z \\
+\\
+&= [4, -5, -6]
+\end{align*}
+$$
+::::
+:::::
+
+
+:::::::::::::
+
+
+:::::::::::::{part} c
+Finn $(\vec{a} \times \vec{b}) \times \vec{c}$.
+
+
+:::::{answer}
+$$
+(\vec{a} \times \vec{b}) \times \vec{c} = [2, -1, -3]
+$$
+
+::::{solution}
+$$
+\begin{align*}
+(\vec{a} \times \vec{b}) \times \vec{c} &= \mqty|\vec{e}_x & \vec{e}_y & \vec{e}_z \\ -7 & 1 & -5 \\ 3 & 0 & 2| \\
+\\
+&= \vec{e}_x \cdot \mqty|1 & -5 \\ 0 & 2| - \vec{e}_y \cdot \mqty|-7 & -5 \\ 3 & 2| + \vec{e}_z \cdot \mqty|-7 & 1 \\ 3 & 0| \\
+\\
+&= \vec{e}_x \cdot (2 - 0) - \vec{e}_y \cdot (-14 + 15) + \vec{e}_z \cdot (0 - 3) \\
+\\
+&= 2 \cdot \vec{e}_x - 1 \cdot \vec{e}_y - 3 \cdot \vec{e}_z \\
+\\
+&= [2, -1, -3]
+\end{align*}
+$$
+::::
+:::::
+
+:::::::::::::
+
+
+:::::::::::::{part} d
+Finn $\vec{a} \times (\vec{b} \times \vec{c})$.
+
+
+:::::{answer}
+$$
+\vec{a} \times (\vec{b} \times \vec{c}) = [9, 0, 6]
+$$
+
+::::{solution}
+$$
+\begin{align*}
+\vec{a} \times (\vec{b} \times \vec{c}) &= \mqty|\vec{e}_x & \vec{e}_y & \vec{e}_z \\ -2 & 1 & 3 \\ 4 & -5 & -6| \\
+\\
+&= \vec{e}_x \cdot \mqty|1 & 3 \\ -5 & -6| - \vec{e}_y \cdot \mqty|-2 & 3 \\ 4 & -6| + \vec{e}_z \cdot \mqty|-2 & 1 \\ 4 & -5| \\
+\\
+&= \vec{e}_x \cdot (-6 + 15) - \vec{e}_y \cdot (12 - 12) + \vec{e}_z \cdot (10 - 4) \\
+\\
+&= 9 \cdot \vec{e}_x - 0 \cdot \vec{e}_y + 6 \cdot \vec{e}_z \\
+\\
+&= [9, 0, 6]
+\end{align*}
+$$
+::::
+:::::
+
+
+:::::::::::::
+
+
+:::::::::::::{part} e
+Hvilken generell sammenheng kan du trekke fra svarene i oppgave **c** og **d**? 
+
+
+:::::{answer}
+Kryssproduktet er ikke **assosiativt** som betyr at 
+
+$$
+(\vec{a} \times \vec{b}) \times \vec{c} \neq \vec{a} \times (\vec{b} \times \vec{c})
+$$
+
+Vektoren vi får er avhengig av rekkefølgen vi utfører kryssproduktene i. Vi er vant til at når vi ganger sammen tre tall $a$, $b$ og $c$, så er 
+
+$$
+(a \cdot b) \cdot c = a \cdot (b \cdot c) 
+$$
+
+så da skriver vi bare produktet som $a \cdot b \cdot c$ siden det ikke spiller noen rolle hvilke tall vi ganger sammen først. 
+
+Men dette er ikke sant for kryssproduktet.
+:::::
+
+
+:::::::::::::
+
+
+:::::::::::::::
+
+
+---
+
+
+:::::::::::::::{exercise} Oppgave 5
+Gitt vektorene 
+
+$$
+\vec a = [-2, 1, 3] \qog \vec b = [2, 0, 1] \qog \vec c = [2, 1, -2]
+$$
+
+
+
+:::{hint} Tips 
+I flere av deloppgavene kan du hoppe over utregningen ved å bruke at for to vektorer, så gjelder alltid $\vec r \times \vec s = - (\vec s \times \vec r)$
+:::
+
+
+
+:::::::::::::{part} a
+Finn $(\vec a \times \vec b) \times \vec c$
+
+
+:::::{answer}
+$$
+(\vec a \times \vec b) \times \vec c = [-14, -2, -15]
+$$
+
+
+::::{solution}
+Vi starter med å finne $\vec a \times \vec b$:
+
+$$
+\begin{align*}
+\vec a \times \vec b &= \mqty|\vec{e}_x & \vec{e}_y & \vec{e}_z \\ -2 & 1 & 3 \\ 2 & 0 & 1| \\
+\\
+&= \vec{e}_x \cdot \underbrace{\mqty|1 & 3 \\ 0 & 1|}_{=1} - \vec{e}_y \cdot \underbrace{\mqty|-2 & 3 \\ 2 & 1|}_{=-8} + \vec{e}_z \cdot \underbrace{\mqty|-2 & 1 \\ 2 & 0|}_{=-2} \\
+\\
+&= 1\vec e_x + 8\vec e_y - 2\vec e_z \\
+\\
+&= [1, 8, -2]
+\end{align*}
+$$
+
+Deretter regner vi ut kryssproduktet av denne vektoren med med $\vec c$:
+
+$$
+\begin{align*}
+(\vec a \times \vec b) \times \vec c &= \mqty|\vec{e}_x & \vec{e}_y & \vec{e}_z \\ 1 & 8 & -2 \\ 2 & 1 & -2| \\
+\\
+&= \vec{e}_x \cdot \underbrace{\mqty|8 & -2 \\ 1 & -2|}_{=-14} - \vec{e}_y \cdot \underbrace{\mqty|1 & -2 \\ 2 & -2|}_{=2} + \vec{e}_z \cdot \underbrace{\mqty|1 & 8 \\ 2 & 1|}_{=-15} \\ 
+\\
+&= -14\vec e_x - 2\vec e_y - 15\vec e_z \\
+\\
+&= [-14, -2, -15]
+\end{align*}
+$$
+::::
+:::::
+
+
+:::::::::::::
+
+
+:::::::::::::{part} b
+Finn $\vec c \times (\vec a \times \vec b)$
+
+
+:::::{answer}
+$$
+\vec c \times (\vec a \times \vec b) = [14, 2, 15]
+$$
+
+::::{solution}
+Vi bruker sammenhengen $\vec r \times \vec s = -(\vec s \times \vec r)$ til å skrive om kryssproduktet som gir:
+
+$$
+\begin{align*}
+(\vec c \times (\vec a \times \vec b)) &= -(\vec a \times \vec b) \times \vec c \\
+\\
+&= -[-14, -2, -15] \\
+\\
+&= [14, 2, 15]
+\end{align*}
+$$
+
+der vi har brukt svaret fra oppgave **a**.
+::::
+:::::
+
+
+:::::::::::::
+
+
+
+:::::::::::::{part} c
+Finn $\vec c \times (\vec b \times \vec a)$
+
+:::::{answer}
+$$
+\vec c \times (\vec b \times \vec a) = [-14, -2, -15]
+$$
+
+
+::::{solution}
+Vi bruker at for to vektorer så gjelder alltid $\vec r \times \vec s = -(\vec s \times \vec r)$: 
+
+
+$$
+\begin{align*}
+\vec c \times (\vec b \times \vec a) &= - (\vec b \times \vec a) \times \vec c \\
+\\
+&= (\vec a \times \vec b) \times \vec c \\
+\\
+&= [-14, -2, -15]
+\end{align*}
+$$
+
+::::
+:::::
+:::::::::::::
+
+:::::::::::::::
+
+
+
+
+---
+
+
+
+
+:::::::::::::::{exercise} Oppgave 6
 
 :::::::::::::{part} a
 :::{plot3d-2}
@@ -603,7 +887,7 @@ $$
 
 
 
-:::::::::::::::{exercise} Oppgave 5
+:::::::::::::::{exercise} Oppgave 7
 :::::::::::::{part} a
 :::{plot3d-2}
 nocache:
@@ -1033,7 +1317,7 @@ $$
 ---
 
 
-:::::::::::::::{exercise} Oppgave 6
+:::::::::::::::{exercise} Oppgave 8
 :::{plot3d-2}
 width: 100%
 fontsize: 24
@@ -1218,7 +1502,7 @@ $$
 ---
 
 
-:::::::::::::::{exercise} Oppgave 7
+:::::::::::::::{exercise} Oppgave 9
 
 :::{plot3d-2}
 width: 100%
@@ -1445,166 +1729,8 @@ $$
 
 
 
-:::::::::::::::{exercise} Oppgave 8
-Tre vektorer er gitt ved 
-
-$$
-\vec{a} = \mqty[-2, 1, 3] \qog \vec{b} = \mqty[1, 2, -1] \qog \vec{c} = \mqty[3, 0, 2]
-$$
-
-
-:::::::::::::{part} a
-Finn $\vec{a} \times \vec{b}$.
-
-
-:::::{answer}
-$$
-\vec{a} \times \vec{b} = [-7, 1, -5]
-$$
-
-::::{solution}
-$$
-\begin{align*}
-\vec{a} \times \vec{b} &= \mqty|\vec{e}_x & \vec{e}_y & \vec{e}_z \\ -2 & 1 & 3 \\ 1 & 2 & -1| \\
-\\
-&= \vec{e}_x \cdot \underbrace{\mqty|1 & 3 \\ 2 & -1|}_{=-7} - \vec{e}_y \cdot \underbrace{\mqty|-2 & 3 \\ 1 & -1|}_{=-1} + \vec{e}_z \cdot \underbrace{\mqty|-2 & 1 \\ 1 & 2|}_{=-5} \\
-\\
-&= -7 \cdot \vec{e}_x + 1 \cdot \vec{e}_y - 5 \cdot \vec{e}_z \\
-\\
-&= [-7, 1, -5]
-\end{align*}
-$$
-::::
-:::::
-
-:::::::::::::
-
-
-:::::::::::::{part} b
-Finn $\vec{b} \times \vec{c}$.
-
-
-:::::{answer}
-$$
-\vec{b} \times \vec{c} = [4, -5, -6]
-$$
-
-
-::::{solution}
-$$
-\begin{align*}
-\vec{b} \times \vec{c} &= \mqty|\vec{e}_x & \vec{e}_y & \vec{e}_z \\ 1 & 2 & -1 \\ 3 & 0 & 2| \\
-\\
-&= \vec{e}_x \cdot \mqty|2 & -1 \\ 0 & 2| - \vec{e}_y \cdot \mqty|1 & -1 \\ 3 & 2| + \vec{e}_z \cdot \mqty|1 & 2 \\ 3 & 0| \\
-\\
-&= \vec{e}_x \cdot (4 - 0) - \vec{e}_y \cdot (2 + 3) + \vec{e}_z \cdot (0 - 6) \\
-\\
-&= 4 \cdot \vec{e}_x - 5 \cdot \vec{e}_y - 6 \cdot \vec{e}_z \\
-\\
-&= [4, -5, -6]
-\end{align*}
-$$
-::::
-:::::
-
-
-:::::::::::::
-
-
-:::::::::::::{part} c
-Finn $(\vec{a} \times \vec{b}) \times \vec{c}$.
-
-
-:::::{answer}
-$$
-(\vec{a} \times \vec{b}) \times \vec{c} = [2, -1, -3]
-$$
-
-::::{solution}
-$$
-\begin{align*}
-(\vec{a} \times \vec{b}) \times \vec{c} &= \mqty|\vec{e}_x & \vec{e}_y & \vec{e}_z \\ -7 & 1 & -5 \\ 3 & 0 & 2| \\
-\\
-&= \vec{e}_x \cdot \mqty|1 & -5 \\ 0 & 2| - \vec{e}_y \cdot \mqty|-7 & -5 \\ 3 & 2| + \vec{e}_z \cdot \mqty|-7 & 1 \\ 3 & 0| \\
-\\
-&= \vec{e}_x \cdot (2 - 0) - \vec{e}_y \cdot (-14 + 15) + \vec{e}_z \cdot (0 - 3) \\
-\\
-&= 2 \cdot \vec{e}_x - 1 \cdot \vec{e}_y - 3 \cdot \vec{e}_z \\
-\\
-&= [2, -1, -3]
-\end{align*}
-$$
-::::
-:::::
-
-:::::::::::::
-
-
-:::::::::::::{part} d
-Finn $\vec{a} \times (\vec{b} \times \vec{c})$.
-
-
-:::::{answer}
-$$
-\vec{a} \times (\vec{b} \times \vec{c}) = [9, 0, 6]
-$$
-
-::::{solution}
-$$
-\begin{align*}
-\vec{a} \times (\vec{b} \times \vec{c}) &= \mqty|\vec{e}_x & \vec{e}_y & \vec{e}_z \\ -2 & 1 & 3 \\ 4 & -5 & -6| \\
-\\
-&= \vec{e}_x \cdot \mqty|1 & 3 \\ -5 & -6| - \vec{e}_y \cdot \mqty|-2 & 3 \\ 4 & -6| + \vec{e}_z \cdot \mqty|-2 & 1 \\ 4 & -5| \\
-\\
-&= \vec{e}_x \cdot (-6 + 15) - \vec{e}_y \cdot (12 - 12) + \vec{e}_z \cdot (10 - 4) \\
-\\
-&= 9 \cdot \vec{e}_x - 0 \cdot \vec{e}_y + 6 \cdot \vec{e}_z \\
-\\
-&= [9, 0, 6]
-\end{align*}
-$$
-::::
-:::::
-
-
-:::::::::::::
-
-
-:::::::::::::{part} e
-Hvilken generell sammenheng kan du trekke fra svarene i oppgave **c** og **d**? 
-
-
-:::::{answer}
-Kryssproduktet er ikke **assosiativt** som betyr at 
-
-$$
-(\vec{a} \times \vec{b}) \times \vec{c} \neq \vec{a} \times (\vec{b} \times \vec{c})
-$$
-
-Vektoren vi får er avhengig av rekkefølgen vi utfører kryssproduktene i. Vi er vant til at når vi ganger sammen tre tall $a$, $b$ og $c$, så er 
-
-$$
-(a \cdot b) \cdot c = a \cdot (b \cdot c) 
-$$
-
-så da skriver vi bare produktet som $a \cdot b \cdot c$ siden det ikke spiller noen rolle hvilke tall vi ganger sammen først. 
-
-Men dette er ikke sant for kryssproduktet.
-:::::
-
-
-:::::::::::::
-
-
-:::::::::::::::
-
-
----
-
-
-
-:::::::::::::::{exercise} Oppgave 9
-Avgjør om påstandene nedenfor stemmer. Hvis du mener påstanden er feil, finn et moteksempel.
+:::::::::::::::{exercise} Oppgave 10
+Avgjør om påstandene nedenfor stemmer. Husk å argumentere for svaret ditt.
 
 
 :::::::::::::{part} a
@@ -1709,6 +1835,18 @@ $$
 :::::
 
 
+:::::::::::::
+
+
+
+:::::::::::::{part} e
+**Påstand**:
+
+For alle vektorer $\vec a$, $\vec b$ og $\vec c$ er 
+
+$$
+\vec c \times (\vec b \times \vec a) = (\vec a \times \vec b) \times \vec c
+$$
 :::::::::::::
 
 
