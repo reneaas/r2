@@ -1847,6 +1847,29 @@ For alle vektorer $\vec a$, $\vec b$ og $\vec c$ er
 $$
 \vec c \times (\vec b \times \vec a) = (\vec a \times \vec b) \times \vec c
 $$
+
+
+:::::{answer}
+Sann.
+
+
+::::{solution}
+For to vektorer $\vec r$ og $\vec s$, så gjelder $\vec r \times \vec s = -(\vec s \times \vec r)$. Fra dette følger det at 
+
+$$
+\begin{align*}
+\vec c \times (\vec b \times \vec a) &= -(\vec b \times \vec a) \times \vec c \\
+\\
+&= (\vec a \times \vec b) \times \vec c
+\end{align*}
+$$
+
+Altså er påstanden sann.
+::::
+
+:::::
+
+
 :::::::::::::
 
 

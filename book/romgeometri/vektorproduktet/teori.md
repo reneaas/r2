@@ -11,7 +11,7 @@ Kryssproduktet er en måte å gange to vektorer sammen som lager en ny vektor me
 
 En determinant knytter sammen fire tall på en bestemt måte:
 
-:::::::::::::::{summary} $2 \times 2$ – determinater
+:::::::::::::::{summary} $2 \times 2$ – determinanter
 En $2 \times 2$ – determinant er definert som
 
 $$
@@ -419,7 +419,7 @@ $$
 Vi kan bruke kryssproduktet til å finne arealet av flater i rommet. Dersom flaten ikke er et parallellogram, så er strategien alltid å dele opp flaten i trekanter og regne ut arealet av hver trekant. 
 
 
-:::::::::::::::{summary} Arealer
+:::::::::::::::{summary} Areal av trekanter
 :::{plot}
 axis: equal
 align: right
@@ -480,6 +480,8 @@ En vektor med denne lengden er da gitt ved
 $$
 \vec{G} = \dfrac{1}{2} \cdot (\vec{a} \times \vec{b})
 $$
+
+som vi skal kalle for en **arealvektor** til trekanten.
 
 :::::
 

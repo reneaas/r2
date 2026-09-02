@@ -36,11 +36,6 @@ parts:
       - file: book/romgeometri/kuler/oppgaver.md
         title: Oppgaver
 
-    # - file: book/romgeometri/digitale_verktøy/teori.md
-    #   sections:
-    #   - file: book/romgeometri/digitale_verktøy/oppgaver.md
-    #     title: Oppgaver
-
     # - file: book/romgeometri/sammendrag/teori.md
 
 
