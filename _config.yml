@@ -116,6 +116,7 @@ sphinx:
           dt: ["\\, \\mathrm{d} t"]
           dy: ["\\, \\mathrm{d} y"]
           ds: ["\\, \\mathrm{d} s"]
+          eq: ["\\, (\\mathrm{#1})", 1]
 
 
 
