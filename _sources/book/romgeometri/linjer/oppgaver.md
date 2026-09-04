@@ -1424,6 +1424,119 @@ $$
 
 
 :::::::::::::::{exercise} Oppgave 9
+:::::::::::::{part} a
+To linjer $\ell$ og $m$ er gitt ved
+
+$$
+\vec r_\ell(t) = [2t + 2, 3t + 1, t - 1] \qog \vec r_m(s) = [s + 3, -2s + 13, s - 2]
+$$
+
+Finn skjæringspunktet mellom de to linjene. 
+
+
+
+:::::{answer}
+$(6, 7, 1)$
+
+::::{solution}
+Vi løser likningen $\vec r_\ell(t) = \vec r_m(s)$ for $t$ og $s$. Vi får da tre likninger (én for hver vektorkoordinat):
+
+$$
+\begin{align*}
+2t + 2 &= s + 3 && (\mathrm{I}) \\
+\\
+3t + 1 &= -2s + 13 && (\mathrm{II}) \\
+\\
+t - 1 &= s - 2 && (\mathrm{III})
+\end{align*}
+$$
+
+Vi bruker likning $\eq{I}$ og løser for $s$:
+
+$$
+2t + 2 = s + 3 \liff s = 2t - 1
+$$
+
+Så setter vi inn dette uttrykket for $s$ i likning $\eq{III}$:
+
+$$
+t - 1 = \underbrace{2t - 1}_{=s} - 2 \liff t - 1 = 2t - 3 \liff t = 2
+$$
+
+Skjæringspunktet må da være gitt ved 
+
+$$
+\vec r_\ell(2) = [2 \cdot 2 + 2, 3 \cdot 2 + 1, 2 - 1] = [6, 7, 1]
+$$
+
+Altså skjærer linjene hverandre i $(6, 7, 1)$.
+::::
+:::::
+
+:::::::::::::
+
+
+:::::::::::::{part} b
+To linjer $\ell$ og $m$ er gitt ved
+
+$$
+\ell: \begin{cases} x = 4t + 1 \\ y = 2t + 2 \\ z = t + 1 \end{cases} \qog m: \begin{cases} x = -2s + 9 \\ y = s + 10 \\ z = s + 6 \end{cases}
+$$
+
+
+Bestem koordinatene til skjæringspunktet mellom de to linjene.
+
+
+:::::{answer}
+$(13, 8, 4)$
+
+::::{solution}
+Vi setter vektorkoordinatene lik hverandre og får et likningssystem:
+
+$$
+\begin{align*}
+4t + 1 &= -2s + 9 && (\mathrm{I}) \\
+2t + 2 &= s + 10 && (\mathrm{II}) \\
+t + 1 &= s + 6 && (\mathrm{III})
+\end{align*}
+$$
+
+Vi løser likning $\eq{III}$ for $s$:
+
+$$
+t + 1 = s + 6 \liff s = t - 5
+$$
+
+Så setter vi inn dette uttrykket for $s$ i likning $\eq{II}$:
+
+$$
+2t + 2 = \underbrace{t - 5}_{=s} + 10 \liff 2t + 2 = t + 5 \liff t = 3
+$$
+
+Altså skjærer linjene hverandre når $t = 3$. Koordinatene til dette punktet er 
+
+$$
+\vec r_\ell(3) = [4 \cdot 3 + 1, 2 \cdot 3 + 2, 3 + 1] = [13, 8, 4]
+$$
+
+Altså skjærer linjene hverandre i $(13, 8, 4)$.
+::::
+:::::
+
+
+:::::::::::::
+:::::::::::::::
+
+
+
+
+
+---
+
+
+
+
+:::::::::::::::{exercise} Oppgave 10
 Avgjør om påstandene nedenfor stemmer. Hvis du mener påstanden er feil, finn et moteksempel.
 
 
