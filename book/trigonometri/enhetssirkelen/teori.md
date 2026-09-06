@@ -262,48 +262,6 @@ fontsize: 32
 
 
 
----
-
-
-
-
-
-:::::::::::::::{summary} Sinus og cosinus er periodiske
-:::{plot}
-nocache:
-width: 100%
-align: right
-fontsize: 28
-axis: equal
-ticks: off
-circle: (0, 0), 1
-let: u = 60
-let: v = 60 + 360
-line-segment: (0, 0), (cos(u*pi/180), sin(u*pi/180)), blue
-angle-arc: (0, 0), 0.35, 0, u, red, arrow
-angle-arc: (0, 0), 0.2, 0, v, blue, arrow
-text: 0.4 * cos(u*pi/360), 0.4 * sin(u*pi/360), "$\varphi$", center-center
-text: 0.2 * cos(u*pi/360), -0.2 * sin(u*pi/360), "$\varphi + 2\pi$", bottom-right
-:::
-
-
-
-For en vinkel $\varphi$, vil vi kunne legge til eller trekka fra $2\pi$ og få akkurat samme punkt på enhetssirkelen. Derfor er
-
-$$
-\sin \left(\varphi + 2\pi k\right) = \sin \varphi
-$$
-
-$$
-\cos \left(\varphi + 2\pi k\right) = \cos \varphi
-$$
-
-for alle heltall $k$.
-
-
-:::::::::::::::
-
-
 
 ---
 
