@@ -226,6 +226,77 @@ $$
 
 
 :::::::::::::::{exercise} Oppgave 2
+
+:::{plot}
+nocache:
+width: 380px
+align: right
+fontsize: 24
+let: A = 5
+let: d = -1
+let: T = 4
+let: omega = 2 * pi / T
+let: x0 = 2
+let: phi = - omega * x0
+function: A * cos(omega * x + phi) + d, f
+ymin: -8
+ymax: 8
+:::
+
+
+Grafen til en trigonometrisk funksjon $f$ er vist i figuren til høyre.
+
+
+:::::::::::::{part} a
+Bestem amplituden til $f$.
+
+:::::::::::::
+
+
+:::::::::::::{part} b
+Finn likevektslinja til $f$.
+
+
+:::::::::::::
+
+
+:::::::::::::{part} c
+Finn perioden til $f$.
+
+:::::::::::::
+
+
+:::::::::::::{part} d
+Finn vinkelfrekvensen til $f$.
+
+:::::::::::::
+
+
+:::::::::::::{part} e
+Finn en fasevinkel for $f$.
+
+
+:::::::::::::
+
+
+:::::::::::::{part} f
+Bestem et mulig funksjonsuttrykk på formen
+
+$$
+f(x) = A \cos (\omega x - \varphi) + d
+$$
+:::::::::::::
+
+
+:::::::::::::::
+
+
+
+---
+
+
+
+:::::::::::::::{exercise} Oppgave 3
 :::::::::::::{part} a
 :::{plot}
 nocache:
@@ -347,7 +418,7 @@ $$
 ---
 
 
-:::::::::::::::{exercise} Oppgave 3
+:::::::::::::::{exercise} Oppgave 4
 
 
 :::::::::::::{part} a
@@ -551,7 +622,7 @@ $$
 
 
 
-:::::::::::::::{exercise} Oppgave 4
+:::::::::::::::{exercise} Oppgave 5
 Funksjonen $f$ er gitt ved
 
 $$
@@ -618,7 +689,7 @@ text: 5, 5, "D", center-center, bbox
 
 
 
-:::::::::::::::{exercise} Oppgave 5
+:::::::::::::::{exercise} Oppgave 6
 Funksjonen $f$ er gitt ved 
 
 $$
@@ -687,7 +758,7 @@ text: 5, 5, "D", center-center, bbox
 ---
 
 
-:::::::::::::::{exercise} Oppgave 6
+:::::::::::::::{exercise} Oppgave 7
 :::::::::::::{part} a
 Funksjonen $f$ er gitt ved 
 
@@ -760,7 +831,7 @@ $$
 ---
 
 
-:::::::::::::::{exercise} Oppgave 7
+:::::::::::::::{exercise} Oppgave 8
 Funksjonen $f$ er gitt ved
 
 $$
@@ -801,7 +872,7 @@ Finn koordinatene til topp- og bunnpunktene til $f$.
 
 
 
-:::::::::::::::{exercise} Oppgave 8
+:::::::::::::::{exercise} Oppgave 9
 Funksjonen $f$ er gitt ved
 
 $$

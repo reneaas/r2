@@ -174,7 +174,7 @@ $$
 Vi får vektoren $\lvec{OQ}$ ved å rotere $\lvec{OP}$ mot klokka med $\pi/2$ radianer (90 grader). Da må vi bytte plass på koordinatene og endre fortegnet på den nye $x$-koordinaten:
 
 $$
-\lvec{OQ} = [-\sin \varphi, \cos \varphi] = [\cos\left(\varphi + \dfrac{\pi}{2}\right), \sin\left(\varphi + \dfrac{\pi}{2}\right)]
+\lvec{OQ} = [-\sin \varphi, \cos \varphi] = \mqty[\cos\left(\varphi + \dfrac{\pi}{2}\right), \sin\left(\varphi + \dfrac{\pi}{2}\right)]
 $$
 
 Altså er 
