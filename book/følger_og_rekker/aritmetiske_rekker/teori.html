@@ -16,22 +16,20 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!--
-    this give us a css class that will be invisible only if js is disabled
-  -->
-  <noscript>
-    <style>
-      .pst-js-only { display: none !important; }
-
-    </style>
-  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/legacy_1t/general_style.css?v=11bbc4b6" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/legacy_1t/admonitions.css?v=9237f12a" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/legacy_1t/popup.css?v=2d27c3a4" />
@@ -83,11 +81,10 @@
     <link id="highlight-theme-light" rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/github.min.css" />
     <link id="highlight-theme-dark" rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/github-dark.min.css" />
   
-  <!-- So that users can add custom icons -->
-  <script defer src="../../../_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="../../../_static/documentation_options.js?v=c712eed9"></script>
     <script src="../../../_static/doctools.js?v=9a2dae69"></script>
@@ -100,7 +97,7 @@
     <script src="https://cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js"></script>
     <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../../_static/copybutton.js?v=f281be69"></script>
-    <script src="../../../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script src="../../../_static/tabs.js?v=3ee01567"></script>
     <script src="../../../_static/munchboka/js/solution_timer.js?v=192f5d3d"></script>
     <script src="../../../_static/munchboka/js/escapeRoom/escape-room.js?v=1498b374"></script>
@@ -130,7 +127,6 @@
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3.2/es5/tex-mml-chtml.js"></script>
     <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'book/følger_og_rekker/aritmetiske_rekker/teori';</script>
-    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <script>mermaid.initialize({"startOnLoad": true})</script>
     <script src="../../../_static/munchboka/js/pairPuzzle/draggableItem.js?v=ce9ef7bd"></script>
     <script src="../../../_static/munchboka/js/pairPuzzle/dropZone.js?v=56907477"></script>
@@ -158,13 +154,6 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="norwegian"/>
-  <meta name="docsearch:version" content="" />
-  
-    
-    <script src="../../../_static/searchtools.js"></script>
-    <script src="../../../_static/language_data.js"></script>
-    <script src="../../../searchindex.js"></script>
-  
 <!-- Pyodide -->
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 
@@ -202,22 +191,33 @@
 
 
   </head>
-  <body data-default-mode="">
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
   
   
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
-
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
   
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
-  
-  <dialog id="pst-search-dialog">
-    
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
 <form class="bd-search d-flex align-items-center"
       action="../../../search.html"
       method="get">
@@ -225,6 +225,7 @@
   <input type="search"
          class="form-control"
          name="q"
+         id="search-input"
          placeholder="Search..."
          aria-label="Search..."
          autocomplete="off"
@@ -232,59 +233,15 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-  </dialog>
+</form></div>
+  </div>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
 </div>
 
   
-    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
-<div class="bd-header__inner bd-page-width">
-  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
-    <span class="fa-solid fa-bars"></span>
-  </button>
-  
-  
-  <div class="col-lg-9 navbar-header-items">
-    
-    
-    <div class="navbar-header-items__end">
-      
-        <div class="navbar-item navbar-persistent--container">
-          
-
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button>
-        </div>
-      
-      
-    </div>
-    
-  </div>
-  
-  
-    <div class="navbar-persistent--mobile">
-
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button>
-    </div>
-  
-
-  
-    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
-      <span class="fa-solid fa-outdent"></span>
-    </button>
-  
-</div>
-
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
     </header>
   
 
@@ -295,8 +252,7 @@
       
         
       
-      <dialog id="pst-primary-sidebar-modal"></dialog>
-      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+      <div class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -326,17 +282,21 @@
     
     
     <img src="../../../_static/r2_logo_no_bg.png" class="logo__image only-light" alt="Matematikk R2 - Home"/>
-    <img src="../../../_static/r2_logo_no_bg.png" class="logo__image only-dark pst-js-only" alt="Matematikk R2 - Home"/>
+    <script>document.write(`<img src="../../../_static/r2_logo_no_bg.png" class="logo__image only-dark" alt="Matematikk R2 - Home"/>`);</script>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button></div>
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">I. Romgeometri</span></p>
@@ -401,14 +361,9 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
-      <div class="sidebar-primary-item">
-<div id="ethical-ad-placement"
-      class="flat"
-      data-ea-publisher="readthedocs"
-      data-ea-type="readthedocs-sidebar"
-      data-ea-manual="true">
-</div></div>
   </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -491,7 +446,7 @@
 
 
 <button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  class="btn btn-sm btn-fullscreen-button"
   title="Fullskjerm-modus"
   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
@@ -505,17 +460,25 @@
 
 
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button>
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
 
 
-<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-</button>
-<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
 </div></div>
@@ -537,7 +500,7 @@
                 <h2> Innhold </h2>
             </div>
             <nav aria-label="Page">
-                <ul class="pst-show_toc_level nav section-nav flex-column">
+                <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-Eksempel-1">Eksempel 1</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-Underveisoppgave-1">Underveisoppgave 1</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-Eksplisitt-formel-for-aritmetiske-folger">Eksplisitt formel for aritmetiske følger</a></li>
@@ -905,8 +868,8 @@ S_{20} = \dfrac{a_1 + a_{20}}{2} \cdot 20 = \frac{1 + 77}{2} \cdot 20 = 78\cdot 
  <defs>
   <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
  </defs>
- <g id="cpl_cdd43a296ae3_cd02c6_figure_1">
-  <g id="cpl_cdd43a296ae3_cd02c6_patch_1">
+ <g id="cpl_cdd43a296ae3_66faeb_figure_1">
+  <g id="cpl_cdd43a296ae3_66faeb_patch_1">
    <path d="M 0 108 
 L 360 108 
 L 360 0 
@@ -915,10 +878,10 @@ L 0 108
 z
 " style="fill: none"/>
   </g>
-  <g id="cpl_cdd43a296ae3_cd02c6_axes_1">
-   <g id="cpl_cdd43a296ae3_cd02c6_line2d_1">
+  <g id="cpl_cdd43a296ae3_66faeb_axes_1">
+   <g id="cpl_cdd43a296ae3_66faeb_line2d_1">
     <defs>
-     <path id="cpl_cdd43a296ae3_cd02c6_m77b89587bd" d="M 0 5 
+     <path id="cpl_cdd43a296ae3_66faeb_m77b89587bd" d="M 0 5 
 C 1.326016 5 2.597899 4.473168 3.535534 3.535534 
 C 4.473168 2.597899 5 1.326016 5 0 
 C 5 -1.326016 4.473168 -2.597899 3.535534 -3.535534 
@@ -930,35 +893,35 @@ C -2.597899 4.473168 -1.326016 5 0 5
 z
 " style="stroke: #000000; stroke-opacity: 0.8"/>
     </defs>
-    <g clip-path="url(#cpl_cdd43a296ae3_cd02c6_pd85a637e22)">
-     <use xlink:href="#cpl_cdd43a296ae3_cd02c6_m77b89587bd" x="41.563636" y="54" style="fill-opacity: 0.8; stroke: #000000; stroke-opacity: 0.8"/>
+    <g clip-path="url(#cpl_cdd43a296ae3_66faeb_pd85a637e22)">
+     <use xlink:href="#cpl_cdd43a296ae3_66faeb_m77b89587bd" x="41.563636" y="54" style="fill-opacity: 0.8; stroke: #000000; stroke-opacity: 0.8"/>
     </g>
    </g>
-   <g id="cpl_cdd43a296ae3_cd02c6_line2d_2">
-    <g clip-path="url(#cpl_cdd43a296ae3_cd02c6_pd85a637e22)">
-     <use xlink:href="#cpl_cdd43a296ae3_cd02c6_m77b89587bd" x="103.090909" y="54" style="fill-opacity: 0.8; stroke: #000000; stroke-opacity: 0.8"/>
+   <g id="cpl_cdd43a296ae3_66faeb_line2d_2">
+    <g clip-path="url(#cpl_cdd43a296ae3_66faeb_pd85a637e22)">
+     <use xlink:href="#cpl_cdd43a296ae3_66faeb_m77b89587bd" x="103.090909" y="54" style="fill-opacity: 0.8; stroke: #000000; stroke-opacity: 0.8"/>
     </g>
    </g>
-   <g id="cpl_cdd43a296ae3_cd02c6_line2d_3">
-    <g clip-path="url(#cpl_cdd43a296ae3_cd02c6_pd85a637e22)">
-     <use xlink:href="#cpl_cdd43a296ae3_cd02c6_m77b89587bd" x="164.618182" y="54" style="fill-opacity: 0.8; stroke: #000000; stroke-opacity: 0.8"/>
+   <g id="cpl_cdd43a296ae3_66faeb_line2d_3">
+    <g clip-path="url(#cpl_cdd43a296ae3_66faeb_pd85a637e22)">
+     <use xlink:href="#cpl_cdd43a296ae3_66faeb_m77b89587bd" x="164.618182" y="54" style="fill-opacity: 0.8; stroke: #000000; stroke-opacity: 0.8"/>
     </g>
    </g>
-   <g id="cpl_cdd43a296ae3_cd02c6_line2d_4">
-    <g clip-path="url(#cpl_cdd43a296ae3_cd02c6_pd85a637e22)">
-     <use xlink:href="#cpl_cdd43a296ae3_cd02c6_m77b89587bd" x="226.145455" y="54" style="fill-opacity: 0.8; stroke: #000000; stroke-opacity: 0.8"/>
+   <g id="cpl_cdd43a296ae3_66faeb_line2d_4">
+    <g clip-path="url(#cpl_cdd43a296ae3_66faeb_pd85a637e22)">
+     <use xlink:href="#cpl_cdd43a296ae3_66faeb_m77b89587bd" x="226.145455" y="54" style="fill-opacity: 0.8; stroke: #000000; stroke-opacity: 0.8"/>
     </g>
    </g>
-   <g id="cpl_cdd43a296ae3_cd02c6_line2d_5">
-    <g clip-path="url(#cpl_cdd43a296ae3_cd02c6_pd85a637e22)">
-     <use xlink:href="#cpl_cdd43a296ae3_cd02c6_m77b89587bd" x="287.672727" y="54" style="fill-opacity: 0.8; stroke: #000000; stroke-opacity: 0.8"/>
+   <g id="cpl_cdd43a296ae3_66faeb_line2d_5">
+    <g clip-path="url(#cpl_cdd43a296ae3_66faeb_pd85a637e22)">
+     <use xlink:href="#cpl_cdd43a296ae3_66faeb_m77b89587bd" x="287.672727" y="54" style="fill-opacity: 0.8; stroke: #000000; stroke-opacity: 0.8"/>
     </g>
    </g>
-   <g id="cpl_cdd43a296ae3_cd02c6_text_1">
+   <g id="cpl_cdd43a296ae3_66faeb_text_1">
     <!-- $a_n$ -->
     <g transform="translate(323.512364 69.132997) scale(0.2 -0.2)">
      <defs>
-      <path id="cpl_cdd43a296ae3_cd02c6_CMMI12-61" d="M 1926 760 
+      <path id="cpl_cdd43a296ae3_66faeb_CMMI12-61" d="M 1926 760 
 C 1894 651 1894 639 1805 517 
 C 1664 338 1382 64 1082 64 
 C 819 64 672 300 672 677 
@@ -987,7 +950,7 @@ C 2771 2625 2701 2695 2605 2695
 C 2400 2695 2349 2472 2336 2395 
 z
 " transform="scale(0.015625)"/>
-      <path id="cpl_cdd43a296ae3_cd02c6_CMMI12-6e" d="M 1318 1871 
+      <path id="cpl_cdd43a296ae3_66faeb_CMMI12-6e" d="M 1318 1871 
 C 1331 1910 1491 2229 1728 2433 
 C 1894 2586 2112 2689 2362 2689 
 C 2618 2689 2707 2497 2707 2242 
@@ -1022,15 +985,15 @@ L 1318 1871
 z
 " transform="scale(0.015625)"/>
      </defs>
-     <use xlink:href="#cpl_cdd43a296ae3_cd02c6_CMMI12-61" transform="scale(0.996264)"/>
-     <use xlink:href="#cpl_cdd43a296ae3_cd02c6_CMMI12-6e" transform="translate(51.207858 -14.943915) scale(0.697382)"/>
+     <use xlink:href="#cpl_cdd43a296ae3_66faeb_CMMI12-61" transform="scale(0.996264)"/>
+     <use xlink:href="#cpl_cdd43a296ae3_66faeb_CMMI12-6e" transform="translate(51.207858 -14.943915) scale(0.697382)"/>
     </g>
    </g>
-   <g id="cpl_cdd43a296ae3_cd02c6_text_2">
+   <g id="cpl_cdd43a296ae3_66faeb_text_2">
     <!-- $a_1$ -->
     <g transform="translate(33.028626 69.132997) scale(0.2 -0.2)">
      <defs>
-      <path id="cpl_cdd43a296ae3_cd02c6_CMR17-31" d="M 1702 4058 
+      <path id="cpl_cdd43a296ae3_66faeb_CMR17-31" d="M 1702 4058 
 C 1702 4192 1696 4192 1606 4192 
 C 1357 3916 979 3827 621 3827 
 C 602 3827 570 3827 563 3808 
@@ -1049,15 +1012,15 @@ L 1702 4058
 z
 " transform="scale(0.015625)"/>
      </defs>
-     <use xlink:href="#cpl_cdd43a296ae3_cd02c6_CMMI12-61" transform="scale(0.996264)"/>
-     <use xlink:href="#cpl_cdd43a296ae3_cd02c6_CMR17-31" transform="translate(51.207858 -14.943915) scale(0.697382)"/>
+     <use xlink:href="#cpl_cdd43a296ae3_66faeb_CMMI12-61" transform="scale(0.996264)"/>
+     <use xlink:href="#cpl_cdd43a296ae3_66faeb_CMR17-31" transform="translate(51.207858 -14.943915) scale(0.697382)"/>
     </g>
    </g>
-   <g id="cpl_cdd43a296ae3_cd02c6_text_3">
+   <g id="cpl_cdd43a296ae3_66faeb_text_3">
     <!-- $a_2$ -->
     <g transform="translate(94.555899 69.132997) scale(0.2 -0.2)">
      <defs>
-      <path id="cpl_cdd43a296ae3_cd02c6_CMR17-32" d="M 2669 989 
+      <path id="cpl_cdd43a296ae3_66faeb_CMR17-32" d="M 2669 989 
 L 2554 989 
 C 2490 536 2438 459 2413 420 
 C 2381 369 1920 369 1830 369 
@@ -1080,15 +1043,15 @@ L 2669 989
 z
 " transform="scale(0.015625)"/>
      </defs>
-     <use xlink:href="#cpl_cdd43a296ae3_cd02c6_CMMI12-61" transform="scale(0.996264)"/>
-     <use xlink:href="#cpl_cdd43a296ae3_cd02c6_CMR17-32" transform="translate(51.207858 -14.943915) scale(0.697382)"/>
+     <use xlink:href="#cpl_cdd43a296ae3_66faeb_CMMI12-61" transform="scale(0.996264)"/>
+     <use xlink:href="#cpl_cdd43a296ae3_66faeb_CMR17-32" transform="translate(51.207858 -14.943915) scale(0.697382)"/>
     </g>
    </g>
-   <g id="cpl_cdd43a296ae3_cd02c6_text_4">
+   <g id="cpl_cdd43a296ae3_66faeb_text_4">
     <!-- $a_3$ -->
     <g transform="translate(156.083172 69.132997) scale(0.2 -0.2)">
      <defs>
-      <path id="cpl_cdd43a296ae3_cd02c6_CMR17-33" d="M 1414 2157 
+      <path id="cpl_cdd43a296ae3_66faeb_CMR17-33" d="M 1414 2157 
 C 1984 2157 2234 1662 2234 1090 
 C 2234 320 1824 25 1453 25 
 C 1114 25 563 194 390 693 
@@ -1117,15 +1080,15 @@ L 1414 2157
 z
 " transform="scale(0.015625)"/>
      </defs>
-     <use xlink:href="#cpl_cdd43a296ae3_cd02c6_CMMI12-61" transform="scale(0.996264)"/>
-     <use xlink:href="#cpl_cdd43a296ae3_cd02c6_CMR17-33" transform="translate(51.207858 -14.943915) scale(0.697382)"/>
+     <use xlink:href="#cpl_cdd43a296ae3_66faeb_CMMI12-61" transform="scale(0.996264)"/>
+     <use xlink:href="#cpl_cdd43a296ae3_66faeb_CMR17-33" transform="translate(51.207858 -14.943915) scale(0.697382)"/>
     </g>
    </g>
-   <g id="cpl_cdd43a296ae3_cd02c6_text_5">
+   <g id="cpl_cdd43a296ae3_66faeb_text_5">
     <!-- $a_4$ -->
     <g transform="translate(217.610444 69.132997) scale(0.2 -0.2)">
      <defs>
-      <path id="cpl_cdd43a296ae3_cd02c6_CMR17-34" d="M 2150 4122 
+      <path id="cpl_cdd43a296ae3_66faeb_CMR17-34" d="M 2150 4122 
 C 2150 4256 2144 4256 2029 4256 
 L 128 1254 
 L 128 1088 
@@ -1152,15 +1115,15 @@ L 1798 3703
 z
 " transform="scale(0.015625)"/>
      </defs>
-     <use xlink:href="#cpl_cdd43a296ae3_cd02c6_CMMI12-61" transform="scale(0.996264)"/>
-     <use xlink:href="#cpl_cdd43a296ae3_cd02c6_CMR17-34" transform="translate(51.207858 -14.943915) scale(0.697382)"/>
+     <use xlink:href="#cpl_cdd43a296ae3_66faeb_CMMI12-61" transform="scale(0.996264)"/>
+     <use xlink:href="#cpl_cdd43a296ae3_66faeb_CMR17-34" transform="translate(51.207858 -14.943915) scale(0.697382)"/>
     </g>
    </g>
-   <g id="cpl_cdd43a296ae3_cd02c6_text_6">
+   <g id="cpl_cdd43a296ae3_66faeb_text_6">
     <!-- $a_5$ -->
     <g transform="translate(279.137717 69.132997) scale(0.2 -0.2)">
      <defs>
-      <path id="cpl_cdd43a296ae3_cd02c6_CMR17-35" d="M 730 3692 
+      <path id="cpl_cdd43a296ae3_66faeb_CMR17-35" d="M 730 3692 
 C 794 3666 1056 3584 1325 3584 
 C 1920 3584 2246 3911 2432 4100 
 C 2432 4157 2432 4192 2394 4192 
@@ -1189,11 +1152,11 @@ L 730 3692
 z
 " transform="scale(0.015625)"/>
      </defs>
-     <use xlink:href="#cpl_cdd43a296ae3_cd02c6_CMMI12-61" transform="scale(0.996264)"/>
-     <use xlink:href="#cpl_cdd43a296ae3_cd02c6_CMR17-35" transform="translate(51.207858 -14.943915) scale(0.697382)"/>
+     <use xlink:href="#cpl_cdd43a296ae3_66faeb_CMMI12-61" transform="scale(0.996264)"/>
+     <use xlink:href="#cpl_cdd43a296ae3_66faeb_CMR17-35" transform="translate(51.207858 -14.943915) scale(0.697382)"/>
     </g>
    </g>
-   <g id="cpl_cdd43a296ae3_cd02c6_Quiver_1">
+   <g id="cpl_cdd43a296ae3_66faeb_Quiver_1">
     <path d="M 10.8 52.9848 
 L 309.299564 52.9848 
 L 308.284364 48.924 
@@ -1202,12 +1165,12 @@ L 308.284364 59.076
 L 309.299564 55.0152 
 L 10.8 55.0152 
 L 10.8 52.9848 
-" clip-path="url(#cpl_cdd43a296ae3_cd02c6_pd85a637e22)"/>
+" clip-path="url(#cpl_cdd43a296ae3_66faeb_pd85a637e22)"/>
    </g>
   </g>
  </g>
  <defs>
-  <clipPath id="cpl_cdd43a296ae3_cd02c6_pd85a637e22">
+  <clipPath id="cpl_cdd43a296ae3_66faeb_pd85a637e22">
    <rect x="10.8" y="10.8" width="338.4" height="86.4"/>
   </clipPath>
  </defs>
@@ -1224,8 +1187,8 @@ a_n = \dfrac{a_{n + k} + a_{n - k}}{2}
 <section class="exercise-section" id="exercise-Underveisoppgave-4">
 <h2>Underveisoppgave 4<a class="headerlink" href="#exercise-Underveisoppgave-4" title="Link to this heading">#</a></h2>
 <div class="exercise-body docutils container">
-<div id="quiz-container-quiz-3560dc65" class="quiz-main-container" data-quiz2-source="quiz-source-quiz-3560dc65"></div><div class="quiz2-source docutils container" id="quiz-source-quiz-3560dc65">
-<div class="quiz2-question-source docutils container" id="question-309a9ed1">
+<div id="quiz-container-quiz-317a2523" class="quiz-main-container" data-quiz2-source="quiz-source-quiz-317a2523"></div><div class="quiz2-source docutils container" id="quiz-source-quiz-317a2523">
+<div class="quiz2-question-source docutils container" id="question-af32bd20">
 <div class="quiz2-question-content docutils container">
 <p>La <span class="math notranslate nohighlight">\(\{a_n\}\)</span> være en aritmetisk følge. Hvilket alternativ er riktig?</p>
 </div>
@@ -1256,7 +1219,7 @@ a_6 = \dfrac{a_4 + a_7}{2}
 </div>
 </div>
 </div>
-<div class="quiz2-question-source docutils container" id="question-4886ba60">
+<div class="quiz2-question-source docutils container" id="question-e36c28ef">
 <div class="quiz2-question-content docutils container">
 <p>La <span class="math notranslate nohighlight">\(\{b_n\}\)</span> være en aritmetisk følge. Hvilket alternativ er riktig?</p>
 </div>
@@ -1287,7 +1250,7 @@ b_{15} = \dfrac{b_{13} + b_{18}}{2}
 </div>
 </div>
 </div>
-<div class="quiz2-question-source docutils container" id="question-74e943d0">
+<div class="quiz2-question-source docutils container" id="question-98680d7f">
 <div class="quiz2-question-content docutils container">
 <p>La <span class="math notranslate nohighlight">\(\{c_n\}\)</span> være en aritmetisk følge. Hvilket alternativ er riktig?</p>
 </div>
@@ -1318,7 +1281,7 @@ c_{30} = \dfrac{c_{27} + c_{32}}{2}
 </div>
 </div>
 </div>
-<div class="quiz2-question-source docutils container" id="question-3887fc84">
+<div class="quiz2-question-source docutils container" id="question-ff5b18dd">
 <div class="quiz2-question-content docutils container">
 <p>La <span class="math notranslate nohighlight">\(\{d_n\}\)</span> være en aritmetisk følge. Hvilket alternativ er riktig?</p>
 </div>
@@ -1353,7 +1316,7 @@ d_{20} = \dfrac{d_{17} + d_{24}}{2}
 
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
-                const sourceEl = document.getElementById("quiz-source-quiz-3560dc65");
+                const sourceEl = document.getElementById("quiz-source-quiz-317a2523");
                 const parseFn = (typeof window !== 'undefined') ? window.quiz2ParseDomSource : null;
                 const questionsData = (typeof parseFn === 'function' && sourceEl) ? parseFn(sourceEl) : [];
 
@@ -1362,7 +1325,7 @@ d_{20} = \dfrac{d_{17} + d_{24}}{2}
                     sourceEl.parentNode.removeChild(sourceEl);
                 }
 
-                const quiz = new SequentialMultipleChoiceQuiz("quiz-container-quiz-3560dc65", questionsData);
+                const quiz = new SequentialMultipleChoiceQuiz("quiz-container-quiz-317a2523", questionsData);
             });
         </script>
         </div>
@@ -1480,17 +1443,15 @@ a_4 + 2a_4 = 36
             
             
               
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
-  <div class="sidebar-secondary-item"><div
-    id="pst-page-navigation-heading-2"
-    class="page-toc tocsection onthispage">
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Innhold
   </div>
-  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
-    <ul class="pst-show_toc_level nav section-nav flex-column">
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-Eksempel-1">Eksempel 1</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-Underveisoppgave-1">Underveisoppgave 1</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-Eksplisitt-formel-for-aritmetiske-folger">Eksplisitt formel for aritmetiske følger</a></li>
@@ -1552,8 +1513,8 @@ Av René Ask, Edvard Munch Videregående Skole
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../../_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
-<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
+  <script src="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

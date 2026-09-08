@@ -16,22 +16,20 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!--
-    this give us a css class that will be invisible only if js is disabled
-  -->
-  <noscript>
-    <style>
-      .pst-js-only { display: none !important; }
-
-    </style>
-  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/legacy_1t/general_style.css?v=11bbc4b6" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/legacy_1t/admonitions.css?v=9237f12a" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/legacy_1t/popup.css?v=2d27c3a4" />
@@ -83,11 +81,10 @@
     <link id="highlight-theme-light" rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/github.min.css" />
     <link id="highlight-theme-dark" rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/github-dark.min.css" />
   
-  <!-- So that users can add custom icons -->
-  <script defer src="../../../_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="../../../_static/documentation_options.js?v=c712eed9"></script>
     <script src="../../../_static/doctools.js?v=9a2dae69"></script>
@@ -100,7 +97,7 @@
     <script src="https://cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js"></script>
     <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../../_static/copybutton.js?v=f281be69"></script>
-    <script src="../../../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script src="../../../_static/tabs.js?v=3ee01567"></script>
     <script src="../../../_static/munchboka/js/solution_timer.js?v=192f5d3d"></script>
     <script src="../../../_static/munchboka/js/escapeRoom/escape-room.js?v=1498b374"></script>
@@ -130,7 +127,6 @@
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3.2/es5/tex-mml-chtml.js"></script>
     <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'book/trigonometri/derivasjon/teori';</script>
-    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <script>mermaid.initialize({"startOnLoad": true})</script>
     <script src="../../../_static/munchboka/js/pairPuzzle/draggableItem.js?v=ce9ef7bd"></script>
     <script src="../../../_static/munchboka/js/pairPuzzle/dropZone.js?v=56907477"></script>
@@ -160,13 +156,6 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="norwegian"/>
-  <meta name="docsearch:version" content="" />
-  
-    
-    <script src="../../../_static/searchtools.js"></script>
-    <script src="../../../_static/language_data.js"></script>
-    <script src="../../../searchindex.js"></script>
-  
 <!-- Pyodide -->
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 
@@ -204,22 +193,33 @@
 
 
   </head>
-  <body data-default-mode="">
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
   
   
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
-
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
   
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
-  
-  <dialog id="pst-search-dialog">
-    
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
 <form class="bd-search d-flex align-items-center"
       action="../../../search.html"
       method="get">
@@ -227,6 +227,7 @@
   <input type="search"
          class="form-control"
          name="q"
+         id="search-input"
          placeholder="Search..."
          aria-label="Search..."
          autocomplete="off"
@@ -234,59 +235,15 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-  </dialog>
+</form></div>
+  </div>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
 </div>
 
   
-    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
-<div class="bd-header__inner bd-page-width">
-  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
-    <span class="fa-solid fa-bars"></span>
-  </button>
-  
-  
-  <div class="col-lg-9 navbar-header-items">
-    
-    
-    <div class="navbar-header-items__end">
-      
-        <div class="navbar-item navbar-persistent--container">
-          
-
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button>
-        </div>
-      
-      
-    </div>
-    
-  </div>
-  
-  
-    <div class="navbar-persistent--mobile">
-
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button>
-    </div>
-  
-
-  
-    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
-      <span class="fa-solid fa-outdent"></span>
-    </button>
-  
-</div>
-
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
     </header>
   
 
@@ -295,8 +252,7 @@
       
       
       
-      <dialog id="pst-primary-sidebar-modal"></dialog>
-      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+      <div class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -326,17 +282,21 @@
     
     
     <img src="../../../_static/r2_logo_no_bg.png" class="logo__image only-light" alt="Matematikk R2 - Home"/>
-    <img src="../../../_static/r2_logo_no_bg.png" class="logo__image only-dark pst-js-only" alt="Matematikk R2 - Home"/>
+    <script>document.write(`<img src="../../../_static/r2_logo_no_bg.png" class="logo__image only-dark" alt="Matematikk R2 - Home"/>`);</script>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button></div>
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">I. Romgeometri</span></p>
@@ -401,14 +361,9 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
-      <div class="sidebar-primary-item">
-<div id="ethical-ad-placement"
-      class="flat"
-      data-ea-publisher="readthedocs"
-      data-ea-type="readthedocs-sidebar"
-      data-ea-manual="true">
-</div></div>
   </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -491,7 +446,7 @@
 
 
 <button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  class="btn btn-sm btn-fullscreen-button"
   title="Fullskjerm-modus"
   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
@@ -505,17 +460,25 @@
 
 
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button>
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
 
 
-<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-</button>
-<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
 </div></div>
@@ -537,7 +500,7 @@
                 <h2> Innhold </h2>
             </div>
             <nav aria-label="Page">
-                <ul class="pst-show_toc_level nav section-nav flex-column">
+                <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-De-deriverte-til-sinus-og-cosinus">De deriverte til sinus og cosinus</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-Eksempel-1">Eksempel 1</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-Eksempel-2">Eksempel 2</a></li>
@@ -587,7 +550,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-09-08T17:42:30.592964</dc:date>
+    <dc:date>2026-09-08T18:00:42.656911</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -600,8 +563,8 @@
  <defs>
   <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
  </defs>
- <g id="cpl_70294c93b997_540fd0_figure_1">
-  <g id="cpl_70294c93b997_540fd0_patch_1">
+ <g id="cpl_70294c93b997_3abe2c_figure_1">
+  <g id="cpl_70294c93b997_3abe2c_patch_1">
    <path d="M 0 345.6 
 L 460.8 345.6 
 L 460.8 0 
@@ -610,8 +573,8 @@ L 0 345.6
 z
 " style="fill: none"/>
   </g>
-  <g id="cpl_70294c93b997_540fd0_axes_1">
-   <g id="cpl_70294c93b997_540fd0_patch_2">
+  <g id="cpl_70294c93b997_3abe2c_axes_1">
+   <g id="cpl_70294c93b997_3abe2c_patch_2">
     <path d="M 24.284667 326.16 
 L 436.515333 326.16 
 L 436.515333 31.313214 
@@ -620,7 +583,7 @@ L 24.284667 326.16
 z
 " style="fill: none"/>
    </g>
-   <g id="cpl_70294c93b997_540fd0_patch_3">
+   <g id="cpl_70294c93b997_3abe2c_patch_3">
     <path d="M 230.4 307.808984 
 C 264.030101 307.808984 296.287328 294.447603 320.067401 270.66753 
 C 343.847474 246.887458 357.208855 214.630231 357.208855 181.00013 
@@ -632,14 +595,14 @@ C 103.591145 214.630231 116.952526 246.887458 140.732599 270.66753
 C 164.512672 294.447603 196.769899 307.808984 230.4 307.808984 
 L 230.4 307.808984 
 z
-" clip-path="url(#cpl_70294c93b997_540fd0_p0e8dbcd503)" style="fill: none; stroke: #000000; stroke-width: 2.5; stroke-linejoin: miter"/>
+" clip-path="url(#cpl_70294c93b997_3abe2c_pcc16d544ed)" style="fill: none; stroke: #000000; stroke-width: 2.5; stroke-linejoin: miter"/>
    </g>
-   <g id="cpl_70294c93b997_540fd0_matplotlib.axis_1">
-    <g id="cpl_70294c93b997_540fd0_text_1">
+   <g id="cpl_70294c93b997_3abe2c_matplotlib.axis_1">
+    <g id="cpl_70294c93b997_3abe2c_text_1">
      <!-- $\cos \varphi$ -->
      <g transform="translate(383.869281 202.988231) scale(0.26 -0.26)">
       <defs>
-       <path id="cpl_70294c93b997_540fd0_CMR17-63" d="M 2234 2240 
+       <path id="cpl_70294c93b997_3abe2c_CMR17-63" d="M 2234 2240 
 C 2112 2240 1933 2240 1933 2017 
 C 1933 1838 2080 1787 2163 1787 
 C 2208 1787 2394 1807 2394 2024 
@@ -655,7 +618,7 @@ C 621 2338 1094 2688 1472 2688
 C 1722 2688 2093 2573 2234 2240 
 z
 " transform="scale(0.015625)"/>
-       <path id="cpl_70294c93b997_540fd0_CMR17-6f" d="M 2758 1356 
+       <path id="cpl_70294c93b997_3abe2c_CMR17-6f" d="M 2758 1356 
 C 2758 2176 2163 2816 1466 2816 
 C 768 2816 173 2176 173 1356 
 C 173 551 768 -64 1466 -64 
@@ -672,7 +635,7 @@ C 2349 1158 2336 775 2163 467
 C 1984 173 1709 51 1466 51 
 z
 " transform="scale(0.015625)"/>
-       <path id="cpl_70294c93b997_540fd0_CMR17-73" d="M 1978 2697 
+       <path id="cpl_70294c93b997_3abe2c_CMR17-73" d="M 1978 2697 
 C 1978 2813 1971 2819 1933 2819 
 C 1907 2819 1901 2813 1824 2717 
 C 1805 2691 1747 2626 1728 2601 
@@ -701,7 +664,7 @@ C 1978 1849 1978 1869 1978 1978
 L 1978 2697 
 z
 " transform="scale(0.015625)"/>
-       <path id="cpl_70294c93b997_540fd0_CMMI12-27" d="M 1926 280 
+       <path id="cpl_70294c93b997_3abe2c_CMMI12-27" d="M 1926 280 
 C 1818 280 1722 280 1722 312 
 C 1722 325 1830 926 1869 1067 
 C 2074 1884 2560 2472 3117 2472 
@@ -727,19 +690,19 @@ C 1446 -1166 1626 -178 1651 -51
 z
 " transform="scale(0.015625)"/>
       </defs>
-      <use xlink:href="#cpl_70294c93b997_540fd0_CMR17-63" transform="scale(0.996264)"/>
-      <use xlink:href="#cpl_70294c93b997_540fd0_CMR17-6f" transform="translate(40.48566 0) scale(0.996264)"/>
-      <use xlink:href="#cpl_70294c93b997_540fd0_CMR17-73" transform="translate(86.176138 0) scale(0.996264)"/>
-      <use xlink:href="#cpl_70294c93b997_540fd0_CMMI12-27" transform="translate(138.58188 0) scale(0.996264)"/>
+      <use xlink:href="#cpl_70294c93b997_3abe2c_CMR17-63" transform="scale(0.996264)"/>
+      <use xlink:href="#cpl_70294c93b997_3abe2c_CMR17-6f" transform="translate(40.48566 0) scale(0.996264)"/>
+      <use xlink:href="#cpl_70294c93b997_3abe2c_CMR17-73" transform="translate(86.176138 0) scale(0.996264)"/>
+      <use xlink:href="#cpl_70294c93b997_3abe2c_CMMI12-27" transform="translate(138.58188 0) scale(0.996264)"/>
      </g>
     </g>
    </g>
-   <g id="cpl_70294c93b997_540fd0_matplotlib.axis_2">
-    <g id="cpl_70294c93b997_540fd0_text_2">
+   <g id="cpl_70294c93b997_3abe2c_matplotlib.axis_2">
+    <g id="cpl_70294c93b997_3abe2c_text_2">
      <!-- $\sin \varphi$ -->
      <g transform="translate(176.460473 26.274888) scale(0.26 -0.26)">
       <defs>
-       <path id="cpl_70294c93b997_540fd0_CMR17-69" d="M 992 3909 
+       <path id="cpl_70294c93b997_3abe2c_CMR17-69" d="M 992 3909 
 C 992 4049 877 4170 730 4170 
 C 589 4170 467 4056 467 3909 
 C 467 3769 582 3648 730 3648 
@@ -759,7 +722,7 @@ L 979 2776
 L 243 2706 
 z
 " transform="scale(0.015625)"/>
-       <path id="cpl_70294c93b997_540fd0_CMR17-6e" d="M 2656 1933 
+       <path id="cpl_70294c93b997_3abe2c_CMR17-6e" d="M 2656 1933 
 C 2656 2259 2592 2790 1837 2790 
 C 1331 2790 1069 2400 973 2144 
 L 966 2144 
@@ -788,38 +751,38 @@ L 2656 1933
 z
 " transform="scale(0.015625)"/>
       </defs>
-      <use xlink:href="#cpl_70294c93b997_540fd0_CMR17-73" transform="scale(0.996264)"/>
-      <use xlink:href="#cpl_70294c93b997_540fd0_CMR17-69" transform="translate(35.801338 0) scale(0.996264)"/>
-      <use xlink:href="#cpl_70294c93b997_540fd0_CMR17-6e" transform="translate(60.672396 0) scale(0.996264)"/>
-      <use xlink:href="#cpl_70294c93b997_540fd0_CMMI12-27" transform="translate(128.172171 0) scale(0.996264)"/>
+      <use xlink:href="#cpl_70294c93b997_3abe2c_CMR17-73" transform="scale(0.996264)"/>
+      <use xlink:href="#cpl_70294c93b997_3abe2c_CMR17-69" transform="translate(35.801338 0) scale(0.996264)"/>
+      <use xlink:href="#cpl_70294c93b997_3abe2c_CMR17-6e" transform="translate(60.672396 0) scale(0.996264)"/>
+      <use xlink:href="#cpl_70294c93b997_3abe2c_CMMI12-27" transform="translate(128.172171 0) scale(0.996264)"/>
      </g>
     </g>
    </g>
-   <g id="cpl_70294c93b997_540fd0_line2d_1">
+   <g id="cpl_70294c93b997_3abe2c_line2d_1">
     <defs>
-     <path id="cpl_70294c93b997_540fd0_md39ad04b5d" d="M 3 0 
+     <path id="cpl_70294c93b997_3abe2c_m901b09e820" d="M 3 0 
 L -3 -3 
 L -3 3 
 z
 " style="stroke: #000000; stroke-linejoin: miter"/>
     </defs>
     <g>
-     <use xlink:href="#cpl_70294c93b997_540fd0_md39ad04b5d" x="436.515333" y="181.00013" style="stroke: #000000; stroke-linejoin: miter"/>
+     <use xlink:href="#cpl_70294c93b997_3abe2c_m901b09e820" x="436.515333" y="181.00013" style="stroke: #000000; stroke-linejoin: miter"/>
     </g>
    </g>
-   <g id="cpl_70294c93b997_540fd0_line2d_2">
+   <g id="cpl_70294c93b997_3abe2c_line2d_2">
     <defs>
-     <path id="cpl_70294c93b997_540fd0_me9b586707e" d="M 0 -3 
+     <path id="cpl_70294c93b997_3abe2c_md2a3a7ae4c" d="M 0 -3 
 L -3 3 
 L 3 3 
 z
 " style="stroke: #000000; stroke-linejoin: miter"/>
     </defs>
     <g>
-     <use xlink:href="#cpl_70294c93b997_540fd0_me9b586707e" x="230.4" y="31.313214" style="stroke: #000000; stroke-linejoin: miter"/>
+     <use xlink:href="#cpl_70294c93b997_3abe2c_md2a3a7ae4c" x="230.4" y="31.313214" style="stroke: #000000; stroke-linejoin: miter"/>
     </g>
    </g>
-   <g id="cpl_70294c93b997_540fd0_line2d_3">
+   <g id="cpl_70294c93b997_3abe2c_line2d_3">
     <path d="M 268.442656 181.00013 
 L 268.333562 178.12114 
 L 268.006904 175.258662 
@@ -850,9 +813,9 @@ L 215.630598 145.941486
 L 213.019787 147.159741 
 L 211.378672 148.054223 
 L 211.378672 148.054223 
-" clip-path="url(#cpl_70294c93b997_540fd0_p0e8dbcd503)" style="fill: none; stroke: #dc5e8b; stroke-width: 2.5; stroke-linecap: square"/>
+" clip-path="url(#cpl_70294c93b997_3abe2c_pcc16d544ed)" style="fill: none; stroke: #dc5e8b; stroke-width: 2.5; stroke-linecap: square"/>
    </g>
-   <g id="cpl_70294c93b997_540fd0_line2d_4">
+   <g id="cpl_70294c93b997_3abe2c_line2d_4">
     <path d="M 357.208855 181.00013 
 L 357.102566 175.809247 
 L 356.78388 170.627066 
@@ -907,11 +870,11 @@ L 172.235138 68.31768
 L 167.671268 70.793089 
 L 166.995573 71.18044 
 L 166.995573 71.18044 
-" clip-path="url(#cpl_70294c93b997_540fd0_p0e8dbcd503)" style="fill: none; stroke: #dc5e8b; stroke-width: 2.5; stroke-linecap: square"/>
+" clip-path="url(#cpl_70294c93b997_3abe2c_pcc16d544ed)" style="fill: none; stroke: #dc5e8b; stroke-width: 2.5; stroke-linecap: square"/>
    </g>
-   <g id="cpl_70294c93b997_540fd0_line2d_5">
+   <g id="cpl_70294c93b997_3abe2c_line2d_5">
     <defs>
-     <path id="cpl_70294c93b997_540fd0_m347de5f600" d="M 0 5 
+     <path id="cpl_70294c93b997_3abe2c_me533d4b14b" d="M 0 5 
 C 1.326016 5 2.597899 4.473168 3.535534 3.535534 
 C 4.473168 2.597899 5 1.326016 5 0 
 C 5 -1.326016 4.473168 -2.597899 3.535534 -3.535534 
@@ -923,31 +886,31 @@ C -2.597899 4.473168 -1.326016 5 0 5
 z
 " style="stroke: #000000; stroke-opacity: 0.8"/>
     </defs>
-    <g clip-path="url(#cpl_70294c93b997_540fd0_p0e8dbcd503)">
-     <use xlink:href="#cpl_70294c93b997_540fd0_m347de5f600" x="166.995573" y="71.18044" style="fill-opacity: 0.8; stroke: #000000; stroke-opacity: 0.8"/>
+    <g clip-path="url(#cpl_70294c93b997_3abe2c_pcc16d544ed)">
+     <use xlink:href="#cpl_70294c93b997_3abe2c_me533d4b14b" x="166.995573" y="71.18044" style="fill-opacity: 0.8; stroke: #000000; stroke-opacity: 0.8"/>
     </g>
    </g>
-   <g id="cpl_70294c93b997_540fd0_patch_4">
+   <g id="cpl_70294c93b997_3abe2c_patch_4">
     <path d="M 230.4 326.16 
 L 230.4 31.313214 
 " style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
    </g>
-   <g id="cpl_70294c93b997_540fd0_patch_5">
+   <g id="cpl_70294c93b997_3abe2c_patch_5">
     <path d="M 436.515333 326.16 
 L 436.515333 31.313214 
 " style="fill: none"/>
    </g>
-   <g id="cpl_70294c93b997_540fd0_patch_6">
+   <g id="cpl_70294c93b997_3abe2c_patch_6">
     <path d="M 24.284667 181.00013 
 L 436.515333 181.00013 
 " style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
    </g>
-   <g id="cpl_70294c93b997_540fd0_patch_7">
+   <g id="cpl_70294c93b997_3abe2c_patch_7">
     <path d="M 24.284667 31.313214 
 L 436.515333 31.313214 
 " style="fill: none"/>
    </g>
-   <g id="cpl_70294c93b997_540fd0_patch_8">
+   <g id="cpl_70294c93b997_3abe2c_patch_8">
     <path d="M 211.446162 148.015349 
 Q 211.412417 148.034786 213.800716 146.659159 
 " style="fill: none; stroke: #dc5e8b; stroke-width: 2.5; stroke-linecap: round"/>
@@ -957,11 +920,11 @@ L 216.762221 142.183727
 z
 " style="fill: #dc5e8b; stroke: #dc5e8b; stroke-width: 2.5; stroke-linecap: round"/>
    </g>
-   <g id="cpl_70294c93b997_540fd0_text_3">
+   <g id="cpl_70294c93b997_3abe2c_text_3">
     <!-- $\vec{{r}}$ -->
     <g transform="translate(179.676161 145.246058) scale(0.26 -0.26)">
      <defs>
-      <path id="cpl_70294c93b997_540fd0_CMMI12-7e" d="M 3424 3835 
+      <path id="cpl_70294c93b997_3abe2c_CMMI12-7e" d="M 3424 3835 
 C 3347 3764 3110 3540 3110 3451 
 C 3110 3387 3168 3329 3232 3329 
 C 3290 3329 3315 3368 3360 3432 
@@ -978,7 +941,7 @@ C 1158 3835 1274 3835 1376 3835
 L 3424 3835 
 z
 " transform="scale(0.015625)"/>
-      <path id="cpl_70294c93b997_540fd0_CMMI12-72" d="M 2490 2612 
+      <path id="cpl_70294c93b997_3abe2c_CMMI12-72" d="M 2490 2612 
 C 2291 2574 2189 2433 2189 2293 
 C 2189 2139 2310 2088 2400 2088 
 C 2579 2088 2726 2242 2726 2433 
@@ -1006,15 +969,15 @@ C 2304 2689 2406 2670 2490 2612
 z
 " transform="scale(0.015625)"/>
      </defs>
-     <use xlink:href="#cpl_70294c93b997_540fd0_CMMI12-7e" transform="scale(0.996264)"/>
-     <use xlink:href="#cpl_70294c93b997_540fd0_CMMI12-72" transform="translate(3.294926 0) scale(0.996264)"/>
+     <use xlink:href="#cpl_70294c93b997_3abe2c_CMMI12-7e" transform="scale(0.996264)"/>
+     <use xlink:href="#cpl_70294c93b997_3abe2c_CMMI12-72" transform="translate(3.294926 0) scale(0.996264)"/>
     </g>
    </g>
-   <g id="cpl_70294c93b997_540fd0_text_4">
+   <g id="cpl_70294c93b997_3abe2c_text_4">
     <!-- $x$ -->
     <g transform="translate(248.555343 143.547141) scale(0.26 -0.26)">
      <defs>
-      <path id="cpl_70294c93b997_540fd0_CMMI12-78" d="M 3034 2606 
+      <path id="cpl_70294c93b997_3abe2c_CMMI12-78" d="M 3034 2606 
 C 2829 2567 2752 2414 2752 2293 
 C 2752 2139 2874 2088 2963 2088 
 C 3155 2088 3290 2254 3290 2427 
@@ -1048,14 +1011,14 @@ C 2720 2689 2899 2689 3034 2606
 z
 " transform="scale(0.015625)"/>
      </defs>
-     <use xlink:href="#cpl_70294c93b997_540fd0_CMMI12-78" transform="scale(0.996264)"/>
+     <use xlink:href="#cpl_70294c93b997_3abe2c_CMMI12-78" transform="scale(0.996264)"/>
     </g>
    </g>
-   <g id="cpl_70294c93b997_540fd0_text_5">
+   <g id="cpl_70294c93b997_3abe2c_text_5">
     <!-- $\vec{{v}}$ -->
     <g transform="translate(105.438452 83.99577) scale(0.26 -0.26)">
      <defs>
-      <path id="cpl_70294c93b997_540fd0_CMMI12-76" d="M 2925 2389 
+      <path id="cpl_70294c93b997_3abe2c_CMMI12-76" d="M 2925 2389 
 C 2925 2791 2720 2816 2669 2816 
 C 2515 2816 2374 2663 2374 2535 
 C 2374 2459 2419 2414 2445 2389 
@@ -1078,15 +1041,15 @@ C 2560 -64 2925 2024 2925 2389
 z
 " transform="scale(0.015625)"/>
      </defs>
-     <use xlink:href="#cpl_70294c93b997_540fd0_CMMI12-7e" transform="scale(0.996264)"/>
-     <use xlink:href="#cpl_70294c93b997_540fd0_CMMI12-76" transform="translate(3.972363 0) scale(0.996264)"/>
+     <use xlink:href="#cpl_70294c93b997_3abe2c_CMMI12-7e" transform="scale(0.996264)"/>
+     <use xlink:href="#cpl_70294c93b997_3abe2c_CMMI12-76" transform="translate(3.972363 0) scale(0.996264)"/>
     </g>
    </g>
-   <g id="cpl_70294c93b997_540fd0_text_6">
+   <g id="cpl_70294c93b997_3abe2c_text_6">
     <!-- $s(x)$ -->
     <g transform="translate(284.132384 55.691397) scale(0.26 -0.26)">
      <defs>
-      <path id="cpl_70294c93b997_540fd0_CMMI12-73" d="M 1459 1280 
+      <path id="cpl_70294c93b997_3abe2c_CMMI12-73" d="M 1459 1280 
 C 1568 1261 1741 1223 1779 1216 
 C 1862 1192 2150 1090 2150 783 
 C 2150 586 1971 70 1229 70 
@@ -1109,7 +1072,7 @@ C 1062 2816 838 2160 838 1899
 C 838 1414 1312 1312 1459 1280 
 z
 " transform="scale(0.015625)"/>
-      <path id="cpl_70294c93b997_540fd0_CMR17-28" d="M 1958 -1561 
+      <path id="cpl_70294c93b997_3abe2c_CMR17-28" d="M 1958 -1561 
 C 1958 -1555 1958 -1542 1939 -1523 
 C 1645 -1224 858 -407 858 1581 
 C 858 3569 1632 4379 1946 4697 
@@ -1122,7 +1085,7 @@ C 1312 -1135 1837 -1600 1914 -1600
 C 1946 -1600 1958 -1587 1958 -1561 
 z
 " transform="scale(0.015625)"/>
-      <path id="cpl_70294c93b997_540fd0_CMR17-29" d="M 1683 1581 
+      <path id="cpl_70294c93b997_3abe2c_CMR17-29" d="M 1683 1581 
 C 1683 2040 1638 2817 1254 3639 
 C 947 4303 422 4768 346 4768 
 C 326 4768 301 4761 301 4729 
@@ -1136,13 +1099,13 @@ C 1594 281 1683 969 1683 1581
 z
 " transform="scale(0.015625)"/>
      </defs>
-     <use xlink:href="#cpl_70294c93b997_540fd0_CMMI12-73" transform="scale(0.996264)"/>
-     <use xlink:href="#cpl_70294c93b997_540fd0_CMR17-28" transform="translate(45.950048 0) scale(0.996264)"/>
-     <use xlink:href="#cpl_70294c93b997_540fd0_CMMI12-78" transform="translate(81.230815 0) scale(0.996264)"/>
-     <use xlink:href="#cpl_70294c93b997_540fd0_CMR17-29" transform="translate(136.664875 0) scale(0.996264)"/>
+     <use xlink:href="#cpl_70294c93b997_3abe2c_CMMI12-73" transform="scale(0.996264)"/>
+     <use xlink:href="#cpl_70294c93b997_3abe2c_CMR17-28" transform="translate(45.950048 0) scale(0.996264)"/>
+     <use xlink:href="#cpl_70294c93b997_3abe2c_CMMI12-78" transform="translate(81.230815 0) scale(0.996264)"/>
+     <use xlink:href="#cpl_70294c93b997_3abe2c_CMR17-29" transform="translate(136.664875 0) scale(0.996264)"/>
     </g>
    </g>
-   <g id="cpl_70294c93b997_540fd0_Quiver_1">
+   <g id="cpl_70294c93b997_3abe2c_Quiver_1">
     <path d="M 229.328993 181.618476 
 L 171.48968 81.437846 
 L 167.823999 84.982237 
@@ -1151,9 +1114,9 @@ L 178.534066 78.798777
 L 173.631693 80.201154 
 L 231.471007 180.381784 
 L 229.328993 181.618476 
-" clip-path="url(#cpl_70294c93b997_540fd0_p0e8dbcd503)" style="fill: #0072b2"/>
+" clip-path="url(#cpl_70294c93b997_3abe2c_pcc16d544ed)" style="fill: #0072b2"/>
    </g>
-   <g id="cpl_70294c93b997_540fd0_Quiver_2">
+   <g id="cpl_70294c93b997_3abe2c_Quiver_2">
     <path d="M 167.613919 72.251447 
 L 67.43329 130.09076 
 L 70.97768 133.756441 
@@ -1162,12 +1125,12 @@ L 64.79422 123.046374
 L 66.196598 127.948747 
 L 166.377227 70.109433 
 L 167.613919 72.251447 
-" clip-path="url(#cpl_70294c93b997_540fd0_p0e8dbcd503)" style="fill: #0072b2"/>
+" clip-path="url(#cpl_70294c93b997_3abe2c_pcc16d544ed)" style="fill: #0072b2"/>
    </g>
   </g>
  </g>
  <defs>
-  <clipPath id="cpl_70294c93b997_540fd0_p0e8dbcd503">
+  <clipPath id="cpl_70294c93b997_3abe2c_pcc16d544ed">
    <rect x="24.284667" y="31.313214" width="412.230667" height="294.846786"/>
   </clipPath>
  </defs>
@@ -1321,17 +1284,15 @@ f'(x) &amp;= 3 (\sin x)' + 4 (\cos (2x))' \\
             
             
               
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
-  <div class="sidebar-secondary-item"><div
-    id="pst-page-navigation-heading-2"
-    class="page-toc tocsection onthispage">
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Innhold
   </div>
-  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
-    <ul class="pst-show_toc_level nav section-nav flex-column">
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-De-deriverte-til-sinus-og-cosinus">De deriverte til sinus og cosinus</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-Eksempel-1">Eksempel 1</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-Eksempel-2">Eksempel 2</a></li>
@@ -1383,8 +1344,8 @@ Av René Ask, Edvard Munch Videregående Skole
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../../_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
-<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
+  <script src="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>
