@@ -238,7 +238,7 @@ $$
 \lvec{OS} &= \dfrac{1}{2}(\lvec{OA} + \lvec{OB}) \\
 \\
 &= \dfrac{1}{2}\cdot \left([1, 2, 3] + [5, 2, 1]\right) \\
-\
+\\
 &= \dfrac{1}{2} \cdot [6, 4, 4] \\
 \\
 &= [3, 2, 2]
@@ -256,7 +256,7 @@ $$
 Lengden av denne vektoren er 
 
 $$
-\abs{\lvec{AB}} &= \sqrt{4^2 + 0^2 + (-2)^2} = \sqrt{16 + 0 + 4} = \sqrt{20} = 2\sqrt{5}
+\abs{\lvec{AB}} = \sqrt{4^2 + 0^2 + (-2)^2} = \sqrt{20} = 2\sqrt{5}
 $$
 
 Radius er derfor 
@@ -496,25 +496,21 @@ Finn koordinatene til $Q$.
 
 
 :::::{answer}
+$Q(-2, 2, 3)$
 
 ::::{solution}
+Vi har at $Q$ må ligge på den andre siden av kuleflaten, diametralt motsatt fra punktet $P$. Det betyr at 
 
+$$
+\lvec{OQ} = \lvec{OS} - \lvec{SP} = [2, -1, 3] - [4, -3, 0] = [-2, 2, 3]
+$$
+
+Altså er punktet gitt ved $Q(-2, 2, 3)$.
 ::::
 :::::
 
 
 :::::::::::::
-
-
-Et plan $\beta$ er parallelt med $\alpha$ og skjærer kuleflaten langs en sirkel. Avstanden fra $\beta$ til $Q$ er $3$.
-
-:::::::::::::{part} d
-Finn radiusen til skjæringssirkelen mellom $\beta$ og kuleflaten.
-
-
-:::::::::::::
-
-
 
 :::::::::::::::
 
@@ -527,7 +523,7 @@ Finn radiusen til skjæringssirkelen mellom $\beta$ og kuleflaten.
 En kuleflate $K$ har likningen
 
 $$
-x^2 - 2x + y^2 + 2y + z^2 - 6z = 14
+x^2 + y^2 + z^2 - 2x + 2y - 6z = 14
 $$
 
 
@@ -544,23 +540,169 @@ Vis at punktet $A(4, 3, 3)$ ligger på $K$.
 
 :::::::::::::
 
+Et plan $\alpha$ tangerer kuleflaten i punktet $A$.
+
+:::::::::::::{part} c
+Bestem en likning for $\alpha$.
+
+
+:::::::::::::
+
+Et annet plan $\alpha$ går gjennom $S$ og $B(1, 0, 1)$ og står normalt på $\alpha$.
+
+:::::::::::::{part} d
+
+Bestem en likning for $\beta$.
+
+:::::::::::::
+
+
+
+
+:::::::::::::::
+
+
+
+
+---
+
+
+
+:::::::::::::::{exercise} Oppgave 6
+En kuleflate er gitt ved 
+
+$$
+x^2 - 6x + y^2 + 4y + z^2 - 8z - 20 = 0
+$$
+
+
+:::::::::::::{part} a
+Finn sentrum $S$ og radius $r$ til kuleflaten.
+
+
+:::::{answer}
+* Sentrum $S(3, -2, 4)$
+* Radius $r = 7$
+
+::::{solution}
+Vi skriver om kulelikningen til standardform:
+
+$$
+x^2 - 6x + y^2 + 4y + z^2 - 8z - 20 = 0
+$$
+
+$$
+(x - 3)^2 - 9 + (y + 2)^2 - 4 + (z - 4)^2 - 16 - 20 = 0
+$$
+
+$$
+(x - 3)^2 + (y + 2)^2 + (z - 4)^2 = 49 = 7^2
+$$
+
+Altså er sentrum $S(3, -2, 4)$ og radius $r = 7$.
+::::
+:::::
+
+:::::::::::::
+
+
+Et plan er gitt ved 
+
+$$
+6x - 3y + 2z - 4 = 0
+$$
+
+
+:::::::::::::{part} b
+Bestem avstanden fra kulens sentrum til planet.
+
+
+:::::{answer}
+Avstanden er lik $4$.
+
+::::{solution}
+Normalvektoren til planet er $\vec n = [a, b, c] = [6, -3, 2]$. Avstanden fra $S(3, -2, 4)$ til planet er da gitt ved 
+
+$$
+\begin{align*}
+L &= \dfrac{\abs{ax + by + cz + d}}{\sqrt{a^2 + b^2 + c^2}} \\
+\\
+&= \dfrac{\abs{6 \cdot 3 - 3 \cdot (-2) + 2 \cdot 4 - 4}}{\sqrt{6^2 + (-3)^2 + 2^2}} \\
+\\
+&= \dfrac{\abs{18 + 6 + 8 - 4}}{\sqrt{36 + 9 + 4}} \\
+\\
+&= \dfrac{\abs{28}}{\sqrt{49}} \\
+\\
+&= \dfrac{28}{7} \\
+\\
+&= 4
+\end{align*}
+$$
+::::
+:::::
+
+
+:::::::::::::
+
+
+Skjæringen mellom kuleflaten og planet danner en sirkel.
 
 
 :::::::::::::{part} c
-Bestem likningen til tangentplanet $\alpha$ til kuleflaten i punktet $A$.
+Bestem arealet av sirkelen.
+
+:::{hint}
+Husk at arealet av en sirkel er $A = \pi R^2$, der $R$ er radius til sirkelen.
+
+:::
+
+
+:::::{answer}
+Arealet er lik $33\pi$.
+
+::::{solution}
+:::{plot}
+width: 100%
+align: right
+fontsize: 24
+axis: off
+axis: equal
+circle: (0, 0), 3, blue, solid
+line-segment: (-4, 2), (4, 2), red, dashed
+line-segment: (0, 2), (sqrt(5), 2), red, solid
+point: (0, 0)
+text: 0, 0, "$S$", bottom-left
+line-segment: (0, 0), (0, 2), black, dashdot
+line-segment: (0, 0), (sqrt(5), 2), black, dashdot
+let: ds = 0.5
+line-segment: (0, 2 - ds), (ds, 2 - ds), gray, solid
+line-segment: (ds, 2 - ds), (ds, 2), gray, solid
+text: 0.5 * sqrt(5), 0.5 * 2, "$r$", bottom-right
+text: 0, 1, "$L$", center-left
+text: 0.5 * sqrt(5), 2, "$\rho$", top-center
+text: 4, 2, "$\alpha$", center-right
+:::
+
+Vi lar $\rho$ være radius til skjæringssirkelen. Fra skissa til høyre kan vi da bruke Pytagoras' setning: 
+
+$$
+\rho^2 + L^2 = r^2 
+$$
+
+$$
+\rho^2 = r^2 - L^2 = 49 - 16 = 33
+$$
+
+Arealet av sirkelen er da gitt ved
+
+$$
+A = \pi \rho^2 = 33\pi
+$$
+::::
+:::::
 
 
 :::::::::::::
-
-
-:::::::::::::{part} d
-Et annet plan $\alpha$ går gjennom $S$ og $B(1, 0, 1)$ og står normalt på $\alpha$.
-
-Bestem likningen til $\beta$. 
-:::::::::::::
-
-
-
 
 :::::::::::::::
 
