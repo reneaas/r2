@@ -531,11 +531,47 @@ $$
 :::::::::::::{part} a
 Finn sentrum og radius til kulen.
 
+
+:::::{answer}
+* Sentrum $S(1, -1, 3)$
+* Radius $r = 5$
+
+::::{solution}
+Vi skriver om likningen til standardlikningen:
+
+$$
+x^2 - 2x + y^2 + 2y + z^2 - 6z = 14
+$$
+
+$$
+(x - 1)^2 - 1 + (y + 1)^2 - 1 + (z - 3)^2 - 9 = 14
+$$
+
+$$
+(x - 1)^2 + (y + 1)^2 + (z - 3)^2 = 25 = 5^2
+$$
+
+Fra likningen kan vi lese av at kulen har sentrum i $S(1, -1, 3)$ og radius $r = 5$.
+::::
+:::::
+
 :::::::::::::
 
 
 :::::::::::::{part} b
 Vis at punktet $A(4, 3, 3)$ ligger på $K$.
+
+
+::::{solution}
+Vi setter inn koordinatene til punktet og sjekker at kulelikningen er oppfylt:
+
+$$
+(4 - 1)^2 + (3 + 1)^2 + (3 - 3)^2 = 3^2 + 4^2 + 0^2 = 25 = 5^2
+$$
+
+Likningen er oppfylt som betyr at $A$ ligger på $K$.
+::::
+
 
 
 :::::::::::::
@@ -546,13 +582,90 @@ Et plan $\alpha$ tangerer kuleflaten i punktet $A$.
 Bestem en likning for $\alpha$.
 
 
+:::::{answer}
+$$
+3x + 4y - 24 = 0
+$$
+
+::::{solution}
+En normalvektor til planet vil være parallell med $\lvec{SA}$:
+
+$$
+\lvec{SA} = \lvec{OA} - \lvec{OS} = [4, 3, 3] - [1, -1, 3] = [3, 4, 0]
+$$
+
+Vi setter normalvektoren til $\vec n = [3, 4, 0]$. Vi lar $P(x, y, z)$ være et vilkårlig punkt i planet. Da er planlikningen gitt ved
+
+$$
+\lvec{AP} \cdot \vec n = 0
+$$
+
+$$
+[x - 4, y - 3, z - 3] \cdot [3, 4, 0] = 0
+$$
+
+$$
+3(x - 4) + 4(y - 3) + 0(z - 3) = 0
+$$
+
+$$
+3x - 12 + 4y - 12 = 0
+$$
+
+$$
+3x + 4y - 24 = 0
+$$
+::::
+:::::
+
 :::::::::::::
 
-Et annet plan $\alpha$ går gjennom $S$ og $B(1, 0, 1)$ og står normalt på $\alpha$.
+Et annet plan $\beta$ inneholder både $S$ og $B(1, 0, 1)$ og står normalt på $\alpha$.
 
 :::::::::::::{part} d
 
 Bestem en likning for $\beta$.
+
+
+:::::{answer}
+$$
+-8x + 6y + 3z + 5 = 0
+$$
+
+::::{solution}
+Siden $\beta$ inneholder $S$ og $B$, vil $\lvec{SB}$ være parallell med planet. Siden $\beta$ står normalt på $\alpha$, vil også normalvektoren til $\alpha$ være parallell med $\beta$. Dermed kan vi lage en normalvektor til $\beta$ ved å ta kryssproduktet mellom $\lvec{SB}$ og normalvektoren til $\alpha$. Vi har at
+
+$$
+\begin{align*}
+\vec n_\alpha \times \lvec{SB} &= \mqty| \vec e_x & \vec e_y & \vec e_z \\ 3 & 4 & 0 \\ 0 & 1 & -2 | \\
+\\
+&= \vec e_x \cdot \mqty| 4 & 0 \\ 1 & -2 | - \vec e_y \cdot \mqty| 3 & 0 \\ 0 & -2 | + \vec e_z \cdot \mqty| 3 & 4 \\ 0 & 1 | \\
+\\
+&= \vec e_x \cdot (-8) - \vec e_y \cdot (-6) + \vec e_z \cdot (3) \\
+\\
+&= [-8, 6, 3]
+\end{align*}
+$$
+
+Vi lar $P(x, y, z)$ være et vilkårlig punkt i planet. Da er planlikningen til $\beta$ gitt ved
+
+$$
+\lvec{BP} \cdot \vec n_\beta = 0
+$$
+
+$$
+[x - 1, y - 0, z - 1] \cdot [-8, 6, 3] = 0
+$$
+
+$$
+-8(x - 1) + 6(y - 0) + 3(z - 1) = 0
+$$
+
+$$
+-8x + 6y + 3z + 5 = 0
+$$
+::::
+:::::
 
 :::::::::::::
 
