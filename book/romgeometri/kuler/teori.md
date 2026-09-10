@@ -283,17 +283,29 @@ I praksis er det ikke mye ny teori å lære om kuler. Avstander og skjæringer k
 
 
 
+
 :::::::::::::::{example} Eksempel 4
-:::{plot3d-2}
-width: 100%
-fontsize: 24
+
+:::{interactive-plot3d}
+nocache:
+height: 320px
+auto-intersections: true
 align: right
-plane: equation=2*x + y - 2*z - 6 = 0, span=(2, 4), color=red, alpha=0.3
-sphere: center=(3, 2, -1), radius=3, color=blue, alpha=0.2, resolution=128
-xrange: (-2, 10)
-yrange: (-2, 7)
-zrange: (-3, 4)
+width: 50%
+hidden-edges: dashed
+backend: threejs
+fontsize: 20
+plane: equation=2*x + y - 2*z - 6 = 0, span=(4, 4), color=red, alpha=0.3
+sphere: center=(3, 2, -1), radius=3, color=blue, alpha=0.2
+xrange: (-6, 10)
+yrange: (-6, 7)
+zrange: (-6, 4)
 azim: -50
+grid: true
+ticks: true
+xstep: 1
+ystep: 1
+zstep: 1
 :::
 
 
@@ -310,6 +322,8 @@ $$
 
 Finn sentrum og radius til skjæringssirkelen mellom kula og planet. 
 
+:::{clear}
+:::
 
 ::::{solution}
 ---
@@ -383,10 +397,4 @@ $$
 
 
 :::::::::::::::
-
-
-
-
-
-
 
