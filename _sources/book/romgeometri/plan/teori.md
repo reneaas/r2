@@ -679,7 +679,7 @@ right-angle: at=(-0.2, 3, 1), dir1=(0,0,1), dir2=(1,0,0), size=0.35
 right-angle: at=(1, 1, 4), dir1=(0,0,1), dir2=(1,0,0), size=0.35
 text: at=(-0.3, 3, 1.5), value="$\vec{n}_\alpha$", ha=right, va=center
 text: at=(0.9, 1, 4.5), value="$\vec{n}_\beta$", ha=right, va=center
-text: at=(3, 3, 3), value="$L$", ha=left, va=center
+text: at=(3, 3, 2.5), value="$L$", ha=left, va=center
 line-segment: (2, 2, 1), (3, 3, 1), linestyle=dashed, color=gray
 right-angle: at=(3, 3, 1), dir1=(0, 0, 1), dir2=(-(3 - 2), -(3 - 2), 0), size=0.35
 line-segment: (3, 3, 4), (3, 3, 1), linestyle=dashed, color=black
@@ -776,6 +776,74 @@ $$
 
 
 :::::::::::::::
+
+
+### Avstanden mellom to ikke-parallelle linjer
+
+Dersom to linjer $\ell$ og $m$ er ikke-parallelle og ikke skjærer hverandre, vil de ligge i to forskjellige plan som er parallelle. Avstanden mellom de to linjene er derfor lik avstanden mellom de to parallelle planene som inneholder linjene.
+
+:::::::::::::::{summary} Avstand mellom to ikke-parallelle linjer
+:::{interactive-plot3d}
+nocache:
+fontsize: 24
+width: 50%
+align: right
+xrange: (-1, 6)
+yrange: (-1, 6)
+let: Ax = 2
+let: Ay = 2
+let: Az = 1
+let: Bx = 2
+let: By = 2
+let: Bz = 4
+let: vax = 2
+let: vay = 1
+let: vaz = 0
+let: vbx = -2
+let: vby = 1
+let: vbz = 0
+plane: equation=z=Az, span=(4, 4), color=blue, alpha=0.2
+plane: equation=z=Bz, span=(4, 4), color=red, alpha=0.2
+zrange: (-1, 6)
+ticks: off
+line: point=(Ax, Ay, Az), direction=(vax, vay, vaz), color=black, style=solid
+line: point=(Bx, By, Bz), direction=(vbx, vby, vbz), color=black, style=solid
+point: at=(Ax + vax, Ay + vay, Az + vaz), color=black
+point: at=(Bx - vbx, By - vby, Bz - vbz), color=black
+text: at=(Bx - vbx, By - vby, Bz - vbz), value="$B$", ha=left, va=bottom
+text: at=(Ax + vax, Ay + vay, Az + vaz), value="$A$", ha=left, va=bottom
+vector: (Ax + vax, Ay + vay, Az + vaz), (Bx - vbx, By - vby, Bz - vbz), teal
+line-segment: from=(Ax, Ay, Az), to=(Bx, By, Bz), linestyle=dashed, color=black
+text: at=(0.5 * (Ax + Bx), 0.5 * (Ay + By), 0.5 * (Az + Bz)), value="$L$", ha=left, va=center
+line-segment: from=(Bx - vbx, By - vby, Bz - vbz), to=(Bx - vbx, By - vby, Az), linestyle=dashed, color=gray
+right-angle: at=(Bx - vbx, By - vby, Az), dir1=(0, 0, 1), dir2=(-((Bx - vbx) - (Ax + vax)), -((By - vby) - (Ay + vay)), 0), size=0.35, color=black
+right-angle: at=(Ax, Ay, Az), dir1=(0,0,1), dir2=(vax, vay, vaz), size=0.35, color=black
+vector: (Bx - vbx, By - vby, Az), (Bx - vbx, By - vby, Ax + 0.5), blue
+text: at=(Bx - vbx, By - vby - 0.25, Ax + 0.25), value="$\vec{n}$", ha=right, va=center
+line-segment: from=(Ax + vax, Ay + vay, Az + vaz), to=(Bx - vbx, By - vby, Az + vaz), linestyle=dashed, color=gray
+vector: (Ax + vax, Ay + vay, Az + vaz), ((Ax + vax + vax), (Ay + vay +  vay), (Az + vaz + vaz)), blue
+text: at=(0.5 * (Ax + vax + (Ax + vax + vax)), 0.5 * (Ay + vay + (Ay + vay + vay)), 0.5 * (Az + vaz + (Az + vaz + vaz))), value="$\vec{v}_\ell$", ha=left, va=bottom
+vector: (Bx - vbx, By - vby, Bz - vbz), ((Bx - vbx - vbx), (By - vby -  vby), (Bz - vbz - vbz)), red
+text: at=(0.5 * (Bx - vbx + (Bx - vbx - vbx)), 0.5 * (By - vby + (By - vby -  vby)), 0.5 * (Bz - vbz + (Bz - vbz - vbz))), value="$\vec{v}_m$", ha=left, va=bottom
+:::
+
+Gitt to ikke-parallelle linjer $\ell$ og $m$ som ikke skjærer hverandre, er avstanden mellom dem lik avstanden mellom de to parallelle planene som inneholder linjene.
+
+Hvis linja $\ell$ inneholder et punkt $A$ og har en retningsvektor $\vec{v}_\ell$ og linja $m$ inneholder et punkt $B$ og har en retningsvektor $\vec{v}_m$, så er en normalvektor som står normalt på begge linjene samtidig gitt ved 
+
+$$
+\vec{n} = \vec{v}_\ell \times \vec{v}_m
+$$
+
+Da er den korteste avstanden mellom de to linjene gitt ved 
+
+$$
+L = \dfrac{\abs{\lvec{AB} \cdot \vec{n}}}{\abs{\vec{n}}}
+$$
+:::::::::::::::
+
+
+
 
 
 ## Skjæringer
