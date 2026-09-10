@@ -149,9 +149,8 @@ Altså er $\vec{a} \times \vec{b} = [-3, 6, -3]$.
 :::::::::::::::{summary} Geometriske egenskaper til kryssproduktet
 
 
-:::{plot3d-2}
-nocache:
-width: 100%
+:::{interactive-plot3d}
+width: 50%
 align: right
 fontsize: 24
 let: ax = 3
@@ -348,10 +347,9 @@ $$
 
 
 :::::::::::::::{example} Eksempel 3
-:::{plot3d-2}
-nocache:
+:::{interactive-plot3d}
 fontsize: 24
-width: 100%
+width: 50%
 align: right
 ngon: [(0, 0, 0), (1, 2, -2), (0, 5, 4), (-1, 3, 6)], color=blue, alpha=0.3
 zrange: (-2, 8)
@@ -494,8 +492,8 @@ som vi skal kalle for en **arealvektor** til trekanten.
 
 :::::::::::::::{example} Eksempel 4
 
-:::{plot3d-2}
-width: 100%
+:::{interactive-plot3d}
+width: 45%
 fontsize: 24
 align: right
 let: Ax = 1
@@ -578,8 +576,8 @@ $$
 
 
 :::::::::::::::{example} Eksempel 5
-:::{plot3d-2}
-width: 100%
+:::{interactive-plot3d}
+width: 50%
 align: right
 let: Ax = 0
 let: Ay = 0
@@ -764,8 +762,8 @@ Men målet vårt er å bruke vektorregning til å regne ut volumet:
 :::::::::::::::{summary} Volumet av et prisme
 
 
-:::{plot3d-2}
-width: 100%
+:::{interactive-plot3d}
+width: 50%
 align: right
 fontsize: 24
 ylabel: none
@@ -907,8 +905,8 @@ $$
 
 
 :::::::::::::::{example} Eksempel 6
-:::{plot3d-2}
-width: 100%
+:::{interactive-plot3d}
+width: 50%
 align: right
 prism: base=[(1, 1, 0), (4, 1, 0), (4, 5, 0)], vector=(1, 1, 3), color=blue, alpha=0.25
 xrange: (-1, 6)
@@ -998,9 +996,8 @@ Prikkproduktet henter ut den riktige høyden automatisk, så vi trenger ikke bek
 
 ### Pyramider
 
-:::{plot3d-2}
-nocache:
-width: 100%
+:::{interactive-plot3d}
+width: 50%
 align: right
 fontsize: 24
 ylabel: none
@@ -1066,8 +1063,8 @@ $$
 
 :::::::::::::::{summary} Volumet av en pyramide
 
-:::{plot3d-2}
-width: 100%
+:::{interactive-plot3d}
+width: 50%
 align: right
 fontsize: 24
 ylabel: none
@@ -1168,8 +1165,8 @@ $$
 :::::::::::::::{example} Eksempel 7
 
 
-:::{plot3d-2}
-width: 100%
+:::{interactive-plot3d}
+width: 50%
 align: right
 xrange: (-1, 5)
 yrange: (-1, 5)
@@ -1274,9 +1271,8 @@ Når en pyramide har en mer komplisert grunnflate, deler vi opp grunnflaten i mi
 
 
 :::::::::::::::{example} Eksempel 8
-:::{plot3d-2}
-nocache:
-width: 100%
+:::{interactive-plot3d}
+width: 50%
 align: right
 xrange: (-2, 3)
 yrange: (-1, 3)

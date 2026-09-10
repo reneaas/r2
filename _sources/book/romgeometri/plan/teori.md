@@ -54,8 +54,8 @@ Et plan er definert på én av tre måter:
 
 
 :::::::::::::::{summary} Normalvektoren til et plan
-:::{plot3d-2}
-width: 100%
+:::{interactive-plot3d}
+width: 50%
 ticks: off
 align: right
 fontsize: 26
@@ -63,7 +63,7 @@ plane: equation=z=2, xrange=(-0.5, 4), yrange=(-0.5, 4), color=blue, alpha=0.2
 xrange: (-1, 4)
 yrange: (-1, 4)
 zrange: (-1, 4)
-azim: -70
+azim: -65
 elev: 20
 let: Ax = 1
 let: Ay = 1
@@ -131,9 +131,7 @@ $$
 \begin{align*}
 \lvec{AB} \times \lvec{AC} &= \mqty|\vec{e}_x & \vec{e}_y & \vec{e}_z \\ 1 & 1 & -2 \\ 2 & -1 & -1| \\
 \\
-&= \vec{e}_x \cdot (1\cdot(-1) - (-2)\cdot(-1)) - \vec{e}_y \cdot (1\cdot(-1) - (-2)\cdot 2) + \vec{e}_z \cdot (1\cdot(-1) - 1\cdot 2) \\
-\\
-&= \vec{e}_x \cdot (-1 - 2) - \vec{e}_y \cdot (-1 - (-4)) + \vec{e}_z \cdot (-1 - 2) \\
+&= \vec e_x \cdot \mqty| 1 & -2 \\ -1 & -1| - \vec e_y \cdot \mqty| 1 & -2 \\ 2 & -1| + \vec e_z \cdot \mqty| 1 & 1 \\ 2 & -1| \\
 \\
 &= -3 \vec{e}_x - 3 \vec{e}_y - 3 \vec{e}_z \\ 
 \\
@@ -157,11 +155,11 @@ $$
 
 
 :::::::::::::::{summary} Planlikningen
-:::{plot3d-2}
+:::{interactive-plot3d}
 width: 350px
 align: right
-elev: 20
-azim: -70
+elev: 25
+azim: -60
 xrange: (-1, 5)
 yrange: (-1, 5)
 zrange: (-1, 4)
@@ -321,7 +319,8 @@ Avstander mellom plan og andre objekter bruker alle sammen den samme grunnideen:
 
 
 :::::::::::::::{summary} Avstand fra punkt til plan
-:::{plot3d-2}
+:::{interactive-plot3d}
+nocache:
 width: 350px
 align: right
 elev: 20
@@ -333,7 +332,6 @@ ticks: off
 nocache:
 fontsize: 24
 plane: normal=(0, 0, 1), point=(3, 2, 1), span=(4,4), color=blue, alpha=0.2
-normal-segment: plane-normal=(0, 0, 1), plane-point=(3, 2, 1), point=(3, 3, 4), color=black, linestyle=dashed
 vector: (0, 0, 0), (3, 3, 4), red
 vector: (0, 0, 0), (2, 1, 1), red
 point: (2, 1, 1), black
@@ -344,8 +342,11 @@ let: nx = 0
 let: ny = 0
 let: nz = 1
 vector: (3, 3, 1), (3 + nx, 3 + ny, 1 + nz), red
-text: at=(3 + 0.5 * nx - 0.1, 3 + 0.5 * ny, 1 + 0.5 * nz), value="$\vec{n}$", ha=right, va=center
+text: at=(3 + 0.5 * nx + 0.2, 3 + 0.5 * ny + 0.2, 1 + 0.5 * nz), value="$\vec{n}$", ha=left, va=center
 text: at=(3.1, 3, 2.5), value="$L$", ha=left, va=bottom
+line-segment: from=(2, 1, 1), to=(3, 3, 1), linestyle=dashed, color=gray
+right-angle: at=(3, 3, 1), dir1=(0, 0, 1), dir2=(-(3 - 2), -(3 - 1), 1 - 1), size=0.35
+line-segment: from=(3, 3, 1), to=(3, 3, 4), linestyle=dashed, color=black
 :::
 
 
@@ -537,10 +538,8 @@ $$
 
 :::::::::::::::{summary} Avstand fra linje til plan
 
-:::{plot3d-2}
-nocache:
-width: 100%
-ylabel: none
+:::{interactive-plot3d}
+width: 50%
 align: right
 ticks: off
 fontsize: 24
@@ -550,24 +549,25 @@ xrange: (-1, 5)
 yrange: (-1, 5)
 zrange: (-1, 5)
 plane: normal=(0, 0, 1), point=(2, 2, 2), span=(6,6), color=blue, alpha=0.2
-line: point=(4, 3, 4), direction=(1, 0, 0), color=blue, lw=1
-point: (4, 3, 4), black
+line: point=(4, 3, 5), direction=(1, 0, 0), color=blue, lw=1
+point: (4, 3, 5), black
 point: (2, 2, 2), black
-normal-segment: point=(4, 3, 4), plane-normal=(0, 0, 1), plane-point=(2, 2, 2), color=black, linestyle=dashed
-text: at=(4, 3, 4), value="$P$", ha=left, va=bottom
+text: at=(4, 3, 5), value="$P$", ha=left, va=bottom
 text: at=(2, 2, 2), value="$A$", ha=right, va=top
-text: at=(4, 3, 3), value="$L$", ha=left, va=center
-vector: (2, 2, 2), (4, 3, 4), red
-vector: (1, 3, 4), (2, 3, 4), red
-text: at=(1.5, 3, 4), value="$\vec{v}$", ha=center, va=bottom
-vector: (1, 2, 2), (1, 2, 3), red
-right-angle: at=(1, 2, 2), dir1=(0,0,1), dir2=(1,0,0), size=0.35
-text: at=(0.9, 2, 2.5), value="$\vec{n}$", ha=right, va=center
+text: at=(4, 3, 4), value="$L$", ha=left, va=center
+vector: (2, 2, 2), (4, 3, 5), red
+vector: (1, 3, 5), (2, 3, 5), red
+text: at=(1.5, 3, 5), value="$\vec{v}$", ha=center, va=bottom
+vector: (4, 3, 2), (4, 3, 3), red
+text: at=(4 + 0.2, 3, 2.5), value="$\vec{n}$", ha=left, va=center
 vector: (4, 1, 0.2), (4, 1, 1.2), red
 vector: (4, 1, 0.2), (5, 1, 0.2), red
 right-angle: at=(4, 1, 0.2), dir1=(0,0,1), dir2=(1,0,0), size=0.35
 text: at=(3.9, 1, 0.7), value="$\vec{n}$", ha=right, va=center
 text: at=(5, 1, 0.2), value="$\vec{v}$", ha=left, va=center
+line-segment: from=(2, 2, 2), to=(4, 3, 2), linestyle=dashed, color=gray
+right-angle: at=(4, 3, 2), dir1=(0, 0, 1), dir2=(-(4 - 2), -(3 - 2), 0), size=0.35
+line-segment: from=(4, 3, 2), to=(4, 3, 5), linestyle=dashed, color=black
 :::
 
 
@@ -578,6 +578,12 @@ L = \dfrac{|\lvec{AP} \cdot \vec{n}|}{\abs{\vec{n}}}
 $$
 
 der $A$ er et punkt i planet og $P$ er et punkt på linja, og $\vec{n}$ er en normalvektor til planet.
+
+Merk at linja $\ell$ er parallell med planet $\alpha$ dersom retningsvektoren til linja er ortogonal med normalvektoren til planet, altså dersom
+
+$$
+\vec v \cdot \vec n = 0
+$$
 
 :::{clear}
 :::
@@ -600,7 +606,7 @@ $$
 En linje $\ell$ er gitt ved 
 
 $$
-\vec{r}(t) = \mqty[3t + 1 \\ 2t + 2 \\ 3]
+\vec{r}(t) = \mqty[3t + 1, 2t + 2, 3]
 $$
 
 Finn avstanden fra linja $\ell$ til planet $\alpha$.
@@ -612,13 +618,13 @@ open:
 Vi finner ett punkt på linja $\ell$ ved å sette $t = 0$:
 
 $$
-\lvec{OP} = \vec{r}(0) = \mqty[1 \\ 2 \\ 3]
+\lvec{OP} = \vec{r}(0) = \mqty[1, 2, 3]
 $$
 
 Så finner vi et punkt $A$ i planet $\alpha$. Vi kan for eksempel sette $x = 0$ og $y = 0$, som gir at $z = 2$. Altså kan vi bruke punktet $A(0, 0, 2)$ i planet. Da får vi at 
 
 $$
-\lvec{AP} = \lvec{OP} - \lvec{OA} = \mqty[1 \\ 2 \\ 3] - \mqty[0 \\ 0 \\ 2] = \mqty[1 \\ 2 \\ 1]
+\lvec{AP} = \lvec{OP} - \lvec{OA} = \mqty[1, 2, 3] - \mqty[0, 0, 2] = \mqty[1, 2, 1]
 $$
 
 Normalvektoren til planet $\alpha$ er gitt ved koeffisientene i likningen, altså $\vec{n} = [2, -3, 1]$.
@@ -650,12 +656,11 @@ $$
 
 
 :::::::::::::::{summary} Avstand fra plan til plan
-:::{plot3d-2}
-width: 100%
+:::{interactive-plot3d}
+width: 50%
 align: right
 elev: 20
 azim: -70
-ylabel: none
 xrange: (-1, 5)
 yrange: (-1, 5)
 zrange: (-1, 5.5)
@@ -665,7 +670,6 @@ plane: normal=(0, 0, 1), point=(2, 2, 1), span=(6,6), color=blue, alpha=0.2
 plane: normal=(0, 0, 1), point=(2, 2, 4), span=(6,6), color=teal, alpha=0.2
 point: (2, 2, 1), black
 point: (3, 3, 4), black
-normal-segment: point=(3, 3, 4), plane-normal=(0, 0, 1), plane-point=(2, 2, 1), color=black, linestyle=dashed
 vector: (2, 2, 1), (3, 3, 4), red
 text: at=(2, 2, 1), value="$A$", ha=right, va=top
 text: at=(3, 3, 4), value="$B$", ha=left, va=bottom
@@ -675,10 +679,16 @@ right-angle: at=(-0.2, 3, 1), dir1=(0,0,1), dir2=(1,0,0), size=0.35
 right-angle: at=(1, 1, 4), dir1=(0,0,1), dir2=(1,0,0), size=0.35
 text: at=(-0.3, 3, 1.5), value="$\vec{n}_\alpha$", ha=right, va=center
 text: at=(0.9, 1, 4.5), value="$\vec{n}_\beta$", ha=right, va=center
-text: at=(3, 3, 4 - 2), value="$L$", ha=left, va=center
+text: at=(3, 3, 3), value="$L$", ha=left, va=center
+line-segment: (2, 2, 1), (3, 3, 1), linestyle=dashed, color=gray
+right-angle: at=(3, 3, 1), dir1=(0, 0, 1), dir2=(-(3 - 2), -(3 - 2), 0), size=0.35
+line-segment: (3, 3, 4), (3, 3, 1), linestyle=dashed, color=black
+vector: (3, 3, 1), (3, 3, 2), blue
 :::
 
-La $\alpha$ og $\beta$ være to parallelle plan med normalvektorer $\vec{n}_\alpha$ og $\vec{n}_\beta$. La $A$ være et punkt i planet $\alpha$ og $B$ være et punkt i planet $\beta$. 
+La $\alpha$ og $\beta$ være to parallelle plan med normalvektorer $\vec{n}_\alpha$ og $\vec{n}_\beta$. 
+
+La $A$ være et punkt i planet $\alpha$ og $B$ være et punkt i planet $\beta$. 
 
 Da er avstanden $L$ mellom de to planene gitt ved 
 
@@ -777,8 +787,8 @@ Så lenge en linje ikke er parallell med et plan, så vil linja og planet skjær
 
 :::::::::::::::{summary} Strategi: Skjæring mellom linje og plan
 
-:::{plot3d-2}
-width: 100%
+:::{interactive-plot3d}
+width: 50%
 align: right
 ticks: off
 fontsize: 24
@@ -876,11 +886,11 @@ Når to plan skjærer hverandre, så får vi en **skjæringslinje**.
 
 :::::::::::::::{summary} Strategi: Skjæring mellom to plan
 
-:::{plot3d-2}
+:::{interactive-plot3d}
 nocache:
 ylabel: none
 fontsize: 26
-width: 100%
+width: 50%
 align: right
 elev: 20
 azim: -70

@@ -7,15 +7,15 @@
 
 
 :::::::::::::::{summary} Kulelikningen
-:::{plot3d-2}
-width: 100%
+:::{interactive-plot3d}
+width: 50%
 align: right
 fontsize: 24
 let: Sx = 4
 let: Sy = 2
 let: Sz = 3
 let: r = 2
-sphere: center=(Sx, Sy, Sz), radius=r, color=blue, alpha=0.2, resolution=128
+sphere: center=(Sx, Sy, Sz), radius=r, color=blue, alpha=0.2
 xrange: (-1, 7)
 yrange: (-1, 7)
 zrange: (-1, 7)
@@ -58,15 +58,15 @@ $$
 
 
 :::::::::::::::{example} Eksempel 1
-:::{plot3d-2}
-width: 100%
+:::{interactive-plot3d}
+width: 50%
 align: right
 fontsize: 24
 let: Sx = 4
 let: Sy = 2
 let: Sz = 3
 let: r = 2
-sphere: center=(Sx, Sy, Sz), radius=r, color=blue, alpha=0.2, resolution=128
+sphere: center=(Sx, Sy, Sz), radius=r, color=blue, alpha=0.2
 xrange: (-1, 7)
 yrange: (-1, 7)
 zrange: (-1, 7)
@@ -176,8 +176,8 @@ Ergo har kule sentrum i $S(-2, 3, -1)$ og radius $r = \sqrt{20} = 2\sqrt{5}$.
 
 
 :::::::::::::::{summary} Tangentplan
-:::{plot3d-2}
-width: 100%
+:::{interactive-plot3d}
+width: 50%
 align: right
 ticks: off
 ylabel: none
@@ -191,7 +191,7 @@ let: r = 2
 let: Px = Sx + r * cos(phi) * cos(theta)
 let: Py = Sy + r * cos(phi) * sin(theta)
 let: Pz = Sz + r * sin(phi)
-sphere: center=(Sx, Sy, Sz), radius=r, color=blue, alpha=0.1, resolution=128
+sphere: center=(Sx, Sy, Sz), radius=r, color=blue, alpha=0.2
 xrange: (-1, 7)
 yrange: (-1, 7)
 zrange: (-1, 7)
@@ -290,8 +290,8 @@ I praksis er det ikke mye ny teori å lære om kuler. Avstander og skjæringer k
 nocache:
 height: 320px
 auto-intersections: true
-align: right
-width: 50%
+align: center
+width: 100%
 hidden-edges: dashed
 backend: threejs
 fontsize: 20
@@ -309,7 +309,7 @@ zstep: 1
 :::
 
 
-En kule $K$ og et plan $\alpha$ er gitt ved 
+En kuleflate $K$ og et plan $\alpha$ er gitt ved likningene
 
 $$
 \begin{align*}
