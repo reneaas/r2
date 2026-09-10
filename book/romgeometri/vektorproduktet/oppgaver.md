@@ -634,8 +634,8 @@ $$
 :::::::::::::::{exercise} Oppgave 6
 
 :::::::::::::{part} a
-:::{plot3d-2}
-width: 100%
+:::{interactive-plot3d}
+width: 50%
 fontsize: 24
 align: right
 let: Ax = 1
@@ -708,8 +708,8 @@ $$
 
 
 :::::::::::::{part} b
-:::{plot3d-2}
-width: 100%
+:::{interactive-plot3d}
+width: 50%
 fontsize: 24
 align: right
 let: Ax = 1
@@ -801,8 +801,8 @@ $$
 
 
 :::::::::::::{part} c
-:::{plot3d-2}
-width: 100%
+:::{interactive-plot3d}
+width: 50%
 fontsize: 24
 align: right
 let: Ax = -1
@@ -889,9 +889,9 @@ $$
 
 :::::::::::::::{exercise} Oppgave 7
 :::::::::::::{part} a
-:::{plot3d-2}
+:::{interactive-plot3d}
 nocache:
-width: 100%
+width: 50%
 fontsize: 24
 align: right
 let: Ax = 2
@@ -1031,8 +1031,8 @@ $$
 
 
 :::::::::::::{part} b
-:::{plot3d-2}
-width: 100%
+:::{interactive-plot3d}
+width: 50%
 fontsize: 24
 align: right
 let: Ax = 1
@@ -1149,8 +1149,8 @@ $$
 
 
 :::::::::::::{part} c
-:::{plot3d-2}
-width: 100%
+:::{interactive-plot3d}
+width: 50%
 fontsize: 24
 align: right
 let: Ax = 0
@@ -1318,8 +1318,8 @@ $$
 
 
 :::::::::::::::{exercise} Oppgave 8
-:::{plot3d-2}
-width: 100%
+:::{interactive-plot3d}
+width: 50%
 fontsize: 24
 align: right
 let: Ax = 1
@@ -1504,8 +1504,8 @@ $$
 
 :::::::::::::::{exercise} Oppgave 9
 
-:::{plot3d-2}
-width: 100%
+:::{interactive-plot3d}
+width: 50%
 align: right
 ticks: off
 xrange: (-3, 8)

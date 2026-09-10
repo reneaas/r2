@@ -11,8 +11,8 @@ Regnereglene for vektorer i 2 dimensjoner (2D) generaliseres naturlig over til 3
 
 
 :::::::::::::::{summary} Representasjon av vektorer i 3D
-:::{plot3d-2}
-width: 100%
+:::{interactive-plot3d}
+width: 50%
 fontsize: 24
 align: right
 xrange: (-1, 5)
@@ -47,8 +47,8 @@ $$
 
 
 :::::::::::::::{example} Eksempel 1
-:::{plot3d-2}
-width: 100%
+:::{interactive-plot3d}
+width: 50%
 fontsize: 24
 align: right
 xrange: (-1, 5)
@@ -84,8 +84,8 @@ $$
 
 
 :::::::::::::::{summary} Posisjonsvektorer
-:::{plot3d-2}
-width: 100%
+:::{interactive-plot3d}
+width: 50%
 fontsize: 24
 align: right
 xrange: (-1, 5)
@@ -100,6 +100,10 @@ vector: (0, 0, 0), (Ax, Ay, Az), blue
 text: at=(0.5 * Ax, 0.5 * Ay, 0.5 * Az), value="$\overrightarrow{OP}$", ha=right, va=bottom
 text: at=(Ax, Ay, Az), value="$P(x, y, z)$", ha=left, va=bottom
 azim: -45
+line-segment: from=(Ax, Ay, 0), to=(Ax, Ay, Az), linestyle=dashed, color=red
+line-segment: from=(Ax, Ay, 0), to=(Ax, 0, 0), linestyle=dashed, color=gray
+line-segment: from=(Ax, Ay, 0), to=(0, Ay, 0), linestyle=dashed, color=gray
+line-segment: from=(0, 0, Az), to=(Ax, Ay, Az), linestyle=dashed, color=gray
 :::
 
 Gitt et punkt $P(x, y, z)$ i rommet, så er **posisjonsvektoren** $\lvec{OP}$ fra origo $O$ til punktet $P$ gitt ved
@@ -137,8 +141,8 @@ $$
 
 
 :::::::::::::::{summary} Vektorer mellom to punkter
-:::{plot3d-2}
-width: 100%
+:::{interactive-plot3d}
+width: 50%
 fontsize: 24
 align: right
 xrange: (-1, 5)
@@ -205,8 +209,8 @@ $$
 
 
 :::::::::::::::{summary} Lengden av en vektor
-:::{plot3d-2}
-width: 100%
+:::{interactive-plot3d}
+width: 50%
 fontsize: 24
 align: right
 xrange: (-1, 5)

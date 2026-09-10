@@ -82,16 +82,15 @@ Merk at siden alle vektorer som er parallelle med $\lvec{AB}$ også er en retnin
 
 :::::::::::::::{summary} Parameterframstilling for linjer
 
-:::{plot3d-2}
-nocache:
+:::{interactive-plot3d}
 align: right
 fontsize: 24
-width: 100%
+width: 50%
 let: Ax = 3
 let: Ay = 0
 let: Az = 4
 let: vx = 2
-let: vy = 0
+let: vy = 1
 let: vz = 0.5
 let: t = 1.5
 line: point=(Ax, Ay, Az), direction=(vx, vy, vz), color=blue, lw=2
@@ -99,19 +98,18 @@ point: (Ax, Ay, Az), black
 vector: (Ax, Ay, Az), (Ax + t*vx, Ay + t*vy, Az + t*vz), red
 text: at=(Ax, Ay, Az), value="$A$", ha=right, va=bottom
 ticks: off
-xrange: (-1, 7)
-yrange: (-1, 5)
-zrange: (-1, 5)
-vector: (0, 0, 0), (Ax, Ay, Az), blue
+xrange: (-3, 9)
+yrange: (-3, 7)
+zrange: (-3, 7)
+vector: (0, 0, 0), (Ax, Ay, Az), teal
 text: at=(0.5 * Ax, 0.5 * Ay, 0.5 * Az), value="$\overrightarrow{OA}$", ha=right, va=bottom
-vector: (0, 0, 0), (Ax + t*vx, Ay + t*vy, Az + t*vz), blue
+vector: (0, 0, 0), (Ax + t*vx, Ay + t*vy, Az + t*vz), teal
 text: at=(0.5 * (2*Ax + t*vx), 0.5 * (2*Ay + t*vy), 0.5 * (2*Az + t*vz)), value="$\vec{v} \cdot t$", ha=center, va=bottom
 text: at=(0.5 * (Ax + t*vx), 0.5 * (Ay + t*vy), 0.5 * (Az + t*vz)), value="$\vec{r}(t)$", ha=left, va=top
 text: at=(Ax + t*vx, Ay + t*vy, Az + t*vz), value="$P$", ha=left, va=bottom
 point: (Ax + t*vx, Ay + t*vy, Az + t*vz), black
 elev: 20
 azim: -70
-ylabel: none
 :::
 
 En parameterframstilling for en linje angir alle punktene som ligger på linja.
