@@ -83,6 +83,8 @@ Merk at siden alle vektorer som er parallelle med $\lvec{AB}$ også er en retnin
 :::::::::::::::{summary} Parameterframstilling for linjer
 
 :::{interactive-plot3d}
+interactive-var: t, -5, 5, 11
+interactive-var-start: t=2
 align: right
 fontsize: 24
 width: 50%
@@ -92,7 +94,6 @@ let: Az = 4
 let: vx = 2
 let: vy = 1
 let: vz = 0.5
-let: t = 1.5
 line: point=(Ax, Ay, Az), direction=(vx, vy, vz), color=blue, lw=2
 point: (Ax, Ay, Az), black
 vector: (Ax, Ay, Az), (Ax + t*vx, Ay + t*vy, Az + t*vz), red
