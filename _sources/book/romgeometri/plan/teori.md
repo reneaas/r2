@@ -386,11 +386,11 @@ vector: (Ax, Ay, Az), (Px, Py, Pz), blue
 text: at=(Px, Py, Pz), value="$P$", ha=left, va=bottom
 let: nx = 0
 let: ny = 0
-let: nz = 1
+let: nz = 1.5
 vector: (Ax, Ay, Az), (Ax + nx, Ay + ny, Az + nz), red
-text: at=(Ax + 0.5 * nx - 0.1, Ay + 0.5 * ny - 0.1, Az + 0.5 * nz + 0.1), value="$\vec{n}$", ha=right, va=center
-text: at=(Ax - 0.1, Ay, 0.5 * (Az + Pz)), value="$L$", ha=right, va=bottom
-line-segment: from=(Ax, Ay, Az), to=(Ax, Ay, Pz), linestyle=dashed, color=black
+text: at=(Ax + 0.5 * nx - 0.1, Ay + 0.5 * ny - 0.1, Az + 0.5 * nz + 0.2), value="$\vec{n}$", ha=right, va=center
+text: at=(Px + 0.1, Py, 0.5 * (Az + Pz)), value="$L$", ha=left, va=center
+line-segment: from=(Ax, Ay, Az), to=(Ax, Ay, Pz), linestyle=dashed, color=red
 right-angle: at=(Ax, Ay, Pz), dir1=(0, 0, -1), dir2=((Px - Ax), (Py - Ay), 0), size=0.35
 line-segment: from=(Ax, Ay, Pz), to=(Px, Py, Pz), linestyle=dashed, color=black
 right-angle: at=(Ax, Ay, Az), dir1=(0, 0, 1), dir2=(-(Px - Ax), -(Py - Ay), 0), size=0.35
@@ -422,9 +422,9 @@ let: Ay = 0
 let: Px = 1
 let: Py = 1.5
 vector: (Ax, Ay), (Px, Py), blue
-vector: (Ax, 0), (Ax, 0.25 * Py), red
+vector: (Ax, 0), (Ax, 0.35 * Py), red
 let: ds = 0.2 
-line-segment: (Ax, Ay), (Ax, Py), dashed, gray
+line-segment: (Ax, Ay), (Ax, Py), dashed, red
 line-segment: (Ax, Py), (Px, Py), dashed, gray
 line-segment: (Ax, Py - ds), (Ax + ds, Py - ds), solid, gray
 line-segment: (Ax + ds, Py - ds), (Ax + ds, Py), solid, gray
@@ -432,8 +432,8 @@ point: (Ax, Ay)
 text: Ax, Ay - 0.1, "$A$", center-center
 point: (Px, Py)
 text: Px + 0.1, Py, "$P$", center-center
-text: Ax - 0.1, 0.5 * Py, "$L$", center-center
-text: Ax - 0.1, 0.25 * Px, "$\vec{n}$", center-center
+text: Ax - 0.1, 0.7 * Py, "$L$", center-center
+text: Ax - 0.1, 0.35 * Px, "$\vec{n}$", center-center
 text: 0.5 * Px + 0.1, 0.5 * Py - 0.1, "$\overrightarrow{AP}$", center-center
 let: angle = atan(Py/Px)
 angle-arc: (Ax, Ay), 0.3, angle * 180/pi, 90, solid, black
