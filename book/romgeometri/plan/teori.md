@@ -32,8 +32,8 @@ point: (Bx, By, Bz), black
 text: at=(Bx, By, Bz), value="$B$", ha=left, va=center
 point: (Cx, Cy, Cz), black
 text: at=(Cx, Cy, Cz), value="$C$", ha=center, va=bottom
-vector: (Ax, Ay, Az), (Bx, By, Bz), red
-vector: (Ax, Ay, Az), (Cx, Cy, Cz), red
+vector: (Ax, Ay, Az), (Bx, By, Bz), blue
+vector: (Ax, Ay, Az), (Cx, Cy, Cz), blue
 vector: (Ax, Ay, Az), (Ax, Ay, Az + 1), red
 text: at=(Ax, Ay, Az + 1), value="$\vec{n}$", ha=center, va=bottom
 right-angle: at=(Ax, Ay, Az), dir1=(Bx - Ax, By - Ay, Bz - Az), dir2=(0, 0, 1), size=0.35
@@ -69,9 +69,9 @@ let: Ax = 1
 let: Ay = 1
 let: Az = 2
 let: Bx = 3
-let: By = 1
+let: By = 0.5
 let: Bz = 2
-let: Cx = 1
+let: Cx = 0.5
 let: Cy = 3
 let: Cz = 2
 point: (Ax, Ay, Az), black
@@ -80,10 +80,10 @@ point: (Bx, By, Bz), black
 text: at=(Bx, By, Bz), value="$B$", ha=left, va=center
 point: (Cx, Cy, Cz), black
 text: at=(Cx, Cy, Cz), value="$C$", ha=center, va=bottom
-vector: (Ax, Ay, Az), (Bx, By, Bz), red
-vector: (Ax, Ay, Az), (Cx, Cy, Cz), red
-vector: (Ax, Ay, Az), (Ax, Ay, Az + 1), red
-text: at=(Ax, Ay, Az + 1), value="$\vec{n}$", ha=center, va=bottom
+vector: (Ax, Ay, Az), (Bx, By, Bz), blue
+vector: (Ax, Ay, Az), (Cx, Cy, Cz), blue
+vector: (Ax, Ay, Az), (Ax, Ay, Az + 2), red
+text: at=(Ax, Ay, Az + 2), value="$\vec{n}$", ha=center, va=bottom
 right-angle: at=(Ax, Ay, Az), dir1=(Bx - Ax, By - Ay, Bz - Az), dir2=(0, 0, 1), size=0.35
 right-angle: at=(Ax, Ay, Az), dir1=(Cx - Ax, Cy - Ay, Cz - Az), dir2=(0, 0, 1), size=0.35
 :::
@@ -165,7 +165,7 @@ yrange: (-1, 5)
 zrange: (-1, 4)
 ticks: off
 nocache:
-fontsize: 24
+fontsize: 22
 plane: normal=(0, 0, 1), point=(3, 2, 1), span=(4,4), color=blue, alpha=0.2
 point: (2, 1, 1), black
 text: at=(2, 1, 1), value="$A(x_0, y_0, z_0)$", ha=center, va=top
@@ -176,8 +176,8 @@ let: ny = 0
 let: nz = 2
 vector: (3, 3, 1), (3 + nx, 3 + ny, 1 + nz), red
 text: at=(3 + nx, 3 + ny, 1 + nz), value="$\vec{n} = [a, b, c]$", ha=center, va=bottom
-vector: (2, 1, 1), (3, 3, 1), red
-right-angle: at=(3, 3, 1), dir1=(nx, ny, nz), dir2=(2 - 3, 1 - 3, 1 - 1), size=0.3
+vector: (2, 1, 1), (3, 3, 1), blue
+right-angle: at=(3, 3, 1), dir1=(nx, ny, nz), dir2=(2 - 3, 1 - 3, 1 - 1), size=0.35
 :::
 
 Gitt et punkt $A$ og en normalvektor $\vec{n}$ til et plan $\alpha$, så vil alle punkter $P$ i planet tilfredsstille likningen 
@@ -191,6 +191,49 @@ På koordinatform med en normalvektor $\vec{n} = [a, b, c]$ og et punkt $A(x_0, 
 $$
 ax + by + cz + d = 0
 $$
+
+
+
+:::::{proof} Vis forklaring
+Siden både $A$ og $P$ ligger i planet, vil $\lvec{AP}$ være parallell med planet, og dermed ortogonal med en normalvektor $\vec n$ til planet. Dermed må skalarproduktet bli lik 0. Altså
+
+$$
+\lvec{AP} \cdot \vec{n} = 0
+$$
+
+Skriver vi vektoren $\lvec{AP}$ i koordinatform som $[x - x_0, y - y_0, z - z_0]$, og normalvektoren som $\vec{n} = [a, b, c]$, får vi
+
+$$
+\lvec{AP} \cdot \vec{n} = [x - x_0, y - y_0, z - z_0] \cdot [a, b, c] = 0
+$$
+
+Dette gir likningen
+
+$$
+a(x - x_0) + b(y - y_0) + c(z - z_0) = 0
+$$
+
+som vi kan skrive om til
+
+$$
+ax + by + cz - (ax_0 + by_0 + cz_0) = 0
+$$
+
+Vi definerer konstanten $d$ som
+
+$$
+d = -(ax_0 + by_0 + cz_0)
+$$
+
+slik at vi kan skrive likningen til planet på standardform:
+
+$$
+ax + by + cz + d = 0
+$$
+
+Konstanten $d$ har ikke en spesielt viktig betydning, men lar oss skrive likningen på en enkel måte.
+
+:::::
 
 :::::::::::::::
 
@@ -320,33 +363,39 @@ Avstander mellom plan og andre objekter bruker alle sammen den samme grunnideen:
 
 :::::::::::::::{summary} Avstand fra punkt til plan
 :::{interactive-plot3d}
-nocache:
 width: 350px
 align: right
 elev: 20
-azim: -70
-xrange: (-1, 5)
-yrange: (-1, 5)
+azim: -50
+xrange: (-2, 5)
+yrange: (-2, 5)
 zrange: (-1, 5)
 ticks: off
-nocache:
+let: Ax = 2
+let: Ay = 1
+let: Az = 1
+let: Px = 3
+let: Py = 3
+let: Pz = 4
 fontsize: 24
-plane: normal=(0, 0, 1), point=(3, 2, 1), span=(4,4), color=blue, alpha=0.2
-vector: (0, 0, 0), (3, 3, 4), red
-vector: (0, 0, 0), (2, 1, 1), red
-point: (2, 1, 1), black
-text: at=(2, 1, 1), value="$A$", ha=left, va=top
-vector: (2, 1, 1), (3, 3, 4), blue
-text: at=(3, 3, 4), value="$P$", ha=left, va=bottom
+plane: normal=(0, 0, 1), point=(Ax, Ay, Az), span=(5,5), color=blue, alpha=0.2
+point: at=(Ax, Ay, Az), color=black
+point: at=(Px, Py, Pz), color=black
+text: at=(Ax, Ay, Az), value="$A$", ha=left, va=top
+vector: (Ax, Ay, Az), (Px, Py, Pz), blue
+text: at=(Px, Py, Pz), value="$P$", ha=left, va=bottom
 let: nx = 0
 let: ny = 0
 let: nz = 1
-vector: (3, 3, 1), (3 + nx, 3 + ny, 1 + nz), red
-text: at=(3 + 0.5 * nx + 0.2, 3 + 0.5 * ny + 0.2, 1 + 0.5 * nz), value="$\vec{n}$", ha=left, va=center
-text: at=(3.1, 3, 2.5), value="$L$", ha=left, va=bottom
-line-segment: from=(2, 1, 1), to=(3, 3, 1), linestyle=dashed, color=gray
-right-angle: at=(3, 3, 1), dir1=(0, 0, 1), dir2=(-(3 - 2), -(3 - 1), 1 - 1), size=0.35
-line-segment: from=(3, 3, 1), to=(3, 3, 4), linestyle=dashed, color=black
+vector: (Ax, Ay, Az), (Ax + nx, Ay + ny, Az + nz), red
+text: at=(Ax + 0.5 * nx - 0.1, Ay + 0.5 * ny - 0.1, Az + 0.5 * nz + 0.1), value="$\vec{n}$", ha=right, va=center
+text: at=(Ax - 0.1, Ay, 0.5 * (Az + Pz)), value="$L$", ha=right, va=bottom
+line-segment: from=(Ax, Ay, Az), to=(Ax, Ay, Pz), linestyle=dashed, color=black
+right-angle: at=(Ax, Ay, Pz), dir1=(0, 0, -1), dir2=((Px - Ax), (Py - Ay), 0), size=0.35
+line-segment: from=(Ax, Ay, Pz), to=(Px, Py, Pz), linestyle=dashed, color=black
+right-angle: at=(Ax, Ay, Az), dir1=(0, 0, 1), dir2=(-(Px - Ax), -(Py - Ay), 0), size=0.35
+line-segment: from=(Px, Py, Pz), to=(Px, Py, Az), linestyle=dashed, color=red
+right-angle: at=(Px, Py, Az), dir1=(0, 0, 1), dir2=(-(Px - Ax), -(Py - Ay), 0), size=0.35, color=red
 :::
 
 
@@ -362,12 +411,68 @@ $$
 
 
 :::::{proof} Vis forklaring
-Vektoren fra punktet $A$ i planet til punktet $P$ utenfor planet er gitt ved $\lvec{AP}$. Den korteste avstanden $L$ fra punktet $P$ til planet er da gitt ved projeksjonslengden langs normalvektoren $\vec{n}$, som er gitt ved formelen
+:::{plot}
+width: 100%
+align: right
+fontsize: 28
+axis: equal
+axis: off
+let: Ax = 0
+let: Ay = 0
+let: Px = 1
+let: Py = 1.5
+vector: (Ax, Ay), (Px, Py), blue
+vector: (Ax, 0), (Ax, 0.25 * Py), red
+let: ds = 0.2 
+line-segment: (Ax, Ay), (Ax, Py), dashed, gray
+line-segment: (Ax, Py), (Px, Py), dashed, gray
+line-segment: (Ax, Py - ds), (Ax + ds, Py - ds), solid, gray
+line-segment: (Ax + ds, Py - ds), (Ax + ds, Py), solid, gray
+point: (Ax, Ay)
+text: Ax, Ay - 0.1, "$A$", center-center
+point: (Px, Py)
+text: Px + 0.1, Py, "$P$", center-center
+text: Ax - 0.1, 0.5 * Py, "$L$", center-center
+text: Ax - 0.1, 0.25 * Px, "$\vec{n}$", center-center
+text: 0.5 * Px + 0.1, 0.5 * Py - 0.1, "$\overrightarrow{AP}$", center-center
+let: angle = atan(Py/Px)
+angle-arc: (Ax, Ay), 0.3, angle * 180/pi, 90, solid, black
+text: 0.4 * cos((pi/2 + angle)/2), 0.4 * sin((pi/2 + angle)/2), "$\varphi$", center-center
+:::
+
+
+Hvis vi roterer den interaktive figuren ovenfor, kan vi se at vektoren $\lvec{AP}$ kan deles opp i en rettvinklet trekant der én del ligger parallelt med planet og én del ligger parallelt med normalvektoren $\vec n$. Det er lengden av den delen som er parallell med normalvektoren vi ønsker oss. Kaller vi denne for $L$ og tenker oss at vinkelen mellom $\lvec{AP}$ og $\vec n$ er $\varphi$, kan vi ut ifra definisjonen av cosinus skrive:
+
+$$
+\cos \varphi = \frac{L}{\abs{\lvec{AP}}}
+$$
+
+Dermed får vi at 
+
+$$
+L = \abs{\lvec{AP}} \cdot \cos \varphi
+$$
+
+Fra den geometriske formelen for skalarproduktet har vi at 
+
+$$
+\lvec{AP} \cdot \vec n = \abs{\lvec{AP}} \cdot \abs{\vec n} \cdot \cos \varphi
+$$
+
+Deler vi med lengden av normalvektoren $\abs{\vec n}$ på hver side, får vi
+
+$$
+\dfrac{\lvec{AP} \cdot \vec{n}}{\abs{\vec{n}}} = \underbrace{\abs{\lvec{AP}} \cdot \cos \varphi}_{\displaystyle L}
+$$
+
+Altså er avstanden $L$ fra punktet $P$ til planet gitt ved
 
 $$
 L = \dfrac{|\lvec{AP} \cdot \vec{n}|}{\abs{\vec{n}}}
 $$
 
+
+Legg merke til at vi tar absoluttverdien av skalarproduktet fordi vinkelen mellom $\lvec{AP}$ og $\vec{n}$ kan være større enn $90^\circ$, og vi ønsker alltid en positiv avstand.
 :::::
 
 
@@ -548,13 +653,19 @@ azim: -70
 xrange: (-1, 5)
 yrange: (-1, 5)
 zrange: (-1, 5)
-plane: normal=(0, 0, 1), point=(2, 2, 2), span=(6,6), color=blue, alpha=0.2
-line: point=(4, 3, 5), direction=(1, 0, 0), color=blue, lw=1
-point: (4, 3, 5), black
-point: (2, 2, 2), black
-text: at=(4, 3, 5), value="$P$", ha=left, va=bottom
-text: at=(2, 2, 2), value="$A$", ha=right, va=top
-text: at=(4, 3, 4), value="$L$", ha=left, va=center
+let: Ax = 2
+let: Ay = 2
+let: Az = 2
+let: Px = 4
+let: Py = 3
+let: Pz = 5
+plane: normal=(0, 0, 1), point=(Ax, Ay, Az), span=(6,6), color=blue, alpha=0.2
+line: point=(Px, Py, Pz), direction=(1, 0, 0), color=blue, lw=1
+point: (Px, Py, Pz), black
+point: (Ax, Ay, Az), black
+text: at=(Px, Py, Pz), value="$P$", ha=left, va=bottom
+text: at=(Ax, Ay, Az), value="$A$", ha=right, va=top
+text: at=(Px, Py, 0.5 * (Az + Pz)), value="$L$", ha=left, va=center
 vector: (2, 2, 2), (4, 3, 5), red
 vector: (1, 3, 5), (2, 3, 5), red
 text: at=(1.5, 3, 5), value="$\vec{v}$", ha=center, va=bottom
@@ -1088,3 +1199,9 @@ $$
 
 
 :::::::::::::::
+
+
+:::{clear}
+:::
+
+
