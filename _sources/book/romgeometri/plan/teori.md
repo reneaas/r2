@@ -358,7 +358,7 @@ $$
 
 ## Avstander
 
-Avstander mellom plan og andre objekter bruker alle sammen den samme grunnideen: **Projeksjonslengde**. Vi skal i det følgende se på tre tilsynelatende forskjellige situasjoner som alle sammen reduseres til samme formel for avstand. 
+Avstander mellom plan og andre objekter bruker alle sammen den samme grunnideen: Avstand mellom punkt og plan. Alle de andre avstandene du vil se i dette kapittelet vil kunne reduseres til samme situasjon. Så derfor er det strengt bare én avstandsformel du møter her, selv om situasjonene på overflaten kan de annerledes ut. Vi starter med avstand mellom punkt og plan: 
 
 
 :::::::::::::::{summary} Avstand fra punkt til plan
