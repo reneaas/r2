@@ -135,7 +135,7 @@ Finn sentrum og radius til kulen.
 ---
 open:
 ---
-Vi bruker fullstendig kvadraters metode for å skrive om uttrykkene uttrykkene i likningen som fullstendige kvadrater: 
+Vi bruker fullstendig kvadraters metode for å skrive om uttrykkene i likningen som fullstendige kvadrater: 
 
 $$
 x^2 + 4x = \left(x + \dfrac{4}{2}\right)^2 - \left(\dfrac{4}{2}\right)^2 = (x + 2)^2 - 4

@@ -69,6 +69,7 @@ right-angle: at=(3, 3, 1), dir1=(nx, ny, nz), dir2=(2 - 3, 1 - 3, 1 - 1), size=0
 
 :::{interactive-plot3d}
 width: 100%
+align: right
 elev: 20
 azim: -50
 xrange: (-2, 5)
@@ -90,11 +91,11 @@ vector: (Ax, Ay, Az), (Px, Py, Pz), blue
 text: at=(Px, Py, Pz), value="$P$", ha=left, va=bottom
 let: nx = 0
 let: ny = 0
-let: nz = 1
+let: nz = 1.5
 vector: (Ax, Ay, Az), (Ax + nx, Ay + ny, Az + nz), red
-text: at=(Ax + 0.5 * nx - 0.1, Ay + 0.5 * ny - 0.1, Az + 0.5 * nz + 0.1), value="$\vec{n}$", ha=right, va=center
-text: at=(Ax - 0.1, Ay, 0.5 * (Az + Pz)), value="$L$", ha=right, va=bottom
-line-segment: from=(Ax, Ay, Az), to=(Ax, Ay, Pz), linestyle=dashed, color=black
+text: at=(Ax + 0.5 * nx - 0.1, Ay + 0.5 * ny - 0.1, Az + 0.5 * nz + 0.2), value="$\vec{n}$", ha=right, va=center
+text: at=(Px + 0.1, Py, 0.5 * (Az + Pz)), value="$L$", ha=left, va=center
+line-segment: from=(Ax, Ay, Az), to=(Ax, Ay, Pz), linestyle=dashed, color=red
 right-angle: at=(Ax, Ay, Pz), dir1=(0, 0, -1), dir2=((Px - Ax), (Py - Ay), 0), size=0.35
 line-segment: from=(Ax, Ay, Pz), to=(Px, Py, Pz), linestyle=dashed, color=black
 right-angle: at=(Ax, Ay, Az), dir1=(0, 0, 1), dir2=(-(Px - Ax), -(Py - Ay), 0), size=0.35
