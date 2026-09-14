@@ -162,6 +162,13 @@ parts:
   #       title: Oppgaver
 
 
+  # - caption: Oppgavesamlinger
+  #   numbered: false
+  #   chapters:
+  #   - file: book/oppgavesamling/vektorregning.md
+  #     title: Romgeometri
+
+
   - caption: Eksamensøving
     numbered: false
     chapters:

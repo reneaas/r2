@@ -819,7 +819,7 @@ $$
 ---
 
 
-:::::::::::::::{example} Eksempel 8
+:::::::::::::::{example} Eksempel 7
 Likningene til to parallelle plan $\alpha$ og $\beta$ er gitt ved
 
 $$
@@ -1007,7 +1007,7 @@ $$
 
 
 
-:::::::::::::::{example} Eksempel 7
+:::::::::::::::{example} Eksempel 8
 Et plan $\alpha$ er gitt ved likningen
 
 $$
