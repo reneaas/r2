@@ -176,7 +176,7 @@ parts:
 
 
 
-  - caption: Eksamensressurser
+  - caption: Digitale verktøy
     numbered: false
     chapters:
     - file: book/eksamensressurser/python.md

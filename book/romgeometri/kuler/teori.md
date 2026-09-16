@@ -36,7 +36,7 @@ vector: (Sx, Sy, Sz), (Px, Py, Pz), red
 
 
 
-En kuleflate med sentrum i punktet $S(x_0, y_0, z_0)$ og radius $r$ består av alle punktet $P(x, y, z)$ som tilfredsstiller likningen
+En kuleflate med sentrum i punktet $S(x_0, y_0, z_0)$ og radius $r$ består av alle punkter $P(x, y, z)$ som tilfredsstiller likningen
 
 $$
 \abs{\lvec{SP}} = r
@@ -396,5 +396,131 @@ $$
 ::::
 
 
+:::::::::::::::
+
+
+---
+
+
+
+:::::::::::::::{example} Eksempel 5
+
+:::{interactive-plot3d}
+nocache:
+height: 320px
+auto-intersections: true
+align: right
+width: 50%
+hidden-edges: dashed
+fontsize: 20
+sphere: center=(4, 1, 0), radius=3, color=blue, alpha=0.2
+line: point=(0, -1, -4), direction=[2, 1, 2], color=red
+point: at=(2, 0, -2), color=black
+point: at=(6, 2, 2), color=black
+point: at=(0, -1, -4), color=black
+text: at=(0, -1, -4), value="$A$", va=bottom, ha=right
+point: at=(4, 1, 0), color=black
+text: at=(4, 1, 0), value="$S$", va=bottom, ha=right
+vector: from=(6 + 2, 2 + 1, 2 + 2), to=(6 + 4, 2 + 2, 2 + 4), color=blue
+text: at=(9, 3.5, 5), value="$\vec{v}$", va=bottom, ha=right
+xrange: (-6, 10)
+yrange: (-6, 10)
+zrange: (-6, 10)
+azim: -50
+grid: off
+ticks: off
+xstep: 1
+ystep: 1
+zstep: 1
+:::
+
+
+En kuleflate $K$ har sentrum i $S(4, 1, 0)$ og radius $r = 3$. 
+
+En linje $\ell$ går gjennom punktet $A(0, -1, -4)$ og har retningsvektor $\vec v = [2, 1, 2]$.
+
+Finn koordinatene til skjæringspunktene mellom kula og linja. 
+
+
+
+:::{clear}
+:::
+
+::::{solution}
+---
+open:
+---
+Vi finner en likning for kula: 
+
+$$
+(x - 4)^2 + (y - 1)^2 + z^2 = 3^2 = 9
+$$
+
+Så finner vi en parameterframstilling for linja:
+
+$$
+\begin{align*}
+\vec r(t) &= \lvec{OA} + \vec v \cdot t \\
+\\
+&= [0, -1, -4] + [2, 1, 2] \cdot t \\
+\\
+&= [2t, -1 + t, -4 + 2t]
+\end{align*}
+$$
+
+Skjæringspunktene mellom kula og linja finner vi ved å sette inn koordinatene til parameterframstillingen for linja inn i likningen for kula, og så løser vi for $t$:
+
+$$
+(2t - 4)^2 + (-1 + t - 1)^2 + (-4 + 2t)^2 = 9
+$$
+
+$$
+(2t - 4)^2 + (t - 2)^2 + (2t - 4)^2 = 9
+$$
+
+$$
+2(2t - 4)^2 + (t - 2)^2 = 9
+$$
+
+
+$$
+2(4t^2 - 16t + 16) + (t^2 - 4t + 4) = 9
+$$
+
+$$
+8t^2 - 32t + 32 + t^2 - 4t + 4 = 9
+$$
+
+$$
+9t^2 - 36t + 36 = 9
+$$
+$$
+9t^2 - 36t + 36 - 9 = 0
+$$
+$$
+9t^2 - 36t + 27 = 0
+$$
+$$
+t^2 - 4t + 3 = 0
+$$
+$$
+(t - 1)(t - 3) = 0
+$$
+$$
+t = 1 \or t = 3
+$$
+
+Dermed får vi skjæringspunktene:
+
+$$
+\vec r(1) = [2 \cdot 1, -1 + 1, -4 + 2 \cdot 1] = [2, 0, -2]
+$$
+$$
+\vec r(3) = [2 \cdot 3, -1 + 3, -4 + 2 \cdot 3] = [6, 2, 2]
+$$
+
+Skjæringspunktene mellom kula og linja er altså $(2, 0, -2)$ og $(6, 2, 2)$.
+
+::::
 :::::::::::::::
 
