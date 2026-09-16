@@ -981,9 +981,7 @@ Finn de to mulige likningene for planet $\gamma$.
 
 
 :::::{answer}
-$$
--x + 2y - z + 2 = 0 \qeller -x + 2y - z + 4 = 0
-$$
+$-x + 2y - z - 3 = 0$ eller $-x + 2y - z + 9 = 0$.
 
 ::::{solution}
 Siden $\gamma \parallel \alpha$, så er $\vec{n} = [-1, 2, -1]$ også en normalvektor for $\gamma$. For å finne et punkt $P$ som ligger i $\gamma$, kan vi derfor gå ut ifra punktet $A(0, 0 3)$ fra oppgave **b** og følge normalvektoren en avstand $\sqrt{6}$ i hver sin retning langs normalvektoren.
@@ -1040,7 +1038,15 @@ $$
 $$
 
 $$
--x + 2y - z + 2 = 0
+-(x + 1) + 2(y - 2) - (z - 2) = 0
+$$
+
+$$
+-x - 1 + 2y - 4 - z + 2 = 0
+$$
+
+$$
+-x + 2y - z - 3 = 0
 $$
 
 Med det andre punktet $Q_-$ blir planlikningen til $\gamma$ gitt ved:
@@ -1054,7 +1060,15 @@ $$
 $$
 
 $$
--x + 2y - z - 2 = 0
+-(x - 1) + 2(y + 2) - (z - 4) = 0
+$$
+
+$$
+-x + 1 + 2y + 4 - z + 4 = 0
+$$
+
+$$
+-x + 2y - z + 9 = 0
 $$
 
 
