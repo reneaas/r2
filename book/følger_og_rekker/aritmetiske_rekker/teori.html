@@ -55,10 +55,13 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/tabs.css?v=4c969af8" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/general_style.css?v=dfcc20d4" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/calculator_popup.css?v=9c5cafe2" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/escapeRoom/escape-room.css?v=9eb2d604" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/flashcards.css?v=816457f1" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/interactive_code.css?v=44933e1a" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/jeopardy.css?v=951b6e4f" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/notebook.css?v=e0461523" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/popup_code.css?v=b88b7ace" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/quiz.css?v=bc8164d8" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css" />
@@ -100,9 +103,10 @@
     <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script src="../../../_static/tabs.js?v=3ee01567"></script>
     <script src="../../../_static/munchboka/js/solution_timer.js?v=192f5d3d"></script>
+    <script src="../../../_static/munchboka/js/calculator_popup.js?v=93ae1e49"></script>
     <script src="../../../_static/munchboka/js/escapeRoom/escape-room.js?v=1498b374"></script>
     <script src="../../../_static/munchboka/js/flashcards.js?v=293ceac2"></script>
-    <script src="../../../_static/munchboka/js/interactiveCode/interactiveCodeSetup.js?v=ce240afa"></script>
+    <script src="../../../_static/munchboka/js/interactiveCode/interactiveCodeSetup.js?v=9bcf659f"></script>
     <script src="../../../_static/munchboka/js/interactiveCode/codeEditor.js?v=d7a9df79"></script>
     <script src="../../../_static/munchboka/js/interactiveCode/pythonRunner.js?v=e9f0c2d2"></script>
     <script src="../../../_static/munchboka/js/interactiveCode/workerManager.js?v=024a7849"></script>
@@ -147,6 +151,7 @@
     <script src="../../../_static/munchboka/js/geogebra-setup.js?v=8e77fc11"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/python/python.min.js"></script>
+    <script src="../../../_static/munchboka/js/popup_code.js?v=da823f0c"></script>
     <link rel="canonical" href="https://www.munchboka.no/r2/book/følger_og_rekker/aritmetiske_rekker/teori.html" />
     <link rel="icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
@@ -345,6 +350,10 @@
 </ul>
 </details></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Oppgavesamlinger</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../oppgavesamling/vektorregning.html">Romgeometri</a></li>
+</ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Eksamensøving</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../eksamens%C3%B8ving/v%C3%A5r_26/oppgaver.html">Eksamen vår 2026</a></li>
@@ -352,6 +361,7 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Digitale verktøy</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../eksamensressurser/python.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../eksamensressurser/notebook.html">Python notebook</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.geogebra.org/classic">Geogebra</a></li>
 </ul>
 
@@ -868,8 +878,8 @@ S_{20} = \dfrac{a_1 + a_{20}}{2} \cdot 20 = \frac{1 + 77}{2} \cdot 20 = 78\cdot 
  <defs>
   <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
  </defs>
- <g id="cpl_cdd43a296ae3_bb4e1b_figure_1">
-  <g id="cpl_cdd43a296ae3_bb4e1b_patch_1">
+ <g id="cpl_cdd43a296ae3_308853_figure_1">
+  <g id="cpl_cdd43a296ae3_308853_patch_1">
    <path d="M 0 108 
 L 360 108 
 L 360 0 
@@ -878,10 +888,10 @@ L 0 108
 z
 " style="fill: none"/>
   </g>
-  <g id="cpl_cdd43a296ae3_bb4e1b_axes_1">
-   <g id="cpl_cdd43a296ae3_bb4e1b_line2d_1">
+  <g id="cpl_cdd43a296ae3_308853_axes_1">
+   <g id="cpl_cdd43a296ae3_308853_line2d_1">
     <defs>
-     <path id="cpl_cdd43a296ae3_bb4e1b_m77b89587bd" d="M 0 5 
+     <path id="cpl_cdd43a296ae3_308853_m77b89587bd" d="M 0 5 
 C 1.326016 5 2.597899 4.473168 3.535534 3.535534 
 C 4.473168 2.597899 5 1.326016 5 0 
 C 5 -1.326016 4.473168 -2.597899 3.535534 -3.535534 
@@ -893,35 +903,35 @@ C -2.597899 4.473168 -1.326016 5 0 5
 z
 " style="stroke: #000000; stroke-opacity: 0.8"/>
     </defs>
-    <g clip-path="url(#cpl_cdd43a296ae3_bb4e1b_pd85a637e22)">
-     <use xlink:href="#cpl_cdd43a296ae3_bb4e1b_m77b89587bd" x="41.563636" y="54" style="fill-opacity: 0.8; stroke: #000000; stroke-opacity: 0.8"/>
+    <g clip-path="url(#cpl_cdd43a296ae3_308853_pd85a637e22)">
+     <use xlink:href="#cpl_cdd43a296ae3_308853_m77b89587bd" x="41.563636" y="54" style="fill-opacity: 0.8; stroke: #000000; stroke-opacity: 0.8"/>
     </g>
    </g>
-   <g id="cpl_cdd43a296ae3_bb4e1b_line2d_2">
-    <g clip-path="url(#cpl_cdd43a296ae3_bb4e1b_pd85a637e22)">
-     <use xlink:href="#cpl_cdd43a296ae3_bb4e1b_m77b89587bd" x="103.090909" y="54" style="fill-opacity: 0.8; stroke: #000000; stroke-opacity: 0.8"/>
+   <g id="cpl_cdd43a296ae3_308853_line2d_2">
+    <g clip-path="url(#cpl_cdd43a296ae3_308853_pd85a637e22)">
+     <use xlink:href="#cpl_cdd43a296ae3_308853_m77b89587bd" x="103.090909" y="54" style="fill-opacity: 0.8; stroke: #000000; stroke-opacity: 0.8"/>
     </g>
    </g>
-   <g id="cpl_cdd43a296ae3_bb4e1b_line2d_3">
-    <g clip-path="url(#cpl_cdd43a296ae3_bb4e1b_pd85a637e22)">
-     <use xlink:href="#cpl_cdd43a296ae3_bb4e1b_m77b89587bd" x="164.618182" y="54" style="fill-opacity: 0.8; stroke: #000000; stroke-opacity: 0.8"/>
+   <g id="cpl_cdd43a296ae3_308853_line2d_3">
+    <g clip-path="url(#cpl_cdd43a296ae3_308853_pd85a637e22)">
+     <use xlink:href="#cpl_cdd43a296ae3_308853_m77b89587bd" x="164.618182" y="54" style="fill-opacity: 0.8; stroke: #000000; stroke-opacity: 0.8"/>
     </g>
    </g>
-   <g id="cpl_cdd43a296ae3_bb4e1b_line2d_4">
-    <g clip-path="url(#cpl_cdd43a296ae3_bb4e1b_pd85a637e22)">
-     <use xlink:href="#cpl_cdd43a296ae3_bb4e1b_m77b89587bd" x="226.145455" y="54" style="fill-opacity: 0.8; stroke: #000000; stroke-opacity: 0.8"/>
+   <g id="cpl_cdd43a296ae3_308853_line2d_4">
+    <g clip-path="url(#cpl_cdd43a296ae3_308853_pd85a637e22)">
+     <use xlink:href="#cpl_cdd43a296ae3_308853_m77b89587bd" x="226.145455" y="54" style="fill-opacity: 0.8; stroke: #000000; stroke-opacity: 0.8"/>
     </g>
    </g>
-   <g id="cpl_cdd43a296ae3_bb4e1b_line2d_5">
-    <g clip-path="url(#cpl_cdd43a296ae3_bb4e1b_pd85a637e22)">
-     <use xlink:href="#cpl_cdd43a296ae3_bb4e1b_m77b89587bd" x="287.672727" y="54" style="fill-opacity: 0.8; stroke: #000000; stroke-opacity: 0.8"/>
+   <g id="cpl_cdd43a296ae3_308853_line2d_5">
+    <g clip-path="url(#cpl_cdd43a296ae3_308853_pd85a637e22)">
+     <use xlink:href="#cpl_cdd43a296ae3_308853_m77b89587bd" x="287.672727" y="54" style="fill-opacity: 0.8; stroke: #000000; stroke-opacity: 0.8"/>
     </g>
    </g>
-   <g id="cpl_cdd43a296ae3_bb4e1b_text_1">
+   <g id="cpl_cdd43a296ae3_308853_text_1">
     <!-- $a_n$ -->
     <g transform="translate(323.512364 69.132997) scale(0.2 -0.2)">
      <defs>
-      <path id="cpl_cdd43a296ae3_bb4e1b_CMMI12-61" d="M 1926 760 
+      <path id="cpl_cdd43a296ae3_308853_CMMI12-61" d="M 1926 760 
 C 1894 651 1894 639 1805 517 
 C 1664 338 1382 64 1082 64 
 C 819 64 672 300 672 677 
@@ -950,7 +960,7 @@ C 2771 2625 2701 2695 2605 2695
 C 2400 2695 2349 2472 2336 2395 
 z
 " transform="scale(0.015625)"/>
-      <path id="cpl_cdd43a296ae3_bb4e1b_CMMI12-6e" d="M 1318 1871 
+      <path id="cpl_cdd43a296ae3_308853_CMMI12-6e" d="M 1318 1871 
 C 1331 1910 1491 2229 1728 2433 
 C 1894 2586 2112 2689 2362 2689 
 C 2618 2689 2707 2497 2707 2242 
@@ -985,15 +995,15 @@ L 1318 1871
 z
 " transform="scale(0.015625)"/>
      </defs>
-     <use xlink:href="#cpl_cdd43a296ae3_bb4e1b_CMMI12-61" transform="scale(0.996264)"/>
-     <use xlink:href="#cpl_cdd43a296ae3_bb4e1b_CMMI12-6e" transform="translate(51.207858 -14.943915) scale(0.697382)"/>
+     <use xlink:href="#cpl_cdd43a296ae3_308853_CMMI12-61" transform="scale(0.996264)"/>
+     <use xlink:href="#cpl_cdd43a296ae3_308853_CMMI12-6e" transform="translate(51.207858 -14.943915) scale(0.697382)"/>
     </g>
    </g>
-   <g id="cpl_cdd43a296ae3_bb4e1b_text_2">
+   <g id="cpl_cdd43a296ae3_308853_text_2">
     <!-- $a_1$ -->
     <g transform="translate(33.028626 69.132997) scale(0.2 -0.2)">
      <defs>
-      <path id="cpl_cdd43a296ae3_bb4e1b_CMR17-31" d="M 1702 4058 
+      <path id="cpl_cdd43a296ae3_308853_CMR17-31" d="M 1702 4058 
 C 1702 4192 1696 4192 1606 4192 
 C 1357 3916 979 3827 621 3827 
 C 602 3827 570 3827 563 3808 
@@ -1012,15 +1022,15 @@ L 1702 4058
 z
 " transform="scale(0.015625)"/>
      </defs>
-     <use xlink:href="#cpl_cdd43a296ae3_bb4e1b_CMMI12-61" transform="scale(0.996264)"/>
-     <use xlink:href="#cpl_cdd43a296ae3_bb4e1b_CMR17-31" transform="translate(51.207858 -14.943915) scale(0.697382)"/>
+     <use xlink:href="#cpl_cdd43a296ae3_308853_CMMI12-61" transform="scale(0.996264)"/>
+     <use xlink:href="#cpl_cdd43a296ae3_308853_CMR17-31" transform="translate(51.207858 -14.943915) scale(0.697382)"/>
     </g>
    </g>
-   <g id="cpl_cdd43a296ae3_bb4e1b_text_3">
+   <g id="cpl_cdd43a296ae3_308853_text_3">
     <!-- $a_2$ -->
     <g transform="translate(94.555899 69.132997) scale(0.2 -0.2)">
      <defs>
-      <path id="cpl_cdd43a296ae3_bb4e1b_CMR17-32" d="M 2669 989 
+      <path id="cpl_cdd43a296ae3_308853_CMR17-32" d="M 2669 989 
 L 2554 989 
 C 2490 536 2438 459 2413 420 
 C 2381 369 1920 369 1830 369 
@@ -1043,15 +1053,15 @@ L 2669 989
 z
 " transform="scale(0.015625)"/>
      </defs>
-     <use xlink:href="#cpl_cdd43a296ae3_bb4e1b_CMMI12-61" transform="scale(0.996264)"/>
-     <use xlink:href="#cpl_cdd43a296ae3_bb4e1b_CMR17-32" transform="translate(51.207858 -14.943915) scale(0.697382)"/>
+     <use xlink:href="#cpl_cdd43a296ae3_308853_CMMI12-61" transform="scale(0.996264)"/>
+     <use xlink:href="#cpl_cdd43a296ae3_308853_CMR17-32" transform="translate(51.207858 -14.943915) scale(0.697382)"/>
     </g>
    </g>
-   <g id="cpl_cdd43a296ae3_bb4e1b_text_4">
+   <g id="cpl_cdd43a296ae3_308853_text_4">
     <!-- $a_3$ -->
     <g transform="translate(156.083172 69.132997) scale(0.2 -0.2)">
      <defs>
-      <path id="cpl_cdd43a296ae3_bb4e1b_CMR17-33" d="M 1414 2157 
+      <path id="cpl_cdd43a296ae3_308853_CMR17-33" d="M 1414 2157 
 C 1984 2157 2234 1662 2234 1090 
 C 2234 320 1824 25 1453 25 
 C 1114 25 563 194 390 693 
@@ -1080,15 +1090,15 @@ L 1414 2157
 z
 " transform="scale(0.015625)"/>
      </defs>
-     <use xlink:href="#cpl_cdd43a296ae3_bb4e1b_CMMI12-61" transform="scale(0.996264)"/>
-     <use xlink:href="#cpl_cdd43a296ae3_bb4e1b_CMR17-33" transform="translate(51.207858 -14.943915) scale(0.697382)"/>
+     <use xlink:href="#cpl_cdd43a296ae3_308853_CMMI12-61" transform="scale(0.996264)"/>
+     <use xlink:href="#cpl_cdd43a296ae3_308853_CMR17-33" transform="translate(51.207858 -14.943915) scale(0.697382)"/>
     </g>
    </g>
-   <g id="cpl_cdd43a296ae3_bb4e1b_text_5">
+   <g id="cpl_cdd43a296ae3_308853_text_5">
     <!-- $a_4$ -->
     <g transform="translate(217.610444 69.132997) scale(0.2 -0.2)">
      <defs>
-      <path id="cpl_cdd43a296ae3_bb4e1b_CMR17-34" d="M 2150 4122 
+      <path id="cpl_cdd43a296ae3_308853_CMR17-34" d="M 2150 4122 
 C 2150 4256 2144 4256 2029 4256 
 L 128 1254 
 L 128 1088 
@@ -1115,15 +1125,15 @@ L 1798 3703
 z
 " transform="scale(0.015625)"/>
      </defs>
-     <use xlink:href="#cpl_cdd43a296ae3_bb4e1b_CMMI12-61" transform="scale(0.996264)"/>
-     <use xlink:href="#cpl_cdd43a296ae3_bb4e1b_CMR17-34" transform="translate(51.207858 -14.943915) scale(0.697382)"/>
+     <use xlink:href="#cpl_cdd43a296ae3_308853_CMMI12-61" transform="scale(0.996264)"/>
+     <use xlink:href="#cpl_cdd43a296ae3_308853_CMR17-34" transform="translate(51.207858 -14.943915) scale(0.697382)"/>
     </g>
    </g>
-   <g id="cpl_cdd43a296ae3_bb4e1b_text_6">
+   <g id="cpl_cdd43a296ae3_308853_text_6">
     <!-- $a_5$ -->
     <g transform="translate(279.137717 69.132997) scale(0.2 -0.2)">
      <defs>
-      <path id="cpl_cdd43a296ae3_bb4e1b_CMR17-35" d="M 730 3692 
+      <path id="cpl_cdd43a296ae3_308853_CMR17-35" d="M 730 3692 
 C 794 3666 1056 3584 1325 3584 
 C 1920 3584 2246 3911 2432 4100 
 C 2432 4157 2432 4192 2394 4192 
@@ -1152,11 +1162,11 @@ L 730 3692
 z
 " transform="scale(0.015625)"/>
      </defs>
-     <use xlink:href="#cpl_cdd43a296ae3_bb4e1b_CMMI12-61" transform="scale(0.996264)"/>
-     <use xlink:href="#cpl_cdd43a296ae3_bb4e1b_CMR17-35" transform="translate(51.207858 -14.943915) scale(0.697382)"/>
+     <use xlink:href="#cpl_cdd43a296ae3_308853_CMMI12-61" transform="scale(0.996264)"/>
+     <use xlink:href="#cpl_cdd43a296ae3_308853_CMR17-35" transform="translate(51.207858 -14.943915) scale(0.697382)"/>
     </g>
    </g>
-   <g id="cpl_cdd43a296ae3_bb4e1b_Quiver_1">
+   <g id="cpl_cdd43a296ae3_308853_Quiver_1">
     <path d="M 10.8 52.9848 
 L 309.299564 52.9848 
 L 308.284364 48.924 
@@ -1165,12 +1175,12 @@ L 308.284364 59.076
 L 309.299564 55.0152 
 L 10.8 55.0152 
 L 10.8 52.9848 
-" clip-path="url(#cpl_cdd43a296ae3_bb4e1b_pd85a637e22)"/>
+" clip-path="url(#cpl_cdd43a296ae3_308853_pd85a637e22)"/>
    </g>
   </g>
  </g>
  <defs>
-  <clipPath id="cpl_cdd43a296ae3_bb4e1b_pd85a637e22">
+  <clipPath id="cpl_cdd43a296ae3_308853_pd85a637e22">
    <rect x="10.8" y="10.8" width="338.4" height="86.4"/>
   </clipPath>
  </defs>
@@ -1187,8 +1197,8 @@ a_n = \dfrac{a_{n + k} + a_{n - k}}{2}
 <section class="exercise-section" id="exercise-Underveisoppgave-4">
 <h2>Underveisoppgave 4<a class="headerlink" href="#exercise-Underveisoppgave-4" title="Link to this heading">#</a></h2>
 <div class="exercise-body docutils container">
-<div id="quiz-container-quiz-1e9f7f5f" class="quiz-main-container" data-quiz2-source="quiz-source-quiz-1e9f7f5f"></div><div class="quiz2-source docutils container" id="quiz-source-quiz-1e9f7f5f">
-<div class="quiz2-question-source docutils container" id="question-9f44fe47">
+<div id="quiz-container-quiz-d35afe1b" class="quiz-main-container" data-quiz2-source="quiz-source-quiz-d35afe1b"></div><div class="quiz2-source docutils container" id="quiz-source-quiz-d35afe1b">
+<div class="quiz2-question-source docutils container" id="question-86fa795e">
 <div class="quiz2-question-content docutils container">
 <p>La <span class="math notranslate nohighlight">\(\{a_n\}\)</span> være en aritmetisk følge. Hvilket alternativ er riktig?</p>
 </div>
@@ -1219,7 +1229,7 @@ a_6 = \dfrac{a_4 + a_7}{2}
 </div>
 </div>
 </div>
-<div class="quiz2-question-source docutils container" id="question-b3cd43b9">
+<div class="quiz2-question-source docutils container" id="question-b703f061">
 <div class="quiz2-question-content docutils container">
 <p>La <span class="math notranslate nohighlight">\(\{b_n\}\)</span> være en aritmetisk følge. Hvilket alternativ er riktig?</p>
 </div>
@@ -1250,7 +1260,7 @@ b_{15} = \dfrac{b_{13} + b_{18}}{2}
 </div>
 </div>
 </div>
-<div class="quiz2-question-source docutils container" id="question-0ab306ac">
+<div class="quiz2-question-source docutils container" id="question-38fad98b">
 <div class="quiz2-question-content docutils container">
 <p>La <span class="math notranslate nohighlight">\(\{c_n\}\)</span> være en aritmetisk følge. Hvilket alternativ er riktig?</p>
 </div>
@@ -1281,7 +1291,7 @@ c_{30} = \dfrac{c_{27} + c_{32}}{2}
 </div>
 </div>
 </div>
-<div class="quiz2-question-source docutils container" id="question-2e4a54e1">
+<div class="quiz2-question-source docutils container" id="question-19b47233">
 <div class="quiz2-question-content docutils container">
 <p>La <span class="math notranslate nohighlight">\(\{d_n\}\)</span> være en aritmetisk følge. Hvilket alternativ er riktig?</p>
 </div>
@@ -1316,7 +1326,7 @@ d_{20} = \dfrac{d_{17} + d_{24}}{2}
 
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
-                const sourceEl = document.getElementById("quiz-source-quiz-1e9f7f5f");
+                const sourceEl = document.getElementById("quiz-source-quiz-d35afe1b");
                 const parseFn = (typeof window !== 'undefined') ? window.quiz2ParseDomSource : null;
                 const questionsData = (typeof parseFn === 'function' && sourceEl) ? parseFn(sourceEl) : [];
 
@@ -1325,7 +1335,7 @@ d_{20} = \dfrac{d_{17} + d_{24}}{2}
                     sourceEl.parentNode.removeChild(sourceEl);
                 }
 
-                const quiz = new SequentialMultipleChoiceQuiz("quiz-container-quiz-1e9f7f5f", questionsData);
+                const quiz = new SequentialMultipleChoiceQuiz("quiz-container-quiz-d35afe1b", questionsData);
             });
         </script>
         </div>

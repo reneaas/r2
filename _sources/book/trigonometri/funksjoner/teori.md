@@ -9,39 +9,39 @@ Sinusfunksjonen $\sin x$ og cosinusfunksjonen $\cos x$ får vi ved å la $x$ væ
 ---
 rows: 1
 cols: 2
-interactive-var: x, 0, 4*pi, 128
+interactive-var: u, 0, 4*pi, 128
 interactive-var-start: pi/4
 ---
 
 :::{interactive-graph} 
 circle: (0, 0), 1, dashed, gray
-point: (cos(x), sin(x))
-line-segment: (0, 0), (cos(x), sin(x)), solid, black
-angle-arc: (0, 0), 0.2, 0, x * 180 / pi, purple, arrow
-curve: cos(t), sin(t), (0, x), solid, black
-hline: sin(x), 0, cos(x), dashed, red
-vline: cos(x), 0, sin(x), dashed, blue
+point: (cos(u), sin(u))
+line-segment: (0, 0), (cos(u), sin(u)), solid, black
+angle-arc: (0, 0), 0.2, 0, u * 180 / pi, purple, arrow
+curve: cos(t), sin(t), (0, u), solid, black
+hline: sin(u), 0, cos(u), dashed, red
+vline: cos(u), 0, sin(u), dashed, blue
 axis: equal
 grid: off
 ticks: off
 xlabel: $\cos x$
 ylabel: $\sin x$
-fontsize: 32
+fontsize: 24
 :::
 
 :::{interactive-graph} 
-curve: t, cos(t), (0, x), solid, blue
-curve: t, sin(t), (0, x), solid, red
+function: cos(x), (0, u), $y = \cos x$, blue
+function: sin(x), (0, u), $y = \sin x$, red
 xmin: 0
 xmax: 16
 ymin: -1.5
 ymax: 1.5
 xtick-format: pi
 xmin: 0
-xmax: 4*pi
+xmax: 5*pi
 xstep: pi/2
 nocache:
-fontsize: 32 
+fontsize: 24
 :::
 ::::
 
@@ -196,54 +196,28 @@ Fasevinkel $\varphi$, Gir en horisontal **faseforskyvning** lik $\dfrac{\varphi}
 
 
 :::::::::::::::{explore} Utforsk 1
-Nedenfor vises grafen til $y = \cos x$ som en grå stiplet linje. I hvert interaktive vindu kan du se hva som skjer når du justerer på parameterne $A$, $\omega$, $\varphi$ og $d$ i den generelle cosinusfunksjonen og sammenligne med grafen til $y = \cos x$.
+Nedenfor vises grafen til $y = \cos x$ som en grå stiplet linje. Den blå grafen viser grafen til 
 
-::::{multi-plot2}
----
-rows: 2
-cols: 2
----
+$$
+f(x) = A \cos (\omega x - \varphi) + d
+$$
+
+der $A$, $\omega$, $\varphi$ og $d$ kan justeres.
+
+
 :::{interactive-graph} 
-width: 100%
+width: 70%
 interactive-var: A, 1, 4, 4
-interactive-var-start: 1
-function: A*cos(x), $y = A\cdot \cos(x)$
-curve: t, cos(t), (-6, 6), dashed, gray
-ymin: -4
-ymax: 4
-:::
-
-:::{interactive-graph} 
-width: 100%
 interactive-var: omega, 1, 5, 5
-interactive-var-start: 1
-function: cos(omega*x), $y = \cos(omega \cdot x)$
-curve: t, cos(t), (-6, 6), dashed, gray
-ymin: -4
-ymax: 4
-:::
-
-:::{interactive-graph} 
-width: 100%
 interactive-var: varphi, -2*pi, 2*pi, 11
-interactive-var-start: 0
-function: cos(x - varphi), $y = \cos(x - varphi)$
+interactive-var: d, -5, 5, 11
+interactive-var-start: A=1, d=0, omega=1, varphi=0
+function: A*cos(omega * x - varphi) + d, blue 
 curve: t, cos(t), (-6, 6), dashed, gray
 ymin: -4
 ymax: 4
 :::
 
-:::{interactive-graph} 
-width: 100%
-interactive-var: d, -5, 5, 11
-interactive-var-start: 0
-function: cos(x) + d, $y = \cos(x) + d$
-curve: t, cos(t), (-6, 6), dashed, gray
-hline: d, dashed, red
-ymin: -4
-ymax: 4
-:::
-::::
 :::::::::::::::
 
 
