@@ -143,6 +143,7 @@
     <script src="../../../_static/munchboka/js/goals.js?v=a2f2d5f7"></script>
     <script src="../../../_static/munchboka/js/proof.js?v=2793954e"></script>
     <script src="../../../_static/munchboka/js/hint.js?v=9d6836a9"></script>
+    <script src="../../../_static/notebook-external-link.js?v=189b816c"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
@@ -350,10 +351,6 @@
 </ul>
 </details></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Oppgavesamlinger</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../oppgavesamling/vektorregning.html">Romgeometri</a></li>
-</ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Eksamensøving</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../eksamens%C3%B8ving/v%C3%A5r_26/oppgaver.html">Eksamen vår 2026</a></li>
@@ -361,7 +358,7 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Digitale verktøy</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../eksamensressurser/python.html">Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../eksamensressurser/notebook.html">Python notebook</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.munchboka.no/1t/_static/munchboka/notebook/index.html?new=1">Python notebook</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.geogebra.org/classic">Geogebra</a></li>
 </ul>
 
@@ -533,8 +530,8 @@ document.write(`
 <h2>Oppgave 1<a class="headerlink" href="#exercise-Oppgave-1" title="Link to this heading">#</a></h2>
 <div class="exercise-body docutils container">
 <p>Ta quizen!</p>
-<div id="quiz-container-quiz-01a2da5b" class="quiz-main-container" data-quiz2-source="quiz-source-quiz-01a2da5b"></div><div class="quiz2-source docutils container" id="quiz-source-quiz-01a2da5b">
-<div class="quiz2-question-source docutils container" id="question-976c1ace">
+<div id="quiz-container-quiz-c2f30a73" class="quiz-main-container" data-quiz2-source="quiz-source-quiz-c2f30a73"></div><div class="quiz2-source docutils container" id="quiz-source-quiz-c2f30a73">
+<div class="quiz2-question-source docutils container" id="question-8b7b4afb">
 <div class="quiz2-question-content docutils container">
 <p>Hvilke tall skrives ut av programmet?</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>
@@ -569,7 +566,7 @@ document.write(`
 </div>
 </div>
 </div>
-<div class="quiz2-question-source docutils container" id="question-8bd64e7e">
+<div class="quiz2-question-source docutils container" id="question-32eee218">
 <div class="quiz2-question-content docutils container">
 <p>Hvilke tall skrives ut av programmet?</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="p">):</span>
@@ -604,7 +601,7 @@ document.write(`
 </div>
 </div>
 </div>
-<div class="quiz2-question-source docutils container" id="question-99d212f0">
+<div class="quiz2-question-source docutils container" id="question-dce74da7">
 <div class="quiz2-question-content docutils container">
 <p>Hvilke tall skrives ut av programmet?</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
@@ -639,7 +636,7 @@ document.write(`
 </div>
 </div>
 </div>
-<div class="quiz2-question-source docutils container" id="question-20144ef1">
+<div class="quiz2-question-source docutils container" id="question-30098e26">
 <div class="quiz2-question-content docutils container">
 <p>Hvilke tall skrives ut av programmet?</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">20</span><span class="p">):</span>
@@ -678,7 +675,7 @@ document.write(`
 
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
-                const sourceEl = document.getElementById("quiz-source-quiz-01a2da5b");
+                const sourceEl = document.getElementById("quiz-source-quiz-c2f30a73");
                 const parseFn = (typeof window !== 'undefined') ? window.quiz2ParseDomSource : null;
                 const questionsData = (typeof parseFn === 'function' && sourceEl) ? parseFn(sourceEl) : [];
 
@@ -687,7 +684,7 @@ document.write(`
                     sourceEl.parentNode.removeChild(sourceEl);
                 }
 
-                const quiz = new SequentialMultipleChoiceQuiz("quiz-container-quiz-01a2da5b", questionsData);
+                const quiz = new SequentialMultipleChoiceQuiz("quiz-container-quiz-c2f30a73", questionsData);
             });
         </script>
         </div>
@@ -704,7 +701,7 @@ a)</div>
 <div class="part-body docutils container">
 <p>Hvilke tall skrives ut av programmet nedenfor?</p>
 
-        <div id="container-code-54187848"></div>
+        <div id="container-code-70524236"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -713,7 +710,7 @@ a)</div>
 `;
 
                 makePredictionInteractiveCode(
-                    "container-code-54187848",
+                    "container-code-70524236",
                     code,
                 );
             });
@@ -728,7 +725,7 @@ b)</div>
 <div class="part-body docutils container">
 <p>Hvilke tall skrives ut av programmet nedenfor?</p>
 
-        <div id="container-code-e0bbad9c"></div>
+        <div id="container-code-b6adec1a"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -737,7 +734,7 @@ b)</div>
 `;
 
                 makePredictionInteractiveCode(
-                    "container-code-e0bbad9c",
+                    "container-code-b6adec1a",
                     code,
                 );
             });
@@ -752,7 +749,7 @@ c)</div>
 <div class="part-body docutils container">
 <p>Hvilke tall skrives ut av programmet nedenfor?</p>
 
-        <div id="container-code-de98ce91"></div>
+        <div id="container-code-6c5bd039"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -761,7 +758,7 @@ c)</div>
 `;
 
                 makePredictionInteractiveCode(
-                    "container-code-de98ce91",
+                    "container-code-6c5bd039",
                     code,
                 );
             });
@@ -776,7 +773,7 @@ d)</div>
 <div class="part-body docutils container">
 <p>Hvilke tall skrives ut av programmet nedenfor?</p>
 
-        <div id="container-code-ce2a83e1"></div>
+        <div id="container-code-e6edc382"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -785,7 +782,7 @@ d)</div>
 `;
 
                 makePredictionInteractiveCode(
-                    "container-code-ce2a83e1",
+                    "container-code-e6edc382",
                     code,
                 );
             });
@@ -807,7 +804,7 @@ a)</div>
 <p>Nedenfor vises et program som skriver ut noen ledd i en følge <span class="math notranslate nohighlight">\(\{a_n\}\)</span>.</p>
 <p>Forutsi hva programmet skriver ut og sjekk svaret ditt.</p>
 
-        <div id="container-code-7477c3fb"></div>
+        <div id="container-code-16f6282e"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -820,7 +817,7 @@ for n in range(5):
 `;
 
                 makePredictionInteractiveCode(
-                    "container-code-7477c3fb",
+                    "container-code-16f6282e",
                     code,
                 );
             });
@@ -836,7 +833,7 @@ b)</div>
 <p>Nedenfor vises et program som skriver ut noen ledd i en følge <span class="math notranslate nohighlight">\(\{b_n\}\)</span>.</p>
 <p>Forutsi hva programmet skriver ut og sjekk svaret ditt.</p>
 
-        <div id="container-code-d2d6edb1"></div>
+        <div id="container-code-4c783f04"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -849,7 +846,7 @@ for n in range(4):
 `;
 
                 makePredictionInteractiveCode(
-                    "container-code-d2d6edb1",
+                    "container-code-4c783f04",
                     code,
                 );
             });
@@ -865,7 +862,7 @@ c)</div>
 <p>Nedenfor vises et program som skriver ut noen ledd i en følge <span class="math notranslate nohighlight">\(\{c_n\}\)</span>.</p>
 <p>Forutsi hva programmet skriver ut og sjekk svaret ditt.</p>
 
-        <div id="container-code-bf69ddbe"></div>
+        <div id="container-code-088c5a0b"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -878,7 +875,7 @@ for n in range(5):
 `;
 
                 makePredictionInteractiveCode(
-                    "container-code-bf69ddbe",
+                    "container-code-088c5a0b",
                     code,
                 );
             });
@@ -894,7 +891,7 @@ d)</div>
 <p>Nedenfor vises et program som skriver ut noen ledd i en følge <span class="math notranslate nohighlight">\(\{d_n\}\)</span>.</p>
 <p>Forutsi hva programmet skriver ut og sjekk svaret ditt.</p>
 
-        <div id="container-code-7e41056b"></div>
+        <div id="container-code-0d56cf47"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -906,7 +903,7 @@ for n in range(5):
 `;
 
                 makePredictionInteractiveCode(
-                    "container-code-7e41056b",
+                    "container-code-0d56cf47",
                     code,
                 );
             });
@@ -928,7 +925,7 @@ a)</div>
 <p>Programmet nedenfor regner ut summen av en rekke <span class="math notranslate nohighlight">\(S\)</span>.</p>
 <p>Forutsi hva programmet skriver ut og sjekk svaret ditt.</p>
 
-        <div id="container-code-fff0d59b"></div>
+        <div id="container-code-9da12b34"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -944,7 +941,7 @@ print(S)
 `;
 
                 makePredictionInteractiveCode(
-                    "container-code-fff0d59b",
+                    "container-code-9da12b34",
                     code,
                 );
             });
@@ -960,7 +957,7 @@ b)</div>
 <p>Programmet nedenfor regner ut summen av en rekke <span class="math notranslate nohighlight">\(R\)</span>.</p>
 <p>Forutsi hva programmet skriver ut og sjekk svaret ditt.</p>
 
-        <div id="container-code-867c500d"></div>
+        <div id="container-code-2602c66f"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -974,7 +971,7 @@ for n in range(1, 21):
 print(R)`;
 
                 makePredictionInteractiveCode(
-                    "container-code-867c500d",
+                    "container-code-2602c66f",
                     code,
                 );
             });
@@ -990,7 +987,7 @@ c)</div>
 <p>Programmet nedenfor regner ut summen av en rekke <span class="math notranslate nohighlight">\(L\)</span>.</p>
 <p>Forutsi hva programmet skriver ut og sjekk svaret ditt.</p>
 
-        <div id="container-code-5f716f78"></div>
+        <div id="container-code-5c34bfde"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -1004,7 +1001,7 @@ print(L)
 `;
 
                 makePredictionInteractiveCode(
-                    "container-code-5f716f78",
+                    "container-code-5c34bfde",
                     code,
                 );
             });
@@ -1020,7 +1017,7 @@ d)</div>
 <p>Programmet nedenfor regner ut summen av en rekke <span class="math notranslate nohighlight">\(M\)</span>.</p>
 <p>Forutsi hva programmet skriver ut og sjekk svaret ditt.</p>
 
-        <div id="container-code-6f691899"></div>
+        <div id="container-code-852c10bf"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -1033,7 +1030,7 @@ for n in range(1, 100001):
 print(M)`;
 
                 makePredictionInteractiveCode(
-                    "container-code-6f691899",
+                    "container-code-852c10bf",
                     code,
                 );
             });
@@ -1059,7 +1056,7 @@ a)</div>
 <div class="part-body docutils container">
 <p>Lag et program som skriver ut de 5 første leddene i følgen.</p>
 
-        <div id="container-code-2c3cf2a1"></div>
+        <div id="container-code-d6151e0b"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -1068,7 +1065,7 @@ a)</div>
 `;
 
                 makeInteractiveCode(
-                    "container-code-2c3cf2a1",
+                    "container-code-d6151e0b",
                     code,
                 );
             });
@@ -1088,7 +1085,7 @@ b)</div>
 <div class="part-body docutils container">
 <p>Lag et program som finner summen <span class="math notranslate nohighlight">\(S\)</span>.</p>
 
-        <div id="container-code-ed68f857"></div>
+        <div id="container-code-2bd85768"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -1097,7 +1094,7 @@ b)</div>
 `;
 
                 makeInteractiveCode(
-                    "container-code-ed68f857",
+                    "container-code-2bd85768",
                     code,
                 );
             });
