@@ -1185,3 +1185,57 @@ $$
 :::::::::::::::
 
 
+
+
+---
+
+
+
+:::::::::::::::{exercise} Oppgave 9
+Punktene $P(2, 4, -2)$ og $Q(0, 0, 0)$ ligger på en kuleflate $K$ slik at $PQ$ er diameteren i kulen.
+
+
+:::::::::::::{part} a
+Finn en likning for $K$.
+
+:::::::::::::
+
+
+Et plan $\alpha$ tangerer kuleflaten i punktet $P$.
+
+
+:::::::::::::{part} b
+Bestem en likning for $\alpha$.
+
+
+:::::::::::::
+
+
+Et annet plan $\gamma$ er parallelt med $\alpha$, og skjærer kuleflaten $K$ som gir en sirkel med radius $2$.
+
+:::::::::::::{part} c
+Bestem de to mulige likningene for $\gamma$.
+
+:::::::::::::
+
+
+
+
+:::::::::::::::
+
+
+---
+
+
+
+
+:::::::::::::::{exercise} Oppgave 10
+Gitt punktene $A(-1, -1, 2)$, $B(3, 4, -1)$, $C(5, 3, 1)$ og $D(5, 6, 4)$ har vi at
+* Planet $\alpha$ går gjennom $A$, $B$ og $C$
+* Linja $\ell$ går gjennom $A$ og $D$
+* En kuleflate har radius $8$ og sentrum $S$ som ligger på linja $\ell$
+* Kuleflaten tangerer $\alpha$.
+
+Bestem de mulige koordinatene til kuleflatens sentrum.
+:::::::::::::::
+
