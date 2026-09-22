@@ -717,6 +717,7 @@ $$
 
 :::::::::::::
 
+
 :::::::::::::::
 
 
@@ -787,98 +788,128 @@ $$
 En kuleflate $K$ har likningen
 
 $$
-x^2 + y^2 + z^2 - 2x + 2y - 6z = 14
+x^2 + y^2 - 4y + z^2 - 2z - 31 = 0
 $$
 
 
 
 :::::::::::::{part} a
-Finn sentrum og radius til kulen.
+Finn sentrum $S$ og radius $r$ til kulen.
 
 
 :::::{answer}
-* Sentrum $S(1, -1, 3)$
-* Radius $r = 5$
+* Sentrum $S(0, 2, 1)$
+* Radius $r = 6$
 
 ::::{solution}
 Vi skriver om likningen til standardlikningen:
 
 $$
-x^2 - 2x + y^2 + 2y + z^2 - 6z = 14
+x^2 + y^2 - 4y + z^2 - 2z - 31 = 0
 $$
 
 $$
-(x - 1)^2 - 1 + (y + 1)^2 - 1 + (z - 3)^2 - 9 = 14
+x^2 + (y - 2)^2 - 4 + (z - 1)^2 - 1 = 0
 $$
 
 $$
-(x - 1)^2 + (y + 1)^2 + (z - 3)^2 = 25 = 5^2
+x^2 + (y - 2)^2 + (z - 1)^2 = 36 = 6^2
 $$
 
-Fra likningen kan vi lese av at kulen har sentrum i $S(1, -1, 3)$ og radius $r = 5$.
+Fra likningen kan vi lese av at kulen har sentrum i $S(0, 2, 1)$ og radius $r = 6$.
 ::::
 :::::
 
 :::::::::::::
 
 
+Et plan $\alpha$ er gitt ved 
+
+$$
+2x + y - 2z - 9 = 0
+$$
+
 :::::::::::::{part} b
-Vis at punktet $A(4, 3, 3)$ ligger på $K$.
-
-
-::::{solution}
-Vi setter inn koordinatene til punktet og sjekker at kulelikningen er oppfylt:
-
-$$
-(4 - 1)^2 + (3 + 1)^2 + (3 - 3)^2 = 3^2 + 4^2 + 0^2 = 25 = 5^2
-$$
-
-Likningen er oppfylt som betyr at $A$ ligger på $K$.
-::::
-
-
-
-:::::::::::::
-
-Et plan $\alpha$ tangerer kuleflaten i punktet $A$.
-
-:::::::::::::{part} c
-Bestem en likning for $\alpha$.
+Bestem avstanden fra $\alpha$ til kulens sentrum.
 
 
 :::::{answer}
 $$
-3x + 4y - 24 = 0
+L =  3
 $$
 
 ::::{solution}
-En normalvektor til planet vil være parallell med $\lvec{SA}$:
+Vi bruker formelen for avstanden fra et punkt til et plan. Avstanden fra sentrum $S(0, 2, 1)$ til planet $\alpha$ er gitt ved
 
 $$
-\lvec{SA} = \lvec{OA} - \lvec{OS} = [4, 3, 3] - [1, -1, 3] = [3, 4, 0]
+\begin{align*}
+L &= \frac{|2 \cdot 0 + 1 \cdot 2 - 2 \cdot 1 - 9|}{\sqrt{2^2 + 1^2 + (-2)^2}} \\
+\\
+&= \frac{|0 + 2 - 2 - 9|}{\sqrt{4 + 1 + 4}} \\
+\\
+&= \frac{9}{3} \\
+\\
+&= 3
+\end{align*}
+$$
+::::
+:::::
+
+:::::::::::::
+
+
+:::::::::::::{part} c
+Planet $\alpha$ skjærer kuleflaten langs en skjæringssirkel med sentrum $Q$.
+
+Bestem de to mulige koordinatene til $Q$.
+
+
+
+:::::{answer}
+$Q_1(2, 3, -1)$ eller $Q_2(-2, 1, 3)$
+
+::::{solution}
+Avstanden fra kulens sentrum $S(0, 2, 1)$ til planet $\alpha$ er $L = 3$. Går vi en avstand $3$ langs normalvektoren til planet i begge retninger, vil vi finne de to mulige punktene for sirkelens sentrum. 
+
+En enhetsvektor som peker i samme retning som nromalvektoren til planet er
+
+$$
+\hat{n} = \dfrac{\vec n}{\abs{\vec n}} = \dfrac{\vec n}{3}
 $$
 
-Vi setter normalvektoren til $\vec n = [3, 4, 0]$. Vi lar $P(x, y, z)$ være et vilkårlig punkt i planet. Da er planlikningen gitt ved
+Det ene mulige punktet for $Q$ er gitt ved
 
 $$
-\lvec{AP} \cdot \vec n = 0
+\begin{align*}
+\lvec{OQ_1} &= \lvec{OS} + L \cdot \hat{n} \\
+\\
+&= \lvec{OS} + 3 \cdot \dfrac{\vec n}{3} \\
+\\
+&= \lvec{OS} + \vec n \\
+\\
+&= [0, 2, 1] + [2, 1, -2] \\
+\\
+&= [2, 3, -1]
+\end{align*}
 $$
 
-$$
-[x - 4, y - 3, z - 3] \cdot [3, 4, 0] = 0
-$$
+Det andre mulige punktet for $Q$ er gitt ved
 
 $$
-3(x - 4) + 4(y - 3) + 0(z - 3) = 0
+\begin{align*}
+\lvec{OQ_2} &= \lvec{OS} - L \cdot \hat{n} \\
+\\
+&= \lvec{OS} - 3 \cdot \dfrac{\vec n}{3} \\
+\\
+&= \lvec{OS} - \vec n \\
+\\
+&= [0, 2, 1] - [2, 1, -2] \\
+\\
+&= [-2, 1, 3]
+\end{align*}
 $$
 
-$$
-3x - 12 + 4y - 12 = 0
-$$
-
-$$
-3x + 4y - 24 = 0
-$$
+Altså er sentrum i skjæringssirkelen enten $Q_1(2, 3, -1)$ eller $Q_2(-2, 1, 3)$.
 ::::
 :::::
 
@@ -893,41 +924,66 @@ Bestem en likning for $\beta$.
 
 :::::{answer}
 $$
--8x + 6y + 3z + 5 = 0
+y - 2z = 0
 $$
 
 ::::{solution}
-Siden $\beta$ inneholder $S$ og $B$, vil $\lvec{SB}$ være parallell med planet. Siden $\beta$ står normalt på $\alpha$, vil også normalvektoren til $\alpha$ være parallell med $\beta$. Dermed kan vi lage en normalvektor til $\beta$ ved å ta kryssproduktet mellom $\lvec{SB}$ og normalvektoren til $\alpha$. Vi har at
+Siden $\beta$ inneholder både $S$ og $B$, vil vektoren $\lvec{SB}$ være parallell med planet $\beta$. Siden $\beta$ står normalt på $\alpha$, vil også normalvektoren til $\alpha$ være parallell med $\beta$. Dermed vil også normalvektoren $\vec n_\alpha$ til $\alpha$ være parallell med planet $\beta$. Da må normalvektoren til $\beta$ være parallell med kryssproduktet
+
+Vi har at 
+
+$$
+\vec n_\alpha = [2, 1, -2] \qog \lvec{SB} = [1, -2, 0]
+$$
+
+Da er
 
 $$
 \begin{align*}
-\vec n_\alpha \times \lvec{SB} &= \mqty| \vec e_x & \vec e_y & \vec e_z \\ 3 & 4 & 0 \\ 0 & 1 & -2 | \\
+\vec n_\alpha \times \lvec{SB} &= \mqty|\vec e_x & \vec e_y & \vec e_z \\ 2 & 1 & -2 \\ 1 & -2 & 0| \\
 \\
-&= \vec e_x \cdot \mqty| 4 & 0 \\ 1 & -2 | - \vec e_y \cdot \mqty| 3 & 0 \\ 0 & -2 | + \vec e_z \cdot \mqty| 3 & 4 \\ 0 & 1 | \\
+&= \vec e_x \cdot \mqty| 1 & -2 \\ 1 & -2| - \vec e_y \cdot \mqty| 2 & -2 \\ 1 & 0| + \vec e_z \cdot \mqty| 2 & 1 \\ 1 & -2| \\
 \\
-&= \vec e_x \cdot (-8) - \vec e_y \cdot (-6) + \vec e_z \cdot (3) \\
+&= \vec e_x \cdot 0 - \vec e_y \cdot (-2) + \vec e_z \cdot (-4) \\
 \\
-&= [-8, 6, 3]
+&= 0 + 2\vec e_y - 4\vec e_z \\
+\\
+&= [0, 2, -4] \\
+\\
+&= 2 \cdot [0, 1, -2]
 \end{align*}
 $$
 
-Vi lar $P(x, y, z)$ være et vilkårlig punkt i planet. Da er planlikningen til $\beta$ gitt ved
+Altså er en normalvektor til planet $\beta$ gitt ved
 
 $$
-\lvec{BP} \cdot \vec n_\beta = 0
+\vec n_\beta = [0, 1, -2]
+$$
+
+Siden punktet $S(0, 2, 1)$ ligger i planet $\beta$ vil planlikningen være gitt ved:
+
+$$
+\lvec{SP} \cdot \vec n_\beta = 0
 $$
 
 $$
-[x - 1, y - 0, z - 1] \cdot [-8, 6, 3] = 0
+[x - 0, y - 2, z - 1] \cdot [0, 1, -2] = 0
 $$
 
 $$
--8(x - 1) + 6(y - 0) + 3(z - 1) = 0
+0 \cdot (x - 0) + 1 \cdot (y - 2) + (-2) \cdot (z - 1) = 0
 $$
 
 $$
--8x + 6y + 3z + 5 = 0
+y - 2 - 2z + 2 = 0
 $$
+
+$$
+y - 2z = 0
+$$
+
+
+
 ::::
 :::::
 
