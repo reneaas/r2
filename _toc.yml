@@ -162,11 +162,11 @@ parts:
   #       title: Oppgaver
 
 
-  - caption: Oppgavesamlinger
-    numbered: false
-    chapters:
-    - file: book/oppgavesamling/vektorregning.md
-      title: Romgeometri
+  # - caption: Oppgavesamlinger
+  #   numbered: false
+  #   chapters:
+  #   - file: book/oppgavesamling/vektorregning.md
+  #     title: Romgeometri
 
 
   - caption: Eksamensøving
@@ -180,7 +180,9 @@ parts:
     numbered: false
     chapters:
     - file: book/eksamensressurser/python.md
-    - file: book/eksamensressurser/notebook.md
+    # - file: book/eksamensressurser/notebook.md
+    - url: https://www.munchboka.no/1t/_static/munchboka/notebook/index.html?new=1
+      title: Python notebook
     - url: https://www.geogebra.org/classic
       title: Geogebra
 
