@@ -1189,7 +1189,7 @@ $$
 
 ---
 
-<!-- 
+
 
 :::::::::::::::{exercise} Oppgave 9
 Punktene $P(2, 4, -4)$ og $Q(0, 0, 0)$ ligger på en kuleflate $K$ slik at $PQ$ er diameteren i kulen.
@@ -1280,10 +1280,82 @@ $$
 :::::::::::::
 
 
-Et annet plan $\gamma$ er parallelt med $\alpha$, og skjærer kuleflaten $K$ som gir en sirkel med radius $2$.
+Et annet plan $\gamma$ er parallelt med $\alpha$, og skjærer kuleflaten $K$ som gir en sirkel med radius $\sqrt{5}$.
 
 :::::::::::::{part} c
-Bestem de to mulige likningene for $\gamma$.
+Bestem de mulige koordinatene til sirkelens sentrum.
+
+
+:::::{answer}
+$Q_1\left(\dfrac{5}{3}, \dfrac{10}{3}, -\dfrac{10}{3}\right)$ eller $Q_2\left(\dfrac{1}{3}, \dfrac{2}{3}, -\dfrac{2}{3}\right)$.
+
+::::{solution}
+Siden planet $\gamma$ er parallelt med $\alpha$, så vil en normalvektor til $\gamma$ også være
+
+$$
+\vec n = [1, 2, -2]. 
+$$
+
+Hvis vi kjenner til avstanden fra planet $\gamma$ til kuleflatens sentrum, kan vi gå fra sentrum $S$ langs en enhetsvektor $\hat{n}$ i retning av normalvektoren til planet for å finne senteret til den ene sirkelen. Den andre mulige sirkelen finner vi ved å gå i motsatt retning. 
+
+Avstanden $L$ fra $S$ til $\gamma$ vil være:
+
+$$
+L^2 + \rho^2 = r^2 \liff L = \sqrt{r^2 - \rho^2}
+$$
+
+der $r$ er radius til kuleflaten og $\rho$ er radius til sirkelen. Da får vi:
+
+$$
+L = \sqrt{3^2 - \sqrt{5}^2} = \sqrt{9 - 5} = \sqrt{4} = 2
+$$
+
+Vi har at $\abs{\vec n} = 3$ som betyr at enhetsvektoren som peker i samme retning er:
+
+$$
+\hat n = \dfrac{\vec n}{\abs{\vec n}} = \dfrac{\vec n}{3}
+$$
+
+
+La $Q_1$ være det ene mulige senteret til sirkelen. Da får vi at:
+
+$$
+\begin{align*}
+\lvec{OQ_1} &= \lvec{OS} + L \hat{n} \\
+\\
+&= \lvec{OS} + 2 \dfrac{\vec n}{3} \\
+\\
+&= \lvec{OS} + \dfrac{2}{3} \cdot \vec n \\
+\\
+&= [1, 2, -2] + \dfrac{2}{3} \cdot [1, 2, -2] \\
+\\
+&= \mqty[1 + \dfrac{2}{3}, 2 + \dfrac{4}{3}, -2 - \dfrac{4}{3}] \\
+\\
+&= \mqty[\dfrac{5}{3}, \dfrac{10}{3}, -\dfrac{10}{3}] \\
+\end{align*}
+$$
+
+La $Q_2$ være det andre mulige senteret til sirkelen. Da får vi at:
+
+$$
+\begin{align*}
+\lvec{OQ_2} &= \lvec{OS} - L \hat{n} \\
+\\
+&= \lvec{OS} - 2 \dfrac{\vec n}{3} \\
+\\
+&= \lvec{OS} - \dfrac{2}{3} \cdot \vec n \\
+\\
+&= [1, 2, -2] - \dfrac{2}{3} \cdot [1, 2, -2] \\
+\\
+&= \mqty[1 - \dfrac{2}{3}, 2 - \dfrac{4}{3}, -2 + \dfrac{4}{3}] \\
+\\
+&= \mqty[\dfrac{1}{3}, \dfrac{2}{3}, -\dfrac{2}{3}] \\
+\end{align*}
+$$
+
+Altså må sirkelens sentrum enten være $Q_1\left(\dfrac{5}{3}, \dfrac{10}{3}, -\dfrac{10}{3}\right)$ eller $Q_2\left(\dfrac{1}{3}, \dfrac{2}{3}, -\dfrac{2}{3}\right)$.
+::::
+:::::
 
 :::::::::::::
 
@@ -1306,5 +1378,159 @@ Gitt punktene $A(-1, -1, 2)$, $B(3, 4, -1)$, $C(5, 3, 1)$ og $D(5, 6, 4)$ har vi
 * Kuleflaten tangerer $\alpha$.
 
 Bestem de mulige koordinatene til kuleflatens sentrum.
+
+
+
+
+:::::{answer}
+
+$$
+S_1(11, 13, 6) \qeller S_2(-13, -15, -2)
+$$
+
+
+::::{solution}
+Her må vi kombinere en del teori sammen. Først kan vi merke oss at siden kuleflaten tangerer $\alpha$, må avstanden fra kulens sentrum til $\alpha$ være lik radius som er $8$. Derfor vil det være lurt å finne likningen til planet, og da må vi først finne oss en normalvektor. 
+
+En normalvektor til $\alpha$ vil være parallell med $\lvec{AB} \times \lvec{AC}$. Vi har at 
+
+$$
+\lvec{AB} = [4, 5, -3] \qog \lvec{AC} = [6, 4, -1]
+$$
+
+Kryssproduktet mellom de to vektorene blir:
+
+$$
+\begin{align*}
+\lvec{AB} \times \lvec{AC} &= \mqty|\vec e_x & \vec e_y & \vec e_z \\ 4 & 5 & -3 \\ 6 & 4 & -1| \\
+\\
+&= \vec e_x \cdot \underbrace{\mqty|5 & -3 \\ 4 & -1|}_{\displaystyle =7} - \vec e_y \cdot \underbrace{\mqty|4 & -3 \\ 6 & -1|}_{\displaystyle =14} + \vec e_z \cdot \underbrace{\mqty|4 & 5 \\ 6 & 4| }_{\displaystyle =-14} \\
+\\
+&= [7, -14, -14] \\
+\\
+&= 7 \cdot [1, -2, -2]
+\end{align*}
+$$
+
+Altså er en normalvektor til $\alpha$ gitt ved 
+
+$$
+\vec n = [1, -2, -2]
+$$
+
+Likningen til planet kan vi da få ved å ta utgangspunkt i punktet $A$:
+
+$$
+[x + 1, y + 1, z - 2] \cdot [1, -2, -2] = 0
+$$
+
+$$
+x + 1 - 2(y + 1) - 2(z - 2) = 0
+$$
+
+$$
+x + 1 - 2y - 2 - 2z + 4 = 0
+$$
+
+$$
+x - 2y - 2z + 3 = 0
+$$
+
+
+Siden $\alpha$ tangerer kulen $K$ og radius er lik $8$ (som også blir avstanden fra planet til kulens sentrum) har vi at
+
+$$
+8 = \dfrac{\abs{x - 2y - 2z + 3}}{\abs{\vec n}}
+$$
+
+der vi har at $\abs{\vec n} = 3$. 
+
+Dermed får vi at 
+
+$$
+8 = \dfrac{\abs{x - 2y - 2z + 3}}{3} \liff \abs{x - 2y - 2z + 3} = 24
+$$
+
+
+der $(x, y, z)$ er kulens sentrum. Vi vet også at kulens sentrum ligger på linja $\ell$ gjennom $A$ og $D$, så hvis vi krever at punktet både må ligge på $\ell$ og samtidig må ha en avstand lik $8$, kan vi finne to muligheter for kulens sentrum med likningen ovenfor. 
+
+Da trenger vi først en parameterframstilling for linja. Vi finner en retningsvektor for linja som er gitt ved:
+
+$$
+\vec v = \lvec{AD} = [6, 7, 2]
+$$
+
+En parameterframstilling for linja er da 
+
+$$
+\begin{align*}
+\vec r(t) &= \lvec{OA} + \vec v \cdot t \\
+\\
+&= [-1, -1, 2] + [6, 7, 2] \cdot t \\
+\\
+&= [-1 + 6t, -1 + 7t, 2 + 2t]
+\end{align*}
+$$
+
+Hvis vi nå setter koordinatene til parameterframstillingen inn i likningen for avstanden fra sentrum til planet, kan vi finne de verdiene for $t$ som sørger for at 
+1. Sentrum ligger på linja $\ell$
+2. Avstanden fra planet til kulens sentrum er lik $8$
+
+Da får vi:
+
+$$
+|\underbrace{(-1 + 6t)}_{\displaystyle x} - 2 \cdot \underbrace{(-1 + 7t)}_{\displaystyle y} - 2 \cdot \underbrace{(2 + 2t)}_{\displaystyle z} + 3| = 24
+$$
+
+$$
+|-1 + 6t + 2 - 14t - 4 - 4t + 3| = 24
+$$
+
+$$
+|-12t| = 24  \liff 12\abs{t} = 24
+$$
+
+som betyr at 
+
+$$
+\abs{t} = 2 \liff t = \pm 2
+$$
+
+Den ene muligheten for kulens sentrum $S_1$ blir derfor
+
+$$
+\begin{align*}
+\lvec{OS_1} &= \vec r(2) \\
+\\
+&= [-1 + 6 \cdot 2, -1 + 7 \cdot 2, 2 + 2\cdot 2] \\
+\\
+&= [11, 13, 6]
+\end{align*}
+$$
+
+Den andre muligheten for kulens sentrum $S_2$ blir
+
+$$
+\begin{align*}
+\lvec{OS_2} &= \vec r(-2) \\
+\\
+&= [-1 + 6 \cdot (-2), -1 + 7 \cdot (-2), 2 + 2 \cdot (-2)] \\
+\\
+&= [-13, -15, -2]
+\end{align*}
+$$
+
+
+Altså er mulighetene for kulens sentrum 
+
+$$
+S_1(11, 13, 6) \qeller S_2(-13, -15, -2)
+$$
+
+
+::::
+:::::
+
+
 :::::::::::::::
- -->
+
