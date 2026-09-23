@@ -1189,14 +1189,50 @@ $$
 
 ---
 
-
+<!-- 
 
 :::::::::::::::{exercise} Oppgave 9
-Punktene $P(2, 4, -2)$ og $Q(0, 0, 0)$ ligger på en kuleflate $K$ slik at $PQ$ er diameteren i kulen.
+Punktene $P(2, 4, -4)$ og $Q(0, 0, 0)$ ligger på en kuleflate $K$ slik at $PQ$ er diameteren i kulen.
 
 
 :::::::::::::{part} a
 Finn en likning for $K$.
+
+
+:::::{answer}
+$$
+(x - 1)^2 + (y - 2)^2 + (z + 2)^2 = 3^2
+$$
+
+::::{solution}
+Sentrum $S$ vil ligge midt mellom $P$ og $Q$ som gir oss
+
+$$
+\begin{align*}
+\lvec{OS} &= \frac{1}{2} (\lvec{OP} + \lvec{OQ}) \\
+\\
+&= \frac{1}{2} ([2, 4, -4] + [0, 0, 0]) \\
+\\
+&= \frac{1}{2} [2, 4, -4] \\
+\\
+&= [1, 2, -2]
+\end{align*}
+$$
+
+Radiusen er halvparten av avstanden mellom de to $P$ og $Q$:
+
+$$
+r = \dfrac{\abs{\lvec{PQ}}}{2} = \dfrac{\abs{[2, 4, -4]}}{2} = 3
+$$
+
+Dermed er avstanden fra sentrum til kuleflaten lik radiusen $r = 3$, og likningen for kuleflaten blir 
+
+$$
+(x - 1)^2 + (y - 2)^2 + (z + 2)^2 = 3^2
+$$
+
+::::
+:::::
 
 :::::::::::::
 
@@ -1206,6 +1242,39 @@ Et plan $\alpha$ tangerer kuleflaten i punktet $P$.
 
 :::::::::::::{part} b
 Bestem en likning for $\alpha$.
+
+
+:::::{answer}
+$$
+x + 2y - 2z - 18 = 0
+$$
+
+::::{solution}
+Likningen for planet vil ha en normalvektor som er parallell med 
+
+$$
+\lvec{SP} = \lvec{OP} - \lvec{OS} = [2, 4, -4] - [1, 2, -2] = [1, 2, -2]
+$$
+
+Vi setter $\vec n = [1, 2, -2]$. Da blir likningen til planet gitt ved:
+
+$$
+[x - 2, y - 4, z + 4] \cdot [1, 2, -2] = 0
+$$
+
+$$
+x - 2 + 2(y - 4) - 2(z + 4) = 0
+$$
+
+$$
+x - 2 + 2y - 8 - 2z - 8 = 0
+$$
+
+$$
+x + 2y - 2z - 18 = 0
+$$
+::::
+:::::
 
 
 :::::::::::::
@@ -1238,4 +1307,4 @@ Gitt punktene $A(-1, -1, 2)$, $B(3, 4, -1)$, $C(5, 3, 1)$ og $D(5, 6, 4)$ har vi
 
 Bestem de mulige koordinatene til kuleflatens sentrum.
 :::::::::::::::
-
+ -->
