@@ -924,7 +924,7 @@ Bestem en likning for $\beta$.
 
 :::::{answer}
 $$
-y - 2z = 0
+4x + 2y + 5z - 9 = 0
 $$
 
 ::::{solution}
@@ -933,54 +933,53 @@ Siden $\beta$ inneholder både $S$ og $B$, vil vektoren $\lvec{SB}$ være parall
 Vi har at 
 
 $$
-\vec n_\alpha = [2, 1, -2] \qog \lvec{SB} = [1, -2, 0]
+\vec n_\alpha \times \lvec{SB} = [2, 1, -2] \times [1, -2, 0]
 $$
 
-Da er
+Da får vi at 
 
 $$
 \begin{align*}
 \vec n_\alpha \times \lvec{SB} &= \mqty|\vec e_x & \vec e_y & \vec e_z \\ 2 & 1 & -2 \\ 1 & -2 & 0| \\
 \\
-&= \vec e_x \cdot \mqty| 1 & -2 \\ 1 & -2| - \vec e_y \cdot \mqty| 2 & -2 \\ 1 & 0| + \vec e_z \cdot \mqty| 2 & 1 \\ 1 & -2| \\
+&= \vec e_x \cdot \mqty| 1 & -2 \\ -2 & 0| - \vec e_y \cdot \mqty| 2 & -2 \\ 1 & 0| + \vec e_z \cdot \mqty| 2 & 1 \\ 1 & -2| \\
 \\
-&= \vec e_x \cdot 0 - \vec e_y \cdot (-2) + \vec e_z \cdot (-4) \\
+&= \vec e_x \cdot (1 \cdot 0 - (-2) \cdot (-2)) - \vec e_y \cdot (2 \cdot 0 - (-2) \cdot 1) + \vec e_z \cdot (2 \cdot (-2) - 1 \cdot 1) \\
 \\
-&= 0 + 2\vec e_y - 4\vec e_z \\
+&= \vec e_x \cdot (0 - 4) - \vec e_y \cdot (0 - (-2)) + \vec e_z \cdot (-4 - 1) \\
 \\
-&= [0, 2, -4] \\
+&= -4\vec e_x - 2\vec e_y - 5\vec e_z \\
 \\
-&= 2 \cdot [0, 1, -2]
+&= [-4, -2, -5] \\
+\\
+&= -1 \cdot [4, 2, 5]
 \end{align*}
 $$
 
-Altså er en normalvektor til planet $\beta$ gitt ved
-
-$$
-\vec n_\beta = [0, 1, -2]
-$$
-
-Siden punktet $S(0, 2, 1)$ ligger i planet $\beta$ vil planlikningen være gitt ved:
+Så vi kan sette $\vec n_\beta = [4, 2, 5]$. En likning for $\beta$ blir derfor
 
 $$
 \lvec{SP} \cdot \vec n_\beta = 0
 $$
 
 $$
-[x - 0, y - 2, z - 1] \cdot [0, 1, -2] = 0
+[x - 0, y - 2, z - 1] \cdot [4, 2, 5] = 0
 $$
 
 $$
-0 \cdot (x - 0) + 1 \cdot (y - 2) + (-2) \cdot (z - 1) = 0
+4x + 2(y - 2) + 5(z - 1) = 0
 $$
 
 $$
-y - 2 - 2z + 2 = 0
+4x + 2y - 4 + 5z - 5 = 0
 $$
 
 $$
-y - 2z = 0
+4x + 2y + 5z - 9 = 0
 $$
+
+
+
 
 
 
