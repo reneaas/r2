@@ -1,4 +1,4 @@
-# Vektorregning: Sammendrag
+# Romgeometri: Sammendrag
 
 
 
