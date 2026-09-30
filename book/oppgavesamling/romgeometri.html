@@ -1,0 +1,2815 @@
+
+<!DOCTYPE html>
+
+
+<html lang="norwegian" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Oppgavesamling: Romgeometri &#8212; Matematikk R2</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/munchboka/css/legacy_1t/general_style.css?v=11bbc4b6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/munchboka/css/legacy_1t/admonitions.css?v=9237f12a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/munchboka/css/legacy_1t/popup.css?v=2d27c3a4" />
+    <link rel="stylesheet" type="text/css" href="../../_static/munchboka/css/legacy_1t/escape-room.css?v=bfeb5342" />
+    <link rel="stylesheet" type="text/css" href="../../_static/munchboka/css/legacy_1t/jeopardy.css?v=71d9bb06" />
+    <link rel="stylesheet" type="text/css" href="../../_static/munchboka/css/legacy_1t/parsonsPuzzle.css?v=9fbab2c7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/munchboka/css/static_code_blocks.css?v=68f9364b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/munchboka/css/clickable_figures/style.css?v=d35dfce7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/munchboka/css/escapeRoom/style.css?v=b30732ed" />
+    <link rel="stylesheet" type="text/css" href="../../_static/munchboka/css/mathjax/style.css?v=194b018e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/munchboka/css/misc_styles/figures.css?v=46e199f0" />
+    <link rel="stylesheet" type="text/css" href="../../_static/munchboka/css/misc_styles/geogebra.css?v=fd180d66" />
+    <link rel="stylesheet" type="text/css" href="../../_static/munchboka/css/misc_styles/grids.css?v=7667ba21" />
+    <link rel="stylesheet" type="text/css" href="../../_static/munchboka/css/misc_styles/misc.css?v=55d93a12" />
+    <link rel="stylesheet" type="text/css" href="../../_static/munchboka/css/misc_styles/popup_code.css?v=4b4feebf" />
+    <link rel="stylesheet" type="text/css" href="../../_static/munchboka/css/misc_styles/tabs.css?v=a560da15" />
+    <link rel="stylesheet" type="text/css" href="../../_static/munchboka/css/multipleChoiceQuiz/style.css?v=d667b426" />
+    <link rel="stylesheet" type="text/css" href="../../_static/munchboka/fonts/opendyslexic/dyslexic.css?v=80f1227b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=4c969af8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/munchboka/css/general_style.css?v=ea5285ea" />
+    <link rel="stylesheet" type="text/css" href="../../_static/munchboka/css/calculator_popup.css?v=9c5cafe2" />
+    <link rel="stylesheet" type="text/css" href="../../_static/munchboka/css/escapeRoom/escape-room.css?v=9eb2d604" />
+    <link rel="stylesheet" type="text/css" href="../../_static/munchboka/css/flashcards.css?v=816457f1" />
+    <link rel="stylesheet" type="text/css" href="../../_static/munchboka/css/interactive_code.css?v=44933e1a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/munchboka/css/jeopardy.css?v=575e2325" />
+    <link rel="stylesheet" type="text/css" href="../../_static/munchboka/css/masonry.css?v=db25927a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/munchboka/css/notebook.css?v=00170ee0" />
+    <link rel="stylesheet" type="text/css" href="../../_static/munchboka/css/popup_code.css?v=b88b7ace" />
+    <link rel="stylesheet" type="text/css" href="../../_static/munchboka/css/quiz.css?v=bc8164d8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/munchboka/css/admonitions.css?v=a3692687" />
+    <link rel="stylesheet" type="text/css" href="../../_static/munchboka/css/dialogue.css?v=c5b7ed32" />
+    <link rel="stylesheet" type="text/css" href="../../_static/munchboka/css/figures.css?v=acd93126" />
+    <link rel="stylesheet" type="text/css" href="../../_static/munchboka/css/popup.css?v=26181dfd" />
+    <link rel="stylesheet" type="text/css" href="../../_static/munchboka/css/timedQuiz.css?v=89e27729" />
+    <link rel="stylesheet" type="text/css" href="../../_static/munchboka/css/cas_popup.css?v=bb968b84" />
+    <link rel="stylesheet" type="text/css" href="../../_static/munchboka/css/github-light.css?v=0cccc4aa" />
+    <link rel="stylesheet" type="text/css" href="../../_static/munchboka/css/github-dark.css?v=e9bcc25f" />
+    <link rel="stylesheet" type="text/css" href="../../_static/munchboka/css/github-dark-high-contrast.css?v=4c0c1b0f" />
+    <link rel="stylesheet" type="text/css" href="../../_static/munchboka/css/table.css?v=fd6d533f" />
+    <link rel="stylesheet" type="text/css" href="../../_static/munchboka/css/pairPuzzle/style.css?v=0a0f323a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/munchboka/css/parsons/parsonsPuzzle.css?v=a1529215" />
+    <link rel="stylesheet" type="text/css" href="../../_static/munchboka/css/part.css?v=bc286cc2" />
+    <link rel="stylesheet" type="text/css" href="../../_static/munchboka/css/print_pdf.css?v=448841f9" />
+    <link id="highlight-theme-light" rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/github.min.css" />
+    <link id="highlight-theme-dark" rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/github-dark.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/munchboka/vendor/katex/dist/katex.min.css?v=83223527" />
+    <link rel="stylesheet" type="text/css" href="../../_static/munchboka/css/interactive3d.css?v=07c6a507" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=c712eed9"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/munchboka/vendor/katex/dist/katex.min.js?v=5cc8ed51"></script>
+    <script src="../../_static/munchboka/fonts/opendyslexic/opendylexic-toggle.js?v=1652b728"></script>
+    <script src="../../_static/munchboka/js/interactive3d/scene.js?v=a2338fa5"></script>
+    <script type="module" src="../../_static/munchboka/js/interactive3d/three-runtime.js?v=5deaea76"></script>
+    <script src="../../_static/munchboka/js/utils.js?v=b59157b9"></script>
+    <script src="../../_static/munchboka/js/casThemeManager.js?v=88874cc7"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.js"></script>
+    <script src="../../_static/munchboka/js/skulpt/skulpt.js?v=51c28977"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../../_static/tabs.js?v=3ee01567"></script>
+    <script src="../../_static/munchboka/js/solution_timer.js?v=192f5d3d"></script>
+    <script src="../../_static/munchboka/js/calculator_popup.js?v=93ae1e49"></script>
+    <script src="../../_static/munchboka/js/escapeRoom/escape-room.js?v=1498b374"></script>
+    <script src="../../_static/munchboka/js/flashcards.js?v=293ceac2"></script>
+    <script src="../../_static/munchboka/js/interactiveCode/interactiveCodeSetup.js?v=9bcf659f"></script>
+    <script src="../../_static/munchboka/js/interactiveCode/codeEditor.js?v=d7a9df79"></script>
+    <script src="../../_static/munchboka/js/interactiveCode/pythonRunner.js?v=e9f0c2d2"></script>
+    <script src="../../_static/munchboka/js/interactiveCode/workerManager.js?v=024a7849"></script>
+    <script src="../../_static/munchboka/js/interactiveCode/turtleCode.js?v=ecc68a76"></script>
+    <script src="../../_static/munchboka/js/jeopardy.js?v=375a3583"></script>
+    <script defer="defer" src="../../_static/munchboka/js/masonry.js?v=96ec6874"></script>
+    <script src="../../_static/munchboka/js/quiz.js?v=f8bcd7a1"></script>
+    <script>let toggleHintShow = 'Klikk for å vise';</script>
+    <script>let toggleHintHide = 'Klikk for å skjule';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=b8b12719"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../../_static/munchboka/js/popup.js?v=5db611f4"></script>
+    <script src="../../_static/munchboka/js/timedQuiz/utils.js?v=2c6f871c"></script>
+    <script src="../../_static/munchboka/js/timedQuiz/multipleChoiceQuestion.js?v=c6ce1ca2"></script>
+    <script src="../../_static/munchboka/js/timedQuiz/timedMultipleChoiceQuiz.js?v=9accc73d"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"loader": {"load": ["[tex]/physics"]}, "tex": {"packages": {"[+]": ["physics"]}, "macros": {"annotateAbove": ["\\mathrel{\\overset{\\substack{\\text{#2} \\\\ \\Bigg\\downarrow}}{#1}}", 2], "annotateBelow": ["\\mathrel{\\underset{\\substack{\\Bigg\\uparrow \\\\ \\text{#2}}}{#1}}", 2], "cline": ["\\underline{\\phantom{#1}}", 1], "and": ["\\quad \\land \\quad"], "or": ["\\quad \\lor \\quad"], "liff": ["\\quad \\iff \\quad"], "limplies": ["\\quad \\implies \\quad"], "limpliedby": ["\\quad \\impliedby \\quad"], "lland": ["\\; \\land \\;"], "degree": ["^\\circ"], "qog": ["\\quad \\text{og} \\quad"], "qder": ["\\quad \\text{der} \\quad"], "qeller": ["\\quad \\text{eller} \\quad"], "qhvis": ["\\quad \\text{hvis} \\quad"], "qfor": ["\\quad \\text{for} \\quad"], "natural": ["\\mathbb{N}"], "integer": ["\\mathbb{Z}"], "rational": ["\\mathbb{Q}"], "real": ["\\mathbb{R}"], "irrational": ["\\mathbb{Q}^c"], "qcomma": [",\\quad"], "nimplies": ["\\quad\\mathrel{\\not\\!\\!\\!\\implies}\\quad"], "nimpliedby": ["\\quad\\mathrel{\\not\\!\\!\\!\\impliedby}\\quad"], "niff": ["\\quad\\mathrel{\\not\\!\\!\\!\\iff}\\quad"], "cubica": ["\\raisebox{-0.4ex}{\\small\\(\\frown\\!\\smile\\)}", 0], "cubicb": ["\\raisebox{-0.4ex}{\\small\\(\\smile\\!\\frown\\)}", 0], "t": ["\\mathrm{#1}", 1], "dot": ["\\vec{#1} \\cdot \\vec{#2}", 2], "len": ["\\abs{\\vec{#1}}", 1], "lvec": ["\\overrightarrow{#1}", 1], "v": ["\\left[#1, #2\\right]", 2], "proj": ["\\mathrm{proj}_{#1}\\left(#2\\right)", 2], "mstack": ["\\begin{array}{c}#1\\end{array}", 1], "d": ["\\, \\mathrm{d}"], "dx": ["\\, \\mathrm{d} x"], "du": ["\\, \\mathrm{d} u"], "dz": ["\\, \\mathrm{d} z"], "dt": ["\\, \\mathrm{d} t"], "dy": ["\\, \\mathrm{d} y"], "ds": ["\\, \\mathrm{d} s"], "eq": ["\\, (\\mathrm{#1})", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3.2/es5/tex-mml-chtml.js"></script>
+    <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'book/oppgavesamling/romgeometri';</script>
+    <script>mermaid.initialize({"startOnLoad": true})</script>
+    <script src="../../_static/munchboka/js/pairPuzzle/draggableItem.js?v=ce9ef7bd"></script>
+    <script src="../../_static/munchboka/js/pairPuzzle/dropZone.js?v=56907477"></script>
+    <script src="../../_static/munchboka/js/pairPuzzle/game.js?v=cb8b0d45"></script>
+    <script src="../../_static/munchboka/js/escapeRoom/escape-room.js?v=1498b374"></script>
+    <script src="../../_static/munchboka/js/parsons/parsonsPuzzle.js?v=57870877"></script>
+    <script src="../../_static/munchboka/js/print_answer_key.js?v=eebcd271"></script>
+    <script src="../../_static/munchboka/js/solution2.js?v=a2d1029e"></script>
+    <script src="../../_static/munchboka/js/part.js?v=ca40db03"></script>
+    <script src="../../_static/munchboka/js/goals.js?v=a2f2d5f7"></script>
+    <script src="../../_static/munchboka/js/proof.js?v=2793954e"></script>
+    <script src="../../_static/munchboka/js/hint.js?v=9d6836a9"></script>
+    <script src="../../_static/notebook-external-link.js?v=189b816c"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script src="../../_static/munchboka/js/highlight-init.js?v=6bc17905"></script>
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+    <script src="../../_static/munchboka/js/geogebra-setup.js?v=8e77fc11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/python/python.min.js"></script>
+    <script src="../../_static/munchboka/js/popup_code.js?v=da823f0c"></script>
+    <link rel="canonical" href="https://www.munchboka.no/r2/book/oppgavesamling/romgeometri.html" />
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Eksamen vår 2026" href="../eksamens%C3%B8ving/v%C3%A5r_26/oppgaver.html" />
+    <link rel="prev" title="Oppgaver: Derivasjon" href="../trigonometri/derivasjon/oppgaver.html" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="norwegian"/>
+<!-- Pyodide -->
+<script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
+
+
+<!-- CodeMirror -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css">
+<link rel="stylesheet" href="../../_static/code_mirror_themes/github_light_cm.css">
+<link rel="stylesheet" href="../../_static/code_mirror_themes/github_dark_cm.css">
+<link rel="stylesheet" href="../../_static/code_mirror_themes/one_dark_cm.css">
+
+<!-- CodeMirror scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/python/python.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+<!-- highlighting of code in Parsons puzzle -->
+<head>
+    <link id="highlight-theme-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/github.min.css">
+    <link id="highlight-theme-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/github-dark.min.css">
+</head>
+
+
+
+<script src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery-ui-touch-punch-improved@0.3.1/dist/jquery.ui.touch-punch-improved.min.js"></script>
+
+
+
+
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/r2.webp" class="logo__image only-light" alt="Matematikk R2 - Home"/>
+    <script>document.write(`<img src="../../_static/r2.webp" class="logo__image only-dark" alt="Matematikk R2 - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">I. Romgeometri</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../romgeometri/regneregler/teori.html">1. Vektorer i 3D</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../romgeometri/regneregler/oppgaver.html">Oppgaver</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../romgeometri/vektorproduktet/teori.html">2. Kryssproduktet</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../romgeometri/vektorproduktet/oppgaver.html">Oppgaver</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../romgeometri/linjer/teori.html">3. Linjer</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../romgeometri/linjer/oppgaver.html">Oppgaver</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../romgeometri/plan/teori.html">4. Plan</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../romgeometri/plan/oppgaver.html">Oppgaver</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../romgeometri/kuler/teori.html">5. Kuler</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../romgeometri/kuler/oppgaver.html">Oppgaver</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../romgeometri/sammendrag/teori.html">6. Sammendrag</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">II. Trigonometri</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../trigonometri/enhetssirkelen/teori.html">7. Enhetssirkelen og radianer</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../trigonometri/enhetssirkelen/oppgaver.html">Oppgaver</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../trigonometri/identiteter/teori.html">8. Trigonometriske identiteter</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../trigonometri/identiteter/oppgaver.html">Oppgaver</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../trigonometri/likninger/teori.html">9. Likninger</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../trigonometri/likninger/oppgaver.html">Oppgaver</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../trigonometri/funksjoner/teori.html">10. Trigonometriske funksjoner</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../trigonometri/funksjoner/oppgaver.html">Oppgaver</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../trigonometri/derivasjon/teori.html">11. Derivasjon</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../trigonometri/derivasjon/oppgaver.html">Oppgaver</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Oppgavesamlinger</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Romgeometri</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Eksamensøving</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../eksamens%C3%B8ving/v%C3%A5r_26/oppgaver.html">Eksamen vår 2026</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Digitale verktøy</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../eksamensressurser/python.html">Python</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.munchboka.no/1t/_static/munchboka/notebook/index.html?new=1">Python notebook</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.geogebra.org/classic">Geogebra</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Last ned denne siden">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/book/oppgavesamling/romgeometri.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Last ned kildefilen"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Skriv ut til PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullskjerm-modus"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Oppgavesamling: Romgeometri</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Innhold </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-Oppgave-1">Oppgave 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-Oppgave-2">Oppgave 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-Oppgave-3">Oppgave 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-Oppgave-4">Oppgave 4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-Oppgave-5">Oppgave 5</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-Oppgave-6">Oppgave 6</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-Oppgave-7">Oppgave 7</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-Oppgave-8">Oppgave 8</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-Oppgave-9">Oppgave 9</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-Oppgave-10">Oppgave 10</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-Oppgave-11">Oppgave 11</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="oppgavesamling-romgeometri">
+<h1>Oppgavesamling: Romgeometri<a class="headerlink" href="#oppgavesamling-romgeometri" title="Link to this heading">#</a></h1>
+<section class="exercise-section" id="exercise-Oppgave-1">
+<h2>Oppgave 1<a class="headerlink" href="#exercise-Oppgave-1" title="Link to this heading">#</a></h2>
+<div class="exercise-body docutils container">
+<p>Gitt punktene <span class="math notranslate nohighlight">\(A(-1, 3, 2)\)</span>, <span class="math notranslate nohighlight">\(B(2, 2, 1)\)</span>, <span class="math notranslate nohighlight">\(C(1, -1, -2)\)</span> og <span class="math notranslate nohighlight">\(T(5, 3, 8)\)</span>.</p>
+<div class="part part-open docutils container">
+<div class="part-header docutils container">
+<div class="part-label docutils container">
+a)</div>
+<button class="part-toggle" data-open="Skjul oppgaven" data-closed="Vis oppgaven">Skjul oppgaven</button></div>
+<div class="part-body docutils container">
+<p>Finn <span class="math notranslate nohighlight">\(\lvec{AB} \times \lvec{AC}\)</span></p>
+<div class="answer-2 docutils container">
+<button class="answer-2-toggle" aria-expanded="false" data-label="Vis fasit">Vis fasit</button><div class="answer-2-content docutils container">
+<div class="math notranslate nohighlight">
+\[
+\lvec{AB} \times \lvec{AC} = [0, 10, -10]
+\]</div>
+<div class="solution-2 docutils container">
+<button class="solution-2-toggle" aria-expanded="false" data-label="Vis løsningsforslag">Vis løsningsforslag</button><div class="solution-2-content docutils container">
+<p>Vi har at</p>
+<div class="math notranslate nohighlight">
+\[
+\lvec{AB} = [2 - (-1), 2 - 3, 1 - 2] = [3, -1, -1]
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\lvec{AC} = [1 - (-1), -1 - 3, -2 - 2] = [2, -4, -4]
+\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\lvec{AB} \times \lvec{AC} &amp;= \mqty|\vec e_x &amp; \vec e_y &amp; \vec e_z \\ 3 &amp; -1 &amp; -1 \\ 2 &amp; -4 &amp; -4| \\
+\\
+&amp;= \vec e_x \cdot \underbrace{\mqty|-1 &amp; -1 \\ -4 &amp; -4|}_{\displaystyle =0} - \vec e_y \cdot \underbrace{\mqty|3 &amp; -1 \\ 2 &amp; -4|}_{\displaystyle =-10} + \vec e_z \cdot \underbrace{\mqty|3 &amp; -1 \\ 2 &amp; -4|}_{\displaystyle =-10} \\
+\\
+&amp;= [0, 10, -10]
+\end{align*}
+\end{split}\]</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Gitt trekanten <span class="math notranslate nohighlight">\(ABC\)</span>.</p>
+<div class="part part-open docutils container">
+<div class="part-header docutils container">
+<div class="part-label docutils container">
+b)</div>
+<button class="part-toggle" data-open="Skjul oppgaven" data-closed="Vis oppgaven">Skjul oppgaven</button></div>
+<div class="part-body docutils container">
+<p>Finn arealet av trekanten.</p>
+<div class="answer-2 docutils container">
+<button class="answer-2-toggle" aria-expanded="false" data-label="Vis fasit">Vis fasit</button><div class="answer-2-content docutils container">
+<p><span class="math notranslate nohighlight">\(5 \sqrt{2}\)</span></p>
+<div class="solution-2 docutils container">
+<button class="solution-2-toggle" aria-expanded="false" data-label="Vis løsningsforslag">Vis løsningsforslag</button><div class="solution-2-content docutils container">
+<p>Arealvektoren til trekanten er gitt ved</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{G} = \dfrac{1}{2} \cdot \lvec{AB} \times \lvec{AC} = [0, 5, -5]
+\]</div>
+<p>Lengden av denne vektoren gir arealet av trekanten:</p>
+<div class="math notranslate nohighlight">
+\[
+\abs{\vec G} = |5 \cdot [0, 1, -1]| = 5 \sqrt{2}
+\]</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>En linje <span class="math notranslate nohighlight">\(\ell\)</span> går gjennom punktene <span class="math notranslate nohighlight">\(A\)</span> og <span class="math notranslate nohighlight">\(B\)</span>.</p>
+<div class="part part-open docutils container">
+<div class="part-header docutils container">
+<div class="part-label docutils container">
+c)</div>
+<button class="part-toggle" data-open="Skjul oppgaven" data-closed="Vis oppgaven">Skjul oppgaven</button></div>
+<div class="part-body docutils container">
+<p>Finn den korteste avstanden fra <span class="math notranslate nohighlight">\(C\)</span> til <span class="math notranslate nohighlight">\(\ell\)</span>.</p>
+<div class="answer-2 docutils container">
+<button class="answer-2-toggle" aria-expanded="false" data-label="Vis fasit">Vis fasit</button><div class="answer-2-content docutils container">
+<div class="math notranslate nohighlight">
+\[
+L = \dfrac{10\sqrt{22}}{11}
+\]</div>
+<div class="solution-2 docutils container">
+<button class="solution-2-toggle" aria-expanded="false" data-label="Vis løsningsforslag">Vis løsningsforslag</button><div class="solution-2-content docutils container">
+<p>Vi har at <span class="math notranslate nohighlight">\(\lvec{AB}\)</span> er en retningsvektor for linja <span class="math notranslate nohighlight">\(\ell\)</span>.</p>
+<p>Den korteste avstanden <span class="math notranslate nohighlight">\(L\)</span> fra punktet <span class="math notranslate nohighlight">\(C\)</span> til linja <span class="math notranslate nohighlight">\(\ell\)</span> er gitt ved formelen</p>
+<div class="math notranslate nohighlight">
+\[
+L = \dfrac{\abs{\lvec{AC} \times \lvec{AB}}}{\abs{\lvec{AB}}}
+\]</div>
+<p>der vi vet at</p>
+<div class="math notranslate nohighlight">
+\[
+\lvec{AB} \times \lvec{AC} = [0, 10, -10] \qog \lvec{AB} = [3, -1, -1].
+\]</div>
+<p>Da får vi</p>
+<div class="math notranslate nohighlight">
+\[
+\abs{\lvec{AB} \times \lvec{AC}} = |10 \cdot [0, 1, -1]| = 10\sqrt{2}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\abs{\lvec{AB}} = \sqrt{3^2 + (-1)^2 + (-1)^2} = \sqrt{11}
+\]</div>
+<p>Dermed er den korteste avstanden</p>
+<div class="math notranslate nohighlight">
+\[
+L = \dfrac{10\sqrt{2}}{\sqrt{11}} = \dfrac{10\sqrt{22}}{11}
+\]</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Gitt pyramiden <span class="math notranslate nohighlight">\(ABCT\)</span>.</p>
+<div class="part part-open docutils container">
+<div class="part-header docutils container">
+<div class="part-label docutils container">
+d)</div>
+<button class="part-toggle" data-open="Skjul oppgaven" data-closed="Vis oppgaven">Skjul oppgaven</button></div>
+<div class="part-body docutils container">
+<p>Finn volumet av pyramiden.</p>
+<div class="answer-2 docutils container">
+<button class="answer-2-toggle" aria-expanded="false" data-label="Vis fasit">Vis fasit</button><div class="answer-2-content docutils container">
+<p><span class="math notranslate nohighlight">\(V = 10\)</span></p>
+<div class="solution-2 docutils container">
+<button class="solution-2-toggle" aria-expanded="false" data-label="Vis løsningsforslag">Vis løsningsforslag</button><div class="solution-2-content docutils container">
+<p>Når en pyramide har fire hjørner, så spiller det ingen rolle hvilke tre punkter vi velger som grunnflate. Vi lar <span class="math notranslate nohighlight">\(ABC\)</span> være grunnflaten siden vi allerede har arealvektoren <span class="math notranslate nohighlight">\(\vec{G}\)</span> til denne trekanten fra oppgave <strong>b)</strong>.</p>
+<p>Da er volumet av pyramiden</p>
+<div class="math notranslate nohighlight">
+\[
+V = \dfrac{\abs{\vec G \cdot \lvec{AT}}}{3}
+\]</div>
+<p>der</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{G} = [0, 5, -5] \qog \lvec{AT} = [6, 0, 6]
+\]</div>
+<p>Da får vi</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{G} \cdot \lvec{AT} = -30
+\]</div>
+<p>som gir volumet</p>
+<div class="math notranslate nohighlight">
+\[
+V = \dfrac{\abs{-30}}{3} = 10
+\]</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="exercise-section" id="exercise-Oppgave-2">
+<h2>Oppgave 2<a class="headerlink" href="#exercise-Oppgave-2" title="Link to this heading">#</a></h2>
+<div class="exercise-body docutils container">
+<p>Et plan <span class="math notranslate nohighlight">\(\alpha\)</span> går gjennom punktene <span class="math notranslate nohighlight">\(A(-3, 6, 8)\)</span>, <span class="math notranslate nohighlight">\(B(0, 2, 4)\)</span> og <span class="math notranslate nohighlight">\(C(3, -4, 4)\)</span>.</p>
+<div class="part part-open docutils container">
+<div class="part-header docutils container">
+<div class="part-label docutils container">
+a)</div>
+<button class="part-toggle" data-open="Skjul oppgaven" data-closed="Vis oppgaven">Skjul oppgaven</button></div>
+<div class="part-body docutils container">
+<p>Bestem en likning for planet.</p>
+<div class="answer-2 docutils container">
+<button class="answer-2-toggle" aria-expanded="false" data-label="Vis fasit">Vis fasit</button><div class="answer-2-content docutils container">
+<div class="math notranslate nohighlight">
+\[
+4x + 2y + z - 8 = 0
+\]</div>
+<div class="solution-2 docutils container">
+<button class="solution-2-toggle" aria-expanded="false" data-label="Vis løsningsforslag">Vis løsningsforslag</button><div class="solution-2-content docutils container">
+<p>Vi finner en normalvektor til planet først:</p>
+<div class="math notranslate nohighlight">
+\[
+\lvec{AB} = [3, -4, -4] \qog \lvec{AC} = [6, -10, -4]
+\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\lvec{AB} \times \lvec{AC} &amp;= \mqty|\vec e_x &amp; \vec e_y &amp; \vec e_z \\ 3 &amp; -4 &amp; -4 \\ 6 &amp; -10 &amp; -4| \\
+\\
+&amp;= \vec e_x \cdot \underbrace{\mqty|-4 &amp; -4 \\ -10 &amp; -4|}_{\displaystyle = -24} - \vec e_y \cdot \underbrace{\mqty|3 &amp; -4 \\ 6 &amp; -4|}_{\displaystyle = 12} + \vec e_z \cdot \underbrace{\mqty|3 &amp; -4 \\ 6 &amp; -10|}_{\displaystyle = -6} \\
+\\
+&amp;= [-24, -12, -6] \\
+\\
+&amp;= (-6) \cdot [4, 2, 1]
+\end{align*}
+\end{split}\]</div>
+<p>Så vi setter normalvektoren til <span class="math notranslate nohighlight">\(\vec n = [4, 2, 1]\)</span>. Vi bruker punktet <span class="math notranslate nohighlight">\(B(0, 2, 4)\)</span> til å lage en likning for planet:</p>
+<div class="math notranslate nohighlight">
+\[
+\lvec{BP} \cdot \vec n = 0
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+[x, y - 2, z - 4] \cdot [4, 2, 1] = 0
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+4x + 2(y - 2) + (z - 4) = 0
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+4x + 2y + z - 8 = 0
+\]</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="part part-open docutils container">
+<div class="part-header docutils container">
+<div class="part-label docutils container">
+b)</div>
+<button class="part-toggle" data-open="Skjul oppgaven" data-closed="Vis oppgaven">Skjul oppgaven</button></div>
+<div class="part-body docutils container">
+<p>Bestem skjæringspunktene mellom <span class="math notranslate nohighlight">\(\alpha\)</span> og hver av de tre koordinataksene.</p>
+<div class="answer-2 docutils container">
+<button class="answer-2-toggle" aria-expanded="false" data-label="Vis fasit">Vis fasit</button><div class="answer-2-content docutils container">
+<ul class="simple">
+<li><p>Skjæring med <span class="math notranslate nohighlight">\(x\)</span>-aksen: <span class="math notranslate nohighlight">\(X(2, 0, 0)\)</span></p></li>
+<li><p>Skjæring med <span class="math notranslate nohighlight">\(y\)</span>-aksen: <span class="math notranslate nohighlight">\(Y(0, 4, 0)\)</span></p></li>
+<li><p>Skjæring med <span class="math notranslate nohighlight">\(z\)</span>-aksen: <span class="math notranslate nohighlight">\(Z(0, 0, 8)\)</span></p></li>
+</ul>
+<div class="solution-2 docutils container">
+<button class="solution-2-toggle" aria-expanded="false" data-label="Vis løsningsforslag">Vis løsningsforslag</button><div class="solution-2-content docutils container">
+<p>Planlikningen til <span class="math notranslate nohighlight">\(\alpha\)</span> er gitt ved</p>
+<div class="math notranslate nohighlight">
+\[
+4x + 2y + z - 8 = 0
+\]</div>
+<p>Når planet skjærer <span class="math notranslate nohighlight">\(x\)</span>-aksen er <span class="math notranslate nohighlight">\(y = z = 0\)</span>. Fra planlikningen får vi da</p>
+<div class="math notranslate nohighlight">
+\[
+4x - 8 = 0 \liff x = 2 \liff X(2, 0, 0) \in \alpha
+\]</div>
+<p>Når planet skjærer <span class="math notranslate nohighlight">\(y\)</span>-aksen er <span class="math notranslate nohighlight">\(x = z = 0\)</span>. Fra planlikningen får vi da</p>
+<div class="math notranslate nohighlight">
+\[
+2y - 8 = 0 \liff y = 4 \liff Y(0, 4, 0) \in \alpha
+\]</div>
+<p>Når planet skjærer <span class="math notranslate nohighlight">\(z\)</span>-aksen er <span class="math notranslate nohighlight">\(x = y = 0\)</span>. Fra planlikningen får vi da:</p>
+<div class="math notranslate nohighlight">
+\[
+z - 8 = 0 \liff z = 8 \liff Z(0, 0, 8) \in \alpha
+\]</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>En pyramide har hjørner i origo og i skjæringspunktene mellom <span class="math notranslate nohighlight">\(\alpha\)</span> og koordinataksene.</p>
+<div class="part part-open docutils container">
+<div class="part-header docutils container">
+<div class="part-label docutils container">
+c)</div>
+<button class="part-toggle" data-open="Skjul oppgaven" data-closed="Vis oppgaven">Skjul oppgaven</button></div>
+<div class="part-body docutils container">
+<p>Bestem volumet av pyramiden.</p>
+<div class="answer-2 docutils container">
+<button class="answer-2-toggle" aria-expanded="false" data-label="Vis fasit">Vis fasit</button><div class="answer-2-content docutils container">
+<div class="math notranslate nohighlight">
+\[
+V = \dfrac{32}{3}
+\]</div>
+<div class="solution-2 docutils container">
+<button class="solution-2-toggle" aria-expanded="false" data-label="Vis løsningsforslag">Vis løsningsforslag</button><div class="solution-2-content docutils container">
+<p>Fra oppgave <strong>b)</strong> har vi skjæringspunktene mellom <span class="math notranslate nohighlight">\(\alpha\)</span> og koordinataksene:</p>
+<div class="math notranslate nohighlight">
+\[
+X(2, 0, 0) \qog Y(0, 4, 0) \qog Z(0, 0, 8)
+\]</div>
+<p>Vi kaller origo for <span class="math notranslate nohighlight">\(O(0, 0, 0)\)</span> og velger <span class="math notranslate nohighlight">\(OXY\)</span> som grunnflate og <span class="math notranslate nohighlight">\(Z\)</span> som toppunkt. Grunnflaten er da spent ut av vektorene</p>
+<div class="math notranslate nohighlight">
+\[
+\lvec{OX} = [2, 0, 0] \qog \lvec{OY} = [0, 4, 0]
+\]</div>
+<p>Grunnflatevektoren <span class="math notranslate nohighlight">\(\vec{G}\)</span> er gitt ved</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{G} = \dfrac{1}{2}\lvec{OX} \times \lvec{OY}
+\]</div>
+<p>Vi regner ut kryssproduktet først:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\lvec{OX} \times \lvec{OY} &amp;= \mqty|\vec e_x &amp; \vec e_y &amp; \vec e_z \\ 2 &amp; 0 &amp; 0 \\ 0 &amp; 4 &amp; 0| \\
+\\
+&amp;= \vec e_x \cdot \underbrace{\mqty|0 &amp; 0 \\ 4 &amp; 0|}_{\displaystyle = 0} - \vec e_y \cdot \underbrace{\mqty|2 &amp; 0 \\ 0 &amp; 0|}_{\displaystyle = 0} + \vec e_z \cdot \underbrace{\mqty|2 &amp; 0 \\ 0 &amp; 4|}_{\displaystyle = 8} \\
+\\
+&amp;= [0, 0, 8]
+\end{align*}
+\end{split}\]</div>
+<p>Grunnflatevektoren er da <span class="math notranslate nohighlight">\(\vec G = [0, 0, 4]\)</span>. Volumet av pyramiden er gitt ved</p>
+<div class="math notranslate nohighlight">
+\[
+V = \dfrac{\abs{\vec G \cdot \lvec{OZ}}}{3}
+\]</div>
+<p>Vi har at</p>
+<div class="math notranslate nohighlight">
+\[
+\vec G \cdot \lvec{OZ} = [0, 0, 4] \cdot [0, 0, 8] = 32
+\]</div>
+<p>Altså er volumet</p>
+<div class="math notranslate nohighlight">
+\[
+V = \dfrac{32}{3}
+\]</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section class="exercise-section" id="exercise-Oppgave-3">
+<h2>Oppgave 3<a class="headerlink" href="#exercise-Oppgave-3" title="Link to this heading">#</a></h2>
+<div class="exercise-body docutils container">
+<p>En linje <span class="math notranslate nohighlight">\(\ell\)</span> går gjennom punktene <span class="math notranslate nohighlight">\(A(3, 1, 2)\)</span> og <span class="math notranslate nohighlight">\(B(5, 3, 3)\)</span>.</p>
+<div class="part part-open docutils container">
+<div class="part-header docutils container">
+<div class="part-label docutils container">
+a)</div>
+<button class="part-toggle" data-open="Skjul oppgaven" data-closed="Vis oppgaven">Skjul oppgaven</button></div>
+<div class="part-body docutils container">
+<p>Lag en parameterframstilling for <span class="math notranslate nohighlight">\(\ell\)</span>.</p>
+<div class="answer-2 docutils container">
+<button class="answer-2-toggle" aria-expanded="false" data-label="Vis fasit">Vis fasit</button><div class="answer-2-content docutils container">
+<p><span class="math notranslate nohighlight">\(\vec r(t) = [3 + 2t, 1 + 2t, 2 + t]\)</span></p>
+<div class="solution-2 docutils container">
+<button class="solution-2-toggle" aria-expanded="false" data-label="Vis løsningsforslag">Vis løsningsforslag</button><div class="solution-2-content docutils container">
+<p>Vi trenger en retningsvektor for linja. Enhver slik vektor er parallell med</p>
+<div class="math notranslate nohighlight">
+\[
+\lvec{AB} = [5 - 3, 3 - 1, 3 - 2] = [2, 2, 1]
+\]</div>
+<p>Vi velger <span class="math notranslate nohighlight">\(\vec v = [2, 2, 1]\)</span>. Da er en parameterframstilling for linja gitt ved:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\vec r(t) &amp;= \lvec{OA} + \vec v \cdot t \\
+\\
+&amp;= [3, 1, 2] + [2, 2, 1] \cdot t \\
+\\
+&amp;= [3 + 2t, 1 + 2t, 2 + t]
+\end{align*}
+\end{split}\]</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Et punkt <span class="math notranslate nohighlight">\(C(1, -3, 5)\)</span> ligger ikke på linja.</p>
+<div class="part part-open docutils container">
+<div class="part-header docutils container">
+<div class="part-label docutils container">
+b)</div>
+<button class="part-toggle" data-open="Skjul oppgaven" data-closed="Vis oppgaven">Skjul oppgaven</button></div>
+<div class="part-body docutils container">
+<p>Finn avstanden fra <span class="math notranslate nohighlight">\(\ell\)</span> til <span class="math notranslate nohighlight">\(C\)</span>.</p>
+<div class="answer-2 docutils container">
+<button class="answer-2-toggle" aria-expanded="false" data-label="Vis fasit">Vis fasit</button><div class="answer-2-content docutils container">
+<p><span class="math notranslate nohighlight">\(L = 2 \sqrt{5}\)</span></p>
+<div class="solution-2 docutils container">
+<button class="solution-2-toggle" aria-expanded="false" data-label="Vis løsningsforslag">Vis løsningsforslag</button><div class="solution-2-content docutils container">
+<p>Avstanden fra <span class="math notranslate nohighlight">\(\ell\)</span> til <span class="math notranslate nohighlight">\(C\)</span> er gitt ved</p>
+<div class="math notranslate nohighlight">
+\[
+L = \dfrac{|\lvec{AC} \times \vec v|}{|\vec v|}
+\]</div>
+<p>Vi har at</p>
+<div class="math notranslate nohighlight">
+\[
+\lvec{AC} = [1 - 3, -3 - 1, 5 - 2] = [-2, -4, 3] \qog \vec v = [2, 2, 1]
+\]</div>
+<p>Da får vi</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\lvec{AC} \times \vec v &amp;= \mqty|\vec e_x &amp; \vec e_y &amp; \vec e_z \\ -2 &amp; -4 &amp; 3 \\ 2 &amp; 2 &amp; 1| \\
+\\
+&amp;= \vec e_x \cdot \underbrace{\mqty|-4 &amp; 3 \\ 2 &amp; 1|}_{\displaystyle = -10} - \vec e_y \cdot \underbrace{\mqty|-2 &amp; 3 \\ 2 &amp; 1|}_{\displaystyle = -8} + \vec e_z \cdot \underbrace{\mqty|-2 &amp; -4 \\ 2 &amp; 2|}_{\displaystyle = 4} \\
+\\
+&amp;= [-10, 8, 4]
+\end{align*}
+\end{split}\]</div>
+<p>Vi regner ut lengden av telleren og nevneren i formelen:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\abs{\lvec{AC} \times \vec v} &amp;= \abs{[-10, 8, 4]} \\
+\\
+&amp;= \abs{2 \cdot [-5, 4, 2]} \\
+\\
+&amp;= 2 \cdot \sqrt{5^2 + 4^2 + 2^2} \\
+\\
+&amp;= 2 \cdot \sqrt{45} \\
+\\
+&amp;= 2 \cdot \sqrt{9 \cdot 5} \\
+\\
+&amp;= 2 \cdot 3 \cdot \sqrt{5} \\
+\\
+&amp;= 6 \sqrt{5}
+\end{align*}
+\end{split}\]</div>
+<p>Lengden av nevneren er</p>
+<div class="math notranslate nohighlight">
+\[
+|\vec v| = \abs{[2, 2, 1]} = \sqrt{2^2 + 2^2 + 1^2} = \sqrt{9} = 3
+\]</div>
+<p>Dermed blir avstanden</p>
+<div class="math notranslate nohighlight">
+\[
+L = \dfrac{6 \sqrt{5}}{3} = 2 \sqrt{5}
+\]</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Et plan <span class="math notranslate nohighlight">\(\alpha\)</span> er gitt ved</p>
+<div class="math notranslate nohighlight">
+\[
+2x - y + 2z + 3 = 0
+\]</div>
+<div class="part part-open docutils container">
+<div class="part-header docutils container">
+<div class="part-label docutils container">
+c)</div>
+<button class="part-toggle" data-open="Skjul oppgaven" data-closed="Vis oppgaven">Skjul oppgaven</button></div>
+<div class="part-body docutils container">
+<p>Finn koordinatene til skjæringspunktet mellom <span class="math notranslate nohighlight">\(\alpha\)</span> og <span class="math notranslate nohighlight">\(\ell\)</span>.</p>
+<div class="answer-2 docutils container">
+<button class="answer-2-toggle" aria-expanded="false" data-label="Vis fasit">Vis fasit</button><div class="answer-2-content docutils container">
+<p><span class="math notranslate nohighlight">\((-3, -5, -1)\)</span></p>
+<div class="solution-2 docutils container">
+<button class="solution-2-toggle" aria-expanded="false" data-label="Vis løsningsforslag">Vis løsningsforslag</button><div class="solution-2-content docutils container">
+<p>Vi setter inn koordinatene til parameterframstillingen i planlikningen og løser for <span class="math notranslate nohighlight">\(t\)</span>. Fra oppgave <strong>a)</strong> har vi at</p>
+<div class="math notranslate nohighlight">
+\[
+\vec r(t) = [3 + 2t, 1 + 2t, 2 + t]
+\]</div>
+<p>som gir</p>
+<div class="math notranslate nohighlight">
+\[
+2 \cdot \underbrace{(3 + 2t)}_{\displaystyle x} - \underbrace{(1 + 2t)}_{\displaystyle y} + 2 \cdot \underbrace{(2 + t)}_{\displaystyle z} + 3 = 0
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+2(3 + 2t) - (1 + 2t) + 2(2 + t) + 3 = 0
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+6 + 4t - 1 - 2t + 4 + 2t + 3 = 0
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+4t + 12 = 0 \liff t = -3
+\]</div>
+<p>Koordinatene til skjæringspunktet er da</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\vec r(-3) &amp;= [3 + 2\cdot (-3), 1 + 2\cdot (-3), 2 + (-3)] \\
+\\
+&amp;= [-3, -5, -1]
+\end{align*}
+\end{split}\]</div>
+<p>Altså skjærer <span class="math notranslate nohighlight">\(\ell\)</span> planet <span class="math notranslate nohighlight">\(\alpha\)</span> i punktet <span class="math notranslate nohighlight">\((-3, -5, -1)\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section class="exercise-section" id="exercise-Oppgave-4">
+<h2>Oppgave 4<a class="headerlink" href="#exercise-Oppgave-4" title="Link to this heading">#</a></h2>
+<div class="exercise-body docutils container">
+<p>Et plan <span class="math notranslate nohighlight">\(\alpha\)</span> er gitt ved likningen</p>
+<div class="math notranslate nohighlight">
+\[
+3x + 4z - 10 = 0
+\]</div>
+<div class="part part-open docutils container">
+<div class="part-header docutils container">
+<div class="part-label docutils container">
+a)</div>
+<button class="part-toggle" data-open="Skjul oppgaven" data-closed="Vis oppgaven">Skjul oppgaven</button></div>
+<div class="part-body docutils container">
+<p>Finn en normalvektor til planet.</p>
+<div class="answer-2 docutils container">
+<button class="answer-2-toggle" aria-expanded="false" data-label="Vis fasit">Vis fasit</button><div class="answer-2-content docutils container">
+<p><span class="math notranslate nohighlight">\(\vec n = [3, 0, 4]\)</span></p>
+<div class="solution-2 docutils container">
+<button class="solution-2-toggle" aria-expanded="false" data-label="Vis løsningsforslag">Vis løsningsforslag</button><div class="solution-2-content docutils container">
+<p>Fra planlikningen</p>
+<div class="math notranslate nohighlight">
+\[
+ax + by + cz + d = 0
+\]</div>
+<p>kan vi lese av <span class="math notranslate nohighlight">\(\vec n = [a, b, c]\)</span> som en normalvektor til planet. Dermed er en mulig normalvektor</p>
+<div class="math notranslate nohighlight">
+\[
+\vec n = [3, 0, 4].
+\]</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="part part-open docutils container">
+<div class="part-header docutils container">
+<div class="part-label docutils container">
+b)</div>
+<button class="part-toggle" data-open="Skjul oppgaven" data-closed="Vis oppgaven">Skjul oppgaven</button></div>
+<div class="part-body docutils container">
+<p>Vis at punktet <span class="math notranslate nohighlight">\(A(2, 3, 1)\)</span> ligger i planet.</p>
+<div class="solution-2 docutils container">
+<button class="solution-2-toggle" aria-expanded="false" data-label="Vis løsningsforslag">Vis løsningsforslag</button><div class="solution-2-content docutils container">
+<p>Vi setter inn koordinatene til <span class="math notranslate nohighlight">\(A\)</span> i planlikningen og sjekker at den er oppfylt:</p>
+<div class="math notranslate nohighlight">
+\[
+3 \cdot 2 + 4 \cdot 1 - 10 = 0
+\]</div>
+<p>Altså ligger <span class="math notranslate nohighlight">\(A\)</span> i <span class="math notranslate nohighlight">\(\alpha\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<p>En kule <span class="math notranslate nohighlight">\(K\)</span> tangerer planet i punktet <span class="math notranslate nohighlight">\(A\)</span> og har radius <span class="math notranslate nohighlight">\(10\)</span>.</p>
+<div class="part part-open docutils container">
+<div class="part-header docutils container">
+<div class="part-label docutils container">
+c)</div>
+<button class="part-toggle" data-open="Skjul oppgaven" data-closed="Vis oppgaven">Skjul oppgaven</button></div>
+<div class="part-body docutils container">
+<p>Finn de mulige koordinatene til kulens sentrum.</p>
+<div class="answer-2 docutils container">
+<button class="answer-2-toggle" aria-expanded="false" data-label="Vis fasit">Vis fasit</button><div class="answer-2-content docutils container">
+<p><span class="math notranslate nohighlight">\(S_1(8, 3, 9)\)</span> eller <span class="math notranslate nohighlight">\(S_2(-4, 3, -7)\)</span></p>
+<div class="solution-2 docutils container">
+<button class="solution-2-toggle" aria-expanded="false" data-label="Vis løsningsforslag">Vis løsningsforslag</button><div class="solution-2-content docutils container">
+<p>Koordinatene til kulens sentrum vil ligge en avstand <span class="math notranslate nohighlight">\(10\)</span> fra punktet <span class="math notranslate nohighlight">\(A\)</span> langs linja som har retningsvektor <span class="math notranslate nohighlight">\(\vec n\)</span>. Hvis vi lager oss en enhetsvektor <span class="math notranslate nohighlight">\(\hat n\)</span> langs denne retningen, får vi to mulige sentrum:</p>
+<div class="math notranslate nohighlight">
+\[
+\lvec{OS} = \lvec{OA} \pm 10 \hat n
+\]</div>
+<p>Vi har at</p>
+<div class="math notranslate nohighlight">
+\[
+\hat n = \dfrac{\vec n}{|\vec n|}
+\]</div>
+<p>der</p>
+<div class="math notranslate nohighlight">
+\[
+\abs{\vec n} = \sqrt{3^2 + 0^2 + 4^2} = \sqrt{25} = 5
+\]</div>
+<p>Dermed er</p>
+<div class="math notranslate nohighlight">
+\[
+\hat n = \dfrac{\vec n}{5}
+\]</div>
+<p>Den ene muligheten blir derfor</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\lvec{OS_1} &amp;= \lvec{OA} + 10 \cdot \dfrac{\vec n}{5} \\
+\\
+&amp;= \lvec{OA} + 2 \cdot \vec n \\
+\\
+&amp;= [2, 3, 1] + 2 \cdot [3, 0, 4] \\
+\\
+&amp;= [8, 3, 9]
+\end{align*}
+\end{split}\]</div>
+<p>Den andre muligheten blir</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\lvec{OS_2} &amp;= \lvec{OA} - 2 \cdot \vec n \\
+\\
+&amp;= [2, 3, 1] - 2 \cdot [3, 0, 4] \\
+\\
+&amp;= [-4, 3, -7]
+\end{align*}
+\end{split}\]</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section class="exercise-section" id="exercise-Oppgave-5">
+<h2>Oppgave 5<a class="headerlink" href="#exercise-Oppgave-5" title="Link to this heading">#</a></h2>
+<div class="exercise-body docutils container">
+<p>To linjer <span class="math notranslate nohighlight">\(\ell\)</span> og <span class="math notranslate nohighlight">\(m\)</span> er gitt ved</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{r}_\ell(t) = [3 + 4t, 1 + 7t, 1 + 4t] \qog \vec r_m(s) = [5 + s, 8 + 2s, 7 + s] 
+\]</div>
+<p>Linja <span class="math notranslate nohighlight">\(\ell\)</span> ligger i et plan <span class="math notranslate nohighlight">\(\alpha\)</span> og linja <span class="math notranslate nohighlight">\(m\)</span> ligger i et plan <span class="math notranslate nohighlight">\(\beta\)</span> der planene er parallelle.</p>
+<div class="part part-open docutils container">
+<div class="part-header docutils container">
+<div class="part-label docutils container">
+a)</div>
+<button class="part-toggle" data-open="Skjul oppgaven" data-closed="Vis oppgaven">Skjul oppgaven</button></div>
+<div class="part-body docutils container">
+<p>Bestem en likning for hvert plan.</p>
+<div class="answer-2 docutils container">
+<button class="answer-2-toggle" aria-expanded="false" data-label="Vis fasit">Vis fasit</button><div class="answer-2-content docutils container">
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\alpha:&amp; \quad x - z - 2 = 0 \\
+\\
+\beta:&amp; \quad x - z + 2 = 0
+\end{align*}
+\end{split}\]</div>
+<div class="solution-2 docutils container">
+<button class="solution-2-toggle" aria-expanded="false" data-label="Vis løsningsforslag">Vis løsningsforslag</button><div class="solution-2-content docutils container">
+<p>Retningsvektorene til de to linjene vil være parallelle med hvert plan. Retningsvektorene kan lese av fra koeffisientene til parameterframstillingene som:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec v_\ell = [4, 7, 4] \qog \vec v_m = [1, 2, 1]
+\]</div>
+<p>Da blir en normalvektor til hvert plan:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\vec v_\ell \times \vec v_m &amp;= \mqty|\vec e_x &amp; \vec e_y &amp; \vec e_z \\ 4 &amp; 7 &amp; 4 \\ 1 &amp; 2 &amp; 1| \\
+\\
+&amp;= \vec e_x \cdot \underbrace{\mqty|7 &amp; 4 \\ 2 &amp; 1|}_{\displaystyle = -1} - \vec e_y \cdot \underbrace{\mqty|4 &amp; 4 \\ 1 &amp; 1|}_{\displaystyle = 0} + \vec e_z \cdot \underbrace{\mqty|4 &amp; 7 \\ 1 &amp; 2| }_{\displaystyle = 1} \\
+\\
+&amp;= [-1, 0, 1] = (-1) \cdot [1, 0, -1] 
+\end{align*}
+\end{split}\]</div>
+<p>Altså er <span class="math notranslate nohighlight">\(\vec n = [1, 0, -1]\)</span> en normalvektor til begge plan. Vi trenger et punkt i hvert plan. Et punkt <span class="math notranslate nohighlight">\(A\)</span> i <span class="math notranslate nohighlight">\(\alpha\)</span> vil være gitt ved</p>
+<div class="math notranslate nohighlight">
+\[
+\lvec{OA} = \vec r_\ell(0) = [3, 1, 1]
+\]</div>
+<p>Dermed blir en planlikning til <span class="math notranslate nohighlight">\(\alpha\)</span> gitt ved</p>
+<div class="math notranslate nohighlight">
+\[
+\lvec{AP} \cdot [1, 0, -1] = 0
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+[x - 3, y - 1, z - 1]\cdot [1, 0, -1] = 0
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+x - z - 2 = 0
+\]</div>
+<p>Et punkt <span class="math notranslate nohighlight">\(B\)</span> i <span class="math notranslate nohighlight">\(\beta\)</span> vil være gitt ved</p>
+<div class="math notranslate nohighlight">
+\[
+\lvec{OB} = \vec r_m(0) = [5, 8, 7]
+\]</div>
+<p>Dermed blir en planlikning til <span class="math notranslate nohighlight">\(\beta\)</span> gitt ved</p>
+<div class="math notranslate nohighlight">
+\[
+\lvec{BP} \cdot [1, 0, -1] = 0
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+[x - 5, y - 8, z - 7] \cdot [1, 0, -1] = 0
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+x - z + 2 = 0
+\]</div>
+<p>Altså er likningene til de to planene gitt ved:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\alpha:&amp; \quad x - z - 2 = 0 \\
+\\
+\beta:&amp; \quad x - z + 2 = 0
+\end{align*}
+\end{split}\]</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>En kule tangerer <span class="math notranslate nohighlight">\(\alpha\)</span> i et punkt på <span class="math notranslate nohighlight">\(\ell\)</span> og <span class="math notranslate nohighlight">\(\beta\)</span> i et punkt på <span class="math notranslate nohighlight">\(m\)</span>.</p>
+<div class="part part-open docutils container">
+<div class="part-header docutils container">
+<div class="part-label docutils container">
+b)</div>
+<button class="part-toggle" data-open="Skjul oppgaven" data-closed="Vis oppgaven">Skjul oppgaven</button></div>
+<div class="part-body docutils container">
+<p>Bestem kulens radius.</p>
+<div class="answer-2 docutils container">
+<button class="answer-2-toggle" aria-expanded="false" data-label="Vis fasit">Vis fasit</button><div class="answer-2-content docutils container">
+<p><span class="math notranslate nohighlight">\(r = \sqrt{2}\)</span>.</p>
+<div class="solution-2 docutils container">
+<button class="solution-2-toggle" aria-expanded="false" data-label="Vis løsningsforslag">Vis løsningsforslag</button><div class="solution-2-content docutils container">
+<p>Linjene ligger i hvert sitt parallelle plan som betyr at avstanden mellom de to linjene reduseres til avstanden fra et punkt til et plan. Radien til kula må være halvparten av denne avstanden.</p>
+<p>Vi har at et punkt i planet <span class="math notranslate nohighlight">\(\alpha\)</span> er</p>
+<div class="math notranslate nohighlight">
+\[
+\lvec{OP} = \vec r_\ell(0) = [3, 1, 1]
+\]</div>
+<p>Om det andre planet <span class="math notranslate nohighlight">\(\beta\)</span> vet vi at</p>
+<div class="math notranslate nohighlight">
+\[
+x - z + 2 = 0 \qog \abs{\vec n_\beta} = \sqrt{2}
+\]</div>
+<p>Avstanden fra punktet <span class="math notranslate nohighlight">\(P\)</span> til <span class="math notranslate nohighlight">\(\beta\)</span> er da</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+L &amp;= \dfrac{\abs{x - z + 2}}{\abs{\vec n_\beta}} \\
+\\
+&amp;= \dfrac{\abs{3 - 1 + 2}}{\sqrt{2}} \\
+\\
+&amp;= \dfrac{4}{\sqrt{2}}
+\end{align*}
+\end{split}\]</div>
+<p>Radius til kula vil være halvparten av denne avstanden, altså:</p>
+<div class="math notranslate nohighlight">
+\[
+r = \dfrac{L}{2} = \dfrac{2}{\sqrt{2}} = \sqrt{2}
+\]</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section class="exercise-section" id="exercise-Oppgave-6">
+<h2>Oppgave 6<a class="headerlink" href="#exercise-Oppgave-6" title="Link to this heading">#</a></h2>
+<div class="exercise-body docutils container">
+<p>En kuleflate <span class="math notranslate nohighlight">\(K\)</span> er gitt ved likningen</p>
+<div class="math notranslate nohighlight">
+\[
+x^2 + y^2 + z^2 - 4x + 6y - 2z - 35 = 0
+\]</div>
+<div class="part part-open docutils container">
+<div class="part-header docutils container">
+<div class="part-label docutils container">
+a)</div>
+<button class="part-toggle" data-open="Skjul oppgaven" data-closed="Vis oppgaven">Skjul oppgaven</button></div>
+<div class="part-body docutils container">
+<p>Bestem sentrum og radius til <span class="math notranslate nohighlight">\(K\)</span>.</p>
+<div class="answer-2 docutils container">
+<button class="answer-2-toggle" aria-expanded="false" data-label="Vis fasit">Vis fasit</button><div class="answer-2-content docutils container">
+<p>Sentrum <span class="math notranslate nohighlight">\(S(2, -3, 1)\)</span> og radius <span class="math notranslate nohighlight">\(7\)</span>.</p>
+<div class="solution-2 docutils container">
+<button class="solution-2-toggle" aria-expanded="false" data-label="Vis løsningsforslag">Vis løsningsforslag</button><div class="solution-2-content docutils container">
+<p>Vi skriver om likningen til standardform ved å fullføre kvadrater:</p>
+<div class="math notranslate nohighlight">
+\[
+x^2 - 4x + y^2 + 6y + z^2 - 2z - 35 = 0
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+(x - 2)^2 - 4 + (y + 3)^2 - 9 + (z - 1)^2 - 1 - 35 = 0
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+(x - 2)^2 + (y + 3)^2 + (z - 1)^2 = 49 = 7^2
+\]</div>
+<p>Altså har kuleflaten sentrum <span class="math notranslate nohighlight">\(S(2, -3, 1)\)</span> og radius <span class="math notranslate nohighlight">\(7\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Et plan <span class="math notranslate nohighlight">\(\alpha\)</span> tangerer <span class="math notranslate nohighlight">\(K\)</span> i punktet <span class="math notranslate nohighlight">\(A(4, 0, -5)\)</span>.</p>
+<div class="part part-open docutils container">
+<div class="part-header docutils container">
+<div class="part-label docutils container">
+b)</div>
+<button class="part-toggle" data-open="Skjul oppgaven" data-closed="Vis oppgaven">Skjul oppgaven</button></div>
+<div class="part-body docutils container">
+<p>Bestem en likning for <span class="math notranslate nohighlight">\(\alpha\)</span>.</p>
+<div class="answer-2 docutils container">
+<button class="answer-2-toggle" aria-expanded="false" data-label="Vis fasit">Vis fasit</button><div class="answer-2-content docutils container">
+<div class="math notranslate nohighlight">
+\[
+2x + 3y - 6z - 38 = 0
+\]</div>
+<div class="solution-2 docutils container">
+<button class="solution-2-toggle" aria-expanded="false" data-label="Vis løsningsforslag">Vis løsningsforslag</button><div class="solution-2-content docutils container">
+<p>En normalvektor til planet er gitt ved</p>
+<div class="math notranslate nohighlight">
+\[
+\vec n = \lvec{SA} = [4 - 2, 0 - (-3), -5 - 1] = [2, 3, -6]
+\]</div>
+<p>Likningen for planet blir da</p>
+<div class="math notranslate nohighlight">
+\[
+\lvec{AP} \cdot \vec n = 0
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+[x - 4, y - 0, z - (-5)] \cdot [2, 3, -6] = 0
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+2(x - 4) + 3y - 6(z + 5) = 0
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+2x + 3y - 6z - 38 = 0
+\]</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>En linje <span class="math notranslate nohighlight">\(\ell\)</span> er parallell med planet <span class="math notranslate nohighlight">\(\alpha\)</span> og går gjennom punktet <span class="math notranslate nohighlight">\(B(0, -6, 7)\)</span>.</p>
+<div class="part part-open docutils container">
+<div class="part-header docutils container">
+<div class="part-label docutils container">
+c)</div>
+<button class="part-toggle" data-open="Skjul oppgaven" data-closed="Vis oppgaven">Skjul oppgaven</button></div>
+<div class="part-body docutils container">
+<p>Bestem i hvilket punkt linja <span class="math notranslate nohighlight">\(\ell\)</span> skjærer <span class="math notranslate nohighlight">\(z\)</span>-aksen.</p>
+<div class="answer-2 docutils container">
+<button class="answer-2-toggle" aria-expanded="false" data-label="Vis fasit">Vis fasit</button><div class="answer-2-content docutils container">
+<p><span class="math notranslate nohighlight">\(Z(0, 0, 10)\)</span>.</p>
+<div class="solution-2 docutils container">
+<button class="solution-2-toggle" aria-expanded="false" data-label="Vis løsningsforslag">Vis løsningsforslag</button><div class="solution-2-content docutils container">
+<p>Siden linja <span class="math notranslate nohighlight">\(\ell\)</span> er parallell med planet <span class="math notranslate nohighlight">\(\alpha\)</span>, må retningsvektoren <span class="math notranslate nohighlight">\(\vec v\)</span> til linja og normalvektoren <span class="math notranslate nohighlight">\(\vec n\)</span> til planet være ortogonale. Det betyr at</p>
+<div class="math notranslate nohighlight">
+\[
+\vec v \cdot \vec n = 0
+\]</div>
+<p>La <span class="math notranslate nohighlight">\(Z(0, 0, z)\)</span> være punktet linja skjærer <span class="math notranslate nohighlight">\(z\)</span>-aksen. Da er <span class="math notranslate nohighlight">\(\lvec{BZ}\)</span> <em>også</em> en retningsvektor for linja som betyr at</p>
+<div class="math notranslate nohighlight">
+\[
+\lvec{BZ} \cdot \vec n = 0
+\]</div>
+<p>Vi har at</p>
+<div class="math notranslate nohighlight">
+\[
+\lvec{BZ} = [0, 6, z - 7] \qog \vec n = [2, 3, -6]
+\]</div>
+<p>som gir</p>
+<div class="math notranslate nohighlight">
+\[
+[0, 6, z - 7] \cdot [2, 3, -6] = 0
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+18 - 6z + 42 = 0
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+6z = 60 \liff z = 10
+\]</div>
+<p>Altså skjærer linja <span class="math notranslate nohighlight">\(z\)</span>-aksen i <span class="math notranslate nohighlight">\(Z(0, 0, 10)\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Linja <span class="math notranslate nohighlight">\(\ell\)</span> ligger i et annet plan <span class="math notranslate nohighlight">\(\beta\)</span>. Planet <span class="math notranslate nohighlight">\(\beta\)</span> står normalt på <span class="math notranslate nohighlight">\(\alpha\)</span>.</p>
+<div class="part part-open docutils container">
+<div class="part-header docutils container">
+<div class="part-label docutils container">
+d)</div>
+<button class="part-toggle" data-open="Skjul oppgaven" data-closed="Vis oppgaven">Skjul oppgaven</button></div>
+<div class="part-body docutils container">
+<p>Bestem en likning for <span class="math notranslate nohighlight">\(\beta\)</span>.</p>
+<div class="answer-2 docutils container">
+<button class="answer-2-toggle" aria-expanded="false" data-label="Vis fasit">Vis fasit</button><div class="answer-2-content docutils container">
+<div class="math notranslate nohighlight">
+\[
+15x - 2y + 4z - 28 = 0
+\]</div>
+<div class="solution-2 docutils container">
+<button class="solution-2-toggle" aria-expanded="false" data-label="Vis løsningsforslag">Vis løsningsforslag</button><div class="solution-2-content docutils container">
+<p>Vi trenger to ikke-parallelle vektorer som er parallelle med <span class="math notranslate nohighlight">\(\beta\)</span> for å finne en normalvektor til planet. Siden punktene <span class="math notranslate nohighlight">\(B(0, -6, 7)\)</span> og <span class="math notranslate nohighlight">\(Z(0, 0, 10)\)</span> fra oppgave <strong>c)</strong> ligger i planet, så må <span class="math notranslate nohighlight">\(\lvec{BZ}\)</span> være en slik vektor. Siden planet <span class="math notranslate nohighlight">\(\beta\)</span> står normalt på <span class="math notranslate nohighlight">\(\alpha\)</span>, vil også <span class="math notranslate nohighlight">\(\vec n_\alpha\)</span> være parallell med <span class="math notranslate nohighlight">\(\beta\)</span>.</p>
+<p>Dermed vil <span class="math notranslate nohighlight">\(\vec n_\alpha \times \lvec{BZ}\)</span> være en normalvektor til <span class="math notranslate nohighlight">\(\beta\)</span>. Vi har at</p>
+<div class="math notranslate nohighlight">
+\[
+\vec n_\alpha = [2, 3, -6] \qog \lvec{BZ} = [0, 6, 3]
+\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\vec n_\alpha \times \lvec{BZ} &amp;= \mqty|\vec e_x &amp; \vec e_y &amp; \vec e_z \\ 2 &amp; 3 &amp; -6 \\ 0 &amp; 6 &amp; 3| \\
+\\
+&amp;= \vec e_x \cdot \underbrace{\mqty|3 &amp; -6 \\ 6 &amp; 3|}_{\displaystyle = 45} - \vec e_y \cdot \underbrace{\mqty|2 &amp; -6 \\ 0 &amp; 3|}_{\displaystyle = 6} + \vec e_z \cdot \underbrace{\mqty|2 &amp; 3 \\ 0 &amp; 6|}_{\displaystyle = 12} \\
+\\
+&amp;= [45, -6, 12] \\
+\\
+&amp;= 3 \cdot [15, -2, 4]
+\end{align*}
+\end{split}\]</div>
+<p>Vi velger derfor <span class="math notranslate nohighlight">\(\vec n_\beta = [15, -2, 4]\)</span> som normalvektor til planet <span class="math notranslate nohighlight">\(\beta\)</span>. Da kan vi skrive en likning for planet som</p>
+<div class="math notranslate nohighlight">
+\[
+\lvec{BP} \cdot \vec n_\beta = 0
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+[x, y, z - 7] \cdot [15, -2, 4] = 0
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+15x - 2y + 4z - 28 = 0
+\]</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section class="exercise-section" id="exercise-Oppgave-7">
+<h2>Oppgave 7<a class="headerlink" href="#exercise-Oppgave-7" title="Link to this heading">#</a></h2>
+<div class="exercise-body docutils container">
+<p>To linjer <span class="math notranslate nohighlight">\(\ell\)</span> og <span class="math notranslate nohighlight">\(m\)</span> er gitt ved</p>
+<div class="math notranslate nohighlight">
+\[
+\vec r_\ell(t) = [9 + 2t, t, 5 + 2t] \qog \vec r_m(s) = [2 + 3s, -4 + 2s, -1 + 2s]
+\]</div>
+<p>Linjene skjærer hverandre i et punkt <span class="math notranslate nohighlight">\(T\)</span>.</p>
+<div class="part part-open docutils container">
+<div class="part-header docutils container">
+<div class="part-label docutils container">
+a)</div>
+<button class="part-toggle" data-open="Skjul oppgaven" data-closed="Vis oppgaven">Skjul oppgaven</button></div>
+<div class="part-body docutils container">
+<p>Bestem koordinatene til <span class="math notranslate nohighlight">\(T\)</span>.</p>
+<div class="answer-2 docutils container">
+<button class="answer-2-toggle" aria-expanded="false" data-label="Vis fasit">Vis fasit</button><div class="answer-2-content docutils container">
+<p><span class="math notranslate nohighlight">\(T(5, -2, 1)\)</span></p>
+<div class="solution-2 docutils container">
+<button class="solution-2-toggle" aria-expanded="false" data-label="Vis løsningsforslag">Vis løsningsforslag</button><div class="solution-2-content docutils container">
+<p>Vi løser likningen <span class="math notranslate nohighlight">\(\vec r_\ell(t) = \vec r_m(s)\)</span> for å finne koordinatene til punktet. Det gir oss likningssystemet</p>
+<div class="math notranslate nohighlight">
+\[
+9 + 2t = 2 + 3s \and t = -4 + 2s \and 5 + 2t = -1 + 2s
+\]</div>
+<p>Den midterste likningen er allerede løst for <span class="math notranslate nohighlight">\(t\)</span>, så vi setter inn uttrykket for <span class="math notranslate nohighlight">\(t\)</span> i én av de andre likningene. Velger den første likningen:</p>
+<div class="math notranslate nohighlight">
+\[
+9 + 2 \cdot (-4 + 2s) = 2 + 3s
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+9 - 8 + 4s = 2 + 3s \liff s = 1
+\]</div>
+<p>som gir oss at</p>
+<div class="math notranslate nohighlight">
+\[
+t = -4 + 2\cdot 1 = -2
+\]</div>
+<p>Vi bør regne ut punktet med begge parameterframstillinger for å dobbeltsjekke at vi får samme punkt:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec r_\ell(-2) = [9 + 2\cdot(-2), -2, 5 + 2\cdot(-2)] = [5, -2, 1]
+\]</div>
+<p>og</p>
+<div class="math notranslate nohighlight">
+\[
+\vec r_m(1) = [2 + 3\cdot 1, -4 + 2\cdot 1, -1 + 2\cdot 1] = [5, -2, 1]
+\]</div>
+<p>Altså skjærer linjene hverandre i punktet <span class="math notranslate nohighlight">\(T(5, -2, 1)\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Linjene ligger i et plan <span class="math notranslate nohighlight">\(\alpha\)</span>.</p>
+<div class="part part-open docutils container">
+<div class="part-header docutils container">
+<div class="part-label docutils container">
+b)</div>
+<button class="part-toggle" data-open="Skjul oppgaven" data-closed="Vis oppgaven">Skjul oppgaven</button></div>
+<div class="part-body docutils container">
+<p>Bestem en likning for planet.</p>
+<div class="answer-2 docutils container">
+<button class="answer-2-toggle" aria-expanded="false" data-label="Vis fasit">Vis fasit</button><div class="answer-2-content docutils container">
+<div class="math notranslate nohighlight">
+\[
+-2x + 2y + z + 13 = 0
+\]</div>
+<div class="solution-2 docutils container">
+<button class="solution-2-toggle" aria-expanded="false" data-label="Vis løsningsforslag">Vis løsningsforslag</button><div class="solution-2-content docutils container">
+<p>Retningsvektorene til linjene vil være parallelle med planet, samtidig som de to vektorene er ikke-parallelle. Dermed kan vi bruke kryssproduktet av dem til å lage en normalvektor til planet. Vi har at</p>
+<div class="math notranslate nohighlight">
+\[
+\vec v_\ell = \vec r_\ell'(t) = [2, 1, 2] \qog \vec v_m = \vec r_m'(s) = [3, 2, 2]
+\]</div>
+<p>Da får vi</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec v_\ell \times \vec v_m &amp;= \mqty|\vec e_x &amp; \vec e_y &amp; \vec e_z \\ 2 &amp; 1 &amp; 2 \\ 3 &amp; 2 &amp; 2| \\
+\\
+&amp;= \vec e_x \cdot \underbrace{\mqty|1 &amp; 2 \\ 2 &amp; 2|}_{\displaystyle = -2} - \vec e_y \cdot \underbrace{\mqty|2 &amp; 2 \\ 3 &amp; 2|}_{\displaystyle = -2} + \vec e_z \cdot \underbrace{\mqty|2 &amp; 1 \\ 3 &amp; 2|}_{\displaystyle = 1} \\
+\\
+&amp;= [-2, 2, 1]
+\end{split}\]</div>
+<p>Altså kan vi velge normalvektoren <span class="math notranslate nohighlight">\(\vec n = [-2, 2, 1]\)</span>. Punktet <span class="math notranslate nohighlight">\(T\)</span> ligger i planet, som gir planlikningen:</p>
+<div class="math notranslate nohighlight">
+\[
+\lvec{TP} \cdot \vec n = 0
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+[x - 5, y + 2, z - 1] \cdot [-2, 2, 1] = 0
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+-2(x - 5) + 2(y + 2) + (z - 1) = 0
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+-2x + 2y + z + 13 = 0
+\]</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Planet tangerer en kuleflate som har sentrum i <span class="math notranslate nohighlight">\(S(8, 6, 9)\)</span>.</p>
+<div class="part part-open docutils container">
+<div class="part-header docutils container">
+<div class="part-label docutils container">
+c)</div>
+<button class="part-toggle" data-open="Skjul oppgaven" data-closed="Vis oppgaven">Skjul oppgaven</button></div>
+<div class="part-body docutils container">
+<p>Bestem kulens radius.</p>
+<div class="answer-2 docutils container">
+<button class="answer-2-toggle" aria-expanded="false" data-label="Vis fasit">Vis fasit</button><div class="answer-2-content docutils container">
+<p><span class="math notranslate nohighlight">\(r = 6\)</span></p>
+<div class="solution-2 docutils container">
+<button class="solution-2-toggle" aria-expanded="false" data-label="Vis løsningsforslag">Vis løsningsforslag</button><div class="solution-2-content docutils container">
+<p>Den korteste avstanden fra sentrum til planet vil være lik radius. Fra oppgave <strong>b)</strong> har vi planlikningen</p>
+<div class="math notranslate nohighlight">
+\[
+-2x + 2y + z + 13 = 0
+\]</div>
+<p>som gir oss at avstanden er</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+r &amp;= \dfrac{\abs{-2 \cdot 8 + 2 \cdot 6 + 9 + 13}}{\sqrt{(-2)^2 + 2^2 + 1^2}} \\
+\\
+&amp;= \dfrac{\abs{18}}{3} \\
+\\
+&amp;= 6
+\end{align*}
+\end{split}\]</div>
+<p>Altså har kuleflaten radius <span class="math notranslate nohighlight">\(r = 6\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>En annen kuleflate tangerer planet <span class="math notranslate nohighlight">\(\alpha\)</span> i samme punkt som den første kulen. Kuleflaten har radius <span class="math notranslate nohighlight">\(9\)</span> og ligger på den andre siden av planet i forhold til den første kulen.</p>
+<div class="part part-open docutils container">
+<div class="part-header docutils container">
+<div class="part-label docutils container">
+d)</div>
+<button class="part-toggle" data-open="Skjul oppgaven" data-closed="Vis oppgaven">Skjul oppgaven</button></div>
+<div class="part-body docutils container">
+<p>Bestem koordinatene til kuleflatens sentrum <span class="math notranslate nohighlight">\(Q\)</span>.</p>
+<div class="answer-2 docutils container">
+<button class="answer-2-toggle" aria-expanded="false" data-label="Vis fasit">Vis fasit</button><div class="answer-2-content docutils container">
+<p><span class="math notranslate nohighlight">\(Q(18, -4, 4)\)</span></p>
+<div class="solution-2 docutils container">
+<button class="solution-2-toggle" aria-expanded="false" data-label="Vis løsningsforslag">Vis løsningsforslag</button><div class="solution-2-content docutils container">
+<p>Kuleflaten har radius lik <span class="math notranslate nohighlight">\(9\)</span>. Den forrige kuleflaten har radius lik <span class="math notranslate nohighlight">\(6\)</span> som betyr at vi kan flytte oss en avstand <span class="math notranslate nohighlight">\(6 + 9 = 15\)</span> fra punktet <span class="math notranslate nohighlight">\(S\)</span> langs normalvektoren til planet for å finne koordinatene til sentrum. Vi vet ikke hvilken vei vi skal gå langs <span class="math notranslate nohighlight">\(\vec n\)</span>, så vi må også dobbeltsjekke at vi får en avstand <span class="math notranslate nohighlight">\(9\)</span> fra planet.</p>
+<p>Vi vet at <span class="math notranslate nohighlight">\(\abs{\vec n} = 3\)</span>, så da vil <span class="math notranslate nohighlight">\(5\cdot \vec n\)</span> ha riktig lengde hvis vi starter i <span class="math notranslate nohighlight">\(S\)</span>. Da får vi to muligheter:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\lvec{OQ} &amp;= \lvec{OS} + 5 \cdot \vec n \\
+\\
+&amp;= [8, 6, 9] + 5 \cdot [-2, 2, 1] \\
+\\
+&amp;= [8, 6, 9] + [-10, 10, 5] \\
+\\
+&amp;= [-2, 16, 14]
+\end{align*}
+\end{split}\]</div>
+<p>Vi sjekker om avstanden fra planet til punktet er <span class="math notranslate nohighlight">\(9\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+L &amp;= \dfrac{\abs{-2x + 2y + z + 13}}{3} \\
+\\
+&amp;= \dfrac{\abs{-2 \cdot (-2) + 2 \cdot 16 + 14 + 13}}{3} \\ 
+\\
+&amp;= \dfrac{\abs{63}}{3} \\
+\\
+&amp;= 21
+\end{align*}
+\end{split}\]</div>
+<p>Altså er ikke dette det riktige punktet. Da går vi i motsatt retning i stedet:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\lvec{OQ} &amp;= \lvec{OS} - 5\cdot \vec n \\
+\\
+&amp;= [8, 6, 9] - [-10, 10, 5] \\
+\\
+&amp;= [18, -4, 4]
+\end{align*}
+\end{split}\]</div>
+<p>Vi sjekker om avstanden er korrekt:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+L &amp;= \dfrac{\abs{-2 \cdot 18 + 2 \cdot (-4) + 4 + 13}}{3} \\
+\\
+&amp;= \dfrac{\abs{-27}}{3} \\
+\\
+&amp;= 9
+\end{align*}
+\end{split}\]</div>
+<p>Altså får vi riktig avstand som betyr at kuleflatens sentrum er <span class="math notranslate nohighlight">\(Q(18, -4, 4)\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section class="exercise-section" id="exercise-Oppgave-8">
+<h2>Oppgave 8<a class="headerlink" href="#exercise-Oppgave-8" title="Link to this heading">#</a></h2>
+<div class="exercise-body docutils container">
+<figure class="interactive-figure no-click align-right" style="width: 50%">
+<div class="munch-3d interactive-plot3d no-click" style="width:100%"><script type="application/json">{"version": 1, "sliders": [], "ranges": [[-2.0, 6.0], [-2.0, 6.0], [-1.0, 6.0]], "steps": [1.0, 1.0, 1.0], "axis": true, "grid": false, "autoIntersections": false, "buttons": false, "ticks": [false, false, false], "labels": ["$x$", "$y$", "$z$"], "camera": {"elev": 22.0, "azim": ["neg", 55.0], "zoom": 1.28}, "fontsize": 24.0, "primitives": [{"type": "ngon", "color": "#0072b2", "lw": 1.5, "alpha": 0.2, "style": "solid", "hiddenEdges": "dashed", "points": [[0.0, 0.0, 0.0], [4.0, 0.0, 0.0], [4.0, 4.0, 0.0], [0.0, 4.0, 0.0]], "edgecolor": "#000000"}, {"type": "ngon", "color": "#0072b2", "lw": 1.5, "alpha": 0.2, "style": "solid", "hiddenEdges": "dashed", "points": [[4.0, 0.0, 0.0], [4.0, 4.0, 0.0], [3.0, 3.0, 3.0], [3.0, 1.0, 3.0]], "edgecolor": "#000000"}, {"type": "ngon", "color": "#0072b2", "lw": 1.5, "alpha": 0.2, "style": "solid", "hiddenEdges": "dashed", "points": [[4.0, 4.0, 0.0], [0.0, 4.0, 0.0], [1.0, 3.0, 3.0], [3.0, 3.0, 3.0]], "edgecolor": "#000000"}, {"type": "ngon", "color": "#0072b2", "lw": 1.5, "alpha": 0.2, "style": "solid", "hiddenEdges": "dashed", "points": [[0.0, 4.0, 0.0], [0.0, 0.0, 0.0], [1.0, 1.0, 3.0], [1.0, 3.0, 3.0]], "edgecolor": "#000000"}, {"type": "ngon", "color": "#0072b2", "lw": 1.5, "alpha": 0.2, "style": "solid", "hiddenEdges": "dashed", "points": [[1.0, 1.0, 3.0], [3.0, 1.0, 3.0], [3.0, 3.0, 3.0], [1.0, 3.0, 3.0]], "edgecolor": "#000000"}, {"type": "ngon", "color": "#0072b2", "lw": 1.5, "alpha": 0.2, "style": "solid", "hiddenEdges": "dashed", "points": [[0.0, 0.0, 0.0], [4.0, 0.0, 0.0], [3.0, 1.0, 3.0], [1.0, 1.0, 3.0]], "edgecolor": "#000000"}, {"type": "text", "color": "#000000", "lw": 1.5, "alpha": 0.35, "style": "solid", "hiddenEdges": "dashed", "at": [0.0, 0.0, 0.0], "offset": [0.0, 0.0, 0.0], "text": "$O$", "fontsize": 24.0, "ha": "right", "va": "top"}, {"type": "text", "color": "#000000", "lw": 1.5, "alpha": 0.35, "style": "solid", "hiddenEdges": "dashed", "at": [4.0, 0.0, 0.0], "offset": [0.0, 0.0, 0.0], "text": "$A$", "fontsize": 24.0, "ha": "right", "va": "top"}, {"type": "text", "color": "#000000", "lw": 1.5, "alpha": 0.35, "style": "solid", "hiddenEdges": "dashed", "at": [4.0, 4.0, 0.0], "offset": [0.0, 0.0, 0.0], "text": "$B$", "fontsize": 24.0, "ha": "left", "va": "top"}, {"type": "text", "color": "#000000", "lw": 1.5, "alpha": 0.35, "style": "solid", "hiddenEdges": "dashed", "at": [0.0, 4.0, 0.0], "offset": [0.0, 0.0, 0.0], "text": "$C$", "fontsize": 24.0, "ha": "left", "va": "top"}, {"type": "text", "color": "#000000", "lw": 1.5, "alpha": 0.35, "style": "solid", "hiddenEdges": "dashed", "at": [1.0, 1.0, 3.0], "offset": [0.0, 0.0, 0.0], "text": "$D$", "fontsize": 24.0, "ha": "right", "va": "bottom"}, {"type": "text", "color": "#000000", "lw": 1.5, "alpha": 0.35, "style": "solid", "hiddenEdges": "dashed", "at": [3.0, 1.0, 3.0], "offset": [0.0, 0.0, 0.0], "text": "$E$", "fontsize": 24.0, "ha": "left", "va": "bottom"}, {"type": "text", "color": "#000000", "lw": 1.5, "alpha": 0.35, "style": "solid", "hiddenEdges": "dashed", "at": [3.0, 3.0, 3.0], "offset": [0.0, 0.0, 0.0], "text": "$F$", "fontsize": 24.0, "ha": "left", "va": "bottom"}, {"type": "text", "color": "#000000", "lw": 1.5, "alpha": 0.35, "style": "solid", "hiddenEdges": "dashed", "at": [1.0, 3.0, 3.0], "offset": [0.0, 0.0, 0.0], "text": "$G$", "fontsize": 24.0, "ha": "left", "va": "bottom"}]}</script><div class="munch-3d-board" id="munch-3d-0-d01fed1ee7b949df3a5c69a7" role="img" aria-label="3D-koordinatsystem" style="height:460px"></div><div class="munch-3d-controls"></div><p class="munch-3d-status" role="status">Static preview. Enable JavaScript for an interactive view.</p><div class="munch-3d-fallback"><a class="reference internal image-reference" href="../../_images/d01fed1ee7b949df3a5c69a7.png"><img alt="3D-koordinatsystem" src="../../_images/d01fed1ee7b949df3a5c69a7.png" style="width: 100%;" />
+</a>
+</div></div></figure>
+<p>En rett avkortet pyramide <span class="math notranslate nohighlight">\(OABCDEFG\)</span> er vist i figuren til høyre. Punktene er gitt ved</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(O(0, 0, 0)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(A(4, 0, 0)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(B(4, 4, 0)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(C(0, 4, 0)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(D(1, 1, 3)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(E(3, 1, 3)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(F(3, 3, 3)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(G(1, 3, 3)\)</span></p></li>
+</ul>
+<div class="part part-open docutils container">
+<div class="part-header docutils container">
+<div class="part-label docutils container">
+a)</div>
+<button class="part-toggle" data-open="Skjul oppgaven" data-closed="Vis oppgaven">Skjul oppgaven</button></div>
+<div class="part-body docutils container">
+<p>Bestem arealet av sideflaten <span class="math notranslate nohighlight">\(ABFE\)</span>.</p>
+<div class="answer-2 docutils container">
+<button class="answer-2-toggle" aria-expanded="false" data-label="Vis fasit">Vis fasit</button><div class="answer-2-content docutils container">
+<div class="math notranslate nohighlight">
+\[
+G_{ABFE} = 3\sqrt{10}
+\]</div>
+<div class="solution-2 docutils container">
+<button class="solution-2-toggle" aria-expanded="false" data-label="Vis løsningsforslag">Vis løsningsforslag</button><div class="solution-2-content docutils container">
+<p>Vi deler opp sideflaten <span class="math notranslate nohighlight">\(ABFE\)</span> i to trekanter <span class="math notranslate nohighlight">\(ABF\)</span> og <span class="math notranslate nohighlight">\(AFE\)</span>.</p>
+<p>Vektorene som spenner ut trekanten <span class="math notranslate nohighlight">\(ABF\)</span> er gitt ved</p>
+<div class="math notranslate nohighlight">
+\[
+\lvec{AB} = [0, 4, 0] \qog \lvec{AF} = [-1, 3, 3]
+\]</div>
+<p>Arealet av denne trekanten er da <span class="math notranslate nohighlight">\(G_{ABF} = \dfrac{1}{2}\abs{\lvec{AB} \times \lvec{AF}}\)</span>. Vi regner ut kryssproduktet først:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\lvec{AB} \times \lvec{AF} &amp;= \mqty|\vec e_x &amp; \vec e_y &amp; \vec e_z \\ 0 &amp; 4 &amp; 0 \\ -1 &amp; 3 &amp; 3| \\
+\\
+&amp;= \vec e_x \cdot \underbrace{\mqty|4 &amp; 0 \\ 3 &amp; 3|}_{\displaystyle =12} - \vec e_y \cdot \underbrace{\mqty|0 &amp; 0 \\ -1 &amp; 3|}_{\displaystyle =0} + \vec e_z \cdot \underbrace{\mqty|0 &amp; 4 \\ -1 &amp; 3|}_{\displaystyle =4} \\
+\\
+&amp;= [12, 0, 4] \\
+\\
+&amp;= 4 \cdot [3, 0, 1]
+\end{align*}
+\end{split}\]</div>
+<p>Arealet av trekanten <span class="math notranslate nohighlight">\(ABF\)</span> blir da</p>
+<div class="math notranslate nohighlight">
+\[
+G_{ABF} = \frac{1}{2} \abs{\lvec{AB} \times \lvec{AF}} = \frac{1}{2} \abs{4 \cdot [3, 0, 1]} = \frac{1}{2} \cdot 4 \cdot \sqrt{3^2 + 0^2 + 1^2} = 2 \cdot \sqrt{10}
+\]</div>
+<p>Så tar vi trekant <span class="math notranslate nohighlight">\(AFE\)</span>. Denne er utspent av vektorene</p>
+<div class="math notranslate nohighlight">
+\[
+\lvec{AF} = [-1, 3, 3] \qog \lvec{AE} = [-1, 1, 3]
+\]</div>
+<p>Vi regner ut kryssproduktet:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\lvec{AF} \times \lvec{AE} &amp;= \mqty|\vec e_x &amp; \vec e_y &amp; \vec e_z \\ -1 &amp; 3 &amp; 3 \\ -1 &amp; 1 &amp; 3| \\
+\\
+&amp;= \vec e_x \cdot \underbrace{\mqty|3 &amp; 3 \\ 1 &amp; 3|}_{\displaystyle =6} - \vec e_y \cdot \underbrace{\mqty|-1 &amp; 3 \\ -1 &amp; 3|}_{\displaystyle =0} + \vec e_z \cdot \underbrace{\mqty|-1 &amp; 3 \\ -1 &amp; 1|}_{\displaystyle =2} \\
+\\
+&amp;= [6, 0, 2] \\
+\\
+&amp;= 2 \cdot [3, 0, 1]
+\end{align*}
+\end{split}\]</div>
+<p>Arealet av trekant <span class="math notranslate nohighlight">\(AFE\)</span> er da</p>
+<div class="math notranslate nohighlight">
+\[
+G_{AFE} = \frac{1}{2} \abs{\lvec{AF} \times \lvec{AE}} = \frac{1}{2} \abs{2 \cdot [3, 0, 1]} = \frac{1}{2} \cdot 2 \cdot \sqrt{3^2 + 0^2 + 1^2} = \sqrt{10}
+\]</div>
+<p>Arealet av sideflaten <span class="math notranslate nohighlight">\(ABFE\)</span> blir da summen av arealene av trekantene <span class="math notranslate nohighlight">\(ABF\)</span> og <span class="math notranslate nohighlight">\(AFE\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+G_{ABFE} = G_{ABF} + G_{AFE} = 2\sqrt{10} + \sqrt{10} = 3\sqrt{10}
+\]</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="part part-open docutils container">
+<div class="part-header docutils container">
+<div class="part-label docutils container">
+b)</div>
+<button class="part-toggle" data-open="Skjul oppgaven" data-closed="Vis oppgaven">Skjul oppgaven</button></div>
+<div class="part-body docutils container">
+<p>Bestem volumet av <span class="math notranslate nohighlight">\(OABCDEFG\)</span>.</p>
+<div class="hint docutils container">
+<button class="hint-toggle" aria-expanded="false" data-label="Hint">Hint</button><div class="hint-content docutils container">
+<p>Se for deg at du utvider pyramiden slik at du får den fulle pyramiden før den ble avkortet som vist i den interaktive figuren nedenfor. Du kan bruke denne ideen til å finne volumet av den avkortede pyramiden.</p>
+<figure class="interactive-figure no-click align-center" style="width: 100%">
+<div class="munch-3d interactive-plot3d no-click" style="width:100%"><script type="application/json">{"version": 1, "sliders": [], "ranges": [[-2.0, 6.0], [-2.0, 6.0], [-1.0, 6.0]], "steps": [1.0, 1.0, 1.0], "axis": true, "grid": false, "autoIntersections": false, "buttons": false, "ticks": [false, false, false], "labels": ["$x$", "$y$", "$z$"], "camera": {"elev": 22.0, "azim": ["neg", 55.0], "zoom": 1.28}, "fontsize": 24.0, "primitives": [{"type": "line-segment", "color": "#808080", "lw": 1.5, "alpha": 0.35, "style": "dashdot", "hiddenEdges": "dashed", "start": [1.0, 1.0, 3.0], "end": [2.0, 2.0, 6.0]}, {"type": "line-segment", "color": "#808080", "lw": 1.5, "alpha": 0.35, "style": "dashdot", "hiddenEdges": "dashed", "start": [3.0, 1.0, 3.0], "end": [2.0, 2.0, 6.0]}, {"type": "line-segment", "color": "#808080", "lw": 1.5, "alpha": 0.35, "style": "dashdot", "hiddenEdges": "dashed", "start": [3.0, 3.0, 3.0], "end": [2.0, 2.0, 6.0]}, {"type": "line-segment", "color": "#808080", "lw": 1.5, "alpha": 0.35, "style": "dashdot", "hiddenEdges": "dashed", "start": [1.0, 3.0, 3.0], "end": [2.0, 2.0, 6.0]}, {"type": "ngon", "color": "#0072b2", "lw": 1.5, "alpha": 0.2, "style": "solid", "hiddenEdges": "dashed", "points": [[0.0, 0.0, 0.0], [4.0, 0.0, 0.0], [4.0, 4.0, 0.0], [0.0, 4.0, 0.0]], "edgecolor": "#000000"}, {"type": "ngon", "color": "#0072b2", "lw": 1.5, "alpha": 0.2, "style": "solid", "hiddenEdges": "dashed", "points": [[4.0, 0.0, 0.0], [4.0, 4.0, 0.0], [3.0, 3.0, 3.0], [3.0, 1.0, 3.0]], "edgecolor": "#000000"}, {"type": "ngon", "color": "#0072b2", "lw": 1.5, "alpha": 0.2, "style": "solid", "hiddenEdges": "dashed", "points": [[4.0, 4.0, 0.0], [0.0, 4.0, 0.0], [1.0, 3.0, 3.0], [3.0, 3.0, 3.0]], "edgecolor": "#000000"}, {"type": "ngon", "color": "#0072b2", "lw": 1.5, "alpha": 0.2, "style": "solid", "hiddenEdges": "dashed", "points": [[0.0, 4.0, 0.0], [0.0, 0.0, 0.0], [1.0, 1.0, 3.0], [1.0, 3.0, 3.0]], "edgecolor": "#000000"}, {"type": "ngon", "color": "#0072b2", "lw": 1.5, "alpha": 0.2, "style": "solid", "hiddenEdges": "dashed", "points": [[1.0, 1.0, 3.0], [3.0, 1.0, 3.0], [3.0, 3.0, 3.0], [1.0, 3.0, 3.0]], "edgecolor": "#000000"}, {"type": "ngon", "color": "#0072b2", "lw": 1.5, "alpha": 0.2, "style": "solid", "hiddenEdges": "dashed", "points": [[0.0, 0.0, 0.0], [4.0, 0.0, 0.0], [3.0, 1.0, 3.0], [1.0, 1.0, 3.0]], "edgecolor": "#000000"}, {"type": "text", "color": "#000000", "lw": 1.5, "alpha": 0.35, "style": "solid", "hiddenEdges": "dashed", "at": [2.0, 2.0, 6.0], "offset": [0.0, 0.0, 0.0], "text": "$T$", "fontsize": 24.0, "ha": "center", "va": "bottom"}, {"type": "text", "color": "#000000", "lw": 1.5, "alpha": 0.35, "style": "solid", "hiddenEdges": "dashed", "at": [0.0, 0.0, 0.0], "offset": [0.0, 0.0, 0.0], "text": "$O$", "fontsize": 24.0, "ha": "right", "va": "top"}, {"type": "text", "color": "#000000", "lw": 1.5, "alpha": 0.35, "style": "solid", "hiddenEdges": "dashed", "at": [4.0, 0.0, 0.0], "offset": [0.0, 0.0, 0.0], "text": "$A$", "fontsize": 24.0, "ha": "right", "va": "top"}, {"type": "text", "color": "#000000", "lw": 1.5, "alpha": 0.35, "style": "solid", "hiddenEdges": "dashed", "at": [4.0, 4.0, 0.0], "offset": [0.0, 0.0, 0.0], "text": "$B$", "fontsize": 24.0, "ha": "left", "va": "top"}, {"type": "text", "color": "#000000", "lw": 1.5, "alpha": 0.35, "style": "solid", "hiddenEdges": "dashed", "at": [0.0, 4.0, 0.0], "offset": [0.0, 0.0, 0.0], "text": "$C$", "fontsize": 24.0, "ha": "left", "va": "top"}, {"type": "text", "color": "#000000", "lw": 1.5, "alpha": 0.35, "style": "solid", "hiddenEdges": "dashed", "at": [1.0, 1.0, 3.0], "offset": [0.0, 0.0, 0.0], "text": "$D$", "fontsize": 24.0, "ha": "right", "va": "bottom"}, {"type": "text", "color": "#000000", "lw": 1.5, "alpha": 0.35, "style": "solid", "hiddenEdges": "dashed", "at": [3.0, 1.0, 3.0], "offset": [0.0, 0.0, 0.0], "text": "$E$", "fontsize": 24.0, "ha": "left", "va": "bottom"}, {"type": "text", "color": "#000000", "lw": 1.5, "alpha": 0.35, "style": "solid", "hiddenEdges": "dashed", "at": [3.0, 3.0, 3.0], "offset": [0.0, 0.0, 0.0], "text": "$F$", "fontsize": 24.0, "ha": "left", "va": "bottom"}, {"type": "text", "color": "#000000", "lw": 1.5, "alpha": 0.35, "style": "solid", "hiddenEdges": "dashed", "at": [1.0, 3.0, 3.0], "offset": [0.0, 0.0, 0.0], "text": "$G$", "fontsize": 24.0, "ha": "left", "va": "bottom"}]}</script><div class="munch-3d-board" id="munch-3d-1-ff190eb1c0abf108f3a5594c" role="img" aria-label="3D-koordinatsystem" style="height:460px"></div><div class="munch-3d-controls"></div><p class="munch-3d-status" role="status">Static preview. Enable JavaScript for an interactive view.</p><div class="munch-3d-fallback"><a class="reference internal image-reference" href="../../_images/ff190eb1c0abf108f3a5594c.png"><img alt="3D-koordinatsystem" src="../../_images/ff190eb1c0abf108f3a5594c.png" style="width: 100%;" />
+</a>
+</div></div></figure>
+</div>
+</div>
+<div class="answer-2 docutils container">
+<button class="answer-2-toggle" aria-expanded="false" data-label="Vis fasit">Vis fasit</button><div class="answer-2-content docutils container">
+<div class="math notranslate nohighlight">
+\[
+V_{OABCDEFG} = 28
+\]</div>
+<div class="solution-2 docutils container">
+<button class="solution-2-toggle" aria-expanded="false" data-label="Vis løsningsforslag">Vis løsningsforslag</button><div class="solution-2-content docutils container">
+<p>Vi kan tenke på volumet av <span class="math notranslate nohighlight">\(OABCDEFG\)</span> som volumet av en pyramide med grunnflate <span class="math notranslate nohighlight">\(OABC\)</span> hvor vi fjerner volumet av en pyramide med grunnflate <span class="math notranslate nohighlight">\(DEFG\)</span> der de har et felles toppunkt <span class="math notranslate nohighlight">\(T\)</span>.</p>
+<p>Koordinatene i <span class="math notranslate nohighlight">\(xy\)</span>-planet til toppunktet vil ligge i midten av begge grunnflater som bare er gitt ved</p>
+<div class="math notranslate nohighlight">
+\[
+\lvec{OT}_{xy} = \dfrac{\lvec{OO} + \lvec{OA} + \lvec{OB} + \lvec{OC}}{4} = \dfrac{[8, 8, 0]}{4} = [2, 2, 0]
+\]</div>
+<p>Samtidig vil linja gjennom <span class="math notranslate nohighlight">\(O\)</span> og <span class="math notranslate nohighlight">\(D\)</span> nødvendigvis gå gjennom dette toppunktet <span class="math notranslate nohighlight">\(T\)</span>, så vi kan lage en parameterframstilling for denne linja og bestemme <span class="math notranslate nohighlight">\(t\)</span> slik at <span class="math notranslate nohighlight">\(x = y = 2\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec r(t) = \lvec{OO} + \lvec{OD} \cdot t = [t, t, 3t]
+\]</div>
+<p>For at <span class="math notranslate nohighlight">\(x\)</span>- og <span class="math notranslate nohighlight">\(y\)</span>-koordinatene skal være lik <span class="math notranslate nohighlight">\(2\)</span>, må <span class="math notranslate nohighlight">\(t = 2\)</span> som betyr at toppunktet vil ha koordinatene</p>
+<div class="math notranslate nohighlight">
+\[
+\lvec{OT} = \vec r(2) = [2, 2, 6]
+\]</div>
+<p>Grunnflaten <span class="math notranslate nohighlight">\(OABC\)</span> og <span class="math notranslate nohighlight">\(DEFG\)</span> er kvadrater, så volumet av hver av dem kan vi finne ved å bruke at volumet for en pyramide med grunnflate <span class="math notranslate nohighlight">\(G\)</span> og høyde <span class="math notranslate nohighlight">\(h\)</span> er gitt ved</p>
+<div class="math notranslate nohighlight">
+\[
+V = \dfrac{Gh}{3}
+\]</div>
+<p>Grunnflatearealet til <span class="math notranslate nohighlight">\(OABC\)</span> er</p>
+<div class="math notranslate nohighlight">
+\[
+G_{OABC} = 4^2 = 16
+\]</div>
+<p>Grunnflatearealet til <span class="math notranslate nohighlight">\(DEFG\)</span> er</p>
+<div class="math notranslate nohighlight">
+\[
+G_{DEFG} = \abs{\lvec{DE}}^2 = 2^2 = 4
+\]</div>
+<p>Siden begge grunnflater er parallelle med <span class="math notranslate nohighlight">\(xy\)</span>-planet, så er høyden til hver pyramide forskjellen i <span class="math notranslate nohighlight">\(z\)</span>-koordinatene til punktet <span class="math notranslate nohighlight">\(T\)</span> og <span class="math notranslate nohighlight">\(z\)</span>-koordinaten til grunnflaten.</p>
+<p>Høyden til pyramiden med grunnflate <span class="math notranslate nohighlight">\(OABC\)</span> er</p>
+<div class="math notranslate nohighlight">
+\[
+h_{OABC} = 6 - 0 = 6
+\]</div>
+<p>som gir volumet</p>
+<div class="math notranslate nohighlight">
+\[
+V = \dfrac{G_{OABC} \cdot h_{OABC}}{3} = \dfrac{16 \cdot 6}{3} = 32
+\]</div>
+<p>Høyden til pyramiden med grunnflate <span class="math notranslate nohighlight">\(DEFG\)</span> er</p>
+<div class="math notranslate nohighlight">
+\[
+h_{DEFG} = 6 - 3 = 3
+\]</div>
+<p>som gir volumet</p>
+<div class="math notranslate nohighlight">
+\[
+V = \dfrac{G_{DEFG} \cdot h_{DEFG}}{3} = \dfrac{4 \cdot 3}{3} = 4
+\]</div>
+<p>Dermed er volumet av <span class="math notranslate nohighlight">\(OABCDEFG\)</span> gitt ved volumet av den store pyramiden minus volumet av den lille pyramiden:</p>
+<div class="math notranslate nohighlight">
+\[
+V_{OABCDEFG} = V_{OABC} - V_{DEFG} = 32 - 4 = 28
+\]</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section class="exercise-section" id="exercise-Oppgave-9">
+<h2>Oppgave 9<a class="headerlink" href="#exercise-Oppgave-9" title="Link to this heading">#</a></h2>
+<div class="exercise-body docutils container">
+<p>To plan <span class="math notranslate nohighlight">\(\alpha\)</span> og <span class="math notranslate nohighlight">\(\beta\)</span> er gitt ved</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\alpha &amp;: \quad 2x - 2y + z + 21 = 0 \\
+\\
+\beta &amp;: \quad 7x - 4y + 4z + 56 = 0
+\end{align*}
+\end{split}\]</div>
+<p>En kuleflate <span class="math notranslate nohighlight">\(K\)</span> tangerer <span class="math notranslate nohighlight">\(\alpha\)</span> i <span class="math notranslate nohighlight">\(P(-3, 7, -1)\)</span> og <span class="math notranslate nohighlight">\(\beta\)</span> i <span class="math notranslate nohighlight">\(Q(-4, 5, -2)\)</span>.</p>
+<div class="part part-open docutils container">
+<div class="part-header docutils container">
+<div class="part-label docutils container">
+a)</div>
+<button class="part-toggle" data-open="Skjul oppgaven" data-closed="Vis oppgaven">Skjul oppgaven</button></div>
+<div class="part-body docutils container">
+<p>Bestem en likning for <span class="math notranslate nohighlight">\(K\)</span>.</p>
+<div class="hint docutils container">
+<button class="hint-toggle" aria-expanded="false" data-label="Hint">Hint</button><div class="hint-content docutils container">
+<p>Tenk deg en linje som starter i <span class="math notranslate nohighlight">\(P\)</span> og en annen linje som starter i <span class="math notranslate nohighlight">\(Q\)</span>. Skjæringspunktet mellom disse linjene vil være sentrumet til kulen.</p>
+</div>
+</div>
+<div class="answer-2 docutils container">
+<button class="answer-2-toggle" aria-expanded="false" data-label="Vis fasit">Vis fasit</button><div class="answer-2-content docutils container">
+<div class="math notranslate nohighlight">
+\[
+(x - 3)^2 + (y - 1)^2 + (z - 2)^2 = 9^2
+\]</div>
+<div class="solution-2 docutils container">
+<button class="solution-2-toggle" aria-expanded="false" data-label="Vis løsningsforslag">Vis løsningsforslag</button><div class="solution-2-content docutils container">
+<p>Vi tenker oss en linje <span class="math notranslate nohighlight">\(\ell\)</span> som går gjennom punktet <span class="math notranslate nohighlight">\(P\)</span> og står normalt på <span class="math notranslate nohighlight">\(\alpha\)</span>. Denne linja vil gå gjennom kulens sentrum. Så tenker vi oss en annen linje <span class="math notranslate nohighlight">\(m\)</span> som går gjennom punktet<span class="math notranslate nohighlight">\( Q\)</span> og står normalt på <span class="math notranslate nohighlight">\(\beta\)</span>. Denne linja vil også gå gjennom kulens sentrum. Strategien er derfor å finne skjæringspunktet mellom de to linjene.</p>
+<p>Vi lager parameterframstillingene først. Retningsvektorene til linjene er bare lik normalvektorene til planene som vi kan lese av fra planlikningene til å være:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec n_\alpha = [2, -2, 1] \qog \vec n_\beta = [7, -4, 4]
+\]</div>
+<p>Da får vi:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\vec r_\ell(t) &amp;= \lvec{OP} + \vec n_\alpha \cdot t \\
+\\
+&amp;= [-3, 7, -1] + [2, -2, 1] \cdot t \\
+\\
+&amp;= [-3 + 2t, 7 - 2t, -1 + t]
+\end{align*}
+\end{split}\]</div>
+<p>og</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\vec r_m(s) &amp;= \lvec{OQ} + \vec n_\beta \cdot s \\
+\\
+&amp;= [-4, 5, -2] + [7, -4, 4] \cdot s \\
+\\
+&amp;= [-4 + 7s, 5 - 4s, -2 + 4s]
+\end{align*}
+\end{split}\]</div>
+<p>Så finner vi skjæringspunktet mellom linjene ved å løse <span class="math notranslate nohighlight">\(\vec r_\ell(t) = \vec r_m(s)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+-3 + 2t = -4 + 7s \and 7 - 2t = 5 - 4s \and -1 + t = -2 + 4s
+\]</div>
+<p>Vi løser den siste likningen for <span class="math notranslate nohighlight">\(t\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+-1 + t = -2 + 4s \liff t = -1 + 4s
+\]</div>
+<p>Så setter vi inn i den første likningen:</p>
+<div class="math notranslate nohighlight">
+\[
+-3 + 2\cdot (-1 + 4s) = -4 + 7s
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+-3 - 2 + 8s = -4 + 7s \liff s = 1
+\]</div>
+<p>som også gir at</p>
+<div class="math notranslate nohighlight">
+\[
+t = -1 + 4 = 3
+\]</div>
+<p>Vi setter inn i begge parameterframstillinger for å sikre at vi får samme punkt:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec r_\ell(3) = [-3 + 2\cdot 3, 7 - 2\cdot 3, -1 + 3] = [3, 1, 2]
+\]</div>
+<p>og</p>
+<div class="math notranslate nohighlight">
+\[
+\vec r_m(1) = [-4 + 7, 5 - 4, -2 + 4] = [3, 1, 2]
+\]</div>
+<p>Altså er kulens sentrum <span class="math notranslate nohighlight">\(S(3, 1, 2)\)</span>. Siden vi flytte oss én enhet langs <span class="math notranslate nohighlight">\(\vec n_\beta\)</span> med linja <span class="math notranslate nohighlight">\(m\)</span>, vil radius til kula være</p>
+<div class="math notranslate nohighlight">
+\[
+r = \abs{\vec n_\beta} = \sqrt{7^2 + (-4)^2 + 4^2} = \sqrt{81} = 9
+\]</div>
+<p>Dermed er en likning for kuleflaten gitt ved</p>
+<div class="math notranslate nohighlight">
+\[
+(x - 3)^2 + (y - 1)^2 + (z - 2)^2 = 9^2
+\]</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Planet <span class="math notranslate nohighlight">\(\alpha\)</span> og <span class="math notranslate nohighlight">\(\beta\)</span> skjærer hverandre langs en linje <span class="math notranslate nohighlight">\(\ell\)</span>. Punktet <span class="math notranslate nohighlight">\(A(-8, 5, 5)\)</span> ligger på linja.</p>
+<div class="part part-open docutils container">
+<div class="part-header docutils container">
+<div class="part-label docutils container">
+b)</div>
+<button class="part-toggle" data-open="Skjul oppgaven" data-closed="Vis oppgaven">Skjul oppgaven</button></div>
+<div class="part-body docutils container">
+<p>Lag en parameterframstilling for <span class="math notranslate nohighlight">\(\ell\)</span>.</p>
+<div class="answer-2 docutils container">
+<button class="answer-2-toggle" aria-expanded="false" data-label="Vis fasit">Vis fasit</button><div class="answer-2-content docutils container">
+<p><span class="math notranslate nohighlight">\(\vec r_\ell(t) = [-8 - 4t, 5 - t, 5 + 6t]\)</span></p>
+<div class="solution-2 docutils container">
+<button class="solution-2-toggle" aria-expanded="false" data-label="Vis løsningsforslag">Vis løsningsforslag</button><div class="solution-2-content docutils container">
+<p>Retningsvektoren til linja vil stå normalt på begge plan, slik at vi kan lage en retningsvektor for linja ved å ta kryssproduktet av normalvektorene. Vi har</p>
+<div class="math notranslate nohighlight">
+\[
+\vec n_\alpha = [2, -2, 1] \qog \vec n_\beta = [7, -4, 4]
+\]</div>
+<p>Da får vi en retningsvektor blir:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\vec v_\ell = \vec n_\alpha \times \vec n_\beta = \mqty|\vec e_x &amp; \vec e_y &amp; \vec e_z \\ 2 &amp; -2 &amp; 1 \\ 7 &amp; -4 &amp; 4| \\
+\\
+&amp;= \vec e_x \cdot \underbrace{\mqty|-2 &amp; 1 \\ -4 &amp; 4|}_{\displaystyle = -4} - \vec e_y \cdot \underbrace{\mqty|2 &amp; 1 \\ 7 &amp; 4|}_{\displaystyle = 1} + \vec e_z \cdot \underbrace{\mqty|2 &amp; -2 \\ 7 &amp; -4|}_{\displaystyle = 6} \\
+\\
+&amp;= [-4, -1, 6]
+\end{align*}
+\end{split}\]</div>
+<p>Da kan vi lage en parameterframstilling for linja som:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\vec r_\ell(t) &amp;= \lvec{OA} + \vec v \cdot t \\
+\\
+&amp;= [-8, 5, 5] + [-4, -1, 6] \cdot t \\
+\\
+&amp;= [-8 - 4t, 5 - t, 5 + 6t]
+\end{align*}
+\end{split}\]</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Et plan <span class="math notranslate nohighlight">\(\gamma\)</span> er gitt ved</p>
+<div class="math notranslate nohighlight">
+\[
+\gamma: \quad x + 2y + 2z - 27 = 0
+\]</div>
+<p>Planet <span class="math notranslate nohighlight">\(\gamma\)</span> skjærer <span class="math notranslate nohighlight">\(K\)</span> langs en sirkel.</p>
+<div class="part part-open docutils container">
+<div class="part-header docutils container">
+<div class="part-label docutils container">
+c)</div>
+<button class="part-toggle" data-open="Skjul oppgaven" data-closed="Vis oppgaven">Skjul oppgaven</button></div>
+<div class="part-body docutils container">
+<p>Bestem sentrum og radius til sirkelen.</p>
+<div class="answer-2 docutils container">
+<button class="answer-2-toggle" aria-expanded="false" data-label="Vis fasit">Vis fasit</button><div class="answer-2-content docutils container">
+<p>Sentrum i <span class="math notranslate nohighlight">\((5, 5, 6)\)</span> og radius <span class="math notranslate nohighlight">\(3\sqrt{5}\)</span>.</p>
+<div class="solution-2 docutils container">
+<button class="solution-2-toggle" aria-expanded="false" data-label="Vis løsningsforslag">Vis løsningsforslag</button><div class="solution-2-content docutils container">
+<figure class="adaptive-figure plot-figure no-click align-right">
+<div class="graph-image no-click no-scaled-link"><?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 432 432" xmlns="http://www.w3.org/2000/svg" version="1.1" class="graph-inline-svg" role="img" aria-label="Tilpasset figur" style="width:100%; height:auto; display:block; margin:0 auto;">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-30T15:32:43.120883</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="cpl_f3640b5e5256_444057_figure_1">
+  <g id="cpl_f3640b5e5256_444057_patch_1">
+   <path d="M 0 432 
+L 432 432 
+L 432 0 
+L 0 0 
+L 0 432 
+z
+" style="fill: none"/>
+  </g>
+  <g id="cpl_f3640b5e5256_444057_axes_1">
+   <g id="cpl_f3640b5e5256_444057_patch_2">
+    <path d="M 213.80078 349.028504 
+C 249.080352 349.028504 282.919713 335.011782 307.866138 310.065357 
+C 332.812562 285.118933 346.829284 251.279572 346.829284 216 
+C 346.829284 180.720428 332.812562 146.881067 307.866138 121.934643 
+C 282.919713 96.988218 249.080352 82.971496 213.80078 82.971496 
+C 178.521209 82.971496 144.681847 96.988218 119.735423 121.934643 
+C 94.788999 146.881067 80.772276 180.720428 80.772276 216 
+C 80.772276 251.279572 94.788999 285.118933 119.735423 310.065357 
+C 144.681847 335.011782 178.521209 349.028504 213.80078 349.028504 
+L 213.80078 349.028504 
+z
+" clip-path="url(#cpl_f3640b5e5256_444057_p8a6725f09b)" style="fill: none; stroke: #0072b2; stroke-width: 2.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="cpl_f3640b5e5256_444057_line2d_1">
+    <path d="M 36.429442 127.314331 
+L 391.172119 127.314331 
+" clip-path="url(#cpl_f3640b5e5256_444057_p8a6725f09b)" style="fill: none; stroke-dasharray: 9.25,4; stroke-dashoffset: 0; stroke: #dc5e8b; stroke-width: 2.5"/>
+   </g>
+   <g id="cpl_f3640b5e5256_444057_line2d_2">
+    <path d="M 213.80078 127.314331 
+L 312.954373 127.314331 
+" clip-path="url(#cpl_f3640b5e5256_444057_p8a6725f09b)" style="fill: none; stroke: #dc5e8b; stroke-width: 2.5; stroke-linecap: square"/>
+   </g>
+   <g id="cpl_f3640b5e5256_444057_line2d_3">
+    <path d="M 213.80078 216 
+L 213.80078 127.314331 
+" clip-path="url(#cpl_f3640b5e5256_444057_p8a6725f09b)" style="fill: none; stroke-dasharray: 16,4,2.5,4; stroke-dashoffset: 0; stroke: #000000; stroke-width: 2.5"/>
+   </g>
+   <g id="cpl_f3640b5e5256_444057_line2d_4">
+    <path d="M 213.80078 216 
+L 312.954373 127.314331 
+" clip-path="url(#cpl_f3640b5e5256_444057_p8a6725f09b)" style="fill: none; stroke-dasharray: 16,4,2.5,4; stroke-dashoffset: 0; stroke: #000000; stroke-width: 2.5"/>
+   </g>
+   <g id="cpl_f3640b5e5256_444057_line2d_5">
+    <path d="M 213.80078 149.485748 
+L 235.972198 149.485748 
+" clip-path="url(#cpl_f3640b5e5256_444057_p8a6725f09b)" style="fill: none; stroke: #808080; stroke-width: 2.5; stroke-linecap: square"/>
+   </g>
+   <g id="cpl_f3640b5e5256_444057_line2d_6">
+    <path d="M 235.972198 149.485748 
+L 235.972198 127.314331 
+" clip-path="url(#cpl_f3640b5e5256_444057_p8a6725f09b)" style="fill: none; stroke: #808080; stroke-width: 2.5; stroke-linecap: square"/>
+   </g>
+   <g id="cpl_f3640b5e5256_444057_line2d_7">
+    <defs>
+     <path id="cpl_f3640b5e5256_444057_ma4c32bf1a0" d="M 0 5 
+C 1.326016 5 2.597899 4.473168 3.535534 3.535534 
+C 4.473168 2.597899 5 1.326016 5 0 
+C 5 -1.326016 4.473168 -2.597899 3.535534 -3.535534 
+C 2.597899 -4.473168 1.326016 -5 0 -5 
+C -1.326016 -5 -2.597899 -4.473168 -3.535534 -3.535534 
+C -4.473168 -2.597899 -5 -1.326016 -5 0 
+C -5 1.326016 -4.473168 2.597899 -3.535534 3.535534 
+C -2.597899 4.473168 -1.326016 5 0 5 
+z
+" style="stroke: #000000; stroke-opacity: 0.8"/>
+    </defs>
+    <g clip-path="url(#cpl_f3640b5e5256_444057_p8a6725f09b)">
+     <use xlink:href="#cpl_f3640b5e5256_444057_ma4c32bf1a0" x="213.80078" y="216" style="fill-opacity: 0.8; stroke: #000000; stroke-opacity: 0.8"/>
+    </g>
+   </g>
+   <g id="cpl_f3640b5e5256_444057_text_1">
+    <!-- $S$ -->
+    <g transform="translate(191.420398 240.534621) scale(0.24 -0.24)">
+     <defs>
+      <path id="cpl_f3640b5e5256_444057_CMMI12-53" d="M 4064 4423 
+C 4064 4480 4019 4480 4006 4480 
+C 3981 4480 3974 4474 3898 4378 
+C 3859 4333 3597 4001 3590 3995 
+C 3379 4410 2957 4480 2688 4480 
+C 1875 4480 1139 3743 1139 3025 
+C 1139 2549 1427 2269 1741 2161 
+C 1811 2135 2189 2033 2381 1989 
+C 2707 1900 2790 1875 2925 1735 
+C 2950 1703 3078 1557 3078 1258 
+C 3078 667 2528 57 1888 57 
+C 1363 57 781 280 781 991 
+C 781 1112 806 1265 826 1328 
+C 826 1348 832 1378 832 1391 
+C 832 1417 819 1449 768 1449 
+C 710 1449 704 1436 678 1328 
+L 352 24 
+C 352 18 326 -64 326 -71 
+C 326 -128 378 -128 390 -128 
+C 416 -128 422 -122 499 -26 
+L 794 356 
+C 947 126 1280 -128 1875 -128 
+C 2701 -128 3456 666 3456 1460 
+C 3456 1728 3392 1963 3149 2197 
+C 3014 2331 2899 2363 2310 2516 
+C 1882 2630 1824 2649 1709 2751 
+C 1600 2858 1517 3011 1517 3227 
+C 1517 3761 2061 4308 2669 4308 
+C 3296 4308 3590 3926 3590 3323 
+C 3590 3158 3558 2986 3558 2961 
+C 3558 2903 3610 2903 3629 2903 
+C 3686 2903 3693 2922 3718 3024 
+L 4064 4423 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#cpl_f3640b5e5256_444057_CMMI12-53" transform="scale(0.996264)"/>
+    </g>
+   </g>
+   <g id="cpl_f3640b5e5256_444057_text_2">
+    <!-- $r$ -->
+    <g transform="translate(271.359287 196.191786) scale(0.24 -0.24)">
+     <defs>
+      <path id="cpl_f3640b5e5256_444057_CMMI12-72" d="M 2490 2612 
+C 2291 2574 2189 2433 2189 2293 
+C 2189 2139 2310 2088 2400 2088 
+C 2579 2088 2726 2242 2726 2433 
+C 2726 2638 2528 2816 2208 2816 
+C 1952 2816 1658 2701 1389 2312 
+C 1344 2650 1088 2816 832 2816 
+C 582 2816 454 2625 378 2484 
+C 269 2254 173 1871 173 1839 
+C 173 1814 198 1782 243 1782 
+C 294 1782 301 1788 339 1935 
+C 435 2318 557 2689 813 2689 
+C 966 2689 1011 2580 1011 2395 
+C 1011 2254 947 2005 902 1807 
+L 723 1118 
+C 698 996 627 709 595 594 
+C 550 428 480 128 480 96 
+C 480 6 550 -64 646 -64 
+C 717 -64 838 -19 877 109 
+C 896 160 1133 1124 1171 1271 
+C 1203 1411 1242 1546 1274 1686 
+C 1299 1775 1325 1878 1344 1961 
+C 1363 2018 1536 2331 1696 2472 
+C 1773 2542 1939 2689 2202 2689 
+C 2304 2689 2406 2670 2490 2612 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#cpl_f3640b5e5256_444057_CMMI12-72" transform="scale(0.996264)"/>
+    </g>
+   </g>
+   <g id="cpl_f3640b5e5256_444057_text_3">
+    <!-- $L$ -->
+    <g transform="translate(189.890065 177.633989) scale(0.24 -0.24)">
+     <defs>
+      <path id="cpl_f3640b5e5256_444057_CMMI12-4c" d="M 2349 3861 
+C 2406 4103 2426 4167 2989 4167 
+C 3162 4167 3206 4167 3206 4288 
+C 3206 4352 3136 4352 3110 4352 
+C 2982 4352 2835 4352 2707 4352 
+L 1850 4352 
+C 1728 4352 1587 4352 1466 4352 
+C 1414 4352 1344 4352 1344 4231 
+C 1344 4167 1402 4167 1498 4167 
+C 1888 4167 1888 4116 1888 4046 
+C 1888 4034 1888 3995 1862 3899 
+L 998 472 
+C 941 249 928 185 480 185 
+C 358 185 294 185 294 70 
+C 294 0 333 0 461 0 
+L 3328 0 
+C 3469 0 3475 6 3520 121 
+L 4013 1478 
+C 4026 1510 4038 1548 4038 1567 
+C 4038 1605 4006 1631 3974 1631 
+C 3968 1631 3936 1631 3923 1605 
+C 3910 1599 3910 1586 3859 1465 
+C 3654 905 3366 185 2285 185 
+L 1670 185 
+C 1581 185 1568 185 1530 192 
+C 1459 198 1453 211 1453 262 
+C 1453 307 1466 345 1478 401 
+L 2349 3861 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#cpl_f3640b5e5256_444057_CMMI12-4c" transform="scale(0.996264)"/>
+    </g>
+   </g>
+   <g id="cpl_f3640b5e5256_444057_text_4">
+    <!-- $\rho$ -->
+    <g transform="translate(257.339854 114.733358) scale(0.24 -0.24)">
+     <defs>
+      <path id="cpl_f3640b5e5256_444057_CMMI12-1a" d="M 198 -1107 
+C 192 -1139 179 -1177 179 -1216 
+C 179 -1312 256 -1376 352 -1376 
+C 448 -1376 538 -1312 576 -1222 
+C 602 -1164 781 -397 986 390 
+C 1114 70 1350 -64 1600 -64 
+C 2323 -64 3142 830 3142 1795 
+C 3142 2478 2726 2816 2285 2816 
+C 1722 2816 1037 2235 826 1385 
+L 198 -1107 
+z
+M 1594 64 
+C 1158 64 1050 569 1050 645 
+C 1050 684 1210 1295 1229 1391 
+C 1555 2670 2182 2670 2278 2670 
+C 2566 2670 2726 2410 2726 2036 
+C 2726 1712 2554 1084 2445 819 
+C 2253 381 1920 64 1594 64 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#cpl_f3640b5e5256_444057_CMMI12-1a" transform="scale(0.996264)"/>
+    </g>
+   </g>
+   <g id="cpl_f3640b5e5256_444057_text_5">
+    <!-- $\gamma$ -->
+    <g transform="translate(399.153829 133.291155) scale(0.24 -0.24)">
+     <defs>
+      <path id="cpl_f3640b5e5256_444057_CMMI12-d" d="M 2419 760 
+C 2406 1071 2394 1561 2150 2133 
+C 2022 2452 1805 2788 1338 2788 
+C 550 2788 122 1790 122 1625 
+C 122 1567 166 1567 186 1567 
+C 243 1567 243 1580 275 1663 
+C 410 2057 819 2368 1261 2368 
+C 2150 2368 2278 1383 2278 754 
+C 2278 352 2234 220 2195 92 
+C 2074 -302 1862 -1090 1862 -1268 
+C 1862 -1319 1882 -1376 1933 -1376 
+C 2029 -1376 2086 -1166 2157 -912 
+C 2310 -353 2349 -73 2381 181 
+C 2400 334 2765 1384 3270 2382 
+C 3315 2483 3405 2655 3405 2674 
+C 3405 2680 3398 2725 3341 2725 
+C 3328 2725 3296 2725 3283 2699 
+C 3270 2687 3046 2254 2854 1822 
+C 2758 1606 2630 1320 2419 760 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#cpl_f3640b5e5256_444057_CMMI12-d" transform="scale(0.996264)"/>
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="cpl_f3640b5e5256_444057_p8a6725f09b">
+   <rect x="10.8" y="14.396303" width="410.4" height="403.207393"/>
+  </clipPath>
+ </defs>
+</svg>
+</div></figure>
+<p>La <span class="math notranslate nohighlight">\(L\)</span> være avstanden fra sentrum <span class="math notranslate nohighlight">\(S\)</span> til planet <span class="math notranslate nohighlight">\(\gamma\)</span> og <span class="math notranslate nohighlight">\(\rho\)</span> være radius i skjæringssirkelen, og <span class="math notranslate nohighlight">\(r\)</span> være radius til kula. Da kan vi bruke skissen vist til høyre for å forstå geometrien.</p>
+<p>Kula har sentrum <span class="math notranslate nohighlight">\(S(3, 1, 2)\)</span>. Normalvektoren til planet er</p>
+<div class="math notranslate nohighlight">
+\[
+\vec n_\gamma = [1, 2, 2] \limplies \abs{\vec n_\gamma} = 3
+\]</div>
+<p>Dermed får vi at avstanden <span class="math notranslate nohighlight">\(L\)</span> fra <span class="math notranslate nohighlight">\(S\)</span> til <span class="math notranslate nohighlight">\(\gamma\)</span> er</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+L &amp;= \dfrac{\abs{x + 2y + 2z - 27}}{\abs{\vec n_\gamma}} \\
+\\
+&amp;= \dfrac{\abs{3 + 2 \cdot 1 + 2 \cdot 2 - 27}}{3} \\
+\\
+&amp;= \dfrac{\abs{-18}}{3} \\
+\\
+&amp;= 6
+\end{align*}
+\end{split}\]</div>
+<p>Dermed blir radien til sirkelen</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+L^2 + \rho^2 = r^2 \implies \rho = \sqrt{r^2 - L^2} \\
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[
+\rho = \sqrt{9^2 - 6^2} = \sqrt{45} = 3 \sqrt{5}
+\]</div>
+<p>Linja som går gjennom <span class="math notranslate nohighlight">\(S\)</span> og har retningsvektor lik normalvektoren til planet <span class="math notranslate nohighlight">\(\gamma\)</span> vil skjære planet i sentrum av sirkelen. Vi har at</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\vec r(t) &amp;= \lvec{OS} + \vec n_\gamma \cdot t \\
+\\
+&amp;= [3, 1, 2] + [1, 2, 2] \cdot t \\
+\\
+&amp;= [3 + t, 1 + 2t, 2 + 2t]
+\end{align*}
+\end{split}\]</div>
+<p>Vi setter inn koordinatene til linja inn i planlikningen til <span class="math notranslate nohighlight">\(\gamma\)</span> for å finne sentrum av sirkelen. Vi har at</p>
+<div class="math notranslate nohighlight">
+\[
+\underbrace{(3 + t)}_{\displaystyle x} + 2 \underbrace{(1 + 2t)}_{\displaystyle y} + 2 \underbrace{(2 + 2t)}_{\displaystyle z} - 27 = 0
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+3 + t + 2 + 4t + 4 + 4t - 27 = 0
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+9t - 18 = 0 \liff t = 2
+\]</div>
+<p>Dermed er koordinatene til sirkelens sentrum</p>
+<div class="math notranslate nohighlight">
+\[
+\vec r(2) = [3 + 2, 1 + 2\cdot 2, 2 + 2\cdot 2] = [5, 5, 6]
+\]</div>
+<p>Altså har sirkelen sentrum i <span class="math notranslate nohighlight">\((5, 5, 6)\)</span> og radius <span class="math notranslate nohighlight">\(3\sqrt{5}\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<hr class="docutils" />
+<section class="exercise-section" id="exercise-Oppgave-10">
+<h2>Oppgave 10<a class="headerlink" href="#exercise-Oppgave-10" title="Link to this heading">#</a></h2>
+<div class="exercise-body docutils container">
+<p>En pyramide har grunnflate i punktene <span class="math notranslate nohighlight">\(A(0, 0, 0)\)</span>, <span class="math notranslate nohighlight">\(B(2, 0, 4)\)</span> og <span class="math notranslate nohighlight">\(C(0, 3, 6)\)</span>.</p>
+<p>Pyramiden har et toppunkt <span class="math notranslate nohighlight">\(T(t, t, t^2 + 5)\)</span> der <span class="math notranslate nohighlight">\(t \in \real\)</span>.</p>
+<div class="part part-open docutils container">
+<div class="part-header docutils container">
+<div class="part-label docutils container">
+a)</div>
+<button class="part-toggle" data-open="Skjul oppgaven" data-closed="Vis oppgaven">Skjul oppgaven</button></div>
+<div class="part-body docutils container">
+<p>Bestem <span class="math notranslate nohighlight">\(t\)</span> slik at volumet av pyramiden er <span class="math notranslate nohighlight">\(10\)</span>.</p>
+<div class="answer-2 docutils container">
+<button class="answer-2-toggle" aria-expanded="false" data-label="Vis fasit">Vis fasit</button><div class="answer-2-content docutils container">
+<div class="math notranslate nohighlight">
+\[
+t = -1 \or t = 5
+\]</div>
+<div class="solution-2 docutils container">
+<button class="solution-2-toggle" aria-expanded="false" data-label="Vis løsningsforslag">Vis løsningsforslag</button><div class="solution-2-content docutils container">
+<p>Vi starter med å finne en funksjon <span class="math notranslate nohighlight">\(V(t)\)</span> for volumet til pyramiden. Grunnflatevektoren er gitt ved</p>
+<div class="math notranslate nohighlight">
+\[
+\vec G = \dfrac{1}{2} \cdot \lvec{AB} \times \lvec{AC}
+\]</div>
+<p>Vi har at</p>
+<div class="math notranslate nohighlight">
+\[
+\lvec{AB} = [2, 0, 4] \qog \lvec{AC} = [0, 3, 6]
+\]</div>
+<p>Kryssproduktet av de to vektorene er da</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\lvec{AB} \times \lvec{AC} &amp;= \mqty|\vec e_x &amp; \vec e_y &amp; \vec e_z \\ 2 &amp; 0 &amp; 4 \\ 0 &amp; 3 &amp; 6| \\
+\\
+&amp;= \vec e_x \cdot \underbrace{\mqty|0 &amp; 4 \\ 3 &amp; 6|}_{\displaystyle = -12} - \vec e_y \cdot \underbrace{\mqty|2 &amp; 4 \\ 0 &amp; 6|}_{\displaystyle = 12} + \vec e_z \cdot \underbrace{\mqty|2 &amp; 0 \\ 0 &amp; 3|}_{\displaystyle = 6} \\
+\\
+&amp;= [-12, -12, 6]
+\end{align*}
+\end{split}\]</div>
+<p>som gir at grunnflatevektoren er</p>
+<div class="math notranslate nohighlight">
+\[
+\vec G = [-6, -6, 3]
+\]</div>
+<p>Forflytningsvektoren fra grunnflaten til toppunktet kan være</p>
+<div class="math notranslate nohighlight">
+\[
+\lvec{AT} = [t, t, t^2 + 5]
+\]</div>
+<p>Da blir en funksjon <span class="math notranslate nohighlight">\(V(t)\)</span> for volumet til pyramiden gitt ved</p>
+<div class="math notranslate nohighlight">
+\[
+V(t) = \dfrac{\abs{\vec G \cdot \lvec{AT}}}{3}
+\]</div>
+<p>Vi har at</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\vec G \cdot \lvec{AT} &amp;= [-6, -6, 3] \cdot [t, t, t^2 + 5] \\
+\\ 
+&amp;= -6t - 6t + 3(t^2 + 5) \\
+\\
+&amp;= 3t^2 - 12t + 15 \\
+\\
+&amp;= 3(t^2 - 4t + 5)
+\end{align*}
+\end{split}\]</div>
+<p>Vi har at</p>
+<div class="math notranslate nohighlight">
+\[
+t^2 - 4t + 5 = (t - 2)^2 + 1 &gt; 0 \qfor t \in \real
+\]</div>
+<p>som vi kan tolke som en konveks andregradsfunksjon med bunnpunkt i <span class="math notranslate nohighlight">\((2, 1)\)</span>, og vil derfor aldri være negativ.</p>
+<p>Derfor vil absoluttverdien av uttrykket alltid være lik selve uttrykket, altså</p>
+<div class="math notranslate nohighlight">
+\[
+|3(t^2 - 4t + 5)| = 3(t^2 - 4t + 5)
+\]</div>
+<p>Dermed blir volumfunksjonen</p>
+<div class="math notranslate nohighlight">
+\[
+V(t) = \dfrac{\abs{\vec G \cdot \lvec{AT}}}{3} = \dfrac{\abs{3(t^2 - 4t + 5)}}{3} = t^2 - 4t + 5
+\]</div>
+<p>Vi skal bestemme <span class="math notranslate nohighlight">\(t\)</span> slik at <span class="math notranslate nohighlight">\(V(t) = 10\)</span>. Da får vi:</p>
+<div class="math notranslate nohighlight">
+\[
+V(t) = 10 \liff t^2 - 4t + 5 = 10 \liff t^2 - 4t - 5 = 0
+\]</div>
+<p>Vi bruker <span class="math notranslate nohighlight">\(abc\)</span>-formelen:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+t &amp;= \dfrac{4 \pm \sqrt{16 + 20}}{2} \\
+\\
+&amp;= \dfrac{4 \pm 6}{2} \\
+\\
+&amp;= 2 \pm 3
+\end{align*}
+\end{split}\]</div>
+<p>som gir</p>
+<div class="math notranslate nohighlight">
+\[
+t = -1 \or t = 5
+\]</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="part part-open docutils container">
+<div class="part-header docutils container">
+<div class="part-label docutils container">
+b)</div>
+<button class="part-toggle" data-open="Skjul oppgaven" data-closed="Vis oppgaven">Skjul oppgaven</button></div>
+<div class="part-body docutils container">
+<div class="hint docutils container">
+<button class="hint-toggle" aria-expanded="false" data-label="Hint">Hint</button><div class="hint-content docutils container">
+<p>Bruk derivasjon til å finne den verdien av <span class="math notranslate nohighlight">\(t\)</span> som gir det minste mulige volumet <span class="math notranslate nohighlight">\(V(t)\)</span>.</p>
+</div>
+</div>
+<p>Bestem det minste mulige volumet pyramiden kan ha.</p>
+<div class="answer-2 docutils container">
+<button class="answer-2-toggle" aria-expanded="false" data-label="Vis fasit">Vis fasit</button><div class="answer-2-content docutils container">
+<p><span class="math notranslate nohighlight">\(V_\mathrm{minst} = 1\)</span>.</p>
+<div class="solution-2 docutils container">
+<button class="solution-2-toggle" aria-expanded="false" data-label="Vis løsningsforslag">Vis løsningsforslag</button><div class="solution-2-content docutils container">
+<p>Fra oppgave <strong>a)</strong> har vi at volumfunksjonen er</p>
+<div class="math notranslate nohighlight">
+\[
+V(t) = t^2 - 4t + 5
+\]</div>
+<p>Volumet blir minst mulig dersom <span class="math notranslate nohighlight">\(V'(t) = 0\)</span>. Vi har at</p>
+<div class="math notranslate nohighlight">
+\[
+V'(t) = 2t - 4 = 0 \liff t = 2
+\]</div>
+<p>Altså er det minste mulige volumet pyramiden kan ha gitt ved</p>
+<div class="math notranslate nohighlight">
+\[
+V_\mathrm{minst} = V(2) = 2^2 - 4 \cdot 2 + 5 = 4 - 8 + 5 = 1
+\]</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section class="exercise-section" id="exercise-Oppgave-11">
+<h2>Oppgave 11<a class="headerlink" href="#exercise-Oppgave-11" title="Link to this heading">#</a></h2>
+<div class="exercise-body docutils container">
+<ul class="simple">
+<li><p>Et plan <span class="math notranslate nohighlight">\(\alpha\)</span> går gjennom punktene <span class="math notranslate nohighlight">\(A(0, 0, 0)\)</span>, <span class="math notranslate nohighlight">\(B(2, 1, 0)\)</span> og <span class="math notranslate nohighlight">\(C(2, 0, 1)\)</span>.</p></li>
+<li><p>En linje <span class="math notranslate nohighlight">\(\ell\)</span> er gitt ved <span class="math notranslate nohighlight">\(\vec r_\ell(t) = [9, 0, 0] + [2, 1, 0] \cdot t\)</span>.</p></li>
+<li><p>En kuleflate <span class="math notranslate nohighlight">\(K\)</span> har sentrum <span class="math notranslate nohighlight">\(S\)</span> på linja <span class="math notranslate nohighlight">\(\ell\)</span>. Kula inneholder punktet <span class="math notranslate nohighlight">\(D(9, 0, 2)\)</span>.</p></li>
+<li><p>Kuleflaten <span class="math notranslate nohighlight">\(K\)</span> tangerer <span class="math notranslate nohighlight">\(\alpha\)</span>.</p></li>
+</ul>
+<p>Bestem kulens radius og de mulige koordinatene til sentrum <span class="math notranslate nohighlight">\(S\)</span>.</p>
+<div class="answer-2 docutils container">
+<button class="answer-2-toggle" aria-expanded="false" data-label="Vis fasit">Vis fasit</button><div class="answer-2-content docutils container">
+<p>Kula har radius <span class="math notranslate nohighlight">\(3\)</span> og sentrum i enten <span class="math notranslate nohighlight">\(S_1(11, 1, 0)\)</span> eller <span class="math notranslate nohighlight">\(S_2(7, -1, 0)\)</span>.</p>
+<div class="solution-2 docutils container">
+<button class="solution-2-toggle" aria-expanded="false" data-label="Vis løsningsforslag">Vis løsningsforslag</button><div class="solution-2-content docutils container">
+<p>Først bør vi finne en normalvektor til planet så vi kan sammenligne hvordan planet er orientert i forhold til linja.</p>
+<p>Vi har at</p>
+<div class="math notranslate nohighlight">
+\[
+\lvec{AB} = [2, 1, 0] \qog \lvec{AC} = [2, 0, 1]
+\]</div>
+<p>Alle normalvektorer til planet er parallell med kryssproduktet av de to vektorene, så:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\lvec{AB} \times \lvec{AC} &amp;= \mqty|\vec e_x &amp; \vec e_y &amp; \vec e_z \\ 2 &amp; 1 &amp; 0 \\ 2 &amp; 0 &amp; 1| \\
+\\
+&amp;= \vec e_x \cdot \underbrace{\mqty|1 &amp; 0 \\ 0 &amp; 1|}_{\displaystyle = 1} - \vec e_y \cdot \underbrace{\mqty|2 &amp; 0 \\ 2 &amp; 1|}_{\displaystyle = 2} + \vec e_z \cdot \underbrace{\mqty|2 &amp; 1 \\ 2 &amp; 0|}_{\displaystyle = -2} \\
+\\
+&amp;= [1, -2, -2]
+\end{align*}
+\end{split}\]</div>
+<p>Dermed vil <span class="math notranslate nohighlight">\(n_\alpha = [1, -2, -2]\)</span> være en normalvektor for <span class="math notranslate nohighlight">\(\alpha\)</span>. Retningsvektoren til linja <span class="math notranslate nohighlight">\(\ell\)</span> er <span class="math notranslate nohighlight">\(v_\ell = [2, 1, 0]\)</span>. Vi kan merke oss at</p>
+<div class="math notranslate nohighlight">
+\[
+\vec n_\alpha \cdot \vec v_\ell = [1, -2, -2] \cdot [2, 1, 0] = 0
+\]</div>
+<p>som betyr at planet og linja er parallelle. Det betyr at avstanden fra planet til linja <em>alltid</em> er den samme. Siden kuleflaten har sentrum på linja, og planet tangerer kula, vil denne avstanden være lik radius.</p>
+<p>For å regne ut denne avstanden trenger vi en planlikning til <span class="math notranslate nohighlight">\(\alpha\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\lvec{AP} \cdot \vec n_\alpha = 0
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+[x - 0, y - 0, z - 0] \cdot [1, -2, -2] = 0
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+x - 2y - 2z = 0
+\]</div>
+<p>Vi kan sette inn koordinatene til parameterframstillingen for linja i formelen for avstand fra punkt til plan for å finne radius:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+r &amp;= \dfrac{\abs{x - 2y - 2z}}{\sqrt{1^2 + (-2)^2 + (-2)^2}} \\
+\\
+&amp;= \dfrac{\abs{(9 + 2t) - 2\cdot t - 2 \cdot 0}}{3} \\
+\\
+&amp;= \dfrac{\abs{9}}{3} \\
+\\
+&amp;= 3
+\end{split}\]</div>
+<p>Altså må radius til kula være <span class="math notranslate nohighlight">\(r = 3\)</span>.</p>
+<p>Nå må vi bare finne koordinatene til kulens sentrum. Vi har at punktet <span class="math notranslate nohighlight">\(D\)</span> ligger på kuleflaten, og siden sentrum <span class="math notranslate nohighlight">\(S\)</span> ligger på linja, må vi ha at</p>
+<div class="math notranslate nohighlight">
+\[
+\abs{\vec r_\ell(t) - \lvec{OD}}^2 = r^2 = 9
+\]</div>
+<p>for maksimalt to verdier av <span class="math notranslate nohighlight">\(t\)</span>. Vi setter opp likningen og løser for <span class="math notranslate nohighlight">\(t\)</span>. Vi har at</p>
+<div class="math notranslate nohighlight">
+\[
+\vec r_\ell(t) - \lvec{OD} = [9 + 2t, t, 0] - [9, 0, 2] = [2t, t, -2]
+\]</div>
+<p>som gir oss</p>
+<div class="math notranslate nohighlight">
+\[
+\abs{\vec r_\ell(t) - \lvec{OD}}^2 = 9
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+(2t)^2 + t^2 + (-2)^2 = 9
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+5t^2 + 4 = 9 \liff 5t^2 = 5 \liff t = \pm 1
+\]</div>
+<p>Dermed vil de mulige sentrene til kula være</p>
+<div class="math notranslate nohighlight">
+\[
+\lvec{OS_1} = \vec r_\ell(1) = [11, 1, 0]
+\]</div>
+<p>eller</p>
+<div class="math notranslate nohighlight">
+\[
+\lvec{OS_2} = \vec r_\ell(-1) = [7, -1, 0]
+\]</div>
+<p>Altså har kula radius <span class="math notranslate nohighlight">\(3\)</span> og sentrum i enten <span class="math notranslate nohighlight">\(S_1(11, 1, 0)\)</span> eller <span class="math notranslate nohighlight">\(S_2(7, -1, 0)\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 
+
+:::::::::::::::{exercise} Oppgave 12
+Gitt punktene $A(1, 0, 1)$, $B(3, 1, 0)$ og $C(2, -1, 2)$, og en linje $\ell$ gitt ved 
+
+$$
+\vec r_\ell(t) = [2, 1, 4] + [1, 2, -1] \cdot t
+$$
+
+* Planet $\alpha$ går gjennom punktene $A$, $B$ og $C$.
+* Et punkt $S$ ligger på linja $\ell$ og er sentrum i en kuleflate $K$.
+* Planet $\alpha$ skjærer kuleflata $K$ i en sirkel med radius $3$.
+* Kuleflaten har radius $5$.
+
+Bestem de mulige koordinatene til kulens sentrum.
+::::::::::::::: --></section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./book/oppgavesamling"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../trigonometri/derivasjon/oppgaver.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Oppgaver: Derivasjon</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../eksamens%C3%B8ving/v%C3%A5r_26/oppgaver.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Eksamen vår 2026</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Innhold
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-Oppgave-1">Oppgave 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-Oppgave-2">Oppgave 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-Oppgave-3">Oppgave 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-Oppgave-4">Oppgave 4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-Oppgave-5">Oppgave 5</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-Oppgave-6">Oppgave 6</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-Oppgave-7">Oppgave 7</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-Oppgave-8">Oppgave 8</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-Oppgave-9">Oppgave 9</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-Oppgave-10">Oppgave 10</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-Oppgave-11">Oppgave 11</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Av René Ask, Edvard Munch Videregående Skole
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -4,8 +4,8 @@
 
 :::::::::::::::{exercise} Oppgave 1
 :::::::::::::{part} a
-:::{plot3d-2}
-width: 100%
+:::{interactive-plot3d}
+width: 50%
 fontsize: 24
 align: right
 xrange: (-1, 5)
@@ -40,8 +40,8 @@ $$
 
 
 :::::::::::::{part} b
-:::{plot3d-2}
-width: 100%
+:::{interactive-plot3d}
+width: 50%
 fontsize: 24
 align: right
 xrange: (-1, 5)
@@ -75,8 +75,8 @@ $$
 
 
 :::::::::::::{part} c
-:::{plot3d-2}
-width: 100%
+:::{interactive-plot3d}
+width: 50%
 fontsize: 24
 align: right
 xrange: (-3, 4)
