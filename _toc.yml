@@ -35,8 +35,11 @@ parts:
       sections:
       - file: book/romgeometri/kuler/oppgaver.md
         title: Oppgaver
+    
+    # - file: book/romgeometri/kurver/teori.md
 
-    # - file: book/romgeometri/sammendrag/teori.md
+    - file: book/romgeometri/sammendrag/teori.md
+      title: Sammendrag
 
 
 
@@ -68,6 +71,7 @@ parts:
       sections:
       - file: book/trigonometri/derivasjon/oppgaver.md
         title: Oppgaver
+
 
 
   # - caption: III. Følger og rekker
@@ -162,12 +166,18 @@ parts:
   #       title: Oppgaver
 
 
-  # - caption: Oppgavesamlinger
+  - caption: Oppgavesamlinger
+    numbered: false
+    chapters:
+    - file: book/oppgavesamling/romgeometri.md
+      title: Romgeometri
+
+
+  # - caption: Jeopardy
   #   numbered: false
   #   chapters:
-  #   - file: book/oppgavesamling/vektorregning.md
+  #   - file: book/jeopardy/romgeometri.md
   #     title: Romgeometri
-
 
   - caption: Eksamensøving
     numbered: false
