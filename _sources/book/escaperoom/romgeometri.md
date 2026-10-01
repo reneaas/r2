@@ -1,0 +1,82 @@
+# Escape room: Romgeometri
+
+
+::::::::{escape-room-2}
+:::::::{room}
+---
+code: 1296
+---
+Et plan $\alpha$ er gitt ved 
+
+$$
+2x + 2y - z - 9 = 0
+$$
+
+Et punkt $P(7, 6, -1)$ ligger utenfor planet og har en avstand $L$ til planet. 
+
+Koden til neste rom er $L^4$. 
+:::::::
+
+
+
+:::::::{room}
+---
+code: 132
+---
+Et plan $\alpha$ er gitt ved 
+
+$$
+\alpha: \quad 2x - 2y + z - 10 = 0
+$$
+
+* Planet tangerer en kuleflate med radius $6$ i punktet $A(5, 1, 2)$. 
+* Kuleflaten har sentrum i $S_1$ eller $S_2$.
+
+Koden til neste rom er $|\overrightarrow{OS_1}|^2 + |\overrightarrow{OS_2}|^2$. 
+
+
+:::::::
+
+
+:::::::{room}
+---
+code: 4096
+---
+Pyramiden $ABCD$ har hjørner i punktene $A(2, 0, 0)$, $B(2, 4, 0)$, $C(0, 0, 2)$ og $D(2, 4, 6)$.
+
+Pyramiden har et volum $V$. 
+
+Koden til neste rom er $V^4$.
+
+:::::::
+
+
+
+Den ferdige versjonen blir derfor:
+:::::::{room}
+---
+code: 355
+---
+Punktene
+
+$$
+A(0,0,0), \qquad B(4,0,0), \qquad C(0,6,0)
+$$
+
+danner grunnflaten i en pyramide $ABCP$.
+
+Toppunktet $P$ beveger seg langs kurven
+
+$$
+P(t)= (t, t + 2, -t^2 + 6t - 4) \qfor t \in \real
+$$
+
+Bestem når pyramiden har størst mulig volum.
+
+Når volumet er størst, har toppunktet koordinater $P(x,y,z)$.
+
+Koden til neste rom er tallet med sifrene $xyz$.
+:::::::
+
+
+::::::::
