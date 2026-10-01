@@ -37,11 +37,13 @@ $$
 
 
 :::::::::{masonry-card} Areal av trekant
-Arealet av en trekant $ABC$ er
+En trekant $ABC$ har arealvektor $\vec G$ gitt ved
 
 $$
-G = \dfrac{1}{2}|\lvec{AB}\times \lvec{AC}|
+\vec G = \dfrac{1}{2} \cdot \lvec{AB}\times \lvec{AC}
 $$
+
+Arealet av trekanten er lik $\abs{\vec G}$.
 
 
 :::::::::
@@ -160,6 +162,8 @@ text: 0.5 * (0 + 1), 0.5 * (-2 + 3), "$\overrightarrow{AP}$", top-left
 $$
 L = \dfrac{|\lvec{AP} \times \vec v|}{|\vec v|}
 $$
+
+Formelen gjelder også for avstanden mellom to parallelle linjer.
 
 :::::::::
 

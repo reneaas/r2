@@ -1956,14 +1956,12 @@ $$
 
 
 :::::::::::::{part} b
+Bestem det minste mulige volumet pyramiden kan ha.
+
 
 :::{hint} Hint
 Bruk derivasjon til å finne den verdien av $t$ som gir det minste mulige volumet $V(t)$.
 :::
-
-
-Bestem det minste mulige volumet pyramiden kan ha.
-
 
 
 :::::{answer}
