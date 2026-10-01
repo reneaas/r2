@@ -173,11 +173,11 @@ parts:
       title: Romgeometri
 
 
-  # - caption: Jeopardy
-  #   numbered: false
-  #   chapters:
-  #   - file: book/jeopardy/romgeometri.md
-  #     title: Romgeometri
+  - caption: Jeopardy
+    numbered: false
+    chapters:
+    - file: book/jeopardy/romgeometri.md
+      title: Romgeometri
 
   - caption: Eksamensøving
     numbered: false
