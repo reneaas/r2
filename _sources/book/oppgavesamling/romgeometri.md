@@ -2157,7 +2157,7 @@ Altså har kula radius $3$ og sentrum i enten $S_1(11, 1, 0)$ eller $S_2(7, -1, 
 
 
 :::::::::::::::{exercise} Oppgave 12
-Gitt punktene $A(1, 0, 1)$, $B(3, 1, 0)$ og $C(2, -1, 2)$, og en linje $\ell$ gitt ved 
+Gitt punktene $A(2, 1, 4)$, $B(4, 0, 4)$ og $C(2, 3, 2)$, og en linje $\ell$ gitt ved 
 
 $$
 \vec r_\ell(t) = [2, 1, 4] + [1, 2, -1] \cdot t
@@ -2169,4 +2169,105 @@ $$
 * Kuleflaten har radius $5$.
 
 Bestem de mulige koordinatene til kulens sentrum.
+
+
+:::::{answer}
+$S_1(6, 9, 0)$ eller $S_2(-2, -7, 8)$
+
+::::{solution}
+Vi kan først og fremst merke oss at punktet $A(2, 1, 4)$ ligger både i planet og på linja siden
+
+$$
+\lvec{OA} = \vec r_\ell(0) = [2, 1, 4].
+$$
+
+Det er ikke opplagt hvordan vi går fram her, så vi får først finne ut mer om objektene involvert. Avstanden fra kulens sentrum $S$ til planet vil tilfredsstille
+
+$$
+L^2 + \rho^2 = r^2
+$$
+
+der $\rho$ er radius til skjæringssirkelen mellom planet og kulen, og $r$ er radius til kulen, og $L$ er avstanden fra $S$ til planet. Vi har at $\rho = 3$ og $r = 5$, så 
+
+$$
+L^2 = r^2 - \rho^2 = 5^2 - 3^2 = 16 \limplies L = 4
+$$
+
+
+Siden punktet $S$ ligger på linja $\ell$ vil vi for minst én verdi av $t$ ha at 
+
+$$
+\lvec{AS} = \underbrace{\vec r_\ell(t)}_{\displaystyle \lvec{OS}} - \lvec{OA} = [t, 2t, -t]
+$$
+
+
+Vi vet allerede avstanden $L$ fra $S$ til planet, så da må vi ha at 
+
+$$
+L = \dfrac{\abs{\lvec{AS} \cdot \vec n_\alpha}}{\abs{\vec n_\alpha}} = 4
+$$
+
+For å finne denne avstanden, må vi ha en normalvektor til planet. Dette kan vi finne ved kryssproduktet av to vektorer som ligger i planet, for eksempel $\lvec{AB}$ og $\lvec{AC}$. Vi har at
+
+$$
+\lvec{AB} = [2, -1, 0] \qog \lvec{AC} = [0, 2, -2]
+$$
+
+som gir
+
+$$
+\begin{align*}
+\lvec{AB} \times \lvec{AC} &= \mqty|\vec e_x & \vec e_y & \vec e_z \\ 2 & -1 & 0 \\ 0 & 2 & -2| \\
+\\
+&= \vec e_x \cdot \underbrace{\mqty|-1 & 0 \\ 2 & -2|}_{\displaystyle = 2} - \vec e_y \cdot \underbrace{\mqty|2 & 0 \\ 0 & -2|}_{\displaystyle = -4} + \vec e_z \cdot \underbrace{\mqty|2 & -1 \\ 0 & 2|}_{\displaystyle = 4} \\
+\\
+&= [2, 4, 4] \\
+\\
+&= 2 \cdot [1, 2, 2]
+\end{align*}
+$$
+
+Altså er en normalvektor til planet gitt ved 
+
+$$
+\vec n_\alpha = [1, 2, 2] \limplies \abs{\vec n_\alpha} = 3
+$$
+
+Nå kan vi sette opp en likning for $t$: 
+
+$$
+4 = \dfrac{\abs{[t, 2t, -t] \cdot [1, 2, 2]}}{3}
+$$
+
+$$
+4 = \dfrac{\abs{t + 4t - 2t}}{3}
+$$
+
+$$
+4 = \dfrac{\abs{3t}}{3} = \abs{t}
+$$
+
+som gir at 
+
+$$
+\abs{t} = 4 \liff t = \pm 4
+$$
+
+Altså blir de mulige koordinatene til kulens sentrum gitt ved 
+
+$$
+\lvec{OS_1} = \vec r_\ell(4) = [2, 1, 4] + [1, 2, -1] \cdot 4 = [6, 9, 0]
+$$
+
+eller
+
+$$
+\lvec{OS_2} = \vec r_\ell(-4) = [2, 1, 4] + [1, 2, -1] \cdot (-4) = [-2, -7, 8]
+$$
+
+Altså har kulen sentrum i enten $S_1(6, 9, 0)$ eller $S_2(-2, -7, 8)$.
+
+
+::::
+:::::
 :::::::::::::::
