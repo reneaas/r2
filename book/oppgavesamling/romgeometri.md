@@ -2236,6 +2236,10 @@ $$
 Nå kan vi sette opp en likning for $t$: 
 
 $$
+L = \dfrac{\abs{\lvec{AS} \cdot \vec n_\alpha}}{\abs{\vec n_\alpha}}
+$$
+
+$$
 4 = \dfrac{\abs{[t, 2t, -t] \cdot [1, 2, 2]}}{3}
 $$
 
