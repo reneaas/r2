@@ -179,6 +179,12 @@ parts:
     - file: book/jeopardy/romgeometri.md
       title: Romgeometri
 
+  # - caption: Escape room
+  #   numbered: false
+  #   chapters:
+  #   - file: book/escaperoom/romgeometri.md
+  #     title: Romgeometri
+
   - caption: Eksamensøving
     numbered: false
     chapters:

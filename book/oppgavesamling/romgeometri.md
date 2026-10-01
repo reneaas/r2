@@ -1832,17 +1832,51 @@ Altså har sirkelen sentrum i $(5, 5, 6)$ og radius $3\sqrt{5}$.
 
 
 :::::::::::::::{exercise} Oppgave 10
+
+:::{interactive-plot3d}
+interactive-var: t, -6, 6, 61
+interactive-var-start: t=-2
+width: 50%
+align: right
+let: Ax = 0
+let: Ay = 0
+let: Az = 0
+let: Bx = 2
+let: By = 0
+let: Bz = 4
+let: Cx = 0
+let: Cy = 3
+let: Cz = 6
+let: Tx = t
+let: Ty = t
+let: Tz = t**2 + 5
+pyramid: base=[(Ax, Ay, Az), (Bx, By, Bz), (Cx, Cy, Cz)], apex=(Tx, Ty, Tz), color=blue, alpha=0.2
+curve: x=t, y=t, z=t**2 + 5, t=(-6, 6), color=red, lw=2.5
+ticks: off
+xrange: (-2, 6)
+yrange: (-2, 6)
+zrange: (-2, 10)
+text: at=(Ax, Ay, Az), value="$A$", ha=right, va=top
+text: at=(Bx, By, Bz), value="$B$", ha=left, va=center
+text: at=(Cx, Cy, Cz), value="$C$", ha=left, va=bottom
+text: at=(t, t, t**2 + 5), value="$T$", ha=right, va=center
+fontsize: 24
+point: at=(t, t, t**2 + 5), drag=t, color=black
+:::
+
+
+
 En pyramide har grunnflate i punktene $A(0, 0, 0)$, $B(2, 0, 4)$ og $C(0, 3, 6)$. 
 
-Pyramiden har et toppunkt $T(t, t, t^2 + 5)$ der $t \in \real$.
+Pyramiden har et toppunkt $T(t, t, t^2 + 5)$ der $t \in \real$ som ligger på en kurve i rommet.
 
 :::::::::::::{part} a
-Bestem $t$ slik at volumet av pyramiden er $10$.
+Bestem hvilke punkter $T$ som gir at volumet av pyramiden er lik $10$.
 
 
 :::::{answer}
 $$
-t = -1 \or t = 5
+T(-1, -1, 6) \or T(5, 5, 30)
 $$
 
 ::::{solution}
@@ -1947,6 +1981,12 @@ som gir
 
 $$
 t = -1 \or t = 5
+$$
+
+Dermed blir de ulike mulige toppunktene $T$ som gir volumet $10$:
+
+$$
+T(-1, -1, 6) \or T(5, 5, 30)
 $$
 
 ::::
@@ -2114,7 +2154,7 @@ Altså har kula radius $3$ og sentrum i enten $S_1(11, 1, 0)$ eller $S_2(7, -1, 
 :::::::::::::::
 
 
-<!-- 
+
 
 :::::::::::::::{exercise} Oppgave 12
 Gitt punktene $A(1, 0, 1)$, $B(3, 1, 0)$ og $C(2, -1, 2)$, og en linje $\ell$ gitt ved 
@@ -2129,4 +2169,4 @@ $$
 * Kuleflaten har radius $5$.
 
 Bestem de mulige koordinatene til kulens sentrum.
-::::::::::::::: -->
+:::::::::::::::

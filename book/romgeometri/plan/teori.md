@@ -955,6 +955,88 @@ $$
 
 
 
+---
+
+
+
+
+:::::::::::::::{example} Eksempel 8
+En linje $\ell$ går gjennom punktet $A(3, 0, 4)$ og har en retningsvektor $\vec{v}_\ell = [2, 1, 1]$. 
+
+En linje $m$ går gjennom punktet $B(4, 2, -1)$ og har en retningsvektor $\vec{v}_m = [1, 2, 1]$.
+
+Finn den korteste avstanden mellom $\ell$ og $m$.
+
+
+::::{solution}
+---
+open:
+---
+Først finner vi en vektor $\vec{n}$ som står normalt på begge linjer:
+
+$$
+\begin{align*}
+\lvec{n} &= \vec{v}_\ell \times \vec{v}_m \\
+\\
+&= \mqty|\vec{e}_x & \vec{e}_y & \vec{e}_z \\ 2 & 1 & 1 \\ 1 & 2 & 1| \\
+\\
+&= \vec{e}_x \cdot \mqty|1 & 1 \\ 2 & 1| - \vec{e}_y \cdot \mqty|2 & 1 \\ 1 & 1| + \vec{e}_z \cdot \mqty|2 & 1 \\ 1 & 2| \\
+\\
+&= \vec{e}_x \cdot (1 \cdot 1 - 1 \cdot 2) - \vec{e}_y \cdot (2 \cdot 1 - 1 \cdot 1) + \vec{e}_z \cdot (2 \cdot 2 - 1 \cdot 1) \\
+\\
+&= \vec{e}_x \cdot (1 - 2) - \vec{e}_y \cdot (2 - 1) + \vec{e}_z \cdot (4 - 1) \\
+\\
+&= -\vec{e}_x  - \vec{e}_y  + 3\vec{e}_z  \\
+\\
+&= [-1, -1, 3]
+\end{align*}
+$$
+
+Vi trenger en vektor som peker fra et punkt på linja $\ell$ til et punkt på linja $m$. Vi velger vektoren $\lvec{AB}$:
+
+$$
+\lvec{AB} = [4 - 3, 2 - 0, -1 - 4] = [1, 2, -5]
+$$
+
+Den korteste avstanden mellom linjene $\ell$ og $m$ er da gitt ved 
+
+$$
+L = \dfrac{|\lvec{AB} \cdot \vec{n}|}{\abs{\vec{n}}}
+$$
+
+Vi regner ut prikkproduktet: 
+
+$$
+\begin{align*}
+\lvec{AB} \cdot \vec{n} &= [1, 2, -5] \cdot [-1, -1, 3] \\
+\\
+&= 1 \cdot (-1) + 2 \cdot (-1) + (-5) \cdot 3 \\
+\\
+&= -1 - 2 - 15 \\
+\\
+&= -18
+\end{align*}
+$$
+
+så regner vi ut lengden av vektoren $\vec{n}$:
+
+$$
+\abs{\vec{n}} = \sqrt{(-1)^2 + (-1)^2 + 3^2} = \sqrt{1 + 1 + 9} = \sqrt{11}
+$$
+
+Dermed er den korteste avstanden mellom linjene $\ell$ og $m$ gitt ved
+
+$$
+L = \dfrac{|-18|}{\sqrt{11}} = \dfrac{18}{\sqrt{11}}
+$$
+
+::::
+
+
+:::::::::::::::
+
+
+
 
 
 ## Skjæringer
@@ -1007,7 +1089,7 @@ $$
 
 
 
-:::::::::::::::{example} Eksempel 8
+:::::::::::::::{example} Eksempel 9
 Et plan $\alpha$ er gitt ved likningen
 
 $$
@@ -1030,7 +1112,7 @@ open:
 Vi setter inn posisjonsvektoren til linja inn i likningen til planet og løser for $t$:
 
 $$
-(3t + 4) + 2(t + 5) + (t + 3) - 5 = 0
+\underbrace{(3t + 4)}_{\displaystyle x} + 2 \cdot \underbrace{(t + 5)}_{\displaystyle y} + \underbrace{(t + 3)}_{\displaystyle z} - 5 = 0
 $$
 
 $$
@@ -1130,7 +1212,7 @@ $$
 
 
 
-:::::::::::::::{example} Eksempel 9
+:::::::::::::::{example} Eksempel 10
 To plan $\alpha$ og $\beta$ er gitt ved likningene
 
 $$
@@ -1199,9 +1281,5 @@ $$
 
 
 :::::::::::::::
-
-
-:::{clear}
-:::
 
 

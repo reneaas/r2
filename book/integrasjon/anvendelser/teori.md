@@ -39,7 +39,7 @@ vline: b, 0, f(b), dashed, gray
 Dersom funksjonsgrafene til to funksjoner $f$ og $g$ skjærer hverandre i $x = a$ og $x = b$, så er arealet $A$ av området mellom grafene gitt ved
 
 $$
-A = \int\limits_a^b \abs{f(x) - g(x)} \, \d x
+\boxed{A = \int\limits_a^b \abs{f(x) - g(x)} \, \d x}
 $$
 
 
@@ -211,16 +211,14 @@ ymax: 8
 :::
 
 
-:::{plot3d}
-layout: symmetric
+:::{interactive-plot3d}
 xrange: (0, 8)
-yrange: (-2.5, 8)
-zrange: (-2.5, 8)
+yrange: (-2, 8)
+zrange: (-8, 8)
 ticks: false
-xlabel: $x$
-ylabel: $y$
-zlabel: $z$
-solid-of-revolution: x + 1, (1, 5), blue, alpha=0.35, disks=6
+solid-of-revolution: 2*x + 1, (1, 5), blue, alpha=0.2
+curve: x=t, y=0, z=2*t + 1, t=(1, 5), color=red
+height: 250px
 :::
 
 
