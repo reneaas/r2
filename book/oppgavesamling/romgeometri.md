@@ -1870,6 +1870,9 @@ En pyramide har grunnflate i punktene $A(0, 0, 0)$, $B(2, 0, 4)$ og $C(0, 3, 6)$
 
 Pyramiden har et toppunkt $T(t, t, t^2 + 5)$ der $t \in \real$ som ligger på en kurve i rommet.
 
+
+I figuren til høyre kan du flytte rundt på punktet $T$.
+
 :::::::::::::{part} a
 Bestem hvilke punkter $T$ som gir at volumet av pyramiden er lik $10$.
 
