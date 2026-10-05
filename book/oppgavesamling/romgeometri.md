@@ -348,7 +348,7 @@ Lag en parameterframstilling for $\ell$.
 
 
 :::::{answer}
-$\vec r(t) = [3 + 2t, 1 + 2t, 2 + t]$
+$\vec r(t) = [3, 1, 2] + [2, 2, 1] \cdot t$
 
 ::::{solution}
 Vi trenger en retningsvektor for linja. Enhver slik vektor er parallell med
@@ -364,10 +364,10 @@ $$
 \vec r(t) &= \lvec{OA} + \vec v \cdot t \\
 \\
 &= [3, 1, 2] + [2, 2, 1] \cdot t \\
-\\
-&= [3 + 2t, 1 + 2t, 2 + t]
 \end{align*}
 $$
+
+> Det er ofte ryddig å bare oppgi svaret på formen ovenfor siden det viser tydelig hva som er startpunkt og hva som er retningsvektor. I praktiske oppgaver må vi som regel forenkle og skrive det om til den mer kompakte formen $\vec r(t) = [3 + 2t, 1 + 2t, 2 + t]$ for å bruke det videre.
 ::::
 :::::
 
@@ -2277,4 +2277,108 @@ Altså har kulen sentrum i enten $S_1(6, 9, 0)$ eller $S_2(-2, -7, 8)$.
 
 ::::
 :::::
+:::::::::::::::
+
+
+
+---
+
+
+
+:::::::::::::::{exercise} Oppgave 13
+* Et plan $\alpha$ er gitt ved $x + 2y + 2z - 9 = 0$
+* En linje $\ell$ er gitt ved $\vec r_\ell(t) = [1, 1, 2] + [1, 1, 1] \cdot t$
+* En kuleflate $K$ har sentrum $S$ som ligger på linja $\ell$
+* $K$ tangerer $\alpha$ i punktet $A(3, 1, 2)$.
+
+Bestem kuleflatens sentrum og radius.
+
+
+
+:::::{answer}
+Sentrum $S(5, 5, 6)$ og radius $r = 6$.
+
+
+::::{solution}
+Vi vet at punktene $A$ og $S$ ligger på linja $\ell$. Sentrum $S$ vil være gitt ved 
+
+$$
+\lvec{OS} = \vec r_\ell(t) = [t + 1, t + 1, t + 2]
+$$
+
+for én verdi av $t$. Betyr at $\abs{\lvec{AS}}^2 = r^2$ der $r$ er kulens radius. Vi kan finne et eksplisitt uttrykk for dette:
+
+$$
+\lvec{AS} = \vec r_\ell(t) - \vec \lvec{OA} = [t + 1, t + 1, t + 2] - [3, 1, 2] = [t - 2, t, t]
+$$
+
+Dermed er 
+
+$$
+r^2 = \abs{\lvec{AS}}^2 = (t - 2)^2 + t^2 + t^2 = 3t^2 - 4t + 4
+$$
+
+Samtidig vet vi at $\alpha$ tangerer $K$ i punktet $A$. Det betyr at den avstanden fra punktet $S$ til $\alpha$ også er lik kulens radius $r$. Da har vi 
+
+$$
+\begin{align*}
+r &= L = \dfrac{\abs{(t + 1) + 2(t + 1) + 2(t + 1) - 9}}{3} \\
+\\
+&= \dfrac{\abs{t + 1 + 2t + 2 + 2t + 2 - 9}}{3} \\
+\\
+&= \dfrac{\abs{5t - 2}}{3}
+\end{align*}
+$$
+
+Hvis vi krever at de to uttrykkene for $r$ er like, eller snarere $r^2$, får vi:
+
+$$
+\dfrac{(5t - 2)^2}{3^2} = 3t^2 - 4t + 4
+$$
+
+$$
+(5t - 2)^2 = 9(3t^2 - 4t + 4) = 27t^2 - 36t + 36
+$$
+
+$$
+25t^2 - 20t + 4 = 27t^2 - 36t + 36
+$$
+
+$$
+0 = 2t^2 - 16t + 32
+$$
+
+$$
+0 = t^2 - 8t + 16 = (t - 4)^2
+$$
+
+Altså får vi at 
+
+$$
+t = 4
+$$
+
+Kulens sentrum blir da 
+
+$$
+\lvec{OS} = \vec r_\ell(4) = [1, 1, 2] + [1, 1, 1] \cdot 4 = [5, 5, 6]
+$$
+
+Kulens radius tilfredsstiller
+
+$$
+r^2 = 3t^2 - 4t + 4 = 3 \cdot 4^2 - 4 \cdot 4 + 4 = 48 - 16 + 4 = 36
+$$
+
+som gir at 
+
+$$
+r = 6
+$$
+
+Altså er kulens sentrum $S(5, 5, 6)$ og radius $r = 6$.
+::::
+:::::
+
+
 :::::::::::::::
