@@ -1,6 +1,32 @@
 # Escape room: Romgeometri
 
 
+
+## Bossrommet
+
+::::::::{escape-room-2}
+:::::::{room}
+---
+code: 1296
+---
+Hovedbossen venter her. 
+
+Koden for å åpne rommet er $k_1 \cdot k_2 \cdot k_3$ der
+
+* $k_1$ er koden til det siste rommet i escape room 1
+* $k_2$ er koden til det siste rommet i escape room 2
+* $k_3$ er koden til det siste rommet i escape room 3
+
+:::::::
+
+
+
+::::::::
+
+
+## Escape room 1
+
+
 ::::::::{escape-room-2}
 :::::::{room}
 ---
@@ -80,3 +106,10 @@ Koden til neste rom er tallet med sifrene $xyz$.
 
 
 ::::::::
+
+
+## Escape room 2
+
+
+
+## Escape room 3
