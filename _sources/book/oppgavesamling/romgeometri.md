@@ -2300,7 +2300,7 @@ Sentrum $S(5, 5, 6)$ og radius $r = 6$.
 
 
 ::::{solution}
-Vi vet at punktene $A$ og $S$ ligger på linja $\ell$. Sentrum $S$ vil være gitt ved 
+Vi vet at punktene $S$ ligger på linja $\ell$. Siden sentrum $S$ ligger på linja vil $\vec{AS}$ peke fra tangeringspunktet til sentrum $S$. Lengden av denne vektoren er lik radiusen til kula. 
 
 $$
 \lvec{OS} = \vec r_\ell(t) = [t + 1, t + 1, t + 2]
