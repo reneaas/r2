@@ -2309,7 +2309,7 @@ $$
 for én verdi av $t$. Betyr at $\abs{\lvec{AS}}^2 = r^2$ der $r$ er kulens radius. Vi kan finne et eksplisitt uttrykk for dette:
 
 $$
-\lvec{AS} = \vec r_\ell(t) - \vec \lvec{OA} = [t + 1, t + 1, t + 2] - [3, 1, 2] = [t - 2, t, t]
+\lvec{AS} = \vec r_\ell(t) - \lvec{OA} = [t + 1, t + 1, t + 2] - [3, 1, 2] = [t - 2, t, t]
 $$
 
 Dermed er 
