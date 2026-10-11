@@ -942,7 +942,7 @@ Bestem en likning for $\beta$.
 
 :::::{answer}
 $$
-15x - 2y + 4z - 28 = 0
+15x - 2y + 4z - 40 = 0
 $$
 
 ::::{solution}
@@ -969,15 +969,15 @@ $$
 Vi velger derfor $\vec n_\beta = [15, -2, 4]$ som normalvektor til planet $\beta$. Da kan vi skrive en likning for planet som
 
 $$
-\lvec{BP} \cdot \vec n_\beta = 0
+\lvec{ZP} \cdot \vec n_\beta = 0
 $$
 
 $$
-[x, y, z - 7] \cdot [15, -2, 4] = 0
+[x, y, z - 10] \cdot [15, -2, 4] = 0
 $$
 
 $$
-15x - 2y + 4z - 28 = 0
+15x - 2y + 4z - 40 = 0
 $$
 ::::
 
