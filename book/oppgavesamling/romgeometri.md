@@ -1666,7 +1666,7 @@ Lag en parameterframstilling for $\ell$.
 $\vec r_\ell(t) = [-8 - 4t, 5 - t, 5 + 6t]$
 
 ::::{solution}
-Retningsvektoren til linja vil stå normalt på begge plan, slik at vi kan lage en retningsvektor for linja ved å ta kryssproduktet av normalvektorene. Vi har 
+Retningsvektoren til linja må være parallell med begge plan samtidig. Det betyr at retningsvektoren er ortogonal med normalvektorene til begge plan. En slik retningsvektor kan vi lage ved å ta kryssproduktet av normalvektorene. Vi har 
 
 $$
 \vec n_\alpha = [2, -2, 1] \qog \vec n_\beta = [7, -4, 4]
