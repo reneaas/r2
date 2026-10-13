@@ -2045,7 +2045,8 @@ $$
 :::::::::::::::{exercise} Oppgave 11 
 * Et plan $\alpha$ går gjennom punktene $A(0, 0, 0)$, $B(2, 1, 0)$ og $C(2, 0, 1)$.
 * En linje $\ell$ er gitt ved $\vec r_\ell(t) = [9, 0, 0] + [2, 1, 0] \cdot t$.
-* En kuleflate $K$ har sentrum $S$ på linja $\ell$. Kula inneholder punktet $D(9, 0, 2)$.
+* En kuleflate $K$ har sentrum $S$ på linja $\ell$. 
+* Punktet $D(9, 0, 2)$ ligger på kuleflaten $K$.
 * Kuleflaten $K$ tangerer $\alpha$.
 
 
@@ -2112,23 +2113,25 @@ $$
 
 Altså må radius til kula være $r = 3$. 
 
-Nå må vi bare finne koordinatene til kulens sentrum. Vi har at punktet $D$ ligger på kuleflaten, og siden sentrum $S$ ligger på linja, må vi ha at 
+Nå må vi bare finne koordinatene til kulens sentrum. Vi vet at sentrum $S$ ligger på linja som betyr at 
 
 $$
-\abs{\vec r_\ell(t) - \lvec{OD}}^2 = r^2 = 9
+\lvec{OS} = \vec r_\ell(t)
 $$
 
-for maksimalt to verdier av $t$. Vi setter opp likningen og løser for $t$. Vi har at
+for én eller flere verdier av $t$. Vi har at punktet $D$ ligger på kuleflaten som betyr at avstanden fra $D$ til $S$ må være lik radius, altså
 
 $$
-\vec r_\ell(t) - \lvec{OD} = [9 + 2t, t, 0] - [9, 0, 2] = [2t, t, -2]
+\abs{\lvec{DS}} = 3 \limplies \abs{\lvec{DS}}^2 = 9
 $$
 
-som gir oss 
+Vi har at 
 
 $$
-\abs{\vec r_\ell(t) - \lvec{OD}}^2 = 9
+\lvec{DS} = \vec r_\ell(t) - \lvec{OD} = [9 + 2t, t, 0] - [9, 0, 2] = [2t, t, -2] 
 $$
+
+Ved å kreve at $\abs{\lvec{DS}}^2 = 9$ får vi
 
 $$
 (2t)^2 + t^2 + (-2)^2 = 9
