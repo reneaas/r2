@@ -88,7 +88,9 @@ $$
 
 
 :::::{answer}
-
+$$
+\varphi = \dfrac{\pi}{2}
+$$
 
 ::::{solution}
 $$
@@ -166,6 +168,9 @@ $$
 
 
 :::::{answer}
+$$
+\beta = -90\degree
+$$
 
 
 ::::{solution}
