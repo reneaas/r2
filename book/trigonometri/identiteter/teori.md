@@ -143,8 +143,8 @@ angle-arc: (0, 0), 0.2, 0, u, blue, arrow
 angle-arc: (0, 0), 0.3, u, v, red, arrow
 angle-arc: (0, 0), 0.4, u, w, purple, arrow
 text: 0.3 * cos(u*pi/360), 0.3 * sin(u*pi/360), "$\varphi$", center-center
-text: 0.5 * cos(0.5*(u + v)*pi/180), 0.5 * sin(0.5*(u + v)*pi/180), "$\varphi + \frac{\pi}{2}$", center-center
-text: 0.65 * cos(0.5*(w + u)*pi/180), 0.65 * sin(0.5*(w + u)*pi/180), "$\varphi - \frac{\pi}{2}$", center-center
+text: 0.5 * cos(0.5*(u + v)*pi/180), 0.5 * sin(0.5*(u + v)*pi/180), "$+\frac{\pi}{2}$", center-center
+text: 0.65 * cos(0.5*(w + u)*pi/180), 0.65 * sin(0.5*(w + u)*pi/180), "$-\frac{\pi}{2}$", center-center
 text: cos(u*pi/180), sin(u*pi/180), "$P$", top-right
 text: cos(v*pi/180), sin(v*pi/180), "$Q$", top-left
 text: cos(w*pi/180), sin(w*pi/180), "$R$", bottom-right
