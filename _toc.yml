@@ -205,10 +205,10 @@ parts:
 
 
 
-  # - caption: Dev
-  #   numbered: false
-  #   chapters:
-  #   - file: book/dev.md
+  - caption: Dev
+    numbered: false
+    chapters:
+    - file: book/dev.md
 
 
     
