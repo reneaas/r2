@@ -8,8 +8,39 @@
 
 Trigonometriske identiteter lar oss omforme uttrykk med sinus og cosinus, og de lar oss regne ut eksakte verdier til en del vinkler ved å bruke de eksakte verdiene vi allerede kjenner. 
 
-I praksis er det mange identiteter, men de fleste kan vi bruke ved hjelp av enhetssirkelen og vektorregning.
+I praksis er det mange identiteter, men de fleste kan vi bruke ved hjelp av enhetssirkelen og vektorregning. 
 
+
+:::{plot}
+nocache:
+width: 350px
+align: right
+fontsize: 28
+axis: equal
+ticks: off
+circle: (0, 0), 1
+let: u = 60
+vector: (0, 0), (cos(u*pi/180), sin(u*pi/180)), blue
+angle-arc: (0, 0), 0.35, 0, u, red, arrow
+text: 0.45 * cos(u*pi/360), 0.45 * sin(u*pi/360), "$\varphi$", center-center
+point: (cos(u*pi/180), sin(u*pi/180))
+text: 1.2 * cos(u*pi/180), 1.2 * sin(u*pi/180), "$\vec{r}(\varphi)$", center-center
+xlabel: $\cos \varphi$
+ylabel: $\sin \varphi$
+:::
+
+
+Punktene på enhetssirkelen kan beskrives med posisjonsvektoren
+
+$$
+\vec r(\varphi) = [\cos \varphi, \sin \varphi]
+$$
+
+som angir koordinatene til punktet man får dersom man roterer et punkt som starter i $(1, 0)$ på $x$-aksen med $\varphi$ radianer på enhetssirkelen.
+
+
+:::{clear}
+:::
 
 :::::::::::::::{summary} Periodisitet
 :::{plot}
@@ -118,6 +149,42 @@ $$
 
 ---
 
+## Rotasjoner
+
+
+:::{plot}
+width: 350px
+align: right
+axis: equal
+ticks: off
+let: a = 1
+let: b = 2
+vector: (0, 0), (a, b), blue
+point: (a, b)
+text: a + 0.2, b + 0.1, "$[a, b]$", top-right
+vector: (0, 0), (-b, a), red
+point: (-b, a)
+text: -b - 0.2, a + 0.1, "$[-b, a]$", top-center
+vector: (0, 0), (b, -a), purple
+point: (b, -a)
+text: b + 0.2, -a, "$[b, -a]$", bottom-right
+fontsize: 28
+let: vx = a
+let: vy = b
+let: ux = b
+let: uy = -a
+let: ds = 0.15
+line-segment: (ds * ux, ds * uy), (ds * ux + ds * vx, ds * uy + ds * vy), solid, gray
+line-segment: (ds * vx, ds * vy), (ds * vx + ds * ux, ds * vy + ds * uy), solid, gray
+:::
+
+
+
+Når vi roterer en vektor $\vec r = [a, b]$ med 90 grader, så får vi en **tverrvektor** som står normalt på den opprinnelige vektoren og har samme lengde. Vi kan lage to forskjellige tverrvektorer avhengig av hvilken retning vi ønsker å rotere vektoren:
+1. Rotasjon *mot* klokka i positiv omløpsretning. Da får vi $\vec r_\perp = [-b, a]$.
+2. Rotasjon *med* klokka i negativ omløpsretning. Da får vi $\vec r_\perp = [b, -a]$.
+
+
 
 :::::::::::::::{summary} Rotasjon med $\dfrac{\pi}{2}$ radianer (90 grader)
 :::{plot}
@@ -145,9 +212,9 @@ angle-arc: (0, 0), 0.4, u, w, purple, arrow
 text: 0.3 * cos(u*pi/360), 0.3 * sin(u*pi/360), "$\varphi$", center-center
 text: 0.5 * cos(0.5*(u + v)*pi/180), 0.5 * sin(0.5*(u + v)*pi/180), "$+\frac{\pi}{2}$", center-center
 text: 0.65 * cos(0.5*(w + u)*pi/180), 0.65 * sin(0.5*(w + u)*pi/180), "$-\frac{\pi}{2}$", center-center
-text: cos(u*pi/180), sin(u*pi/180), "$P$", top-right
-text: cos(v*pi/180), sin(v*pi/180), "$Q$", top-left
-text: cos(w*pi/180), sin(w*pi/180), "$R$", bottom-right
+text: cos(u*pi/180), sin(u*pi/180), "$\vec r(\varphi)$", top-right
+text: cos(v*pi/180), sin(v*pi/180), "$\vec r(\varphi + \frac{\pi}{2})$", top-left
+text: cos(w*pi/180), sin(w*pi/180), "$\vec r(\varphi - \frac{\pi}{2})$", bottom-right
 :::
 
 
@@ -165,45 +232,39 @@ $$
 
 
 :::::{proof} Vis forklaring
-Posisjonsvektoren $\lvec{OP}$ har koordinatene:
+Vi har at posisjonsvektoren med $\varphi$ radianer er gitt ved 
 
 $$
-\lvec{OP} = [\cos \varphi, \sin \varphi]
+\vec r(\varphi) = [\cos \varphi, \sin \varphi]
 $$
 
-Vi får vektoren $\lvec{OQ}$ ved å rotere $\lvec{OP}$ mot klokka med $\pi/2$ radianer (90 grader). Da må vi bytte plass på koordinatene og endre fortegnet på den nye $x$-koordinaten:
+Dersom vi roterer denne vektoren med $\pi/2$ radianer *mot* klokka (i positiv omløpsretning) får vi:
 
 $$
-\lvec{OQ} = [-\sin \varphi, \cos \varphi] = \mqty[\cos\left(\varphi + \dfrac{\pi}{2}\right), \sin\left(\varphi + \dfrac{\pi}{2}\right)]
+\vec r\left(\varphi + \dfrac{\pi}{2}\right) = \mqty[\cos\left(\varphi + \dfrac{\pi}{2}\right), \sin\left(\varphi + \dfrac{\pi}{2}\right)] = [-\sin \varphi, \cos \varphi]
 $$
 
-Altså er 
+som betyr at 
 
 $$
-\begin{align*}
-\cos \left(\varphi + \dfrac{\pi}{2}\right) &= -\sin \varphi \\
-\\
-\sin \left(\varphi + \dfrac{\pi}{2}\right) &= \cos \varphi
-\end{align*}
+\cos \left(\varphi + \dfrac{\pi}{2}\right) = -\sin \varphi \qog \sin \left(\varphi + \dfrac{\pi}{2}\right) = \cos \varphi
 $$
 
-Koordinatene til $\lvec{OR}$ får vi ved å rotere $\lvec{OP}$ med $\pi/2$ radianer *med* klokka. Da bytter vi plass på koordinatene og endrer fortegnet på den nye $y$-koordinaten:
+
+Dersom vi roterer $\vec r(\varphi)$ med $\pi/2$ radianer *med* klokka (i negativ omløpsretning) får vi:
 
 $$
-\lvec{OR} = \left[\sin \varphi, -\cos \varphi\right] = \left[\cos\left(\varphi - \dfrac{\pi}{2}\right), \sin\left(\varphi - \dfrac{\pi}{2}\right)\right]
+\vec r\left(\varphi - \dfrac{\pi}{2}\right) = \mqty[\cos\left(\varphi - \dfrac{\pi}{2}\right), \sin\left(\varphi - \dfrac{\pi}{2}\right)] = [\sin \varphi, -\cos \varphi]
 $$
 
-Altså får vi at 
+Dermed har vi at 
 
 $$
-\begin{align*}
-\cos \left(\varphi - \dfrac{\pi}{2}\right) &= \sin \varphi \\
-\\
-\sin \left(\varphi - \dfrac{\pi}{2}\right) &= -\cos \varphi
-\end{align*}
+\cos \left(\varphi - \dfrac{\pi}{2}\right) = \sin \varphi \qog \sin \left(\varphi - \dfrac{\pi}{2}\right) = -\cos \varphi
 $$
 
-Vi kan samle alle fire identiteter til to mer kompakte identiteter:
+Vi kan samle de to rotasjonene til to mer kompakte identiteter: 
+
 
 $$
 \begin{align*}
@@ -212,6 +273,7 @@ $$
 \sin \left(\varphi \pm \dfrac{\pi}{2}\right) &= \pm\cos \varphi
 \end{align*}
 $$
+
 
 :::::
 
@@ -237,7 +299,7 @@ vector: (0, 0), (cos(u), sin(u)), blue
 angle-arc: (0, 0), 0.3, 0, u*180/pi, red, arrow
 point: (cos(u), sin(u))
 text: 0.45 * cos(u/2), 0.45 * sin(u/2), "$\frac{2\pi}{3}$", center-center
-text: cos(u), sin(u), "$P$", top-left
+text: cos(u), sin(u), "$\vec r\left(\displaystyle \frac{2\pi}{3}\right)$", top-left
 xlabel: $\cos \varphi$
 ylabel: $\sin \varphi$
 :::
@@ -257,28 +319,41 @@ $$
 ---
 open:
 ---
-Koordinatene til vektoren $\lvec{OP}$ er 
+Koordinatene til posisjonsvektoren $\vec r \left(\dfrac{2\pi}{3}\right)$ er 
 
 $$
-\lvec{OP} = \left[\cos \dfrac{2\pi}{3}, \sin \dfrac{2\pi}{3}\right]
+\vec r \left(\dfrac{2\pi}{3}\right) = \left[\cos \dfrac{2\pi}{3}, \sin \dfrac{2\pi}{3}\right]
 $$
 
-Vi kan rotere vektoren $90$ grader *med* klokka for å få et punkt $Q$ som ligger i 1. kvadrant slik at vi kan bestemme koordinatene med en kjent vinkel:
+Hvis vi roterer posisjonsvektoren med $\pi/2$ radianer med klokka, så havner vi i 1. kvadrant: 
+
 
 $$
-\lvec{OQ} = \left[\cos \left(\dfrac{2\pi}{3} - \dfrac{\pi}{2}\right), \sin \left(\dfrac{2\pi}{3} - \dfrac{\pi}{2}\right)\right] = \left[\cos \dfrac{\pi}{6}, \sin \dfrac{\pi}{6}\right] = \left[\dfrac{\sqrt{3}}{2}, \dfrac{1}{2}\right]
+\begin{align*}
+\vec r\left(\dfrac{2\pi}{3} - \dfrac{\pi}{2}\right) &= \vec r\left(\dfrac{\pi}{6}\right) \\
+\\
+&= \left[\cos \dfrac{\pi}{6}, \sin \dfrac{\pi}{6}\right] \\
+\\
+&= \left[\dfrac{\sqrt{3}}{2}, \dfrac{1}{2}\right]
+\end{align*}
 $$
 
-Siden vi nå kjenner koordinatene til $\lvec{OQ}$, kan vi finne koordinatene til $\lvec{OP}$ ved å rotere $\lvec{OQ}$ $90$ grader *mot* klokka (altså vi bare "angrer" den opprinnelige rotasjonen). Da får vi at 
+Så roterer vi denne vektoren *tilbake* igjen med $\pi/2$ radianer *mot* klokka for å finne koordinatene til den opprinnelige posisjonsvektoren:
 
 $$
-\lvec{OP} = \left[-\dfrac{1}{2}, \dfrac{\sqrt{3}}{2}\right]
+\vec r\left(\dfrac{2\pi}{3}\right) = \left[-\dfrac{1}{2}, \dfrac{\sqrt{3}}{2}\right]
 $$
 
-Altså er 
+Dermed har vi at 
 
 $$
-\cos \dfrac{2\pi}{3} = -\dfrac{1}{2} \qog \sin \dfrac{2\pi}{3} = \dfrac{\sqrt{3}}{2}
+\mqty[\cos \dfrac{2\pi}{3},  \sin \dfrac{2\pi}{3}] = \mqty[-\dfrac{1}{2},  \dfrac{\sqrt{3}}{2}]
+$$
+
+som betyr at 
+
+$$
+\cos \dfrac{2\pi}{3} = -\dfrac{1}{2} \and \sin \dfrac{2\pi}{3} = \dfrac{\sqrt{3}}{2}
 $$
 
 
@@ -307,18 +382,18 @@ let: v = u - pi
 let: w = u + pi
 vector: (0, 0), (cos(u), sin(u)), blue
 vector: (0, 0), (cos(v), sin(v)), red
-vector: (0, 0), (cos(w), sin(w)), purple
+vector: (0, 0), (cos(w), sin(w)), red
 angle-arc: (0, 0), 0.4, 0, u*180/pi, blue, arrow
 angle-arc: (0, 0), 0.3, u*180/pi, v*180/pi, red, arrow
-angle-arc: (0, 0), 0.35, u*180/pi, w*180/pi, purple, arrow
+angle-arc: (0, 0), 0.35, u*180/pi, w*180/pi, red, arrow
 text: 0.5 * cos(u/2), 0.45 * sin(u/2), "$\varphi$", center-center
-text: 0.5 * cos(v/2), 0.5 * sin(v/2), "$\varphi - \pi$", center-center
-text: 0.5 * cos(w/2), 0.5 * sin(w/2), "$\varphi + \pi$", center-center
+text: 0.5 * cos(v/2), 0.5 * sin(v/2), "$-\pi$", center-center
+text: 0.5 * cos(w/2), 0.5 * sin(w/2), "$+\pi$", center-center
 line-segment: (cos(u), sin(u)), (cos(v), sin(v)), dashed, gray
 point: (cos(u), sin(u))
 point: (cos(v), sin(v))
-text: cos(u), sin(u), "$P$", top-right
-text: cos(v), sin(v), "$Q$", bottom-left
+text: cos(u), sin(u), "$\vec r(\varphi)$", top-right
+text: cos(v), sin(v), "$\vec r(\varphi \pm \pi)$", bottom-left
 :::
 
 
@@ -335,31 +410,31 @@ $$
 
 
 :::::{proof} Vis forklaring
-Vektoren $\lvec{OP}$ har koordinatene
+Vektoren $\vec r (\varphi)$ har koordinatene
 
 $$
-\lvec{OP} = [\cos \varphi, \sin \varphi]
+\vec r (\varphi) = [\cos \varphi, \sin \varphi]
 $$
 
-Punktet $Q$ får vi ved å enten rotere vektoren $\lvec{OP}$ 180 grader mot eller med klokka. Mot klokka tilsvarer $\varphi + \pi$ og med klokka tilsvarer $\varphi - \pi$. Koordinatene til $\lvec{OQ}$ vil uansett da bli
+Om vi roterer med $+\pi$ radianer (mot klokka) eller $-\pi$ radianer (med klokka), så får vi en vektor som peker i motsatt retning. Dermed har vi at
 
 $$
-\lvec{OQ} = [\cos(\varphi + \pi), \sin(\varphi + \pi)] = [\cos(\varphi - \pi), \sin(\varphi - \pi)]
+\vec r(\varphi \pm \pi) = -\vec r(\varphi) = [-\cos \varphi, -\sin \varphi]
 $$
 
-som vi kan samle til ett uttrykk:
+Videre har vi at 
 
 $$
-\lvec{OQ} = [\cos(\varphi \pm \pi), \sin(\varphi \pm \pi)]
+\vec r(\varphi \pm \pi) = [\cos (\varphi \pm \pi), \sin (\varphi \pm \pi)]
 $$
 
-Å rotere vektoren $\lvec{OP}$ 180 grader er det samme som å finne den motsatte vektoren, som vi gjør med å gange vektoren med $-1$. Ergo må koordinatene til $\lvec{OQ}$ være
+som betyr at 
 
 $$
-\lvec{OQ} = (-1) \cdot \lvec{OP} = [-\cos \varphi, -\sin \varphi]
+[\cos (\varphi \pm \pi), \sin (\varphi \pm \pi)] = [-\cos \varphi, -\sin \varphi]
 $$
 
-De to uttrykkene for $\lvec{OQ}$ må være like som betyr at vi får identitene:
+Dermed har vi identitetene:
 
 $$
 \begin{align*}
@@ -396,10 +471,10 @@ point: (cos(u), sin(u))
 text: 0.45 * cos(u/2), 0.45 * sin(u/2), "$\frac{4\pi}{3}$", center-center
 xlabel: $\cos \varphi$
 ylabel: $\sin \varphi$
-text: cos(u), sin(u), "$P$", bottom-left
+text: cos(u), sin(u), "$\vec r\left(\frac{4\pi}{3}\right)$", bottom-left
 :::
 
-I figuren til høyre vises enhetssirkelen med en vinkel $\varphi = \dfrac{4\pi}{3}$ og en vektor $\lvec{OP}$. 
+I figuren til høyre vises enhetssirkelen med en vinkel $\varphi = \dfrac{4\pi}{3}$ og posisjonsvektoren $\vec r\left(\dfrac{4\pi}{3}\right)$. 
 
 Finn de eksakte verdiene til 
 
@@ -412,30 +487,38 @@ $$
 ---
 open:
 ---
-Vektoren $\lvec{OP}$ har koordinatene
+Koordinatene til $\vec r\left(\dfrac{4\pi}{3}\right)$ er gitt ved
 
 $$
-\lvec{OP} = \left[\cos \dfrac{4\pi}{3}, \sin \dfrac{4\pi}{3}\right]
+\vec r\left(\dfrac{4\pi}{3}\right) = \left[\cos \dfrac{4\pi}{3}, \sin \dfrac{4\pi}{3}\right]
 $$
 
-Hvis vi roterer vektoren 180 grader med klokka får vi et punkt $Q$ som ligger i 1. kvadrant. Da kan vi finne koordinatene til $\lvec{OQ}$ med en kjent vinkel:
+Hvis vi roterer vektoren med $-\pi$ radianer (med klokka), så havner vi i 1. kvadrant:
 
 $$
-\lvec{OQ} = \left[\cos \left(\dfrac{4\pi}{3} - \pi\right), \sin \left(\dfrac{4\pi}{3} - \pi\right)\right] = \left[\cos \dfrac{\pi}{3}, \sin \dfrac{\pi}{3}\right] = \left[\dfrac{1}{2}, \dfrac{\sqrt{3}}{2}\right]
+\vec r\left(\dfrac{4\pi}{3} - \pi\right) = \vec r\left(\dfrac{\pi}{3}\right) = \left[\cos \dfrac{\pi}{3}, \sin \dfrac{\pi}{3}\right] = \left[\dfrac{1}{2}, \dfrac{\sqrt{3}}{2}\right]
 $$
 
-Vektoren $\lvec{OP}$ er bare motsatt rettet av $\lvec{OQ}$. Vi ganger derfor bare koordinatene til $\lvec{OQ}$ med $-1$ for å finne koordinatene til $\lvec{OP}$:
-
-$$
-\lvec{OP} = (-1) \cdot \lvec{OQ} = \left[-\dfrac{1}{2}, -\dfrac{\sqrt{3}}{2}\right]
-$$
+Hvis vi nå roterer denne vektoren tilbake igjen med $+\pi$ radianer (mot klokka – som å angre rotasjonen), så får vi:
 
 
-Altså er 
+$$
+\vec r\left(\dfrac{4\pi}{3}\right) = - \vec r\left(\dfrac{\pi}{3}\right) = - \left[\dfrac{1}{2}, \dfrac{\sqrt{3}}{2}\right] = \left[-\dfrac{1}{2}, -\dfrac{\sqrt{3}}{2}\right]
+$$
+
+Dermed må vi ha at 
 
 $$
-\cos \dfrac{4\pi}{3} = -\dfrac{1}{2} \qog \sin \dfrac{4\pi}{3} = -\dfrac{\sqrt{3}}{2}
+\mqty[\cos \dfrac{4\pi}{3},  \sin \dfrac{4\pi}{3}] = \mqty[-\dfrac{1}{2},  -\dfrac{\sqrt{3}}{2}]
 $$
+
+som betyr at 
+
+$$
+\cos \dfrac{4\pi}{3} = -\dfrac{1}{2} \and \sin \dfrac{4\pi}{3} = -\dfrac{\sqrt{3}}{2}
+$$
+
+
 ::::
 
 :::::::::::::::
@@ -446,13 +529,45 @@ $$
 ---
 
 
+## Speilinger
 
 
-:::::::::::::::{summary} Sinus og cosinus til positive og negative vinkler
+:::{plot}
+width: 350px
+align: right
+axis: equal
+ticks: off
+let: a = 1
+let: b = 2
+vector: (0, 0), (a, b), blue
+point: (a, b)
+text: a, b, "$[a, b]$", top-right
+vector: (0, 0), (a, -b), red
+point: (a, -b)
+text: a, -b, "$[a, -b]$", bottom-right
+vector: (0, 0), (-a, b), purple
+point: (-a, b)
+text: -a, b, "$[-a, b]$", top-left
+fontsize: 28
+line-segment: (a, b), (a, -b), dashed, gray
+line-segment: (a, b), (-a, b), dashed, gray
+:::
+
+
+Når vi jobber med trigonometriske likninger, så vil speilinger om koordinataksene spille en viktig rolle i måten vi løser likningene på. Hvis vi tenker oss en vektor $\vec r = [a, b]$, så kan vi speile de om koordinataksene som følger:
+1. Speiling om $x$-aksen: $[a, b]$ speiles til $[a, -b]$
+2. Speiling om $y$-aksen: $[a, b]$ speiles til $[-a, b]$
+
+
+:::{clear}
+:::
+
+
+:::::::::::::::{summary} Speiling om $x$-aksen
 :::{plot}
 axis: equal
 ticks: off
-width: 100%
+width: 350px
 align: right
 fontsize: 28
 circle: (0, 0), 1
@@ -471,6 +586,8 @@ line-segment: (0, sin(u * pi/180)), (cos(u * pi/180), sin(u*pi/180)), dashed, te
 line-segment: (0, sin(v * pi/180)), (cos(v * pi/180), sin(v*pi/180)), dashed, teal
 xlabel: $\cos \varphi$
 ylabel: $\sin \varphi$
+text: cos(u*pi/180), sin(u*pi/180), "$\vec r(\varphi)$", top-right
+text: cos(v*pi/180), sin(v*pi/180), "$\vec r(-\varphi)$", bottom-right
 :::
 
 
@@ -488,48 +605,30 @@ $$
 
 
 :::::{proof} Vis forklaring
-:::{plot}
-axis: equal
-ticks: off
-width: 100%
-align: right
-fontsize: 28
-circle: (0, 0), 1
-let: u = 50
-let: v = -50
-vector: (0, 0), (cos(u*pi/180), sin(u*pi/180)), blue
-vector: (0, 0), (cos(v*pi/180), sin(v*pi/180)), blue
-point: (cos(u*pi/180), sin(u*pi/180))
-point: (cos(v*pi/180), sin(v*pi/180))
-angle-arc: (0, 0), 0.35, 0, u, red, arrow
-angle-arc: (0, 0), 0.2, 0, v, blue, arrow
-text: 0.45 * cos(u*pi/360), 0.45 * sin(u*pi/360), "$\varphi$", center-center
-text: 0.2 * cos(u*pi/360), -0.2 * sin(u*pi/360), "$-\varphi$", bottom-right
-line-segment: (cos(u * pi/180), sin(u*pi/180)), (cos(v * pi/180), sin(v*pi/180)), dashed, red
-line-segment: (0, sin(u * pi/180)), (cos(u * pi/180), sin(u*pi/180)), dashed, teal
-line-segment: (0, sin(v * pi/180)), (cos(v * pi/180), sin(v*pi/180)), dashed, teal
-xlabel: $\cos \varphi$
-ylabel: $\sin \varphi$
-text: cos(u*pi/180), sin(u*pi/180), "$P$", top-right
-text: cos(v*pi/180), sin(v*pi/180), "$Q$", bottom-right
-:::
 
-Posisjonsvektoren $\lvec{OP}$ er gitt ved 
+
+Posisjonsvektoren $\vec r(\varphi)$ har koordinatene
 
 $$
-\lvec{OP} = [\cos \varphi, \sin \varphi]
+\vec r(\varphi) = [\cos \varphi, \sin \varphi]
 $$
 
-Samtidig får vi koordinatene til $\lvec{OQ}$ ved å speile vektoren om $x$-aksen. Dette svarer til å endre $y$-koordinaten, men holde $x$-koordinaten uendret. Dermed får vi:
+Når vi speiler denne vektoren om $x$-aksen, så endres fortegnet på $y$-koordinaten, mens $x$-koordinaten forblir den samme. Dermed får vi at
 
 $$
-\lvec{OQ} = [\cos(-\varphi), \sin(-\varphi)] = [\cos \varphi, -\sin \varphi]
+\vec r(-\varphi) = [\cos \varphi, -\sin \varphi]
 $$
 
-Men da er 
+Samtidig så er 
 
 $$
-\cos(-\varphi) = \cos \varphi \qog \sin(-\varphi) = -\sin \varphi
+\vec r(-\varphi) = [\cos(-\varphi), \sin(-\varphi)]
+$$
+
+Ved å sammenligne de to uttrykkene for $\vec r(-\varphi)$ må vi derfor ha at
+
+$$
+\cos(-\varphi) = \cos \varphi \and \sin(-\varphi) = -\sin \varphi
 $$
 
 :::::
@@ -575,11 +674,13 @@ line-segment: (0, sin(u * pi/180)), (cos(u * pi/180), sin(u*pi/180)), dashed, te
 line-segment: (0, sin(v * pi/180)), (cos(v * pi/180), sin(v*pi/180)), dashed, teal
 xlabel: $\cos \varphi$
 ylabel: $\sin \varphi$
-text: cos(u*pi/180), sin(u*pi/180), "$P$", top-right
-text: cos(v*pi/180), sin(v*pi/180), "$Q$", bottom-right
+text: cos(u*pi/180), sin(u*pi/180), "$\vec r\left(\frac{\pi}{3}\right)$", top-right
+text: cos(v*pi/180), sin(v*pi/180), "$\vec r\left(-\frac{\pi}{3}\right)$", bottom-right
 :::
 
-Fra figuren kan vi se at $x$-koordinatene til punktet $P$ og $Q$ er like, mens $y$-koordinaten har motsatt fortegn. Dermed får vi at
+
+
+Fra figuren kan vi se at $x$-koordinatene til punktet $\vec r\left(\dfrac{\pi}{3}\right)$ og punktet $\vec r\left(-\dfrac{\pi}{3}\right)$ er like, mens $y$-koordinatene har motsatt fortegn. Dermed har vi at
 
 $$
 \cos \left(-\dfrac{\pi}{3}\right) = \cos \dfrac{\pi}{3} = \dfrac{1}{2}
@@ -602,6 +703,142 @@ $$
 ---
 
 
+
+:::::::::::::::{summary} Speiling om $y$-aksen
+:::{plot}
+axis: equal
+ticks: off
+width: 350px
+align: right
+fontsize: 28
+circle: (0, 0), 1
+let: u = 50
+let: v = 180 - u
+vector: (0, 0), (cos(u*pi/180), sin(u*pi/180)), blue
+vector: (0, 0), (cos(v*pi/180), sin(v*pi/180)), blue
+point: (cos(u*pi/180), sin(u*pi/180))
+point: (cos(v*pi/180), sin(v*pi/180))
+angle-arc: (0, 0), 0.35, 0, u, red, arrow
+angle-arc: (0, 0), 0.35, 180, v, red, arrow
+text: 0.45 * cos(u*pi/360), 0.45 * sin(u*pi/360), "$\varphi$", center-center
+text: 0.45 * 0.5 * (-1 + cos(v*pi/180)) - 0.1, 0.45 * 0.5 * sin(v*pi/180), "$\varphi$", center-center
+line-segment: (cos(u * pi/180), sin(u*pi/180)), (cos(v * pi/180), sin(v*pi/180)), dashed, red
+line-segment: (cos(u * pi/ 180), sin(u * pi/180)), (cos(u * pi/180), 0), dashed, teal
+line-segment: (cos(v * pi/180), sin(v * pi/180)), (cos(v * pi/180), 0), dashed, teal
+xlabel: $\cos \varphi$
+ylabel: $\sin \varphi$
+text: cos(u*pi/180), sin(u*pi/180), "$\vec r(\varphi)$", top-right
+text: cos(v*pi/180), sin(v*pi/180), "$\vec r(\pi-\varphi)$", top-left
+:::
+
+
+For alle vinkler $\varphi$ er
+
+$$
+\begin{align*}
+\cos (\pi - \varphi) &= -\cos \varphi \\
+\\
+\sin (\pi - \varphi) &= \sin \varphi
+\end{align*}
+$$
+
+
+:::::{proof} Vis forklaring
+Posisjonsvektoren $\vec r(\varphi)$ har koordinatene
+
+$$
+\vec r(\varphi) = [\cos \varphi, \sin \varphi]
+$$
+
+Hvis vi speiler denne vektoren om $y$-aksen, så endres fortegnet på $x$-koordinaten, mens $y$-koordinaten forblir den samme. Dermed får vi at
+
+Vinkelen vi får når vi speiler $\vec r(\varphi)$ om $y$-aksen er $\pi - \varphi$. Dermed har vi at
+
+$$
+\vec r(\pi - \varphi) = \mqty[\cos (\pi - \varphi), \sin (\pi - \varphi)] = [-\cos \varphi, \sin \varphi]
+$$
+
+Derfor er 
+
+$$
+\cos(\pi - \varphi) = -\cos \varphi \and \sin (\pi - \varphi) = \sin \varphi
+$$
+:::::
+
+
+
+:::::::::::::::
+
+
+---
+
+
+
+:::::::::::::::{example} Eksempel 5
+:::{plot}
+axis: equal
+ticks: off
+fontsize: 28
+width: 350px
+align: right
+circle: (0, 0), 1
+let: u = 2*pi/3
+vector: (0, 0), (cos(u), sin(u)), blue
+angle-arc: (0, 0), 0.3, 0, u*180/pi, red, arrow
+point: (cos(u), sin(u))
+text: 0.45 * cos(u/2), 0.45 * sin(u/2), "$\frac{2\pi}{3}$", center-center
+text: cos(u), sin(u), "$\vec r\left(\displaystyle \frac{2\pi}{3}\right)$", top-left
+xlabel: $\cos \varphi$
+ylabel: $\sin \varphi$
+:::
+
+
+Posisjonsvektoren $\vec r \mqty(\dfrac{2\pi}{3})$ er vist i figuren til høyre.
+
+Bruk speiling om $y$-aksen til å finne de eksakte verdiene til
+
+$$
+\cos \dfrac{2\pi}{3} \qog \sin \dfrac{2\pi}{3}
+$$
+
+
+
+::::{solution}
+---
+open:
+---
+Hvis vi speiler posisjonsvektoren $\vec r \mqty(\dfrac{2\pi}{3})$ om $y$-aksen, så får vi en vektor som peker i 1. kvadrant. Denne vektoren har vinkelen $\pi - \dfrac{2\pi}{3} = \dfrac{\pi}{3}$. Dermed vil den speilede vektoren har koordinatene 
+
+$$
+\vec r \mqty(\dfrac{\pi}{3}) = \mqty[\cos \dfrac{\pi}{3}, \sin \dfrac{\pi}{3}] = \mqty[\dfrac{1}{2}, \dfrac{\sqrt{3}}{2}]
+$$
+
+Speiler vi den tilbake igjen om $y$-aksen, så skal vi endre fortegnet på $x$-koordinaten, mens $y$-koordinaten forblir den samme. Dermed får vi at
+
+$$
+\vec r \mqty(\dfrac{2\pi}{3}) = \mqty[-\dfrac{1}{2}, \dfrac{\sqrt{3}}{2}]
+$$
+
+Dermed er 
+
+$$
+\cos \dfrac{2\pi}{3} = -\dfrac{1}{2} \and \sin \dfrac{2\pi}{3} = \dfrac{\sqrt{3}}{2}
+$$
+
+
+Vi fant disse verdiene ved å bruke rotasjon med $\pi/2$ radianer i eksempel 2, mens her ser vi at det er mulig å bruke speiling til å finne de samme verdiene.
+::::
+
+:::::::::::::::
+
+
+---
+
+
+
+## Lengden av posisjonsvektoren
+
+
 Den neste identiteten vi skal se på kalles for Pytagoras' identitet. Den har en sterk tilknytning til Pytagoras' setning. Først skal vi merke oss at vi bruker en forenklet skrivemåte
 
 $$
@@ -618,14 +855,14 @@ xlabel: $\cos \varphi$
 ylabel: $\sin \varphi$
 ticks: off
 axis: equal
-width: 100%
+width: 350px
 circle: (0, 0), 1
 let: u = pi/3
 point: (cos(u), sin(u))
 line-segment: (0, 0), (cos(u), sin(u)), blue
 angle-arc: (0, 0), 0.3, 0, u*180/pi, red, arrow
 text: 0.45 * cos(u/2), 0.45 * sin(u/2), "$\varphi$", center-center
-text: cos(u), sin(u), "$P(\cos \varphi, \sin \varphi)$", top-right
+text: cos(u), sin(u), "$\vec r(\varphi)$", top-right
 text: 0.5 * cos(u), 0.5 * sin(u), "$1$", top-left
 :::
 
@@ -641,17 +878,25 @@ $$
 
 :::::{proof} Vis forklaring
 
-Vi bruker vektorregning og regner ut lengden av posisjonsvektoren til punktet $P$:
+Koordinatene til posisjonsvektoren $\vec r(\varphi)$ er gitt ved
 
 $$
-\lvec{OP} = [\cos \varphi, \sin \varphi]
+\vec r(\varphi) = [\cos \varphi, \sin \varphi]
 $$
 
+Siden punktet ligger på enhetssirkelen og denne sirkelen har radius lik $1$, må 
+
 $$
-\abs{\lvec{OP}}^2 = \lvec{OP} \cdot \lvec{OP} = [\cos \varphi, \sin \varphi] \cdot [\cos \varphi, \sin \varphi] = \cos^2 \varphi + \sin^2 \varphi
+\abs{\vec r(\varphi)} = 1 \limplies \abs{\vec r(\varphi)}^2 = 1
 $$
 
-Denne må være lik $1$ siden radius i sirkelen er $1$ og punktet ligger på enhetssirkelen. Dermed får vi Pytagoras' identitet:
+Videre har vi at 
+
+$$
+\abs{\vec r(\varphi)}^2 = \cos^2 \varphi + \sin^2 \varphi
+$$
+
+Dermed må vi ha at 
 
 $$
 \cos^2 \varphi + \sin^2 \varphi = 1
@@ -673,7 +918,7 @@ $$
 
 
 
-:::::::::::::::{example} Eksempel 5
+:::::::::::::::{example} Eksempel 6
 Om en vinkel $\varphi$ får du vite at
 
 * $\varphi$ ligger i 3. kvadrant
@@ -720,15 +965,6 @@ $$
 
 
 :::::::::::::::{summary} Cosinus til doble vinkler
-For alle vinkler $\varphi$ gjelder følgende identitet:
-
-$$
-\cos (2\varphi) = \cos^2 \varphi - \sin^2 \varphi
-$$
-
-
-
-:::::{proof} Forklaring
 :::{plot}
 xlabel: $\cos \varphi$
 ylabel: $\sin \varphi$
@@ -747,41 +983,44 @@ angle-arc: (0, 0), 0.3, 0, u*180/pi, red, arrow
 text: 0.45 * cos(u/2), 0.45 * sin(u/2), "$\varphi$", center-center
 angle-arc: (0, 0), 0.25, 0, -u*180/pi, red, arrow
 text: 0.45 * cos(u/2), -0.45 * sin(u/2), "$-\varphi$", center-center
-text: cos(u), sin(u), "$P$", top-right
-text: cos(u), -sin(u), "$Q$", bottom-right
+text: cos(u), sin(u), "$\vec r(\varphi)$", top-right
+text: cos(u), -sin(u), "$\vec r(-\varphi)$", bottom-right
 :::
 
-Posisjonsvektoren til punktet $P$ er gitt ved
+For alle vinkler $\varphi$ gjelder følgende identitet:
 
 $$
-\lvec{OP} = [\cos \varphi, \sin \varphi]
+\cos (2\varphi) = \cos^2 \varphi - \sin^2 \varphi
 $$
 
-Posisjonsvektoren til punktet $Q$ er gitt ved
+
+
+:::::{proof} Vis forklaring
+Koordinatene til $\vec r(\varphi)$ er gitt ved  
 
 $$
-\lvec{OQ} = [\cos (-\varphi), \sin (-\varphi)] = [\cos \varphi, -\sin \varphi]
+\vec r(\varphi) = [\cos \varphi, \sin \varphi]
 $$
 
-Med den geometriske formelen for skalarproduktet får vi da
+Koordinatene til $\vec r(-\varphi)$ er gitt ved
 
 $$
-\lvec{OP} \cdot \lvec{OQ} = \abs{\lvec{OP}} \cdot \abs{\lvec{OQ}} \cdot \cos (\varphi - (-\varphi))
+\vec r(-\varphi) = [\cos (-\varphi), \sin (-\varphi)] = [\cos \varphi, -\sin \varphi]
 $$
 
-Siden begge punktene ligger på enhetssirkelen er $\abs{\lvec{OP}} = \abs{\lvec{OQ}} = 1$. Dermed får vi
+Bruker vi den geometriske formelen for skalarproduktet får vi at 
 
 $$
-\lvec{OP} \cdot \lvec{OQ} = 1 \cdot 1 \cdot \cos (2\varphi)
+\vec r(\varphi) \cdot \vec r(-\varphi) = \abs{\vec r(\varphi)} \cdot \abs{\vec r(-\varphi)} \cdot \cos (\varphi - (-\varphi)) = 1 \cdot 1 \cdot \cos (2\varphi) = \cos (2\varphi)
 $$
 
-Regner vi ut skalarproduktet på venstre side får vi
+Videre er 
 
 $$
-\lvec{OP} \cdot \lvec{OQ} = [\cos \varphi, \sin \varphi] \cdot [\cos \varphi, -\sin \varphi] = \cos^2 \varphi - \sin^2 \varphi
+\vec r(\varphi) \cdot \vec r(-\varphi) = [\cos \varphi, \sin \varphi] \cdot [\cos \varphi, -\sin \varphi] = \cos^2 \varphi - \sin^2 \varphi
 $$
 
-Dermed følger det at 
+Altså er 
 
 $$
 \cos (2\varphi) = \cos^2 \varphi - \sin^2 \varphi
@@ -995,7 +1234,7 @@ $$
 
 
 
-> Identitetene nedenfor er mer generelle, men vi trenger dem ikke i praksis. Derfor er de markert med (*). I oppgavene får du utlede dem med rotasjoner av vektorer på enhetssirkelen.
+> Identitetene nedenfor er mer generelle, og du trenger ikke å kunne dem utenat. Du skal derimot kunne bruke dem til å utlede andre identiteter og skriv om uttrykk når du jobber med trigonometriske likninger og funksjoner.
 
 
 :::::::::::::::{summary} Cosinus til summer og differanser av vinkler (*)
