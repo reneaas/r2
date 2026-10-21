@@ -50,7 +50,7 @@ $$
 \vec r\left(\dfrac{3\pi}{4} - \dfrac{\pi}{2}\right) = \vec r\left(\dfrac{\pi}{4}\right) = \mqty[\cos \left(\dfrac{\pi}{4}\right), \sin \left(\dfrac{\pi}{4}\right)] = \mqty[\dfrac{\sqrt{2}}{2}, \dfrac{\sqrt{2}}{2}]
 $$
 
-Vi roterer denne vektoren tilbake igjen med $90$ grader *mot* klokka for å komme tilbake til det opprinnelige punktet på enhetssirkelen. Ta bytter vi rekkefølgen på koordinatene og endrer fortegnet på den nye $x$-koordinaten:
+Vi roterer denne vektoren tilbake igjen med $90$ grader *mot* klokka for å komme tilbake til det opprinnelige punktet på enhetssirkelen. Da bytter vi rekkefølgen på koordinatene og endrer fortegnet på den nye $x$-koordinaten:
 
 $$
 \vec r\left(\dfrac{3\pi}{4}\right) = \mqty[-\dfrac{\sqrt{2}}{2}, \dfrac{\sqrt{2}}{2}]
