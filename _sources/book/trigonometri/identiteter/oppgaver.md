@@ -1300,7 +1300,7 @@ $$
 
 
 :::::::::::::::{exercise} Oppgave 6
-For en vinkel $\varphi$ i 1. kvadrant er $\cos \varphi = \dfrac{\sqrt{3}}{2}$.
+For en vinkel $\varphi$ i 1. kvadrant er $\cos \varphi = \dfrac{1}{3}$.
 
 
 :::::::::::::{part} a
@@ -1309,7 +1309,7 @@ Finn $\sin \varphi$.
 
 :::::{answer}
 $$
-\sin \varphi = \dfrac{1}{2}
+\sin \varphi = \dfrac{2\sqrt{2}}{3}
 $$
 
 ::::{solution}
@@ -1321,14 +1321,14 @@ $$
 
 
 $$
-\sin^2 \varphi = 1 - \cos^2 \varphi = 1 - \left(\dfrac{\sqrt{3}}{2}\right)^2 = 1 - \dfrac{3}{4} = \dfrac{1}{4}
+\sin^2 \varphi = 1 - \cos^2 \varphi = 1 - \left(\dfrac{1}{3}\right)^2 = 1 - \dfrac{1}{9} = \dfrac{8}{9}
 $$
 
 
 Siden vinkelen $\varphi$ ligger i 1. kvadrant, må $\sin \varphi$ være positiv:
 
 $$
-\sin \varphi = \sqrt{\dfrac{1}{4}} = \dfrac{1}{2}
+\sin \varphi = \sqrt{\dfrac{8}{9}} = \dfrac{2\sqrt{2}}{3}
 $$
 
 ::::
@@ -1348,7 +1348,7 @@ Finn $\cos (\varphi + \pi)$ og $\sin (\varphi + \pi)$.
 :::::{answer}
 
 $$
-\cos(\varphi + \pi) = -\dfrac{\sqrt{3}}{2} \qog \sin(\varphi + \pi) = -\dfrac{1}{2}
+\cos (\varphi + \pi) = -\dfrac{1}{3} \qog \sin (\varphi + \pi) = -\dfrac{2\sqrt{2}}{3}
 $$
 
 ::::{solution}
@@ -1359,47 +1359,46 @@ fontsize: 28
 align: right
 width: 100%
 circle: (0, 0), 1
-let: u = pi/6
-let: v = pi/6 + pi
-line-segment: (0, 0), (cos(u), sin(u)), blue
-text: cos(u), sin(u), "$P$", top-right
+let: u = acos(1/3)
+let: v = u + pi
+vector: (0, 0), (cos(u), sin(u)), blue
+text: cos(u), sin(u), "$\vec r(\varphi)$", top-right
 point: (cos(u), sin(u))
-line-segment: (0, 0), (cos(v), sin(v)), red
+vector: (0, 0), (cos(v), sin(v)), red
 point: (cos(v), sin(v))
-text: 1.05 * cos(v), 1.05 * sin(v), "$P'$", bottom-left
+text: 1.05 * cos(v), 1.05 * sin(v), "$\vec r(\varphi + \pi)$", bottom-left
 angle-arc: (0, 0), 0.4, 0, u*180/pi, blue, arrow
 angle-arc: (0, 0), 0.3, 0, v*180/pi, red, arrow
 text: 0.5 * cos(u/2), 0.5 * sin(u/2), "$\varphi$", center-center
-text: 0.4 * cos(v/2), 0.4 * sin(v/2), "$\varphi + \pi$", center-center
+text: 0.4 * cos(v/2), 0.45 * sin(v/2), "$\varphi + \pi$", center-center
 axis: equal
 ticks: off
 :::
 
-Posisjonsvektoren til punktet $P$ er gitt ved
+Vi har at 
 
 $$
-\lvec{OP} = \left[\cos \varphi, \sin \varphi\right] = \left[\dfrac{\sqrt{3}}{2}, \dfrac{1}{2}\right]
+\vec{r}(\varphi) = \left[\cos \varphi, \sin \varphi\right] = \mqty[\dfrac{1}{3}, \dfrac{2\sqrt{2}}{3}]
 $$
 
-Roterer vi vektoren med $180\degree$ i positiv omløpsretning, havner vi på motsatt side av sirkelen. Dette svarer til å gange vektoren med $-1$:
+Vinkelen $\varphi + \pi$ svarer til å rotere med $\pi$ radianer (180 grader) fra $\varphi$ som plasserer oss på motsatt side av enhetssirkelen slik at:
 
 $$
-\begin{align*}
-\lvec{OP'} &= \left[\cos(\varphi + \pi), \sin(\varphi + \pi)\right] \\
-\\
-&= \lvec{OP}_{+\pi} \\
-\\
-&= (-1) \cdot \lvec{OP} \\
-\\
-&= \left[-\dfrac{\sqrt{3}}{2}, -\dfrac{1}{2}\right]
-\end{align*}
+\vec{r}(\varphi + \pi) = -\vec r(\varphi)
 $$
 
-Altså er
+Da får vi at 
 
 $$
-\cos(\varphi + \pi) = -\dfrac{\sqrt{3}}{2} \qog \sin(\varphi + \pi) = -\dfrac{1}{2}
+\cos(\varphi + \pi) = -\cos \varphi = -\dfrac{1}{3} 
 $$
+
+og
+
+$$
+\sin(\varphi + \pi) = -\sin \varphi = -\dfrac{2\sqrt{2}}{3}
+$$
+
 
 
 ::::
@@ -1419,15 +1418,15 @@ Finn $\cos \left(\varphi - \pi\right)$ og $\sin \left(\varphi - \pi\right)$.
 :::::{answer}
 
 $$
-\cos \left(\varphi - \pi\right) = -\dfrac{\sqrt{3}}{2} \qog \sin \left(\varphi - \pi\right) = -\dfrac{1}{2}
+\cos (\varphi - \pi) = -\dfrac{1}{3} \qog \sin (\varphi - \pi) = -\dfrac{2\sqrt{2}}{3}
 $$
 
 
 ::::{solution}
-Som i oppgave **b**, så er dette her en rotasjon på $180$ grader, bare denne gangen går det i negativ omløpsretning. Koordinatene blir de samme så
+Som i oppgave **b**, så er dette her en rotasjon på $180$ grader, bare denne gangen går det i negativ omløpsretning. Koordinatene blir de samme som i oppgave **b**, og dermed er: 
 
 $$
-\cos \left(\varphi - \pi\right) = -\dfrac{\sqrt{3}}{2} \qog \sin \left(\varphi - \pi\right) = -\dfrac{1}{2}
+\cos \left(\varphi - \pi\right) = -\dfrac{1}{3} \qog \sin \left(\varphi - \pi\right) = -\dfrac{2\sqrt{2}}{3}
 $$
 ::::
 :::::
@@ -1445,28 +1444,27 @@ Finn $\cos \left(\varphi - \dfrac{\pi}{2}\right)$ og $\sin \left(\varphi - \dfra
 :::::{answer}
 
 $$
-\cos \left(\varphi - \dfrac{\pi}{2}\right) = \dfrac{1}{2} \qog \sin \left(\varphi - \dfrac{\pi}{2}\right) = -\dfrac{\sqrt{3}}{2}
+\cos \left(\varphi - \dfrac{\pi}{2}\right) = \dfrac{2\sqrt{2}}{3} \qog \sin \left(\varphi - \dfrac{\pi}{2}\right) = -\dfrac{1}{3}
 $$
 
 
 ::::{solution}
-Først tenker vi oss at punktet $P$ har posisjonsvektoren
+Vi vet at 
 
 $$
-\lvec{OP} = \left[\cos \varphi, \sin \varphi\right] = \left[\dfrac{\sqrt{3}}{2}, \dfrac{1}{2}\right]
+\vec r(\varphi) = \left[\cos \varphi, \sin \varphi\right] = \mqty[\dfrac{1}{3}, \dfrac{2\sqrt{2}}{3}]
 $$
 
-Så roterer vi vektoren med $-\pi/2$ radianer, som svarer til å bytte om $x$- og $y$-koordinatene, men $y$-koordinaten får motsatt fortegn. Altså får vi
+Roterer vi denne vektoren med $-\pi/2$ radianer (altså 90 grader *med* klokka), så skal vi bytte om på $x$- og $y$-koordinatene og bytte fortegnet til den nye $y$-koordinaten:
 
 $$
-\lvec{OP}_{-\pi/2} = \left[\cos \left(\varphi - \dfrac{\pi}{2}\right), \sin \left(\varphi - \dfrac{\pi}{2}\right)\right] = \left[\dfrac{1}{2}, -\dfrac{\sqrt{3}}{2}\right]
+\vec r\left(\varphi - \dfrac{\pi}{2}\right) = \mqty[\dfrac{2\sqrt{2}}{3}, -\dfrac{1}{3}]
 $$
 
-
-Altså er 
+Da følger det at 
 
 $$
-\cos \left(\varphi - \dfrac{\pi}{2}\right) = \dfrac{1}{2} \qog \sin \left(\varphi - \dfrac{\pi}{2}\right) = -\dfrac{\sqrt{3}}{2}
+\cos \left(\varphi - \dfrac{\pi}{2}\right) = \dfrac{2\sqrt{2}}{3} \qog \sin \left(\varphi - \dfrac{\pi}{2}\right) = -\dfrac{1}{3}
 $$
 ::::
 :::::
@@ -1483,30 +1481,27 @@ Finn $\cos \left(\varphi + \dfrac{\pi}{2}\right)$ og $\sin \left(\varphi + \dfra
 
 :::::{answer}
 $$
-\cos \left(\varphi + \dfrac{\pi}{2}\right) = -\dfrac{1}{2} \qog \sin \left(\varphi + \dfrac{\pi}{2}\right) = \dfrac{\sqrt{3}}{2}
+\cos \left(\varphi + \dfrac{\pi}{2}\right) = -\dfrac{2\sqrt{2}}{3} \qog \sin \left(\varphi + \dfrac{\pi}{2}\right) = \dfrac{1}{3}
 $$
 
 ::::{solution}
-Vi tenker oss et punkt $P$ med posisjonsvektoren
+Vi vet at 
 
 $$
-\lvec{OP} = \left[\cos \varphi, \sin \varphi\right] = \left[\dfrac{\sqrt{3}}{2}, \dfrac{1}{2}\right]
+\vec r(\varphi) = \left[\cos \varphi, \sin \varphi\right] = \mqty[\dfrac{1}{3}, \dfrac{2\sqrt{2}}{3}]
 $$
 
-Så roterer vi vektoren med $+\pi/2$ radianer, som svarer til å bytte om $x$- og $y$-koordinatene, men den nye $x$-koordinaten får motsatt fortegn. Altså får vi
+Vektoren $\vec r\left(\varphi + \dfrac{\pi}{2}\right)$ får vi ved å rotere $\vec r(\varphi)$ med $+\pi/2$ radianer (altså 90 grader mot klokka). Dette tilsvarer å bytte om på $x$- og $y$-koordinatene og bytte fortegnet til den nye $x$-koordinaten:
 
 $$
-\lvec{OP}_{+\pi/2} = \left[\cos \left(\varphi + \dfrac{\pi}{2}\right), \sin \left(\varphi + \dfrac{\pi}{2}\right)\right] = \left[-\dfrac{1}{2}, \dfrac{\sqrt{3}}{2}\right]
+\vec r\left(\varphi + \dfrac{\pi}{2}\right) = \mqty[-\dfrac{2\sqrt{2}}{3}, \dfrac{1}{3}]
 $$
 
-Altså er 
+Da følger det at 
 
 $$
-\cos \left(\varphi + \dfrac{\pi}{2}\right) = -\dfrac{1}{2} \qog \sin \left(\varphi + \dfrac{\pi}{2}\right) = \dfrac{\sqrt{3}}{2}
+\cos \left(\varphi + \dfrac{\pi}{2}\right) = -\dfrac{2\sqrt{2}}{3} \qog \sin \left(\varphi + \dfrac{\pi}{2}\right) = \dfrac{1}{3}
 $$
-
-
-
 ::::
 :::::
 
@@ -1529,32 +1524,39 @@ Tenk deg at du roterer en posisjonsvektor $\lvec{OP} = [\cos(-\varphi), \sin(-\v
 
 :::::{answer}
 $$
-\cos \left(\dfrac{\pi}{2} - \varphi\right) = \dfrac{1}{2} \qog \sin \left(\dfrac{\pi}{2} - \varphi\right) = \dfrac{\sqrt{3}}{2}
+\cos \left(\dfrac{\pi}{2} - \varphi\right) = \dfrac{2\sqrt{2}}{3} \qog \sin \left(\dfrac{\pi}{2} - \varphi\right) = \dfrac{1}{3}
 $$
 
 
 ::::{solution}
-Vi tenker oss først at vi ser på posisjonsvektoren til et punkt $P$ som er rotert $-\varphi$ radianer:
+Vi vet at 
 
 $$
-\lvec{OP} = [\cos(-\varphi), \sin(-\varphi)] = [\cos \varphi, -\sin \varphi] = \left[\dfrac{\sqrt{3}}{2}, -\dfrac{1}{2}\right]
+\vec r(\varphi) = \left[\cos \varphi, \sin \varphi\right] = \mqty[\dfrac{1}{3}, \dfrac{2\sqrt{2}}{3}]
 $$
 
-Så roterer vi denne $+\pi/2$ radianer som svarer til å bytte om rekkefølgen på koordinatene og endre fortegn på den nye $x$-koordinaten:
+En strategi her er å 
+1. Først speile vektoren om $x$-aksen slik at vi får $\vec r(-\varphi)$
+2. Deretter rotere vektoren med $\pi/2$ radianer i positiv omløpsretning så får vi $\vec r\left(\dfrac{\pi}{2} - \varphi\right)$.
+
+Vektoren $\vec r(-\varphi)$ får vi ved å speile vektoren om $x$-aksen. Da vil $x$-koordinaten forbli den samme, mens $y$-koordinaten vil bytte fortegn:
 
 $$
-\begin{align*}
-\lvec{OP}_{+\pi/2} &= \left[\cos(\dfrac{\pi}{2} - \varphi), \sin(\dfrac{\pi}{2} - \varphi)\right] \\
-\\
-&= \left[\dfrac{1}{2}, \dfrac{\sqrt{3}}{2}\right]
-\end{align*}
+\vec r(-\varphi) = \mqty[\dfrac{1}{3}, -\dfrac{2\sqrt{2}}{3}]
 $$
 
-Altså er 
+Nå roterer vi denne vektoren med $\pi/2$ radianer i positiv omløpsretning. Dette tilsvarer å bytte om på $x$- og $y$-koordinatene og bytte fortegnet til den nye $x$-koordinaten:
 
 $$
-\cos \left(\dfrac{\pi}{2} - \varphi\right) = \dfrac{1}{2} \qog \sin \left(\dfrac{\pi}{2} - \varphi\right) = \dfrac{\sqrt{3}}{2}
+\vec r\left(\dfrac{\pi}{2} - \varphi\right) = \mqty[\dfrac{2\sqrt{2}}{3}, \dfrac{1}{3}]
 $$
+
+Koordinatene til vektoren er henholdsvis cosinus og sinus som gir:
+
+$$
+\cos \left(\dfrac{\pi}{2} - \varphi\right) = \dfrac{2\sqrt{2}}{3} \qog \sin \left(\dfrac{\pi}{2} - \varphi\right) = \dfrac{1}{3}
+$$
+
 ::::
 
 
@@ -1622,19 +1624,19 @@ $$
 
 
 ::::{solution}
-Vi tenker oss et punkt $P$ på enhetssirkelen med posisjonsvektoren
+Vi har at 
 
 $$
-\lvec{OP} = \left[\cos \varphi, \sin \varphi\right] = \left[-\dfrac{3}{5}, \dfrac{4}{5}\right]
+\vec r(\varphi) = \left[\cos \varphi, \sin \varphi\right] = \mqty[-\dfrac{3}{5}, \dfrac{4}{5}]
 $$
 
-Så roterer vi denne vektoren med $+\pi$ radianer som svarer til å gange vektoren med $-1$:
+Roterer vi denne vektoren med $\pi$ radianer (180 grader) mot klokka, så får vi
 
 $$
-\lvec{OP}_{+\pi} = \left[\cos(\varphi + \pi), \sin(\varphi + \pi)\right] = -1 \cdot \lvec{OP} = \left[\dfrac{3}{5}, -\dfrac{4}{5}\right]
+\vec r(\varphi + \pi) = -\vec r(\varphi) = \mqty[\dfrac{3}{5}, -\dfrac{4}{5}]
 $$
 
-Altså er 
+Ergo er 
 
 $$
 \cos (\varphi + \pi) = \dfrac{3}{5} \qog \sin (\varphi + \pi) = -\dfrac{4}{5}
@@ -1657,16 +1659,16 @@ $$
 $$
 
 ::::{solution}
-Vi ser for oss et punkt $P$ på enhetssirkelen med posisjonsvektoren
+Vi har at 
 
 $$
-\lvec{OP} = \left[\cos \varphi, \sin \varphi\right] = \left[-\dfrac{3}{5}, \dfrac{4}{5}\right]
+\vec r(\varphi) = \left[\cos \varphi, \sin \varphi\right] = \mqty[-\dfrac{3}{5}, \dfrac{4}{5}]
 $$
 
-Så roterer vi vektoren med $-\pi/2$ radianer som svarer til å bytte om rekkefølgen på koordinatene og endre fortegn på den nye $y$-koordinaten:
+Roterer vi denne vektoren med $-\pi/2$ radianer (90 grader med klokka), så får vi
 
 $$
-\lvec{OP}_{-\pi/2} = \left[\cos(\varphi - \dfrac{\pi}{2}), \sin(\varphi - \dfrac{\pi}{2})\right] = \left[\dfrac{4}{5}, \dfrac{3}{5}\right]
+\vec r\left(\varphi - \dfrac{\pi}{2}\right) = \mqty[\dfrac{4}{5}, \dfrac{3}{5}]
 $$
 
 Altså er 
@@ -1674,6 +1676,7 @@ Altså er
 $$
 \cos \left(\varphi - \dfrac{\pi}{2}\right) = \dfrac{4}{5} \qog \sin \left(\varphi - \dfrac{\pi}{2}\right) = \dfrac{3}{5}
 $$
+
 ::::
 
 :::::
@@ -1692,19 +1695,19 @@ $$
 
 
 ::::{solution}
-Vi tenker oss et punkt $P$ på enhetssirkelen med posisjonsvektoren
+Vi har at 
 
 $$
-\lvec{OP} = \left[\cos \varphi, \sin \varphi\right] = \left[-\dfrac{3}{5}, \dfrac{4}{5}\right]
+\vec r(\varphi) = \left[\cos \varphi, \sin \varphi\right] = \mqty[-\dfrac{3}{5}, \dfrac{4}{5}]
 $$
 
-Så roterer vi vektoren med $+\pi/2$ radianer som svarer til å bytte om rekkefølgen på koordinatene og endre fortegn på den nye $x$-koordinaten:
+Roterer vi denne vektoren med $+\pi/2$ radianer (90 grader mot klokka), så får vi
 
 $$
-\lvec{OP}_{+\pi/2} = \left[\cos(\varphi + \dfrac{\pi}{2}), \sin(\varphi + \dfrac{\pi}{2})\right] = \left[-\dfrac{4}{5}, -\dfrac{3}{5}\right]
+\vec r\left(\varphi + \dfrac{\pi}{2}\right) = \mqty[-\dfrac{4}{5}, -\dfrac{3}{5}]
 $$
 
-Altså er 
+Dermed er 
 
 $$
 \cos \left(\varphi + \dfrac{\pi}{2}\right) = -\dfrac{4}{5} \qog \sin \left(\varphi + \dfrac{\pi}{2}\right) = -\dfrac{3}{5}
@@ -1727,19 +1730,19 @@ $$
 $$
 
 ::::{solution}
-Vi ser for oss at vi først finner posisjonsvektoren til et punkt $P$ gitt ved
+Vi har at 
 
 $$
-\lvec{OP} = \left[\cos (-\varphi), \sin (-\varphi)\right] = \left[\cos \varphi, -\sin \varphi\right] = \left[-\dfrac{3}{5}, -\dfrac{4}{5}\right]
+\vec r(\varphi) = \left[\cos \varphi, \sin \varphi\right] = \mqty[-\dfrac{3}{5}, \dfrac{4}{5}]
 $$
 
-Deretter roterer vi vektoren med $+\pi$ radianer som svarer til å gange vektoren med $-1$:
+Vektoren $\vec r(\pi - \varphi)$ får vi ved å speile $\vec r(\varphi)$ om $y$-aksen. Da vil $y$-koordinaten forbli den samme, mens $x$-koordinaten vil bytte fortegn:
 
 $$
-\lvec{OP}_{+\pi} = \left[\cos(\pi - \varphi), \sin(\pi - \varphi)\right] = -1 \cdot \lvec{OP} = \left[\dfrac{3}{5}, \dfrac{4}{5}\right]
+\vec r(\pi - \varphi) = \mqty[\dfrac{3}{5}, \dfrac{4}{5}]
 $$
 
-Altså er 
+Ergo er 
 
 $$
 \cos (\pi - \varphi) = \dfrac{3}{5} \qog \sin(\pi - \varphi) = \dfrac{4}{5}
@@ -1991,16 +1994,16 @@ $$
 $$
 
 ::::{solution}
-Vi starter med et punkt $P$ på enhetssirkelen gitt ved 
+Vi har at 
 
 $$
-\lvec{OP} = \left[\cos \varphi, \sin \varphi\right] = \left[-\dfrac{4}{5}, -\dfrac{3}{5}\right]
+\vec r(\varphi) = \left[\cos \varphi, \sin \varphi\right] = \left[-\dfrac{4}{5}, -\dfrac{3}{5}\right]
 $$
 
 Vinkelen $\varphi + 3\pi$ vil svare til én full rotasjon med $2\pi$ og deretter en halv rotasjon med $\pi$ radianer. Ergo vil vi ende opp på motsatt side av sirkelen. Altså får vi
 
 $$
-\lvec{OP}_{+3\pi} = \left[\cos(\varphi + 3\pi), \sin(\varphi + 3\pi)\right] = -1 \cdot \lvec{OP} = \left[\dfrac{4}{5}, \dfrac{3}{5}\right]
+\vec r(\varphi + 3\pi) = -1 \cdot \vec r(\varphi) = \left[\dfrac{4}{5}, \dfrac{3}{5}\right]
 $$
 
 Dermed er 
@@ -2024,22 +2027,22 @@ $$
 $$
 
 ::::{solution}
-Vi starter i et punkt $P$ med posisjonsvektoren
+Vi har at:
 
 $$
-\lvec{OP} = \left[\cos \varphi, \sin \varphi\right] = \left[-\dfrac{4}{5}, -\dfrac{3}{5}\right]
+\vec r(\varphi) = \left[\cos \varphi, \sin \varphi\right] = \left[-\dfrac{4}{5}, -\dfrac{3}{5}\right]
 $$
 
 Deretter skal vi rotere vektoren $3\pi/2$ radianer som vi kan dele opp i å først rotere $\pi$ radianer og deretter $\pi/2$ radianer. Etter å ha rotert $\pi$ radianer, vil vi ende opp på motsatt side av sirkelen:
 
 $$
-\lvec{OP}_{+\pi} = \left[\cos(\varphi + \pi), \sin(\varphi + \pi)\right] = -1 \cdot \lvec{OP} = \left[\dfrac{4}{5}, \dfrac{3}{5}\right]
+\vec r(\varphi + \pi) = -1 \cdot \vec r(\varphi) = \left[\dfrac{4}{5}, \dfrac{3}{5}\right]
 $$
 
 Deretter skal vi rotere $\pi/2$ radianer som svarer til å bytte om rekkefølgen på koordinatene og endre fortegn på den nye $x$-koordinaten:
 
 $$
-\lvec{OP}_{+\pi + \pi/2} = \left[\cos(\varphi + 3\pi/2), \sin(\varphi + 3\pi/2)\right] = \left[-\dfrac{3}{5}, \dfrac{4}{5}\right]
+\vec r\left(\varphi + \pi + \pi/2\right) = \vec r\left(\varphi + 3\pi/2\right) = \left[\cos(\varphi + 3\pi/2), \sin(\varphi + 3\pi/2)\right] = \left[-\dfrac{3}{5}, \dfrac{4}{5}\right]
 $$
 
 Ergo er 
@@ -2066,143 +2069,94 @@ $$
 
 
 :::::::::::::::{exercise} Oppgave 10
-Avgjør om påstandene nedenfor er sanne eller usanne. 
-
-Begrunn svaret ditt! 
-
 
 
 :::::::::::::{part} a
-**Påstand:**
+Vis at 
 
-Hvis $\varphi$ ligger i 1. kvadrant, så ligger også $2\varphi$ i 1. kvadrant.
+$$
+\cos 2\varphi = 2\cos^2 \varphi - 1
+$$
 
 
 
-:::::{answer}
-Usann.
+:::{hint} Hint
+Kombiner identitetene
+
+$$
+\cos^2 \varphi + \sin^2 \varphi = 1
+$$
+
+og 
+
+$$
+\cos 2\varphi = \cos^2 \varphi - \sin^2 \varphi
+$$
+:::
 
 
 ::::{solution}
-Siden $\varphi$ ligger i 1. kvadrant, vil $\varphi \in \left\langle 0, \dfrac{\pi}{2} \right\rangle$. Da vil $2\varphi$ doble alle verdiene i intervallet som gir oss at 
+Vi har at 
 
 $$
-2\varphi \in \left\langle 0, \pi \right\rangle
+\cos 2\varphi = \cos^2 \varphi - \sin^2 \varphi
 $$
 
-Det må bety at for noen vinkler $\varphi$ i 1. kvadrant, så vil $2\varphi$ ligge i 2. kvadrant. 
+Samtidig er 
 
-Dermed er påstanden usann.
+$$
+\sin^2 \varphi + \cos^2 \varphi = 1 \liff \sin^2 \varphi = 1 - \cos^2 \varphi
+$$
+
+Vi setter inn uttrykket for $\sin^2 \varphi$ i den første identiteten som gir
+
+$$
+\cos 2\varphi = \cos^2 \varphi - (1 - \cos^2 \varphi) = 2\cos^2 \varphi - 1
+$$
 ::::
-:::::
+
 
 :::::::::::::
-
 
 :::::::::::::{part} b
-**Påstand:**
+Vis at 
 
-Hvis $\varphi$ ligger i 2. kvadrant, så ligger $2\varphi$ enten i 3. kvadrant eller 4. kvadrant
+$$
+\sin^2 \varphi = \dfrac{1 - \cos 2\varphi}{2}
+$$
 
-
-:::::{answer}
-Sann.
 
 
 ::::{solution}
-Siden $\varphi$ ligger i 2. kvadrant, er 
+Vi har at 
 
 $$
-\varphi \in \left \langle \dfrac{\pi}{2}, \pi\right \rangle
+\cos 2\varphi = \cos^2 \varphi - \sin^2 \varphi
 $$
 
-Det betyr at 
+og
 
 $$
-2\varphi \in \langle \pi,  2\pi \rangle
+\sin^2 \varphi + \cos^2 \varphi = 1 \liff \cos^2 \varphi = 1 - \sin^2 \varphi
 $$
 
-Altså ligger $2\varphi$ i 3. eller 4. kvadrant. 
 
-Dermed er påstanden sann.
+Vi setter inn uttrykket for $\cos^2 \varphi$ i den første identiteten som gir
+
+$$
+\cos 2\varphi = (1 - \sin^2 \varphi) - \sin^2 \varphi = 1 - 2\sin^2 \varphi
+$$
+
+Så løser vi for $\sin^2 \varphi$:
+
+$$
+2\sin^2 \varphi = 1 - \cos 2\varphi \liff \sin^2 \varphi = \dfrac{1 - \cos 2\varphi}{2}
+$$
+
 ::::
-:::::
 
 
 :::::::::::::
-
-
-
-:::::::::::::{part} c
-
-**Påstand:**
-
-Hvis $\cos \varphi$ er positiv, så kan $\cos (2\varphi)$ være positiv eller negativ.
-
-
-
-:::::{answer}
-Sann.
-
-::::{solution}
-Siden $\cos \varphi$ er positiv, følger det at $\varphi$ ligger i 4. eller 1. kvadrant. Da er
-
-$$
-\varphi \in \left \langle -\dfrac{\pi}{2}, \dfrac{\pi}{2} \right \rangle
-$$
-
-Det betyr at 
-
-$$
-2 \varphi \in \left \langle -\pi, \pi \right \rangle
-$$
-
-Her kan $\cos (2\varphi)$ være både positiv og negativ siden mengden inneholder alle kvadrantene.
-::::
-:::::
-
-
-:::::::::::::
-
-
-
-:::::::::::::{part} d
-
-**Påstand:**
-
-
-Hvis $\sin \varphi$ er negativ, så er også $\sin (2\varphi)$ negativ.
-
-
-:::::{answer}
-Usann.
-
-::::{solution}
-Hvis $\sin \varphi$ er negativ, så ligger $\varphi$ i 3. eller 4. kvadrant.
-
-Altså er 
-
-$$
-\varphi \in \left\langle \pi, 2\pi \right\rangle
-$$
-
-Det betyr at 
-
-$$
-2\varphi \in \left\langle 2\pi, 4\pi \right\rangle = \left\langle 0, 2\pi \right\rangle
-$$
-
-som forteller oss at $2\varphi$ kan ligge i alle kvadranter. Dermed kan $\sin (2\varphi)$ være både positiv og negativ, helt avhengig av hva $\varphi$ er.
-
-Altså er påstanden usann.
-::::
-:::::
-
-:::::::::::::
-
-
-
-
 
 
 
@@ -2210,6 +2164,96 @@ Altså er påstanden usann.
 
 :::::::::::::::
 
+
+---
+
+
+:::::::::::::::{exercise} Oppgave 11
+
+:::::::::::::{part} a
+Vis at 
+
+$$
+\cos 2\varphi - \sin \varphi = -2\sin^2 \varphi - \sin \varphi + 1
+$$
+
+
+
+::::{solution}
+Vi bruker først at 
+
+$$
+\cos 2\varphi = \cos^2 \varphi - \sin^2 \varphi
+$$
+
+som gir
+
+$$
+\cos 2\varphi - \sin \varphi = \cos^2 \varphi - \sin^2 \varphi - \sin \varphi
+$$
+
+Deretter bruker vi at 
+
+$$
+\cos^2 \varphi = 1 - \sin^2 \varphi
+$$
+
+som gir at 
+
+$$
+\cos 2\varphi - \sin \varphi = (1 - \sin^2 \varphi) - \sin^2 \varphi - \sin \varphi = 1 - 2\sin^2 \varphi - \sin \varphi
+$$
+
+Dermed er 
+
+$$
+\cos 2\varphi - \sin \varphi = -2\sin^2 \varphi - \sin \varphi + 1
+$$
+::::
+
+
+:::::::::::::
+
+
+
+:::::::::::::{part} b
+Vis at 
+
+$$
+\sin^2 2\varphi - \sin^2 \varphi = -4\sin^4 \varphi + 3\sin^2 \varphi
+$$
+
+
+
+::::{solution}
+Vi har at 
+
+$$
+\sin 2\varphi = 2\cos \varphi \sin \varphi \limplies \sin^2 2\varphi = 4\cos^2 \varphi \sin^2 \varphi
+$$
+
+Dermed får vi 
+
+$$
+\begin{align*}
+\sin^2 2\varphi - \sin^2 \varphi &= 4\cos^2 \varphi \sin^2 \varphi - \sin^2 \varphi \\
+\\
+&= 4(1 - \sin^2 \varphi) \sin^2 \varphi - \sin^2 \varphi \\
+\\
+&= 4\sin^2 \varphi - 4\sin^4 \varphi - \sin^2 \varphi \\
+\\
+&= -4\sin^4 \varphi + 3\sin^2 \varphi
+\end{align*}
+$$
+::::
+
+
+:::::::::::::
+
+
+
+
+:::::::::::::::
 
 
 
@@ -2217,136 +2261,206 @@ Altså er påstanden usann.
 
 
 
+:::::::::::::::{exercise} Oppgave 12 
 
-:::::::::::::::{exercise} Oppgave 11
+> Dette er en oppgavetype du vil ha formelark tilgjengelig for å løse. Eller så blir identiteten nedenfor oppgitt i oppgaven.
+
+For alle vinkler $\varphi$ og $\theta$ gjelder følgende identitet:
+
+$$
+\begin{align*}
+\sin (\varphi \pm \theta) = \sin \varphi \cdot \cos \theta \pm \cos \varphi \cdot \sin \theta
+\end{align*}
+$$
+
 
 :::::::::::::{part} a
+Vis at 
 
-:::{plot}
-axis: equal
-ticks: off
-width: 100%
-align: right
-xlabel: $\cos \varphi$
-ylabel: $\sin \varphi$
-fontsize: 28
-circle: (0, 0), 1
-vector: (0, 0), (1, 0), blue
-let: u = pi/3
-vector: (0, 0), (cos(u), sin(u)), red
-text: cos(u), sin(u), "$Q$", top-right
-text: 1, 0, "$P$", top-right
-angle-arc: (0, 0), 0.4, 0, u*180/pi, red, arrow
-text: 0.5 * cos(u/2), 0.5 * sin(u/2), "$\varphi$", center-center
-point: (cos(u), sin(u))
-point: (1, 0)
+$$
+\sin 3\varphi = \sin \varphi \cdot \cos 2\varphi + \cos \varphi \cdot \sin 2\varphi
+$$
+
+
+:::{hint} Hint
+Bruk at $\sin 3\varphi = \sin (\varphi + 2\varphi)$
 :::
 
 
+::::{solution}
+Vi bruker at identiteten
 
-Vektoren $\lvec{OP} = [1, 0]$ er vist i figuren til høyre.
-
-Vi får et punkt $Q$ ved å rotere $\lvec{OP}$ med $\varphi$ radiener i positiv omløpsretning.
-
-Bestem koordinatene til punktet $Q$ uttrykt med $\cos \varphi$ og $\sin \varphi$.
-
-
-
-:::::{answer}
 $$
-\lvec{OQ} = [\cos \varphi, \sin \varphi]
+\sin (\varphi + \theta) = \sin \varphi \cdot \cos \theta + \cos \varphi \cdot \sin \theta
 $$
-:::::
+
+der $\theta = 2\varphi$:
+
+$$
+\begin{align*}
+\sin 3 \varphi &= \sin(\varphi + 2\varphi) \\
+\\
+&= \sin \varphi \cos 2\varphi + \cos \varphi \sin 2\varphi \\
+\end{align*}
+$$
+::::
+
+
 
 
 :::::::::::::
-
 
 
 :::::::::::::{part} b
-:::{plot}
-axis: equal
-ticks: off
-width: 100%
-align: right
-xlabel: $\cos \varphi$
-ylabel: $\sin \varphi$
-fontsize: 28
-circle: (0, 0), 1
-vector: (0, 0), (0, 1), blue
-let: u = pi/2 + pi/3
-vector: (0, 0), (cos(u), sin(u)), red
-text: cos(u), sin(u), "$T$", top-left
-text: 0, 1, "$R$", top-right
-angle-arc: (0, 0), 0.4, 90, u*180/pi, red, arrow
-text: 0.5 * cos((90 * pi/180 + u)/2), 0.5 * sin((90 * pi/180 + u)/2), "$\varphi$", center-center
-point: (cos(u), sin(u))
-point: (0, 1)
+Vis at 
+
+$$
+\sin 3\varphi = 3\sin \varphi - 4\sin^3 \varphi
+$$
+
+
+:::{hint} Hint
+Kombinerer identiteten fra oppgave **a)** med 
+
+$$
+\cos 2\varphi = \cos^2 \varphi - \sin^2 \varphi \qog \sin 2\varphi = 2 \sin \varphi \cos \varphi
+$$
 :::
 
 
+::::{solution}
+Vi har at 
 
-Vektoren $\lvec{OR} = [0, 1]$ er vist i figuren til høyre.
-
-Vi får et punkt $T$ ved å rotere $\lvec{OR}$ med $\varphi$ radianer i positiv omløpsretning.
-
-Bestem koordinatene til punktet $T$ uttrykt med $\cos \varphi$ og $\sin \varphi$.
-
-
-
-:::::{answer}
 $$
-\lvec{OT} = [-\sin \varphi, \cos \varphi]
+\sin 3\varphi = \sin \varphi \cdot \cos 2\varphi + \cos \varphi \cdot \sin 2\varphi
 $$
-:::::
+
+Så kombinerer vi dette med at 
+
+$$
+\cos 2\varphi = \cos^2 \varphi - \sin^2 \varphi = 1 - 2\sin^2 \varphi
+$$
+
+og 
+
+$$
+\sin 2\varphi = 2 \sin \varphi \cos \varphi
+$$
+
+som gir
+
+$$
+\begin{align*}
+\sin 3\varphi &= \sin \varphi \cdot \cos 2\varphi + \cos \varphi \cdot \sin 2\varphi \\
+\\
+&= \sin \varphi (1 - 2\sin^2 \varphi) + \cos \varphi (2 \sin \varphi \cos \varphi) \\
+\\
+&= \sin \varphi - 2\sin^3 \varphi + 2 \sin \varphi \cos^2 \varphi \\
+\\
+&= \sin \varphi - 2\sin^3 \varphi + 2 \sin \varphi (1 - \sin^2 \varphi) \\
+\\
+&= \sin \varphi - 2\sin^3 \varphi + 2 \sin \varphi - 2 \sin^3 \varphi \\
+\\
+&= 3\sin \varphi - 4\sin^3 \varphi
+\end{align*}
+$$
+::::
 
 
 :::::::::::::
-
-
-:::::::::::::{part} c
-Forklar at 
-
-$$
-\lvec{OP} = [\cos \varphi, \sin \varphi] = \cos \varphi \cdot [1, 0] + \sin \varphi \cdot [0, 1]
-$$
-:::::::::::::
-
-
-
-:::::::::::::{part} d
-Om en vinkel $\varphi$ får du vite at
-
-* $\cos \varphi = -\dfrac{3}{5}$
-* $\sin \varphi = \dfrac{4}{5}$
-
-Finn de eksakte verdiene til
-
-$$
-\cos \left(\varphi + \dfrac{\pi}{4}\right) \qog \sin \left(\varphi + \dfrac{\pi}{4}\right)
-$$
-
-:::::::::::::
-
-
-
 
 
 :::::::::::::::
 
 
 
+---
 
-:::::::::::::::{exercise} Oppgave 12
-Bruk ideen fra oppgave 11 til å vise at 
+
+
+:::::::::::::::{exercise} Oppgave 13
+> Dette er en oppgavetype du vil ha formelark tilgjengelig for å løse. Eller så blir identiteten nedenfor oppgitt i oppgaven.
+
+For alle vinkler $\varphi$ og $\theta$ gjelder følgende identitet:
 
 $$
-\cos(\varphi + \theta) = \cos \varphi \cdot \cos \theta - \sin \varphi \cdot \sin \theta
+\cos (\varphi \pm \theta) = \cos \varphi \cdot \cos \theta \mp \sin \varphi \cdot \sin \theta
 $$
 
-og 
+
+:::::::::::::{part} a
+Vis at 
+
 
 $$
-\sin (\varphi + \theta) = \sin \varphi \cdot \cos \theta + \cos \varphi \cdot \sin \theta
+\cos 3\varphi = \cos \varphi \cdot \cos 2\varphi - \sin \varphi \cdot \sin 2\varphi
 $$
+
+
+::::{solution}
+Vi bruker den oppgitte identiteten med $\theta = 2\varphi$ slik at
+
+$$
+\begin{align*}
+\cos 3\varphi &= \cos(\varphi + 2\varphi) \\
+\\
+&= \cos \varphi \cdot \cos 2\varphi - \sin \varphi \cdot \sin 2\varphi
+\end{align*}
+$$
+::::
+
+
+:::::::::::::
+
+
+:::::::::::::{part} b
+Vis at 
+
+$$
+\cos 3\varphi = 4\cos^3 \varphi - 3\cos \varphi
+$$
+
+
+::::{solution}
+Fra oppgave **a)** har vi at 
+
+$$
+\cos 3\varphi = \cos \varphi \cdot \cos 2\varphi - \sin \varphi \cdot \sin 2\varphi
+$$
+
+Vi bruker at 
+
+$$
+\cos 2\varphi = \cos^2 \varphi - \sin^2 \varphi = 2\cos^2 \varphi - 1
+$$
+
+og at 
+
+$$
+\sin 2\varphi = 2 \sin \varphi \cos \varphi
+$$
+
+Da får vi
+
+$$
+\begin{align*}
+\cos 3\varphi &= \cos \varphi \cdot \cos 2\varphi - \sin \varphi \cdot \sin 2\varphi \\
+\\
+&= \cos \varphi (2\cos^2 \varphi - 1) - \sin \varphi (2 \sin \varphi \cos \varphi) \\
+\\
+&= 2\cos^3 \varphi - \cos \varphi - 2 \sin^2 \varphi \cos \varphi \\
+\\
+&= 2\cos^3 \varphi - \cos \varphi - 2 (1 - \cos^2 \varphi) \cos \varphi \\
+\\
+&= 2\cos^3 \varphi - \cos \varphi - 2 \cos \varphi + 2 \cos^3 \varphi \\
+\\
+&= 4\cos^3 \varphi - 3\cos \varphi
+\end{align*}
+$$
+
+::::
+
+:::::::::::::
+
+
 :::::::::::::::
