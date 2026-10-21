@@ -2405,8 +2405,86 @@ $$
 ---
 
 
-
 :::::::::::::::{exercise} Oppgave 13
+
+:::::::::::::{part} a
+Vis at
+
+$$
+\cos 4\varphi = \cos^4 \varphi - 6\cos^2 \varphi \sin^2 \varphi + \sin^4 \varphi
+$$
+
+
+::::{solution}
+Vi har at 
+
+
+$$
+\begin{align*}
+\cos 4\varphi &= \cos (2 \cdot (2\varphi)) \\
+\\
+&= \cos^2 (2\varphi) - \sin^2 (2\varphi) \\
+\\
+&= (\cos^2 \varphi - \sin^2 \varphi)^2 - (2\cos \varphi \sin \varphi)^2 \\
+\\
+&= (\cos^4 \varphi - 2\cos^2 \varphi \sin^2 \varphi + \sin^4 \varphi) - 4\cos^2 \varphi \sin^2 \varphi \\
+\\
+&= \cos^4 \varphi - 6\cos^2 \varphi \sin^2 \varphi + \sin^4 \varphi
+\end{align*}
+$$
+::::
+
+
+:::::::::::::
+
+
+:::::::::::::{part} b
+Vis at 
+
+$$
+\cos 4\varphi = 8\cos^4 \varphi - 8\cos^2 \varphi + 1
+$$
+
+
+::::{solution}
+Fra oppgave **a)** har vi at
+
+$$
+\cos 4\varphi = \cos^4 \varphi - 6\cos^2 \varphi \sin^2 \varphi + \sin^4 \varphi
+$$
+
+Vi bruker Pytagoras' identitet til å skrive om $\sin^2 \varphi$ som
+
+$$
+\sin^2 \varphi = 1 - \cos^2 \varphi
+$$
+
+Da får vi at 
+
+$$
+\begin{align*}
+\cos 4\varphi &= \cos^4 \varphi - 6\cos^2 \varphi \sin^2 \varphi + \sin^4 \varphi \\
+\\
+&= \cos^4 \varphi - 6\cos^2 \varphi (1 - \cos^2 \varphi) + (1 - \cos^2 \varphi)^2 \\
+\\
+&= \cos^4 \varphi - 6\cos^2 \varphi + 6\cos^4 \varphi + 1 - 2\cos^2 \varphi + \cos^4 \varphi \\
+\\
+&= 8\cos^4 \varphi - 8\cos^2 \varphi + 1
+\end{align*}
+$$
+::::
+
+
+:::::::::::::
+
+:::::::::::::::
+
+
+---
+
+
+
+:::::::::::::::{exercise} Oppgave 14
 
 > Dette er en oppgavetype du vil ha formelark tilgjengelig for å løse. Eller så blir identiteten nedenfor oppgitt i oppgaven.
 
@@ -2523,7 +2601,7 @@ $$
 
 
 
-:::::::::::::::{exercise} Oppgave 14
+:::::::::::::::{exercise} Oppgave 15
 > Dette er en oppgavetype du vil ha formelark tilgjengelig for å løse. Eller så blir identiteten nedenfor oppgitt i oppgaven.
 
 For alle vinkler $\varphi$ og $\theta$ gjelder følgende identitet:
