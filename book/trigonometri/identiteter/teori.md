@@ -325,6 +325,10 @@ $$
 \vec r \left(\dfrac{2\pi}{3}\right) = \left[\cos \dfrac{2\pi}{3}, \sin \dfrac{2\pi}{3}\right]
 $$
 
+For å finne koordinatene til denne vektoren, så gjør vi som følger:
+1. Vi roterer vektoren med $-\pi/2$ radianer (90 grader med klokka) for å havne i 1. kvadrant slik at vi får et punkt der vi *vet* de eksakte koordinatene.
+2. Vi roterer vektoren tilbake igjen med $+\pi/2$ radianer (90 grader mot klokka) for å komme tilbake til den opprinnelige posisjonsvektoren og dermed finne koordinatene til $\vec r \left(\dfrac{2\pi}{3}\right)$.
+
 Hvis vi roterer posisjonsvektoren med $\pi/2$ radianer med klokka, så havner vi i 1. kvadrant: 
 
 
@@ -554,7 +558,7 @@ line-segment: (a, b), (-a, b), dashed, gray
 :::
 
 
-Når vi jobber med trigonometriske likninger, så vil speilinger om koordinataksene spille en viktig rolle i måten vi løser likningene på. Hvis vi tenker oss en vektor $\vec r = [a, b]$, så kan vi speile de om koordinataksene som følger:
+Når vi jobber med trigonometriske likninger, så vil speilinger om koordinataksene spille en viktig rolle i måten vi løser likningene på. Hvis vi tenker oss en vektor $\vec r = [a, b]$, så kan vi speile den om koordinataksene som følger:
 1. Speiling om $x$-aksen: $[a, b]$ speiles til $[a, -b]$
 2. Speiling om $y$-aksen: $[a, b]$ speiles til $[-a, b]$
 
@@ -750,7 +754,7 @@ $$
 \vec r(\varphi) = [\cos \varphi, \sin \varphi]
 $$
 
-Hvis vi speiler denne vektoren om $y$-aksen, så endres fortegnet på $x$-koordinaten, mens $y$-koordinaten forblir den samme. Dermed får vi at
+Hvis vi speiler denne vektoren om $y$-aksen, så endres fortegnet på $x$-koordinaten, mens $y$-koordinaten forblir den samme. 
 
 Vinkelen vi får når vi speiler $\vec r(\varphi)$ om $y$-aksen er $\pi - \varphi$. Dermed har vi at
 
@@ -1034,7 +1038,7 @@ $$
 ---
 
 
-:::::::::::::::{example} Eksempel 6
+:::::::::::::::{example} Eksempel 7
 Om en vinkel $\varphi$ får du vite at $\cos \varphi = 3/5$.  
 
 Finn $\cos (2 \varphi)$.
@@ -1178,7 +1182,7 @@ $$
 ---
 
 
-:::::::::::::::{example} Eksempel 7
+:::::::::::::::{example} Eksempel 8
 Om en vinkel $\varphi$ får du vite at $\sin \varphi = 4/5$ og $\varphi$ ligger i 2. kvadrant.
 
 Finn $\sin (2 \varphi)$.
@@ -1234,7 +1238,7 @@ $$
 
 
 
-> Identitetene nedenfor er mer generelle, og du trenger ikke å kunne dem utenat. Du skal derimot kunne bruke dem til å utlede andre identiteter og skriv om uttrykk når du jobber med trigonometriske likninger og funksjoner.
+> Identitetene nedenfor er mer generelle, og du trenger ikke å kunne dem utenat. Du skal derimot kunne bruke dem til å utlede andre identiteter og skrive om uttrykk når du jobber med trigonometriske likninger og funksjoner.
 
 
 :::::::::::::::{summary} Cosinus til summer og differanser av vinkler (*)
@@ -1294,7 +1298,7 @@ $$
 \lvec{OQ} = [\cos \varphi, \sin \varphi]
 $$
 
-Etter Pytagoras' identitet, vil begge vektorene har lengde lik $1$:
+Etter Pytagoras' identitet, vil begge vektorene ha lengde lik $1$:
 
 $$
 \abs{\lvec{OP}} = \abs{\lvec{OQ}} = 1
@@ -1355,7 +1359,7 @@ $$
 \end{align*}
 $$
 
-Vi kan samle de to identitene til én samlet identitet:
+Vi kan samle de to identitetene til én samlet identitet:
 
 $$
 \sin (\varphi \pm \theta) = \sin \varphi \cdot \cos \theta \pm \cos \varphi \cdot \sin \theta

@@ -6,16 +6,16 @@
 :::::::::::::::{exercise} Oppgave 1
 :::::::::::::{part} a
 :::{plot}
-width: 100%
+width: 320px
 axis: equal
 ticks: off
 align: right
 fontsize: 28
 circle: (0, 0), 1
 let: u = 3*pi/4
-line-segment: (0, 0), (cos(u), sin(u)), red
+vector: (0, 0), (cos(u), sin(u)), blue
 point: (cos(u), sin(u))
-text: cos(u), sin(u), "$P$", top-left
+text: cos(u), sin(u), "$\vec r\left(\frac{3\pi}{4}\right)$", top-left
 angle-arc: (0, 0), 0.3, 0, u*180/pi, red, arrow
 text: 0.5 * cos(u/2), 0.5 * sin(u/2), "$3\pi/4$", center-center
 text: 0.5 * cos(u), 0.5 * sin(u), "$1$", bottom-left
@@ -25,7 +25,8 @@ ylabel: $\sin \varphi$
 :::
 
 
-Punktet $P$ ligger på enhetssirkelen. Linjestykket $OP$ danner vinkelen $\varphi = \dfrac{3\pi}{4}$ med førsteaksen.
+
+Vektoren $\vec r\left(\varphi\right)$ peker på et punkt på enhetssirkelen og danner vinkelen $\varphi = \dfrac{3\pi}{4}$ med førsteaksen.
 
 Finn $\cos \dfrac{3\pi}{4}$ og $\sin \dfrac{3\pi}{4}$.
 
@@ -37,26 +38,25 @@ $$
 $$
 
 ::::{solution}
-Posisjonsvektoren til punktet $P$ er
+Vi har at 
 
 $$
-\lvec{OP} = \left[\cos \left(\dfrac{3\pi}{4}\right), \sin \left(\dfrac{3\pi}{4}\right)\right]
+\vec r\left(\dfrac{3\pi}{4}\right) = \left[\cos \left(\dfrac{3\pi}{4}\right), \sin \left(\dfrac{3\pi}{4}\right)\right]
 $$
 
-Dersom vi roterer denne vektoren 90 grader med klokka, får vi et punkt $Q$ i 1. kvadrant. Dette punktet får koordinatene:
+Roterer vi vektoren $90$ grader *med* klokka får vi:
 
 $$
-\lvec{OQ} = \left[\cos \left(\dfrac{3\pi}{4} - \dfrac{\pi}{2}\right), \sin \left(\dfrac{3\pi}{4} - \dfrac{\pi}{2}\right)\right] = \left[\cos \left(\dfrac{\pi}{4}\right), \sin \left(\dfrac{\pi}{4}\right)\right] = \left[\dfrac{\sqrt{2}}{2}, \dfrac{\sqrt{2}}{2}\right]
+\vec r\left(\dfrac{3\pi}{4} - \dfrac{\pi}{2}\right) = \vec r\left(\dfrac{\pi}{4}\right) = \mqty[\cos \left(\dfrac{\pi}{4}\right), \sin \left(\dfrac{\pi}{4}\right)] = \mqty[\dfrac{\sqrt{2}}{2}, \dfrac{\sqrt{2}}{2}]
 $$
 
-Så roterer vi $\lvec{OQ}$ 90 grader mot klokka for å komme tilbake til punktet $P$ ved å bytte om på rekkefølgen på koordinatene og endre fortegnet på $x$-koordinaten:
+Vi roterer denne vektoren tilbake igjen med $90$ grader *mot* klokka for å komme tilbake til det opprinnelige punktet på enhetssirkelen. Ta bytter vi rekkefølgen på koordinatene og endrer fortegnet på den nye $x$-koordinaten:
 
 $$
-\lvec{OP} = \lvec{OQ}_{+\pi/2} = \left[-\dfrac{\sqrt{2}}{2}, \dfrac{\sqrt{2}}{2}\right]
+\vec r\left(\dfrac{3\pi}{4}\right) = \mqty[-\dfrac{\sqrt{2}}{2}, \dfrac{\sqrt{2}}{2}]
 $$
 
-
-Altså er 
+Dermed er 
 
 $$
 \cos \dfrac{3\pi}{4} = -\dfrac{\sqrt{2}}{2} \qog \sin \dfrac{3\pi}{4} = \dfrac{\sqrt{2}}{2}
@@ -72,16 +72,16 @@ $$
 
 :::::::::::::{part} b
 :::{plot}
-width: 100%
+width: 320px
 axis: equal
 ticks: off
 align: right
 fontsize: 28
 circle: (0, 0), 1
 let: u = 2*pi/3
-line-segment: (0, 0), (cos(u), sin(u)), red
+vector: (0, 0), (cos(u), sin(u)), blue
 point: (cos(u), sin(u))
-text: cos(u), sin(u), "$P$", top-left
+text: cos(u), sin(u), "$\vec r\left(\frac{2\pi}{3}\right)$", top-left
 angle-arc: (0, 0), 0.3, 0, u*180/pi, red, arrow
 text: 0.5 * cos(u/2), 0.5 * sin(u/2), "$2\pi/3$", center-center
 text: 0.5 * cos(u), 0.5 * sin(u), "$1$", bottom-left
@@ -90,8 +90,7 @@ xlabel: $\cos \varphi$
 ylabel: $\sin \varphi$
 :::
 
-
-Punktet $P$ ligger på enhetssirkelen. Linjestykket $OP$ danner vinkelen $\varphi = \dfrac{2\pi}{3}$ med førsteaksen.
+Vektoren $\vec r\left(\varphi\right)$ peker på et punkt på enhetssirkelen og danner vinkelen $\varphi = \dfrac{2\pi}{3}$ med førsteaksen.
 
 Finn $\cos \dfrac{2\pi}{3}$ og $\sin \dfrac{2\pi}{3}$.
 
@@ -103,34 +102,28 @@ $$
 $$
 
 ::::{solution}
-Posisjonsvektoren til punktet $P$ er gitt ved
+Vi har at 
 
 $$
-\lvec{OP} = \left[\cos \left(\dfrac{2\pi}{3}\right), \sin \left(\dfrac{2\pi}{3}\right)\right]
+\vec r\left(\dfrac{2\pi}{3}\right) = \left[\cos \left(\dfrac{2\pi}{3}\right), \sin \left(\dfrac{2\pi}{3}\right)\right]
 $$
 
-Roterer vi vektoren $90$ grader med klokka, får vi et punkt $Q$ i 1. kvadrant. Dette punktet får koordinatene:
+Vi roterer vektoren med $-\pi/2$ radianer (90 grader *med* klokka) som gir et punkt på enhetssirkelen i 1. kvadrant:
 
 $$
-\begin{align*}
-\lvec{OQ} &= \lvec{OP}_{-\pi/2} = \left[\cos \left(\dfrac{2\pi}{3} - \dfrac{\pi}{2}\right), \sin \left(\dfrac{2\pi}{3} - \dfrac{\pi}{2}\right)\right] \\
-\\
-&= \left[\cos \left(\dfrac{\pi}{6}\right), \sin \left(\dfrac{\pi}{6}\right)\right] \\
-\\
-&= \left[\dfrac{\sqrt{3}}{2}, \dfrac{1}{2}\right]
-\end{align*}
+\vec r\left(\dfrac{2\pi}{3} - \dfrac{\pi}{2}\right) = \vec r\left(\dfrac{\pi}{6}\right) = \mqty[\cos \left(\dfrac{\pi}{6}\right), \sin \left(\dfrac{\pi}{6}\right)] = \mqty[\dfrac{\sqrt{3}}{2}, \dfrac{1}{2}]
 $$
 
-For å få koordinatene til punktet $P$, roterer vi vektoren tilbake med $90$ grader mot klokka:
+Så roterer vi vektoren tilbake igjen for å finne koordinatene til det opprinnelige punktet. Da bytter vi rekkefølgen på koordinatene og endrer fortegnet på den nye $x$-koordinaten:
 
 $$
-\lvec{OP} = \lvec{OQ}_{+\pi/2} = \left[-\dfrac{1}{2}, \dfrac{\sqrt{3}}{2}\right]
+\vec r\left(\dfrac{2\pi}{3}\right) = \mqty[-\dfrac{1}{2}, \dfrac{\sqrt{3}}{2}]
 $$
 
-Altså er 
+Ergo er 
 
 $$
-\cos \dfrac{2\pi}{3} = -\dfrac{1}{2} \qog \sin \dfrac{2\pi}{3} = \dfrac{\sqrt{3}}{2}
+\cos \left(\dfrac{2\pi}{3}\right) = -\dfrac{1}{2} \qog \sin \left(\dfrac{2\pi}{3}\right) = \dfrac{\sqrt{3}}{2}
 $$
 
 ::::
@@ -142,16 +135,16 @@ $$
 
 :::::::::::::{part} c
 :::{plot}
-width: 100%
+width: 320px
 axis: equal
 ticks: off
 align: right
 fontsize: 28
 circle: (0, 0), 1
 let: u = 5*pi/6
-line-segment: (0, 0), (cos(u), sin(u)), red
+vector: (0, 0), (cos(u), sin(u)), blue
 point: (cos(u), sin(u))
-text: cos(u), sin(u), "$P$", top-left
+text: cos(u), sin(u), "$\vec r\left(\frac{5\pi}{6}\right)$", top-left
 angle-arc: (0, 0), 0.3, 0, u*180/pi, red, arrow
 text: 0.5 * cos(u/2), 0.5 * sin(u/2), "$5\pi/6$", center-center
 text: 0.5 * cos(u), 0.5 * sin(u), "$1$", bottom-left
@@ -160,8 +153,7 @@ xlabel: $\cos \varphi$
 ylabel: $\sin \varphi$
 :::
 
-
-Punktet $P$ ligger på enhetssirkelen. Linjestykket $OP$ danner vinkelen $\varphi = \dfrac{5\pi}{6}$ med førsteaksen.
+Vektoren $\vec r\left(\varphi\right)$ peker på et punkt på enhetssirkelen og danner vinkelen $\varphi = \dfrac{5\pi}{6}$ med førsteaksen.
 
 Finn $\cos \dfrac{5\pi}{6}$ og $\sin \dfrac{5\pi}{6}$.
 
@@ -173,37 +165,28 @@ $$
 $$
 
 ::::{solution}
-Posisjonsvektoren til punktet $P$ er gitt ved 
+Vi har at 
 
 $$
-\lvec{OP} = \left[\cos \left(\dfrac{5\pi}{6}\right), \sin \left(\dfrac{5\pi}{6}\right)\right]
+\vec r\left(\dfrac{5\pi}{6}\right) = \left[\cos \left(\dfrac{5\pi}{6}\right), \sin \left(\dfrac{5\pi}{6}\right)\right]
 $$
 
-Roterer vi vektoren $90$ grader med klokka, får vi et punkt $Q$ i 1. kvadrant. Dette punktet får koordinatene:
+Vi roterer vektoren med $-\pi/2$ radianer (90 grader *med* klokka) som gir et punkt på enhetssirkelen i 1. kvadrant:
 
 $$
-\begin{align*}
-\lvec{OQ} &= \lvec{OP}_{-\pi/2} = \left[\cos \left(\dfrac{5\pi}{6} - \dfrac{\pi}{2}\right), \sin \left(\dfrac{5\pi}{6} - \dfrac{\pi}{2}\right)\right] \\
-\\
-&= \left[\cos \left(\dfrac{\pi}{3}\right), \sin \left(\dfrac{\pi}{3}\right)\right] \\
-\\
-&= \left[\dfrac{1}{2}, \dfrac{\sqrt{3}}{2}\right]
-\end{align*}
+\vec r\left(\dfrac{5\pi}{6} - \dfrac{\pi}{2}\right) = \vec r\left(\dfrac{\pi}{3}\right) = \mqty[\cos \left(\dfrac{\pi}{3}\right), \sin \left(\dfrac{\pi}{3}\right)] = \mqty[\dfrac{1}{2}, \dfrac{\sqrt{3}}{2}]
 $$
 
-Så roterer vi vektoren tilbake igjen med $90$ grader mot klokka for å komme tilbake til punktet $P$:
+Så roterer vi vektoren tilbake igjen som innebærer å bytte rekkefølgen på koordinatene og endre fortegnet på den nye $x$-koordinaten:
 
 $$
-\begin{align*}
-\lvec{OP} &= \lvec{OQ}_{+\pi/2} = \left[-\dfrac{\sqrt{3}}{2}, \dfrac{1}{2}\right]
-\end{align*}
+\vec r\left(\dfrac{5\pi}{6}\right) = \mqty[-\dfrac{\sqrt{3}}{2}, \dfrac{1}{2}]
 $$
 
-
-Ergo er
+Ergo er 
 
 $$
-\cos \dfrac{5\pi}{6} = -\dfrac{\sqrt{3}}{2} \qog \sin \dfrac{5\pi}{6} = \dfrac{1}{2}
+\cos \left(\dfrac{5\pi}{6}\right) = -\dfrac{\sqrt{3}}{2} \qog \sin \left(\dfrac{5\pi}{6}\right) = \dfrac{1}{2}
 $$
 ::::
 :::::
@@ -222,16 +205,16 @@ $$
 
 :::::::::::::{part} a
 :::{plot}
-width: 100%
+width: 320px
 axis: equal
 ticks: off
 align: right
 fontsize: 28
 circle: (0, 0), 1
 let: u = -pi/6
-line-segment: (0, 0), (cos(u), sin(u)), red
+vector: (0, 0), (cos(u), sin(u)), blue
 point: (cos(u), sin(u))
-text: cos(u), sin(u), "$P$", bottom-right
+text: cos(u), sin(u), "$\vec r\left(-\frac{\pi}{6}\right)$", bottom-right
 angle-arc: (0, 0), 0.3, 0, u*180/pi, red, arrow
 text: 0.55 * cos(u/2), 0.5 * sin(u/2), "$-\pi/6$", center-center
 text: 0.5 * cos(u), 0.5 * sin(u), "$1$", bottom-left
@@ -241,7 +224,7 @@ ylabel: $\sin \varphi$
 :::
 
 
-Punktet $P$ ligger på enhetssirkelen. Linjestykket $OP$ danner vinkelen $\varphi = -\dfrac{\pi}{6}$ med førsteaksen.
+Vektoren $\vec r\left(\varphi\right)$ peker på et punkt på enhetssirkelen og danner vinkelen $\varphi = -\dfrac{\pi}{6}$ med førsteaksen.
 
 Finn $\cos \left(-\dfrac{\pi}{6}\right)$ og $\sin \left(-\dfrac{\pi}{6}\right)$.
 
@@ -253,25 +236,25 @@ $$
 $$
 
 ::::{solution}
-Posisjonsvektoren til $\lvec{OP}$ er gitt ved 
+Vi har at 
 
 $$
-\lvec{OP} = \left[\cos \left(-\dfrac{\pi}{6}\right), \sin \left(-\dfrac{\pi}{6}\right)\right]
+\vec r\left(-\dfrac{\pi}{6}\right) = \left[\cos \left(-\dfrac{\pi}{6}\right), \sin \left(-\dfrac{\pi}{6}\right)\right]
 $$
 
-Dersom vi speiler vektoren om $x$-aksen, får vi punktet 
+Speiler vi vektoren om $x$-aksen så endres vinkelen fra $-\dfrac{\pi}{6}$ til $\dfrac{\pi}{6}$ som gir:
 
 $$
-\lvec{OQ} = \left[\cos \left(\dfrac{\pi}{6}\right), \sin \left(\dfrac{\pi}{6}\right)\right] = \left[\dfrac{\sqrt{3}}{2}, \dfrac{1}{2}\right]
+\vec r\left(\dfrac{\pi}{6}\right) = \mqty[\cos \left(\dfrac{\pi}{6}\right), \sin \left(\dfrac{\pi}{6}\right)] = \mqty[\dfrac{\sqrt{3}}{2}, \dfrac{1}{2}]
 $$
 
-Vi speiler vektoren tilbake for å finne koordinatene til $P$ som svarer til å holde $x$-koordinaten uendret, mens fortegnet på $y$-koordinaten endres:
+Speiler vi vektoren tilbake igjen om $x$-aksen, så forblir fortegnet til $x$-komponenten uendret, mens $y$-koordinaten bytter fortegn:
 
 $$
-\lvec{OP} = \left[\dfrac{\sqrt{3}}{2}, -\dfrac{1}{2}\right]
+\vec r\left(-\dfrac{\pi}{6}\right) = \mqty[\dfrac{\sqrt{3}}{2}, -\dfrac{1}{2}]
 $$
 
-Altså er 
+Ergo er 
 
 $$
 \cos \left(-\dfrac{\pi}{6}\right) = \dfrac{\sqrt{3}}{2} \qog \sin \left(-\dfrac{\pi}{6}\right) = -\dfrac{1}{2}
@@ -286,16 +269,16 @@ $$
 
 :::::::::::::{part} b
 :::{plot}
-width: 100%
+width: 320px
 axis: equal
 ticks: off
 align: right
 fontsize: 28
 circle: (0, 0), 1
 let: u = -pi/4
-line-segment: (0, 0), (cos(u), sin(u)), red
+vector: (0, 0), (cos(u), sin(u)), blue
 point: (cos(u), sin(u))
-text: cos(u), sin(u), "$P$", bottom-right
+text: cos(u), sin(u), "$\vec r\left(-\frac{\pi}{4}\right)$", bottom-right
 angle-arc: (0, 0), 0.3, 0, u*180/pi, red, arrow
 text: 0.55 * cos(u/2), 0.5 * sin(u/2), "$-\pi/4$", center-center
 text: 0.5 * cos(u), 0.5 * sin(u), "$1$", bottom-left
@@ -305,7 +288,7 @@ ylabel: $\sin \varphi$
 :::
 
 
-Punktet $P$ ligger på enhetssirkelen. Linjestykket $OP$ danner vinkelen $\varphi = -\dfrac{\pi}{4}$ med førsteaksen.
+Vektoren $\vec r\left(\varphi\right)$ peker på et punkt på enhetssirkelen og danner vinkelen $\varphi = -\dfrac{\pi}{4}$ med førsteaksen.
 
 Finn $\cos \left(-\dfrac{\pi}{4}\right)$ og $\sin \left(-\dfrac{\pi}{4}\right)$.
 
@@ -318,28 +301,16 @@ $$
 $$
 
 ::::{solution}
-Posisjonsvektoren til $P$ er gitt ved 
+Hvis vi speiler vektoren om $x$-aksen får vi en vektor med vinkelen $\dfrac{\pi}{4}$. Da er $x$-koordinaten til punktet lik, mens $y$-koordinaten bytter fortegn som betyr at 
 
 $$
-\lvec{OP} = \left[\cos \left(-\dfrac{\pi}{4}\right), \sin \left(-\dfrac{\pi}{4}\right)\right]
+\cos \left(-\dfrac{\pi}{4}\right) = \cos \left(\dfrac{\pi}{4}\right) = \dfrac{\sqrt{2}}{2} 
 $$
 
-Dersom vi speiler vektoren om $x$-aksen, får vi punktet
+og 
 
 $$
-\lvec{OQ} = \left[\cos \left(\dfrac{\pi}{4}\right), \sin \left(\dfrac{\pi}{4}\right)\right] = \left[\dfrac{\sqrt{2}}{2}, \dfrac{\sqrt{2}}{2}\right]
-$$
-
-Så speiler vi denne vektoren tilbake igjen for å finne koordinatene til $P$ som svarer til å holde $x$-koordinaten uendret, mens fortegnet på $y$-koordinaten endres:
-
-$$
-\lvec{OP} = \left[\dfrac{\sqrt{2}}{2}, -\dfrac{\sqrt{2}}{2}\right]
-$$
-
-Ergo må 
-
-$$
-\cos \left(-\dfrac{\pi}{4}\right) = \dfrac{\sqrt{2}}{2} \qog \sin \left(-\dfrac{\pi}{4}\right) = -\dfrac{\sqrt{2}}{2}
+\sin \left(-\dfrac{\pi}{4}\right) = -\sin \left(\dfrac{\pi}{4}\right) = -\dfrac{\sqrt{2}}{2}
 $$
 ::::
 :::::
@@ -350,16 +321,16 @@ $$
 
 :::::::::::::{part} c
 :::{plot}
-width: 100%
+width: 320px
 axis: equal
 ticks: off
 align: right
 fontsize: 28
 circle: (0, 0), 1
 let: u = -pi/3
-line-segment: (0, 0), (cos(u), sin(u)), red
+vector: (0, 0), (cos(u), sin(u)), blue
 point: (cos(u), sin(u))
-text: cos(u), sin(u), "$P$", bottom-right
+text: cos(u), sin(u), "$\vec r\left(-\frac{\pi}{3}\right)$", bottom-right
 angle-arc: (0, 0), 0.3, 0, u*180/pi, red, arrow
 text: 0.55 * cos(u/2), 0.5 * sin(u/2), "$-\pi/3$", center-center
 text: 0.5 * cos(u), 0.5 * sin(u), "$1$", bottom-left
@@ -369,7 +340,8 @@ ylabel: $\sin \varphi$
 :::
 
 
-Punktet $P$ ligger på enhetssirkelen. Linjestykket $OP$ danner vinkelen $\varphi = -\dfrac{\pi}{3}$ med førsteaksen.
+
+Vektoren $\vec r\left(\varphi\right)$ peker på et punkt på enhetssirkelen og danner vinkelen $\varphi = -\dfrac{\pi}{3}$ med førsteaksen.
 
 Finn $\cos \left(-\dfrac{\pi}{3}\right)$ og $\sin \left(-\dfrac{\pi}{3}\right)$.
 
@@ -380,25 +352,25 @@ $$
 $$
 
 ::::{solution}
-Posisjonsvektoren til punktet $P$ er gitt ved
+Vi har at 
 
 $$
-\lvec{OP} = \left[\cos \left(-\dfrac{\pi}{3}\right), \sin \left(-\dfrac{\pi}{3}\right)\right]
+\vec r\left(-\dfrac{\pi}{3}\right) = \left[\cos \left(-\dfrac{\pi}{3}\right), \sin \left(-\dfrac{\pi}{3}\right)\right]
 $$
 
-Dersom vi speiler vektoren om $x$-aksen, får vi punktet
+Speiler vi vektoren om $x$-aksen, så endres vinkelen fra $-\dfrac{\pi}{3}$ til $\dfrac{\pi}{3}$ som gir:
 
 $$
-\lvec{OQ} = \left[\cos \left(\dfrac{\pi}{3}\right), \sin \left(\dfrac{\pi}{3}\right)\right] = \left[\dfrac{1}{2}, \dfrac{\sqrt{3}}{2}\right]
+\vec r\left(\dfrac{\pi}{3}\right) = \mqty[\cos \left(\dfrac{\pi}{3}\right), \sin \left(\dfrac{\pi}{3}\right)] = \mqty[\dfrac{1}{2}, \dfrac{\sqrt{3}}{2}]
 $$
 
-Så speiler vi denne vektoren tilbake igjen for å finne koordinatene til $P$ som svarer til å holde $x$-koordinaten uendret, mens fortegnet på $y$-koordinaten endres:
+Speiler vi vektoren tilbake igjen om $x$-aksen, så forblir fortegnet på $x$-komponenten uendret, mens $y$-koordinaten bytter fortegn:
 
 $$
-\lvec{OP} = \left[\dfrac{1}{2}, -\dfrac{\sqrt{3}}{2}\right]
+\vec r\left(-\dfrac{\pi}{3}\right) = \mqty[\dfrac{1}{2}, -\dfrac{\sqrt{3}}{2}]
 $$
 
-Ergo må 
+Ergo er 
 
 $$
 \cos \left(-\dfrac{\pi}{3}\right) = \dfrac{1}{2} \qog \sin \left(-\dfrac{\pi}{3}\right) = -\dfrac{\sqrt{3}}{2}
@@ -423,16 +395,16 @@ $$
 :::::::::::::::{exercise} Oppgave 3
 :::::::::::::{part} a
 :::{plot}
-width: 100%
+width: 320px
 axis: equal
 ticks: off
 align: right
 fontsize: 28
 circle: (0, 0), 1
 let: u = 7*pi/6
-line-segment: (0, 0), (cos(u), sin(u)), red
+vector: (0, 0), (cos(u), sin(u)), blue
 point: (cos(u), sin(u))
-text: cos(u), sin(u), "$P$", bottom-left
+text: cos(u), sin(u), "$\vec r\left(\frac{7\pi}{6}\right)$", bottom-left
 angle-arc: (0, 0), 0.3, 0, u*180/pi, red, arrow
 text: 0.5 * cos(u/2), 0.5 * sin(u/2), "$7\pi/6$", center-center
 text: 0.5 * cos(u), 0.5 * sin(u), "$1$", bottom-right
@@ -442,7 +414,7 @@ ylabel: $\sin \varphi$
 :::
 
 
-Punktet $P$ ligger på enhetssirkelen. Linjestykket $OP$ danner vinkelen $\varphi = \dfrac{7\pi}{6}$ med førsteaksen.
+Vektoren $\vec r\left(\varphi\right)$ peker på et punkt på enhetssirkelen og danner vinkelen $\varphi = \dfrac{7\pi}{6}$ med førsteaksen.
 
 Finn $\cos \dfrac{7\pi}{6}$ og $\sin \dfrac{7\pi}{6}$.
 
@@ -453,31 +425,25 @@ $$
 $$
 
 ::::{solution}
-Posisjonsvektoren til $P$ er gitt ved
+Vi har at 
 
 $$
-\lvec{OP} = \left[\cos \left(\dfrac{7\pi}{6}\right), \sin \left(\dfrac{7\pi}{6}\right)\right]
+\vec r\left(\dfrac{7\pi}{6}\right) = \left[\cos \left(\dfrac{7\pi}{6}\right), \sin \left(\dfrac{7\pi}{6}\right)\right]
 $$
 
-Siden punktet $P$ ligger i 3. kvadrant, kan vi rotere vektoren med 180 grader med klokka for å få et punkt $Q$ i 1. kvadrant. Dette punktet får koordinatene:
+Roterer vi vektoren $-\pi$ radianer (180 grader *med* klokka) får vi et punkt på enhetssirkelen i 1. kvadrant:
 
 $$
-\begin{align*}
-\lvec{OQ} &= \lvec{OP}_{-\pi} = \left[\cos \left(\dfrac{7\pi}{6} - \pi\right), \sin \left(\dfrac{7\pi}{6} - \pi\right)\right] \\
-\\
-&= \left[\cos \left(\dfrac{\pi}{6}\right), \sin \left(\dfrac{\pi}{6}\right)\right] \\
-\\
-&= \left[\dfrac{\sqrt{3}}{2}, \dfrac{1}{2}\right]
-\end{align*}
+\vec r\left(\dfrac{7\pi}{6} - \pi\right) = \vec r\left(\dfrac{\pi}{6}\right) = \mqty[\cos \left(\dfrac{\pi}{6}\right), \sin \left(\dfrac{\pi}{6}\right)] = \mqty[\dfrac{\sqrt{3}}{2}, \dfrac{1}{2}]
 $$
 
-Så roterer vi denne vektoren tilbake med 180 grader mot klokka for å komme tilbake til punktet $P$. Dette svarer til å gange vektoren med $-1$:
+Så roterer vi vektoren tilbake igjen til utgangspunktet som svarer til å gange vektoren med $(-1)$:
 
 $$
-\lvec{OP} = \lvec{OQ}_{+\pi} = (-1) \cdot \lvec{OQ} = \left[-\dfrac{\sqrt{3}}{2}, -\dfrac{1}{2}\right]
+\vec r\left(\dfrac{7\pi}{6}\right) = (-1) \cdot \mqty[\dfrac{\sqrt{3}}{2}, \dfrac{1}{2}] = \mqty[-\dfrac{\sqrt{3}}{2}, -\dfrac{1}{2}]
 $$
 
-Altså er 
+Ergo er 
 
 $$
 \cos \dfrac{7\pi}{6} = -\dfrac{\sqrt{3}}{2} \qog \sin \dfrac{7\pi}{6} = -\dfrac{1}{2}
@@ -490,16 +456,16 @@ $$
 
 :::::::::::::{part} b
 :::{plot}
-width: 100%
+width: 320px
 axis: equal
 ticks: off
 align: right
 fontsize: 28
 circle: (0, 0), 1
 let: u = 5*pi/4
-line-segment: (0, 0), (cos(u), sin(u)), red
+vector: (0, 0), (cos(u), sin(u)), blue
 point: (cos(u), sin(u))
-text: cos(u), sin(u), "$P$", bottom-left
+text: cos(u), sin(u), "$\vec r\left(\frac{5\pi}{4}\right)$", bottom-left
 angle-arc: (0, 0), 0.3, 0, u*180/pi, red, arrow
 text: 0.5 * cos(u/2), 0.5 * sin(u/2), "$5\pi/4$", center-center
 text: 0.5 * cos(u), 0.5 * sin(u), "$1$", bottom-right
@@ -509,7 +475,7 @@ ylabel: $\sin \varphi$
 :::
 
 
-Punktet $P$ ligger på enhetssirkelen. Linjestykket $OP$ danner vinkelen $\varphi = \dfrac{5\pi}{4}$ med førsteaksen.
+Vektoren $\vec r\left(\varphi\right)$ peker på et punkt på enhetssirkelen og danner vinkelen $\varphi = \dfrac{5\pi}{4}$ med førsteaksen.
 
 Finn $\cos \dfrac{5\pi}{4}$ og $\sin \dfrac{5\pi}{4}$.
 
@@ -521,31 +487,25 @@ $$
 $$
 
 ::::{solution}
-Posisjonsvektoren til $P$ er gitt ved 
+Vi har at 
 
 $$
-\lvec{OP} = \left[\cos \left(\dfrac{5\pi}{4}\right), \sin \left(\dfrac{5\pi}{4}\right)\right]
+\vec r\left(\dfrac{5\pi}{4}\right) = \left[\cos \left(\dfrac{5\pi}{4}\right), \sin \left(\dfrac{5\pi}{4}\right)\right]
 $$
 
-Siden punktet ligger i 3. kvadrant, kan vi rotere vektoren med 180 grader med klokka for å få et punkt $Q$ i 1. kvadrant. Dette punktet får koordinatene:
+Roterer vi vektoren $-\pi$ radianer (180 grader *med* klokka) får vi et punkt på enhetssirkelen i 1. kvadrant:
 
 $$
-\begin{align*}
-\lvec{OQ} &= \lvec{OP}_{-\pi} = \left[\cos \left(\dfrac{5\pi}{4} - \pi\right), \sin \left(\dfrac{5\pi}{4} - \pi\right)\right] \\
-\\
-&= \left[\cos \left(\dfrac{\pi}{4}\right), \sin \left(\dfrac{\pi}{4}\right)\right] \\
-\\
-&= \left[\dfrac{\sqrt{2}}{2}, \dfrac{\sqrt{2}}{2}\right]
-\end{align*}
+\vec r\left(\dfrac{5\pi}{4} - \pi\right) = \vec r\left(\dfrac{\pi}{4}\right) = \mqty[\cos \left(\dfrac{\pi}{4}\right), \sin \left(\dfrac{\pi}{4}\right)] = \mqty[\dfrac{\sqrt{2}}{2}, \dfrac{\sqrt{2}}{2}]
 $$
 
-Så roterer vi denne vektoren tilbake med 180 grader mot klokka for å komme tilbake til punktet $P$. Dette svarer til å gange vektoren med $-1$:
+Så roterer vi vektoren tilbake igjen til utgangspunktet som svarer til å gange vektoren med $(-1)$:
 
 $$
-\lvec{OP} = \lvec{OQ}_{+\pi} = (-1) \cdot \lvec{OQ} = \left[-\dfrac{\sqrt{2}}{2}, -\dfrac{\sqrt{2}}{2}\right]
+\vec r\left(\dfrac{5\pi}{4}\right) = (-1) \cdot \mqty[\dfrac{\sqrt{2}}{2}, \dfrac{\sqrt{2}}{2}] = \mqty[-\dfrac{\sqrt{2}}{2}, -\dfrac{\sqrt{2}}{2}]
 $$
 
-Altså er 
+Ergo er 
 
 $$
 \cos \dfrac{5\pi}{4} = -\dfrac{\sqrt{2}}{2} \qog \sin \dfrac{5\pi}{4} = -\dfrac{\sqrt{2}}{2}
@@ -560,16 +520,16 @@ $$
 
 :::::::::::::{part} c
 :::{plot}
-width: 100%
+width: 320px
 axis: equal
 ticks: off
 align: right
 fontsize: 28
 circle: (0, 0), 1
 let: u = 4*pi/3
-line-segment: (0, 0), (cos(u), sin(u)), red
+vector: (0, 0), (cos(u), sin(u)), blue
 point: (cos(u), sin(u))
-text: cos(u), sin(u), "$P$", bottom-left
+text: cos(u), sin(u), "$\vec r\left(\frac{4\pi}{3}\right)$", bottom-left
 angle-arc: (0, 0), 0.3, 0, u*180/pi, red, arrow
 text: 0.5 * cos(u/2), 0.5 * sin(u/2), "$4\pi/3$", center-center
 text: 0.5 * cos(u), 0.5 * sin(u), "$1$", bottom-right
@@ -579,7 +539,7 @@ ylabel: $\sin \varphi$
 :::
 
 
-Punktet $P$ ligger på enhetssirkelen. Linjestykket $OP$ danner vinkelen $\varphi = \dfrac{4\pi}{3}$ med førsteaksen.
+Vektoren $\vec r\left(\varphi\right)$ peker på et punkt på enhetssirkelen og danner vinkelen $\varphi = \dfrac{4\pi}{3}$ med førsteaksen.
 
 Finn $\cos \dfrac{4\pi}{3}$ og $\sin \dfrac{4\pi}{3}$.
 
@@ -591,31 +551,25 @@ $$
 $$
 
 ::::{solution}
-Posisjonsvektoren til punktet $P$ er gitt ved 
+Vi har at 
 
 $$
-\lvec{OP} = \left[\cos \left(\dfrac{4\pi}{3}\right), \sin \left(\dfrac{4\pi}{3}\right)\right]
+\vec r\left(\dfrac{4\pi}{3}\right) = \left[\cos \left(\dfrac{4\pi}{3}\right), \sin \left(\dfrac{4\pi}{3}\right)\right]
 $$
 
-Siden punktet ligger i 3. kvadrant, kan vi rotere vektoren med 180 grader med klokka for å få et punkt $Q$ i 1. kvadrant. Dette punktet får koordinatene:
+Roterer vi vektoren $-\pi$ radianer (180 grader *med* klokka) får vi et punkt på enhetssirkelen i 1. kvadrant:
 
 $$
-\begin{align*}
-\lvec{OQ} &= \lvec{OP}_{-\pi} = \left[\cos \left(\dfrac{4\pi}{3} - \pi\right), \sin \left(\dfrac{4\pi}{3} - \pi\right)\right] \\
-\\
-&= \left[\cos \left(\dfrac{\pi}{3}\right), \sin \left(\dfrac{\pi}{3}\right)\right] \\
-\\
-&= \left[\dfrac{1}{2}, \dfrac{\sqrt{3}}{2}\right]
-\end{align*}
+\vec r\left(\dfrac{4\pi}{3} - \pi\right) = \vec r\left(\dfrac{\pi}{3}\right) = \mqty[\cos \left(\dfrac{\pi}{3}\right), \sin \left(\dfrac{\pi}{3}\right)] = \mqty[\dfrac{1}{2}, \dfrac{\sqrt{3}}{2}]
 $$
 
-Så roterer vi denne vektoren tilbake med 180 grader mot klokka for å komme tilbake til punktet $P$. Dette svarer til å gange vektoren med $-1$:
+Så roterer vi vektoren tilbake igjen til utgangspunktet som svarer til å gange vektoren med $(-1)$:
 
 $$
-\lvec{OP} = \lvec{OQ}_{+\pi} = (-1) \cdot \lvec{OQ} = \left[-\dfrac{1}{2}, -\dfrac{\sqrt{3}}{2}\right]
+\vec r\left(\dfrac{4\pi}{3}\right) = (-1) \cdot \mqty[\dfrac{1}{2}, \dfrac{\sqrt{3}}{2}] = \mqty[-\dfrac{1}{2}, -\dfrac{\sqrt{3}}{2}]
 $$
 
-Altså er 
+Ergo er 
 
 $$
 \cos \dfrac{4\pi}{3} = -\dfrac{1}{2} \qog \sin \dfrac{4\pi}{3} = -\dfrac{\sqrt{3}}{2}
@@ -629,16 +583,16 @@ $$
 
 :::::::::::::{part} d
 :::{plot}
-width: 100%
+width: 320px
 axis: equal
 ticks: off
 align: right
 fontsize: 28
 circle: (0, 0), 1
 let: u = -2*pi/3
-line-segment: (0, 0), (cos(u), sin(u)), red
+vector: (0, 0), (cos(u), sin(u)), blue
 point: (cos(u), sin(u))
-text: cos(u), sin(u), "$P$", bottom-left
+text: cos(u), sin(u), "$\vec r\left(-\frac{2\pi}{3}\right)$", bottom-left
 angle-arc: (0, 0), 0.3, 0, u*180/pi, red, arrow
 text: 0.55 * cos(u/2), 0.5 * sin(u/2), "$-2\pi/3$", center-center
 text: 0.5 * cos(u), 0.5 * sin(u), "$1$", top-left
@@ -648,7 +602,7 @@ ylabel: $\sin \varphi$
 :::
 
 
-Punktet $P$ ligger på enhetssirkelen. Linjestykket $OP$ danner vinkelen $\varphi = -\dfrac{2\pi}{3}$ med førsteaksen.
+Vektoren $\vec r\left(\varphi\right)$ peker på et punkt på enhetssirkelen og danner vinkelen $\varphi = -\dfrac{2\pi}{3}$ med førsteaksen.
 
 Finn $\cos \left(-\dfrac{2\pi}{3}\right)$ og $\sin \left(-\dfrac{2\pi}{3}\right)$.
 
@@ -660,31 +614,25 @@ $$
 $$
 
 ::::{solution}
-Posisjonsvektoren til $P$ er gitt ved 
+Vi har at 
 
 $$
-\lvec{OP} = \left[\cos \left(-\dfrac{2\pi}{3}\right), \sin \left(-\dfrac{2\pi}{3}\right)\right]
+\vec r\left(-\dfrac{2\pi}{3}\right) = \left[\cos \left(-\dfrac{2\pi}{3}\right), \sin \left(-\dfrac{2\pi}{3}\right)\right]
 $$
 
-Punktet ligger i 3. kvadrant, men siden vinkelen er negativ, roterer vi vektoren med 180 grader mot klokka for å få et punkt $Q$ i 1. kvadrant. Dette punktet får koordinatene:
+Roterer vi vektoren $+\pi$ radianer (180 grader *mot* klokka) får vi et punkt på enhetssirkelen i 1. kvadrant og 1. omløp:
 
 $$
-\begin{align*}
-\lvec{OQ} &= \lvec{OP}_{+\pi} = \left[\cos \left(-\dfrac{2\pi}{3} + \pi\right), \sin \left(-\dfrac{2\pi}{3} + \pi\right)\right] \\
-\\
-&= \left[\cos \left(\dfrac{\pi}{3}\right), \sin \left(\dfrac{\pi}{3}\right)\right] \\
-\\
-&= \left[\dfrac{1}{2}, \dfrac{\sqrt{3}}{2}\right]
-\end{align*}
+\vec r\left(-\dfrac{2\pi}{3} + \pi\right) = \vec r\left(\dfrac{\pi}{3}\right) = \mqty[\cos \left(\dfrac{\pi}{3}\right), \sin \left(\dfrac{\pi}{3}\right)] = \mqty[\dfrac{1}{2}, \dfrac{\sqrt{3}}{2}]
 $$
 
-Så roterer vi vektoren tilbake med 180 grader med klokka for å komme tilbake til punktet $P$. Dette svarer til å gange vektoren med $-1$:
+Så roterer vi vektoren tilbake igjen til utgangspunktet som svarer til å gange vektoren med $(-1)$:
 
 $$
-\lvec{OP} = \lvec{OQ}_{-\pi} = (-1) \cdot \lvec{OQ} = \left[-\dfrac{1}{2}, -\dfrac{\sqrt{3}}{2}\right]
+\vec r\left(-\dfrac{2\pi}{3}\right) = (-1) \cdot \mqty[\dfrac{1}{2}, \dfrac{\sqrt{3}}{2}] = \mqty[-\dfrac{1}{2}, -\dfrac{\sqrt{3}}{2}]
 $$
 
-Altså er 
+Da får vi at 
 
 $$
 \cos \left(-\dfrac{2\pi}{3}\right) = -\dfrac{1}{2} \qog \sin \left(-\dfrac{2\pi}{3}\right) = -\dfrac{\sqrt{3}}{2}
@@ -707,7 +655,7 @@ $$
 
 :::::::::::::{part} a
 :::{plot}
-width: 100%
+width: 320px
 align: right
 fontsize: 28
 axis: equal
@@ -716,8 +664,9 @@ xlabel: $\cos \varphi$
 ylabel: $\sin \varphi$
 circle: (0, 0), 1
 let: u = pi/3 + 4*pi
-line-segment: (0, 0), (cos(u), sin(u)), blue
+vector: (0, 0), (cos(u), sin(u)), blue
 point: (cos(u), sin(u))
+text: cos(u), sin(u), "$\vec r\left(\frac{13\pi}{3}\right)$", top-right
 angle-arc: (0, 0), 0.3, 0, u*180/pi, red, arrow
 text: 0.6 * cos(u/2), 0.5 * sin(u/2), "$\displaystyle \frac{13\pi}{3}$", center-center
 :::
@@ -766,8 +715,9 @@ xlabel: $\cos \varphi$
 ylabel: $\sin \varphi$
 circle: (0, 0), 1
 let: u = 2*pi / 3 + 2*pi
-line-segment: (0, 0), (cos(u), sin(u)), blue
+vector: (0, 0), (cos(u), sin(u)), blue
 point: (cos(u), sin(u))
+text: cos(u), sin(u), "$\vec r\left(\frac{8\pi}{3}\right)$", top-left
 angle-arc: (0, 0), 0.3, 0, u*180/pi, red, arrow
 text: 0.6 * cos(u/2), 0.6 * sin(u/2), "$\displaystyle \frac{8\pi}{3}$", center-center
 :::
@@ -808,7 +758,7 @@ $$
 :::::::::::::{part} c
 
 :::{plot}
-width: 100%
+width: 320px
 align: right
 fontsize: 28
 axis: equal
@@ -817,8 +767,9 @@ xlabel: $\cos \varphi$
 ylabel: $\sin \varphi$
 circle: (0, 0), 1
 let: u = pi / 6 - 6*pi
-line-segment: (0, 0), (cos(u), sin(u)), blue
+vector: (0, 0), (cos(u), sin(u)), blue
 point: (cos(u), sin(u))
+text: cos(u), sin(u), "$\vec r\left(-\frac{35\pi}{6}\right)$", top-right
 angle-arc: (0, 0), 0.2, 0, u*180/pi, red, arrow
 text: 0.6 * cos(u/2), 0.6 * sin(u/2), "$\displaystyle -\frac{35\pi}{6}$", center-center
 :::
@@ -867,8 +818,9 @@ xlabel: $\cos \varphi$
 ylabel: $\sin \varphi$
 circle: (0, 0), 1
 let: u = 4*pi/3 - 4*pi
-line-segment: (0, 0), (cos(u), sin(u)), blue
+vector: (0, 0), (cos(u), sin(u)), blue
 point: (cos(u), sin(u))
+text: cos(u), sin(u), "$\vec r\left(-\frac{8\pi}{3}\right)$", bottom-left
 angle-arc: (0, 0), 0.3, 0, u*180/pi, red, arrow
 text: 0.6 * cos(u/2), 0.6 * sin(u/2), "$\displaystyle -\frac{8\pi}{3}$", center-center
 :::
@@ -888,26 +840,23 @@ $$
 $$
 
 ::::{solution}
-Trekker vi fra $-4\pi$ får vi en positiv vinkel som ligger i 4. kvadrant:
+Legger vi til $4\pi$ får vi en positiv vinkel som ligger i 3. kvadrant:
 
 $$
 \varphi = -\dfrac{8\pi}{3} + 4\pi = \dfrac{4\pi}{3}
 $$
 
-Denne vinkelen ligger i 3. kvadrant, så vi kan rotere vektoren med 180 grader med klokka for å få et punkt $Q$ i 1. kvadrant. Dette punktet får koordinatene:
-
-Vi har at
-
-$$
-\cos\left(\dfrac{4\pi}{3}\right) = -\cos \dfrac{\pi}{3} = -\dfrac{1}{2} \qog \sin\left(\dfrac{4\pi}{3}\right) = -\sin \dfrac{\pi}{3} = -\dfrac{\sqrt{3}}{2}
-$$
-
 Dermed er 
 
 $$
-\cos \left(-\dfrac{8\pi}{3}\right) = -\dfrac{1}{2} \qog \sin \left(-\dfrac{8\pi}{3}\right) = -\dfrac{\sqrt{3}}{2}
+\cos \left(-\dfrac{8\pi}{3}\right) = \cos \dfrac{4\pi}{3} = -\dfrac{1}{2}
 $$
 
+og 
+
+$$
+\sin \left(-\dfrac{8\pi}{3}\right) = \sin \dfrac{4\pi}{3} = -\dfrac{\sqrt{3}}{2}
+$$
 
 ::::
 :::::
@@ -929,8 +878,9 @@ xlabel: $\cos \varphi$
 ylabel: $\sin \varphi$
 circle: (0, 0), 1
 let: u = 3*pi/4 + 2*pi
-line-segment: (0, 0), (cos(u), sin(u)), blue
+vector: (0, 0), (cos(u), sin(u)), blue
 point: (cos(u), sin(u))
+text: cos(u), sin(u), "$\vec r\left(\frac{11\pi}{4}\right)$", top-left
 angle-arc: (0, 0), 0.3, 0, u*180/pi, red, arrow
 text: 0.6 * cos(u/2), 0.6 * sin(u/2), "$\displaystyle \frac{11\pi}{4}$", center-center
 :::
@@ -1517,7 +1467,7 @@ Finn $\cos \left(\dfrac{\pi}{2} - \varphi\right)$ og $\sin \left(\dfrac{\pi}{2} 
 
 
 ::::{hint} Hint
-Tenk deg at du roterer en posisjonsvektor $\lvec{OP} = [\cos(-\varphi), \sin(-\varphi)]$ med $\pi/2$ radianer i positiv omløpsretning.
+Tenk deg at du roterer $\vec r(-\varphi) = [\cos(-\varphi), \sin(-\varphi)]$ med $\pi/2$ radianer i positiv omløpsretning.
 ::::
 
 
@@ -1886,7 +1836,7 @@ $$
 \cos^2 \varphi + \sin^2 \varphi = 1 \liff \cos^2 \varphi = 1 - \sin^2 \varphi
 $$
 
-Siden vinkelen ligger i 1.kvadrant er $\sin \varphi$ positiv og $\cos \varphi$ positiv. Vi kan derfor skrive om $\cos \varphi$ som
+Siden vinkelen ligger i 1. kvadrant er $\sin \varphi$ positiv og $\cos \varphi$ positiv. Vi kan derfor skrive om $\cos \varphi$ som
 
 $$
 \cos \varphi = \sqrt{1 - \sin^2 \varphi}
@@ -2260,8 +2210,203 @@ $$
 ---
 
 
+:::::::::::::::{exercise} Oppgave 12
 
-:::::::::::::::{exercise} Oppgave 12 
+
+:::{hint} Hint
+Du kan bruke identiteten for sinus av en dobbel vinkel ved å innse at 
+
+$$
+\sin 4\varphi = \sin (2\cdot 2\varphi) = \sin 2 \theta
+$$
+
+der $\theta = 2\varphi$.
+:::
+
+:::::::::::::{part} a
+Vis at 
+
+$$
+\sin 4\varphi = 2 \sin 2\varphi \cdot \cos 2\varphi
+$$
+
+
+::::{solution}
+Vi har at 
+
+$$
+\sin 4\varphi = \sin (2\cdot 2\varphi)
+$$
+
+Hvis vi lar $\theta = 2\varphi$ får vi 
+
+$$
+\sin 2\theta = 2\cos \theta \sin \theta = 2\sin 2\varphi \cos 2\varphi
+$$
+
+Ergo er 
+
+$$
+\sin 4\varphi = 2 \sin 2\varphi \cdot \cos 2\varphi
+$$
+
+::::
+
+
+:::::::::::::
+
+
+:::::::::::::{part} b
+Vis at 
+
+$$
+\sin 4\varphi = 4\cos^3 \varphi \sin \varphi - 4\cos \varphi \sin^3 \varphi
+$$
+
+
+
+::::{solution}
+Vi starter fra identiteten fra oppgave **a)**:
+
+$$
+\sin 4\varphi = 2 \sin 2\varphi \cdot \cos 2\varphi
+$$
+
+Vi har da at 
+
+$$
+\sin 2\varphi = 2 \sin \varphi \cos \varphi
+$$
+
+og
+
+$$
+\cos 2\varphi = \cos^2 \varphi - \sin^2 \varphi
+$$
+
+Så setter vi inn og ganger ut:
+
+$$
+\begin{align*}
+\sin 4\varphi = 2 \sin 2\varphi \cdot \cos 2\varphi &= 2 (2 \sin \varphi \cos \varphi) (\cos^2 \varphi - \sin^2 \varphi) \\
+\\
+&= 4 \sin \varphi \cos \varphi (\cos^2 \varphi - \sin^2 \varphi) \\
+\\
+&= 4 \sin \varphi \cos^3 \varphi - 4 \sin^3 \varphi \cos \varphi \\
+\\
+&= 4 \cos^3 \varphi \sin \varphi - 4 \cos \varphi \sin^3 \varphi
+\end{align*}
+$$
+::::
+
+
+:::::::::::::
+
+
+
+:::::::::::::{part} c
+Vis at 
+
+$$
+\sin 4\varphi = 8\cos^3 \varphi \sin \varphi - 4\cos \varphi \sin \varphi
+$$
+
+
+::::{solution}
+I oppgave **a)** har vi vist at 
+
+$$
+\sin 4\varphi = 2 \sin 2\varphi \cdot \cos 2\varphi
+$$
+
+Vi bruker nå at 
+
+$$
+\sin 2\varphi = 2 \sin \varphi \cos \varphi
+$$
+
+og
+
+$$
+\cos 2\varphi = \cos^2 \varphi - \sin^2 \varphi = \cos^2 \varphi - (1 - \cos^2 \varphi) = 2\cos^2 \varphi - 1
+$$
+
+Vi setter inn i den opprinnelige likningen som gir
+
+$$
+\begin{align*}
+\sin 4\varphi &= 2 \sin 2\varphi \cdot \cos 2\varphi \\
+\\
+&= 2 (2 \sin \varphi \cos \varphi) (2\cos^2 \varphi - 1) \\
+\\
+&= 4 \sin \varphi \cos \varphi (2\cos^2 \varphi - 1) \\
+\\
+&= 8 \sin \varphi \cos^3 \varphi - 4 \sin \varphi \cos \varphi \\
+\end{align*}
+$$
+::::
+
+
+:::::::::::::
+
+
+
+:::::::::::::{part} d
+Vis at 
+
+$$
+\sin 4\varphi = 4\cos\varphi(\sin \varphi - 2\sin^3 \varphi)
+$$
+
+
+::::{solution}
+Fra oppgave **a)** har vi at 
+
+$$
+\sin 4\varphi = 2 \sin 2\varphi \cdot \cos 2\varphi
+$$
+
+Vi har også at 
+
+$$
+\sin 2\varphi = 2  \cos \varphi \sin \varphi
+$$
+
+og
+
+$$
+\cos 2\varphi = \cos^2 \varphi - \sin^2 \varphi = 1 - 2\sin^2 \varphi
+$$
+
+Vi setter inn og regner ut:
+
+$$
+\begin{align*}
+\sin 4\varphi &= 2 \sin 2\varphi \cdot \cos 2\varphi \\
+\\
+&= 2 (2 \sin \varphi \cos \varphi) (1 - 2\sin^2 \varphi) \\
+\\
+&= 4  \cos \varphi \sin \varphi (1 - 2\sin^2 \varphi) \\
+\\
+&= 4 \cos \varphi \sin \varphi  - 8 \cos \varphi \sin^3 \varphi \\
+\\
+&= 4 \cos \varphi (\sin \varphi - 2\sin^3 \varphi)
+\end{align*}
+$$
+::::
+
+
+:::::::::::::
+
+
+:::::::::::::::
+
+
+---
+
+
+
+:::::::::::::::{exercise} Oppgave 13
 
 > Dette er en oppgavetype du vil ha formelark tilgjengelig for å løse. Eller så blir identiteten nedenfor oppgitt i oppgaven.
 
@@ -2288,7 +2433,7 @@ Bruk at $\sin 3\varphi = \sin (\varphi + 2\varphi)$
 
 
 ::::{solution}
-Vi bruker at identiteten
+Vi bruker identiteten
 
 $$
 \sin (\varphi + \theta) = \sin \varphi \cdot \cos \theta + \cos \varphi \cdot \sin \theta
@@ -2320,7 +2465,7 @@ $$
 
 
 :::{hint} Hint
-Kombinerer identiteten fra oppgave **a)** med 
+Kombiner identiteten fra oppgave **a)** med 
 
 $$
 \cos 2\varphi = \cos^2 \varphi - \sin^2 \varphi \qog \sin 2\varphi = 2 \sin \varphi \cos \varphi
@@ -2378,7 +2523,7 @@ $$
 
 
 
-:::::::::::::::{exercise} Oppgave 13
+:::::::::::::::{exercise} Oppgave 14
 > Dette er en oppgavetype du vil ha formelark tilgjengelig for å løse. Eller så blir identiteten nedenfor oppgitt i oppgaven.
 
 For alle vinkler $\varphi$ og $\theta$ gjelder følgende identitet:
