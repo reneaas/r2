@@ -267,44 +267,170 @@ fontsize: 32
 
 
 
-:::::::::::::::{summary} Eksakte verdier for sinus og cosinus i 1.kvadrant
+
+:::::::::::::::{summary} Eksaktverdier i første periode (grader)
+Nedenfor ser du en figur som viser eksakte verdier for sinus og cosinus i alle kvadranter der vinkelmålet er i grader. $x$-koordinaten gir cosinusverdien og $y$-koordinaten gir sinusverdien.
+
+
 :::{plot}
 width: 100%
-align: right
-fontsize: 24
+xlabel: $\cos \varphi$
+ylabel: $\sin \varphi$
+fontsize: 16
 axis: equal
 ticks: off
 circle: (0, 0), 1
 let: r = 1.3
 let: r1 = 0.55
 let: r2 = 0.85
+let: ds = 0.1
 line-segment: (0, 0), (r1 * cos(pi/6), r1 * sin(pi/6)), blue
 line-segment: (r2 * cos(pi/6), r2 * sin(pi/6)), (cos(pi/6), sin(pi/6)), blue
-text: 0.7 * cos(pi/6), 0.7 * sin(pi/6), "$\pi/6$", center-center
-text: r * cos(pi/6), r * sin(pi/6), "$\left(\frac{\sqrt{3}}{2}, \frac{1}{2}\right)$", bottom-center
+text: 0.7 * cos(pi/6), 0.7 * sin(pi/6), "$30^\circ$", center-center
+text: r * cos(pi/6) + ds, r * sin(pi/6) - ds, "$\left(\frac{\sqrt{3}}{2}, \frac{1}{2}\right)$", center-center
 line-segment: (0, 0), (r1 * cos(pi/4), r1 * sin(pi/4)), blue
 line-segment: (r2 * cos(pi/4), r2 * sin(pi/4)), (cos(pi/4), sin(pi/4)), blue
-text: 0.7 * cos(pi/4), 0.7 * sin(pi/4), "$\pi/4$", center-center
-text: r * cos(pi/4) + 0.1, r * sin(pi/4), "$\left(\frac{\sqrt{2}}{2}, \frac{\sqrt{2}}{2}\right)$", bottom-center
+text: 0.7 * cos(pi/4), 0.7 * sin(pi/4), "$45^\circ$", center-center
+text: r * cos(pi/4) + ds, r * sin(pi/4), "$\left(\frac{\sqrt{2}}{2}, \frac{\sqrt{2}}{2}\right)$", center-center
 line-segment: (0, 0), (r1 * cos(pi/3), r1 * sin(pi/3)), blue
 line-segment: (r2 * cos(pi/3), r2 * sin(pi/3)), (cos(pi/3), sin(pi/3)), blue
-text: 0.7 * cos(pi/3), 0.7 * sin(pi/3), "$\pi/3$", center-center
-text: r * cos(pi/3), r * sin(pi/3) - 0.1, "$\left(\frac{1}{2}, \frac{\sqrt{3}}{2}\right)$", center-center
+text: 0.7 * cos(pi/3), 0.7 * sin(pi/3), "$60^\circ$", center-center
+text: r * cos(pi/3) - ds, r * sin(pi/3) + ds, "$\left(\frac{1}{2}, \frac{\sqrt{3}}{2}\right)$", center-center
+line-segment: (0, 0), (r1 * cos(2*pi/3), r1 * sin(2*pi/3)), blue
+line-segment: (r2 * cos(2*pi/3), r2 * sin(2*pi/3)), (cos(2*pi/3), sin(2*pi/3)), blue
+text: 0.7 * cos(2*pi/3), 0.7 * sin(2*pi/3), "$120^\circ$", center-center
+text: r * cos(2*pi/3) + ds, r * sin(2*pi/3) + ds, "$\left(-\frac{1}{2}, \frac{\sqrt{3}}{2}\right)$", center-center
+line-segment: (0, 0), (r1 * cos(3*pi/4), r1 * sin(3*pi/4)), blue
+line-segment: (r2 * cos(3*pi/4), r2 * sin(3*pi/4)), (cos(3*pi/4), sin(3*pi/4)), blue
+text: 0.7 * cos(3*pi/4), 0.7 * sin(3*pi/4), "$135^\circ$", center-center
+text: r * cos(3*pi/4) - ds, r * sin(3*pi/4), "$\left(-\frac{\sqrt{2}}{2}, \frac{\sqrt{2}}{2}\right)$", center-center
+line-segment: (0, 0), (r1 * cos(5*pi/6), r1 * sin(5*pi/6)), blue
+line-segment: (r2 * cos(5*pi/6), r2 * sin(5*pi/6)), (cos(5*pi/6), sin(5*pi/6)), blue
+text: 0.7 * cos(5*pi/6), 0.7 * sin(5*pi/6), "$150^\circ$", center-center
+text: r * cos(5*pi/6) - ds, r * sin(5*pi/6) - ds, "$\left(-\frac{\sqrt{3}}{2}, \frac{1}{2}\right)$", center-center
+line-segment: (0, 0), (r1 * cos(7*pi/6), r1 * sin(7*pi/6)), blue
+line-segment: (r2 * cos(7*pi/6), r2 * sin(7*pi/6)), (cos(7*pi/6), sin(7*pi/6)), blue
+text: 0.7 * cos(7*pi/6), 0.7 * sin(7*pi/6), "$210^\circ$", center-center
+text: r * cos(7*pi/6) - ds, r * sin(7*pi/6) + ds, "$\left(-\frac{\sqrt{3}}{2}, -\frac{1}{2}\right)$", center-center
+line-segment: (0, 0), (r1 * cos(5*pi/4), r1 * sin(5*pi/4)), blue
+line-segment: (r2 * cos(5*pi/4), r2 * sin(5*pi/4)), (cos(5*pi/4), sin(5*pi/4)), blue
+text: 0.7 * cos(5*pi/4), 0.7 * sin(5*pi/4), "$225^\circ$", center-center
+text: r * cos(5*pi/4) - ds, r * sin(5*pi/4), "$\left(-\frac{\sqrt{2}}{2}, -\frac{\sqrt{2}}{2}\right)$", center-center
+line-segment: (0, 0), (r1 * cos(4*pi/3), r1 * sin(4*pi/3)), blue
+line-segment: (r2 * cos(4*pi/3), r2 * sin(4*pi/3)), (cos(4*pi/3), sin(4*pi/3)), blue
+text: 0.7 * cos(4*pi/3), 0.7 * sin(4*pi/3), "$240^\circ$", center-center
+text: r * cos(4*pi/3) + ds, r * sin(4*pi/3) - ds, "$\left(-\frac{1}{2}, -\frac{\sqrt{3}}{2}\right)$", center-center
+line-segment: (0, 0), (r1 * cos(5*pi/3), r1 * sin(5*pi/3)), blue
+line-segment: (r2 * cos(5*pi/3), r2 * sin(5*pi/3)), (cos(5*pi/3), sin(5*pi/3)), blue
+text: 0.7 * cos(5*pi/3), 0.7 * sin(5*pi/3), "$300^\circ$", center-center
+text: r * cos(5*pi/3) - ds, r * sin(5*pi/3) - ds, "$\left(\frac{1}{2}, -\frac{\sqrt{3}}{2}\right)$", center-center
+line-segment: (0, 0), (r1 * cos(7*pi/4), r1 * sin(7*pi/4)), blue
+line-segment: (r2 * cos(7*pi/4), r2 * sin(7*pi/4)), (cos(7*pi/4), sin(7*pi/4)), blue
+text: 0.7 * cos(7*pi/4), 0.7 * sin(7*pi/4), "$315^\circ$", center-center
+text: r * cos(7*pi/4) + ds, r * sin(7*pi/4), "$\left(\frac{\sqrt{2}}{2}, -\frac{\sqrt{2}}{2}\right)$", center-center
+line-segment: (0, 0), (r1 * cos(11*pi/6), r1 * sin(11*pi/6)), blue
+line-segment: (r2 * cos(11*pi/6), r2 * sin(11*pi/6)), (cos(11*pi/6), sin(11*pi/6)), blue
+text: 0.7 * cos(11*pi/6), 0.7 * sin(11*pi/6), "$330^\circ$", center-center
+text: r * cos(11*pi/6) + ds, r * sin(11*pi/6) + ds, "$\left(\frac{\sqrt{3}}{2}, -\frac{1}{2}\right)$", center-center
+point: (cos(pi/6), sin(pi/6))
+point: (cos(pi/4), sin(pi/4))
+point: (cos(pi/3), sin(pi/3))
+point: (cos(2*pi/3), sin(2*pi/3))
+point: (cos(3*pi/4), sin(3*pi/4))
+point: (cos(5*pi/6), sin(5*pi/6))
+point: (cos(7*pi/6), sin(7*pi/6))
+point: (cos(5*pi/4), sin(5*pi/4))
+point: (cos(4*pi/3), sin(4*pi/3))
+point: (cos(5*pi/3), sin(5*pi/3))
+point: (cos(7*pi/4), sin(7*pi/4))
+point: (cos(11*pi/6), sin(11*pi/6))
 :::
 
 
-:::{table}
----
-transpose:
----
-labels: $\varphi^\circ$, $\varphi$, $\cos \varphi$, $\sin \varphi$
-$0^\circ$, $0$, $1$, $0$
-$30^\circ$, $\dfrac{\pi}{6}$, $\dfrac{\sqrt{3}}{2}$, $\dfrac{1}{2}$
-$45^\circ$, $\dfrac{\pi}{4}$, $\dfrac{\sqrt{2}}{2}$, $\dfrac{\sqrt{2}}{2}$
-$60^\circ$, $\dfrac{\pi}{3}$, $\dfrac{1}{2}$, $\dfrac{\sqrt{3}}{2}$
-$90^\circ$, $\dfrac{\pi}{2}$, $0$, $1$
-:::
+:::::::::::::::
 
+
+---
+
+
+
+:::::::::::::::{summary} Eksaktverdier i første periode (radianer)
+Nedenfor ser du en figur som viser eksakte verdier for sinus og cosinus i alle kvadranter. $x$-koordinaten gir cosinusverdien og $y$-koordinaten gir sinusverdien.
+
+
+:::{plot}
+width: 100%
+xlabel: $\cos \varphi$
+ylabel: $\sin \varphi$
+fontsize: 16
+axis: equal
+ticks: off
+circle: (0, 0), 1
+let: r = 1.3
+let: r1 = 0.55
+let: r2 = 0.85
+let: ds = 0.1
+line-segment: (0, 0), (r1 * cos(pi/6), r1 * sin(pi/6)), blue
+line-segment: (r2 * cos(pi/6), r2 * sin(pi/6)), (cos(pi/6), sin(pi/6)), blue
+text: 0.7 * cos(pi/6), 0.7 * sin(pi/6), "$\frac{\pi}{6}$", center-center
+text: r * cos(pi/6) + ds, r * sin(pi/6) - ds, "$\left(\frac{\sqrt{3}}{2}, \frac{1}{2}\right)$", center-center
+line-segment: (0, 0), (r1 * cos(pi/4), r1 * sin(pi/4)), blue
+line-segment: (r2 * cos(pi/4), r2 * sin(pi/4)), (cos(pi/4), sin(pi/4)), blue
+text: 0.7 * cos(pi/4), 0.7 * sin(pi/4), "$\frac{\pi}{4}$", center-center
+text: r * cos(pi/4) + ds, r * sin(pi/4), "$\left(\frac{\sqrt{2}}{2}, \frac{\sqrt{2}}{2}\right)$", center-center
+line-segment: (0, 0), (r1 * cos(pi/3), r1 * sin(pi/3)), blue
+line-segment: (r2 * cos(pi/3), r2 * sin(pi/3)), (cos(pi/3), sin(pi/3)), blue
+text: 0.7 * cos(pi/3), 0.7 * sin(pi/3), "$\frac{\pi}{3}$", center-center
+text: r * cos(pi/3) - ds, r * sin(pi/3) + ds, "$\left(\frac{1}{2}, \frac{\sqrt{3}}{2}\right)$", center-center
+line-segment: (0, 0), (r1 * cos(2*pi/3), r1 * sin(2*pi/3)), blue
+line-segment: (r2 * cos(2*pi/3), r2 * sin(2*pi/3)), (cos(2*pi/3), sin(2*pi/3)), blue
+text: 0.7 * cos(2*pi/3), 0.7 * sin(2*pi/3), "$\frac{2\pi}{3}$", center-center
+text: r * cos(2*pi/3) + ds, r * sin(2*pi/3) + ds, "$\left(-\frac{1}{2}, \frac{\sqrt{3}}{2}\right)$", center-center
+line-segment: (0, 0), (r1 * cos(3*pi/4), r1 * sin(3*pi/4)), blue
+line-segment: (r2 * cos(3*pi/4), r2 * sin(3*pi/4)), (cos(3*pi/4), sin(3*pi/4)), blue
+text: 0.7 * cos(3*pi/4), 0.7 * sin(3*pi/4), "$\frac{3\pi}{4}$", center-center
+text: r * cos(3*pi/4) - ds, r * sin(3*pi/4), "$\left(-\frac{\sqrt{2}}{2}, \frac{\sqrt{2}}{2}\right)$", center-center
+line-segment: (0, 0), (r1 * cos(5*pi/6), r1 * sin(5*pi/6)), blue
+line-segment: (r2 * cos(5*pi/6), r2 * sin(5*pi/6)), (cos(5*pi/6), sin(5*pi/6)), blue
+text: 0.7 * cos(5*pi/6), 0.7 * sin(5*pi/6), "$\frac{5\pi}{6}$", center-center
+text: r * cos(5*pi/6) - ds, r * sin(5*pi/6) - ds, "$\left(-\frac{\sqrt{3}}{2}, \frac{1}{2}\right)$", center-center
+line-segment: (0, 0), (r1 * cos(7*pi/6), r1 * sin(7*pi/6)), blue
+line-segment: (r2 * cos(7*pi/6), r2 * sin(7*pi/6)), (cos(7*pi/6), sin(7*pi/6)), blue
+text: 0.7 * cos(7*pi/6), 0.7 * sin(7*pi/6), "$\frac{7\pi}{6}$", center-center
+text: r * cos(7*pi/6) - ds, r * sin(7*pi/6) + ds, "$\left(-\frac{\sqrt{3}}{2}, -\frac{1}{2}\right)$", center-center
+line-segment: (0, 0), (r1 * cos(5*pi/4), r1 * sin(5*pi/4)), blue
+line-segment: (r2 * cos(5*pi/4), r2 * sin(5*pi/4)), (cos(5*pi/4), sin(5*pi/4)), blue
+text: 0.7 * cos(5*pi/4), 0.7 * sin(5*pi/4), "$\frac{5\pi}{4}$", center-center
+text: r * cos(5*pi/4) - ds, r * sin(5*pi/4), "$\left(-\frac{\sqrt{2}}{2}, -\frac{\sqrt{2}}{2}\right)$", center-center
+line-segment: (0, 0), (r1 * cos(4*pi/3), r1 * sin(4*pi/3)), blue
+line-segment: (r2 * cos(4*pi/3), r2 * sin(4*pi/3)), (cos(4*pi/3), sin(4*pi/3)), blue
+text: 0.7 * cos(4*pi/3), 0.7 * sin(4*pi/3), "$\frac{4\pi}{3}$", center-center
+text: r * cos(4*pi/3) + ds, r * sin(4*pi/3) - ds, "$\left(-\frac{1}{2}, -\frac{\sqrt{3}}{2}\right)$", center-center
+line-segment: (0, 0), (r1 * cos(5*pi/3), r1 * sin(5*pi/3)), blue
+line-segment: (r2 * cos(5*pi/3), r2 * sin(5*pi/3)), (cos(5*pi/3), sin(5*pi/3)), blue
+text: 0.7 * cos(5*pi/3), 0.7 * sin(5*pi/3), "$\frac{5\pi}{3}$", center-center
+text: r * cos(5*pi/3) - ds, r * sin(5*pi/3) - ds, "$\left(\frac{1}{2}, -\frac{\sqrt{3}}{2}\right)$", center-center
+line-segment: (0, 0), (r1 * cos(7*pi/4), r1 * sin(7*pi/4)), blue
+line-segment: (r2 * cos(7*pi/4), r2 * sin(7*pi/4)), (cos(7*pi/4), sin(7*pi/4)), blue
+text: 0.7 * cos(7*pi/4), 0.7 * sin(7*pi/4), "$\frac{7\pi}{4}$", center-center
+text: r * cos(7*pi/4) + ds, r * sin(7*pi/4), "$\left(\frac{\sqrt{2}}{2}, -\frac{\sqrt{2}}{2}\right)$", center-center
+line-segment: (0, 0), (r1 * cos(11*pi/6), r1 * sin(11*pi/6)), blue
+line-segment: (r2 * cos(11*pi/6), r2 * sin(11*pi/6)), (cos(11*pi/6), sin(11*pi/6)), blue
+text: 0.7 * cos(11*pi/6), 0.7 * sin(11*pi/6), "$\frac{11\pi}{6}$", center-center
+text: r * cos(11*pi/6) + ds, r * sin(11*pi/6) + ds, "$\left(\frac{\sqrt{3}}{2}, -\frac{1}{2}\right)$", center-center
+point: (cos(pi/6), sin(pi/6))
+point: (cos(pi/4), sin(pi/4))
+point: (cos(pi/3), sin(pi/3))
+point: (cos(2*pi/3), sin(2*pi/3))
+point: (cos(3*pi/4), sin(3*pi/4))
+point: (cos(5*pi/6), sin(5*pi/6))
+point: (cos(7*pi/6), sin(7*pi/6))
+point: (cos(5*pi/4), sin(5*pi/4))
+point: (cos(4*pi/3), sin(4*pi/3))
+point: (cos(5*pi/3), sin(5*pi/3))
+point: (cos(7*pi/4), sin(7*pi/4))
+point: (cos(11*pi/6), sin(11*pi/6))
+:::
 
 
 :::::::::::::::
