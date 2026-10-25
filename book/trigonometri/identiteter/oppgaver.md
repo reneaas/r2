@@ -988,12 +988,71 @@ $$
 
 
 :::::::::::::{part} b
+Om en vinkel $\psi$ får du vite at 
+
+* Vinkelen ligger i 2. kvadrant
+* $\cos \psi = -\dfrac{4}{5}$
+
+Bestem en eksakt verdi for $\sin \psi$ og $\tan \psi$.
+
+
+
+:::::{answer}
+
+$$
+\sin \psi = \dfrac{3}{5} \qog \tan \psi = -\dfrac{3}{4}
+$$
+
+
+::::{solution}
+Vi tar utgangspunkt i Pytagoras' identitet:
+
+$$
+\cos^2\psi + \sin^2\psi = 1
+$$
+
+Vi vet at $\cos \psi = -4/5$, som betyr at
+
+$$
+\sin^2 \psi = 1 - \cos^2 \psi = 1 - \left(-\dfrac{4}{5}\right)^2 = 1 - \dfrac{16}{25} = \dfrac{9}{25}
+$$
+
+Siden vinkelen $\psi$ ligger i 2. kvadrant, må $\sin \psi$ være positiv:
+
+$$
+\sin \psi = \sqrt{\dfrac{9}{25}} = \dfrac{3}{5}
+$$
+
+Så finner vi $\tan \psi$:
+
+$$
+\tan \psi = \dfrac{\sin \psi}{\cos \psi} = \dfrac{\dfrac{3}{5}}{-\dfrac{4}{5}} = -\dfrac{3}{4}
+$$
+::::
+:::::
+
+
+:::::::::::::
+
+
+:::::::::::::{part} c
 Om en vinkel $\theta$ får du vite at
 
 * Vinkelen ligger i 4. kvadrant
 * $\tan \theta = -\dfrac{3}{4}$
 
 Bestem en eksakt verdi for $\sin \theta$ og $\cos \theta$.
+
+
+:::{hint} Hint
+Bruk at 
+
+$$
+\tan \theta = \dfrac{\sin \theta}{\cos \theta}
+$$
+
+og løs for enten $\sin \theta$ eller $\cos \theta$ før du bruker Pytagoras' identitet.
+:::
 
 
 :::::{answer}
@@ -1056,7 +1115,7 @@ $$
 
 
 
-:::::::::::::{part} c
+:::::::::::::{part} d
 Om en vinkel $\gamma$ får du vite at
 
 * Vinkelen ligger i 3. kvadrant
@@ -1125,54 +1184,6 @@ $$
 ::::
 
 :::::
-
-:::::::::::::
-
-
-:::::::::::::{part} d
-Om en vinkel $\psi$ får du vite at 
-
-* Vinkelen ligger i 2. kvadrant
-* $\cos \psi = -\dfrac{4}{5}$
-
-Bestem en eksakt verdi for $\sin \psi$ og $\tan \psi$.
-
-
-
-:::::{answer}
-
-$$
-\sin \psi = \dfrac{3}{5} \qog \tan \psi = -\dfrac{3}{4}
-$$
-
-
-::::{solution}
-Vi tar utgangspunkt i Pytagoras' identitet:
-
-$$
-\cos^2\psi + \sin^2\psi = 1
-$$
-
-Vi vet at $\cos \psi = -4/5$, som betyr at
-
-$$
-\sin^2 \psi = 1 - \cos^2 \psi = 1 - \left(-\dfrac{4}{5}\right)^2 = 1 - \dfrac{16}{25} = \dfrac{9}{25}
-$$
-
-Siden vinkelen $\psi$ ligger i 2. kvadrant, må $\sin \psi$ være positiv:
-
-$$
-\sin \psi = \sqrt{\dfrac{9}{25}} = \dfrac{3}{5}
-$$
-
-Så finner vi $\tan \psi$:
-
-$$
-\tan \psi = \dfrac{\sin \psi}{\cos \psi} = \dfrac{\dfrac{3}{5}}{-\dfrac{4}{5}} = -\dfrac{3}{4}
-$$
-::::
-:::::
-
 
 :::::::::::::
 
@@ -1460,14 +1471,94 @@ $$
 :::::::::::::
 
 
-
 :::::::::::::{part} f
+Finn $\cos(\pi - \varphi)$ og $\sin(\varphi - \pi)$.
+
+
+
+:::::{answer}
+$$
+\cos (\pi - \varphi) = -\dfrac{1}{3} \and \sin (\pi - \varphi) = \dfrac{2\sqrt{2}}{3}
+$$
+
+::::{solution}
+Vi har at 
+
+$$
+\vec r(\varphi) = \mqty[\dfrac{1}{3}, \dfrac{2\sqrt{2}}{3}]
+$$
+
+Vi skal finne
+
+$$
+\vec r(\pi - \varphi) = \mqty[\cos (\pi - \varphi), \sin (\pi - \varphi)]
+$$
+
+Denne vektoren får vi ved å speile $\vec r(\varphi)$ om $y$-aksen. Da endrer $x$-koordinaten til vektoren fortegn, mens $y$-koordinaten forblir den samme. Altså:
+
+$$
+\vec r(\pi - \varphi) = \mqty[-\dfrac{1}{3}, \dfrac{2\sqrt{2}}{3}]
+$$
+
+Altså er 
+
+$$
+\cos (\pi - \varphi) = -\dfrac{1}{3} \and \sin (\pi - \varphi) = \dfrac{2\sqrt{2}}{3}
+$$
+::::
+:::::
+
+
+:::::::::::::
+
+
+:::::::::::::{part} g
+Bestem $\cos (-\varphi)$ og $\sin(-\varphi)$.
+
+
+:::::{answer}
+$$
+\cos(-\varphi) = \dfrac{1}{3} \and \sin(-\varphi) = -\dfrac{2\sqrt{2}}{3}
+$$
+
+::::{solution}
+Vi har at 
+
+$$
+\vec r(\varphi) = \mqty[\dfrac{1}{3}, \dfrac{2\sqrt{2}}{3}]
+$$
+
+Vi skal finne 
+
+$$
+\vec r(-\varphi) = \mqty[\cos (-\varphi), \sin(-\varphi)]
+$$
+
+Denne vektoren får vi ved å speile $\vec r(\varphi)$ om $x$-aksen. Da forblir $x$-koordinaten den samme, mens $y$-koordinaten skifter fortegn:
+
+$$
+\vec r(-\varphi) = \mqty[\dfrac{1}{3}, -\dfrac{2\sqrt{2}}{3}]
+$$
+
+Altså er 
+
+$$
+\cos(-\varphi) = \dfrac{1}{3} \and \sin(-\varphi) = -\dfrac{2\sqrt{2}}{3}
+$$
+::::
+:::::
+
+:::::::::::::
+
+
+
+:::::::::::::{part} h
 Finn $\cos \left(\dfrac{\pi}{2} - \varphi\right)$ og $\sin \left(\dfrac{\pi}{2} - \varphi\right)$.
 
 
 
 ::::{hint} Hint
-Tenk deg at du roterer $\vec r(-\varphi) = [\cos(-\varphi), \sin(-\varphi)]$ med $\pi/2$ radianer i positiv omløpsretning.
+Tenk deg at du roterer $\vec r(-\varphi) = [\cos(-\varphi), \sin(-\varphi)]$ med $\pi/2$ radianer i positiv omløpsretning for å finne $\vec r\left(\dfrac{\pi}{2} - \varphi\right)$.
 ::::
 
 
@@ -1530,7 +1621,7 @@ Gitt at $\sin \varphi = \dfrac{4}{5}$ og $\varphi$ ligger i 2. kvadrant.
 
 
 :::::::::::::{part} a
-Finn $\cos \varphi$.
+Finn $\cos \varphi$
 
 
 :::::{answer}
@@ -1702,164 +1793,81 @@ $$
 
 :::::::::::::
 
-:::::::::::::::
 
-
-
----
-
-
-:::::::::::::::{exercise} Oppgave 8
-:::::::::::::{part} a
-Om en vinkel $\varphi$ får du vite at
-
-* $\cos (2\varphi) = \dfrac{1}{2}$
-* $\sin \varphi = \dfrac{1}{2}$
-
-Bestem de mulige verdiene til $\cos \varphi$.
-
+:::::::::::::{part} f
+Bestem $\cos(-\varphi)$ og $\sin(-\varphi)$. 
 
 
 :::::{answer}
 
-$$
-\cos \varphi = \pm \dfrac{\sqrt{3}}{2}
-$$
 
 ::::{solution}
-Vi bruker identiteten:
+Vi har at 
 
 $$
-\cos(2\varphi) = \cos^2 \varphi - \sin^2 \varphi
+\vec r(\varphi) = \mqty[-\dfrac{3}{5}, \dfrac{4}{5}]
 $$
 
-Vi har at $\cos(2\varphi) = 1/2$ og $\sin \varphi = 1/2$ som gir
+Speiler vi denne vektoren om $x$-aksen får vi 
 
 $$
-\dfrac{1}{2} = \cos^2 \varphi - \left(\dfrac{1}{2}\right)^2
+\vec r(-\varphi) = \mqty[\cos (-\varphi), \sin(-\varphi)]
 $$
 
-$$
-\dfrac{1}{2} = \cos^2 \varphi - \dfrac{1}{4}
-$$
+Speilingen vil bevare $x$-koordinaten, men skifte fortegnet til $y$-koordinaten. Altså
 
 $$
-\cos^2 \varphi = \dfrac{1}{2} + \dfrac{1}{4} = \dfrac{3}{4}
+\vec r(-\varphi) = \mqty[-\dfrac{3}{5}, -\dfrac{4}{5}]
 $$
 
+Dermed er 
+
 $$
-\cos \varphi = \pm \dfrac{\sqrt{3}}{2}
+\cos(-\varphi) = -\dfrac{3}{5} \and \sin(-\varphi) = -\dfrac{4}{5}
 $$
+
 ::::
 :::::
-
 
 :::::::::::::
 
 
-:::::::::::::{part} b
-Om en vinkel $\varphi$ får du vite at
 
-$$
-\cos (2\varphi) = \dfrac{3}{4}
-$$
-
-Bestem de mulige verdiene til $\cos \varphi$.
+:::::::::::::{part} g
+Bestem $\cos\left(\dfrac{\pi}{2}-\varphi\right)$ og $\sin\left(\dfrac{\pi}{2}-\varphi\right)$
 
 
 :::::{answer}
-
 $$
-\cos\varphi = \pm \dfrac{\sqrt{14}}{4}
+\cos\left(\dfrac{\pi}{2}-\varphi\right) = \dfrac{4}{5} \and \sin\left(\dfrac{\pi}{2}-\varphi\right) = -\dfrac{3}{5}
 $$
 
 ::::{solution}
-Vi starter med identiteten:
+Vi starter fra vektoren
 
 $$
-\cos (2\varphi) = \cos^2 \varphi - \sin^2 \varphi
+\vec r(-\varphi) = \mqty[-\dfrac{3}{5}, -\dfrac{4}{5}]
 $$
 
-Så bruker vi Pytagoras' identitet til å kvitte oss med $\sin^2 \varphi$:
+Roterer vi denne vektoren $90$ grader *mot* klokka får vi
 
 $$
-\cos^2 \varphi + \sin^2 \varphi = 1 \liff \sin^2 \varphi = 1 - \cos^2 \varphi
+\vec r\left(\dfrac{\pi}{2} - \varphi\right) = \mqty[\cos\left(\dfrac{\pi}{2}-\varphi\right), \sin\left(\dfrac{\pi}{2}-\varphi\right)]
 $$
 
+Det innebærer å bytte rekkefølge på koordinatene, og endre fortegnet på den nye $x$-koordinaten:
+
 $$
-\cos (2\varphi) = \cos^2 \varphi - (1 - \cos^2 \varphi) = 2\cos^2 \varphi - 1
+\vec r\left(\dfrac{\pi}{2} - \varphi\right) = \mqty[\dfrac{4}{5}, -\dfrac{3}{5}]
 $$
 
 Altså er 
 
 $$
-\cos^2 \varphi = \dfrac{\cos (2\varphi) + 1}{2} = \dfrac{\dfrac{3}{4} + 1}{2} = \dfrac{\dfrac{7}{4}}{2} = \dfrac{7}{8}
-$$
-
-Det betyr at de mulige verdiene er
-
-$$
-\cos \varphi = \pm \sqrt{\dfrac{7}{8}} = \pm \dfrac{\sqrt{14}}{4}
+\cos\left(\dfrac{\pi}{2}-\varphi\right) = \dfrac{4}{5} \and \sin\left(\dfrac{\pi}{2}-\varphi\right) = -\dfrac{3}{5}
 $$
 ::::
 :::::
-
-
-:::::::::::::
-
-
-
-:::::::::::::{part} c
-Om en vinkel $\varphi$ får du vite at
-
-* $\sin \varphi = \dfrac{1}{3}$
-* Vinkelen $\varphi$ ligger i 1. kvadrant
-
-Finn $\sin (2\varphi)$. 
-
-
-:::::{answer}
-$$
-\sin (2\varphi) = \dfrac{4\sqrt{2}}{9}
-$$
-
-::::{solution}
-Vi starter med identiteten:
-
-$$
-\sin (2\varphi) = 2 \sin \varphi \cos \varphi
-$$
-
-Fra Pytagoras' identitet har vi at 
-
-$$
-\cos^2 \varphi + \sin^2 \varphi = 1 \liff \cos^2 \varphi = 1 - \sin^2 \varphi
-$$
-
-Siden vinkelen ligger i 1. kvadrant er $\sin \varphi$ positiv og $\cos \varphi$ positiv. Vi kan derfor skrive om $\cos \varphi$ som
-
-$$
-\cos \varphi = \sqrt{1 - \sin^2 \varphi}
-$$
-
-Vi setter tilbake igjen i den første likningen:
-
-$$
-\sin (2\varphi) = 2 \sin \varphi \sqrt{1 - \sin^2 \varphi}
-$$
-
-Da får vi
-
-$$
-\sin (2\varphi) = 2 \cdot \dfrac{1}{3} \sqrt{1 - \left(\dfrac{1}{3}\right)^2} = \dfrac{2}{3} \sqrt{1 - \dfrac{1}{9}} = \dfrac{2}{3} \sqrt{\dfrac{8}{9}} = \dfrac{2}{3} \cdot \dfrac{2\sqrt{2}}{3} = \dfrac{4\sqrt{2}}{9}
-$$
-
-
-
-
-::::
-:::::
-
 :::::::::::::
 
 :::::::::::::::
@@ -1870,7 +1878,7 @@ $$
 
 
 
-:::::::::::::::{exercise} Oppgave 9
+:::::::::::::::{exercise} Oppgave 8
 En vinkel $\varphi$ ligger i 3. kvadrant der $\tan \varphi = \dfrac{3}{4}$.
 
 
@@ -2018,7 +2026,7 @@ $$
 
 
 
-:::::::::::::::{exercise} Oppgave 10
+:::::::::::::::{exercise} Oppgave 9
 
 
 :::::::::::::{part} a
@@ -2118,7 +2126,7 @@ $$
 ---
 
 
-:::::::::::::::{exercise} Oppgave 11
+:::::::::::::::{exercise} Oppgave 10
 
 :::::::::::::{part} a
 Vis at 
@@ -2210,7 +2218,7 @@ $$
 ---
 
 
-:::::::::::::::{exercise} Oppgave 12
+:::::::::::::::{exercise} Oppgave 11
 
 
 :::{hint} Hint
@@ -2405,7 +2413,7 @@ $$
 ---
 
 
-:::::::::::::::{exercise} Oppgave 13
+:::::::::::::::{exercise} Oppgave 12
 
 :::::::::::::{part} a
 Vis at
@@ -2484,7 +2492,7 @@ $$
 
 
 
-:::::::::::::::{exercise} Oppgave 14
+:::::::::::::::{exercise} Oppgave 13
 
 > Dette er en oppgavetype du vil ha formelark tilgjengelig for å løse. Eller så blir identiteten nedenfor oppgitt i oppgaven.
 
@@ -2601,7 +2609,7 @@ $$
 
 
 
-:::::::::::::::{exercise} Oppgave 15
+:::::::::::::::{exercise} Oppgave 14
 > Dette er en oppgavetype du vil ha formelark tilgjengelig for å løse. Eller så blir identiteten nedenfor oppgitt i oppgaven.
 
 For alle vinkler $\varphi$ og $\theta$ gjelder følgende identitet:
