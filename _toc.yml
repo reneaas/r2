@@ -62,15 +62,15 @@ parts:
       - file: book/trigonometri/likninger/oppgaver.md
         title: Oppgaver
 
-    - file: book/trigonometri/funksjoner/teori.md
-      sections:
-      - file: book/trigonometri/funksjoner/oppgaver.md
-        title: Oppgaver
+    # - file: book/trigonometri/funksjoner/teori.md
+    #   sections:
+    #   - file: book/trigonometri/funksjoner/oppgaver.md
+    #     title: Oppgaver
 
-    - file: book/trigonometri/derivasjon/teori.md
-      sections:
-      - file: book/trigonometri/derivasjon/oppgaver.md
-        title: Oppgaver
+    # - file: book/trigonometri/derivasjon/teori.md
+    #   sections:
+    #   - file: book/trigonometri/derivasjon/oppgaver.md
+    #     title: Oppgaver
 
 
 
