@@ -36,6 +36,8 @@ angle-arc: (0, 0), 0.4, 0, u * 180/pi, red, arrow
 angle-arc: (0, 0), 0.3, 0, v * 180/pi, red, arrow
 point: (cos(u), sin(u))
 point: (cos(v), sin(v))
+text: 0.55 * cos(u/2), 0.45 * sin(u/2), "$x_1$", center-center
+text: 0.45 * cos(v/2), 0.45 * sin(v/2), "$x_2$", center-center
 :::
 
 Likningen 
@@ -50,6 +52,8 @@ har i hvert omløp av enhetssirkelen
 * når $k = -1$ eller $k = 1$ har likningen én løsning
 * når $\abs{k} > 1$ har likningen ingen løsning
 
+
+Hvis $x_1$ er en løsning i positiv omløpsretning, så er $x_2 = -x_1$ en annen løsning. 
 
 
 :::::::::::::::
@@ -203,6 +207,8 @@ angle-arc: (0, 0), 0.4, 0, u * 180/pi, red, arrow
 angle-arc: (0, 0), 0.3, 0, v * 180/pi, red, arrow
 point: (cos(u), sin(u))
 point: (cos(v), sin(v))
+text: 0.55 * cos(u/2), 0.55 * sin(u/2), "$x_1$", center-center
+text: 0.45 * cos(v/2), 0.45 * sin(v/2), "$x_2$", center-center
 :::
 
 Likningen 
@@ -217,6 +223,8 @@ har i hvert omløp av enhetssirkelen
 * når $k = -1$ eller $k = 1$ har likningen én løsning
 * når $\abs{k} > 1$ har likningen ingen løsning
 
+
+Hvis $x_1$ er en løsning i positiv omløpsretning, så er $x_2 = \pi - x_1$ også en løsning.
 
 :::::::::::::::
 
@@ -328,96 +336,7 @@ $$
 :::::::::::::::
 
 
-
 ---
-
-
-
-:::::::::::::::{summary} Likningen $\tan x = k$
-:::{plot}
-width: 100%
-circle: (0, 0), 1
-axis: equal
-ticks: off
-xlabel: $\cos x$
-ylabel: $\sin x$
-align: right
-let: u = pi/3
-let: v = pi + u
-line-segment: (0, 0), (cos(u), sin(u)), blue
-line-segment: (0, 0), (cos(v), sin(v)), blue
-angle-arc: (0, 0), 0.4, 0, u * 180/pi, red, arrow
-angle-arc: (0, 0), 0.3, 0, v * 180/pi, red, arrow
-point: (cos(u), sin(u))
-point: (cos(v), sin(v))
-text: 0.5 * cos(u/2), 0.5 * sin(u/2), "$x_1$", center-center
-text: 0.5 * cos(v/2), 0.5 * sin(v/2), "$x_1 + \pi$", center-center
-fontsize: 28
-:::
-
-
-Likningen
-
-$$
-\tan x = k
-$$
-
-har to løsninger per omløp i enhetssirkelen. Hvis én av løsningene er $x_1$, så vil de generelle løsningene være gitt ved
-
-$$
-x = x_1 + \pi\cdot n \qfor n \in \mathbb{Z}
-$$
-:::::::::::::::
-
-
----
-
-
-:::::::::::::::{example} Eksempel 3
-Løs likningen 
-
-$$
-\tan x = \sqrt{3}
-$$
-
-
-::::{solution}
----
-open:
----
-Siden $\tan x$ skal være positiv, så må løsningen ligge i 1. kvadrant eller 3. kvadrant siden $\sin x$ og $\cos x$ må ha samme fortegn. Vi skriver om likningen ved å bruke definisjonen av tangens:
-
-$$
-\dfrac{\sin x}{\cos x} = \sqrt{3} \liff \sin x = \sqrt{3} \cos x
-$$
-
-Så kvadrerer vi likningen på begge sider:
-
-$$
-\sin^2 x = 3 \cos^2 x
-$$
-
-Nå kan vi bruke Pytagoras' identitet $\sin^2 x + \cos^2 x = 1$ til å skrive om likningen:
-
-$$
-\sin^2 x = 3 (1 - \sin^2 x) \liff \sin^2 x = 3 - 3\sin^2 x \liff 4\sin^2 x = 3 \liff \sin^2 x = \dfrac{3}{4}
-$$
-
-altså er 
-
-$$
-\sin x = \dfrac{\sqrt{3}}{2}
-$$
-
-Siden vinkelen må ligge i 1. kvadrant, så har vi at én løsning er $x = \dfrac{\pi}{3}$. Resten av de generelle løsningene er da gitt ved 
-
-$$
-x = \dfrac{\pi}{3} + \pi \cdot n \qfor n \in \mathbb{Z}
-$$
-::::
-
-
-:::::::::::::::
 
 
 
@@ -427,7 +346,7 @@ I mange likninger, så jobber vi ikke med enkle uttrykk som $\cos x$ og $\sin x$
 
 
 
-:::::::::::::::{example} Eksempel 4
+:::::::::::::::{example} Eksempel 3
 Gitt likningen
 
 $$
@@ -551,7 +470,7 @@ I en del trigonometriske likninger, må vi først bruke en trigonometrisk identi
 
 
 
-:::::::::::::::{example} Eksempel 5
+:::::::::::::::{example} Eksempel 4
 Løs likningen
 
 $$
