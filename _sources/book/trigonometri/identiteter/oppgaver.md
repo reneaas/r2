@@ -1799,7 +1799,9 @@ Bestem $\cos(-\varphi)$ og $\sin(-\varphi)$.
 
 
 :::::{answer}
-
+$$
+\cos(-\varphi) = -\dfrac{3}{5} \and \sin(-\varphi) = -\dfrac{4}{5}
+$$
 
 ::::{solution}
 Vi har at 

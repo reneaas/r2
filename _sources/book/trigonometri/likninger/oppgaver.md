@@ -7,8 +7,66 @@
 Finn de generelle løsningene til likningen
 
 $$
-\cos x = \frac{1}{2}
+\sin x = \dfrac{1}{2}
 $$
+
+
+:::::{answer}
+
+$$
+x = \dfrac{\pi}{6} + 2\pi \cdot k \or x = \dfrac{5\pi}{6} + 2\pi \cdot k
+$$
+
+for alle heltall $k \in \integer$.
+
+::::{solution}
+:::{plot}
+width: 350px
+align: right
+axis: equal
+ticks: off
+xlabel: $\cos x$
+ylabel: $\sin x$
+circle: (0, 0), 1, black
+let: phi = pi/6
+let: theta = pi - phi
+line-segment: (cos(theta), sin(theta)), (cos(phi), sin(phi)), dashed, red
+point: (cos(phi), sin(phi))
+point: (cos(theta), sin(theta))
+line-segment: (0, 0), (cos(phi), sin(phi)), solid, blue
+line-segment: (0, 0), (cos(theta), sin(theta)), solid, blue
+angle-arc: (0, 0), 0.4, 0, phi * 180 / pi, red, arrow
+angle-arc: (0, 0), 0.3, 0, theta * 180 / pi, red, arrow
+text: 0.5 * cos(phi/2), 0.5 * sin(phi/2), "$x_1$", center-center
+text: 0.4 * cos(theta/2), 0.4 * sin(theta/2), "$x_2$", center-center
+fontsize: 24
+:::
+
+Én løsning i 1. kvadrant til likningen $\sin x = \dfrac{1}{2}$ er
+
+$$
+x = \dfrac{\pi}{6}
+$$
+
+En annen løsning finner vi ved å speile punktet på enhetssirkelen om $y$-aksen:
+
+$$
+x = \pi - \dfrac{\pi}{6} = \dfrac{5\pi}{6}
+$$
+
+Vi kan legge til eller trekke fra $2\pi$ så mange ganger vi vil og fortsatt ende opp på samme punkter på enhetssirkelen. Dermed er de generelle løsningene til likningen
+
+$$
+x = \dfrac{\pi}{6} + 2\pi \cdot k \or x = \dfrac{5\pi}{6} + 2\pi \cdot k
+$$
+
+for alle heltall $k \in \integer$.
+::::::::
+
+
+::::
+:::::
+
 
 
 :::::::::::::
@@ -19,8 +77,67 @@ $$
 Finn de generelle løsningene til likningen
 
 $$
-\sin x = \frac{1}{2}
+\cos x = \dfrac{\sqrt{3}}{2}
 $$
+
+
+
+:::::{answer}
+
+$$
+x = \dfrac{\pi}{6} + 2\pi \cdot k \or x = -\dfrac{\pi}{6} + 2\pi \cdot k
+$$
+
+for alle heltall $k \in \integer$.
+
+::::{solution}
+:::{plot}
+width: 350px
+axis: equal
+ticks: off
+align: right
+fontsize: 28
+xlabel: $\cos x$
+ylabel: $\sin x$
+circle: (0, 0), 1
+let: u = pi/6
+let: v = -u
+line-segment: (0, 0), (cos(u), sin(u)), blue
+line-segment: (0, 0), (cos(v), sin(v)), blue
+line-segment: (cos(u), sin(u)), (cos(u), 0), dashed, red
+line-segment: (cos(v), sin(v)), (cos(v), 0), dashed
+angle-arc: (0, 0), 0.4, 0, u * 180/pi, red, arrow
+angle-arc: (0, 0), 0.3, 0, v * 180/pi, red, arrow
+point: (cos(u), sin(u))
+point: (cos(v), sin(v))
+text: 0.55 * cos(u/2), 0.45 * sin(u/2), "$x_1$", center-center
+text: 0.45 * cos(v/2), 0.45 * sin(v/2), "$x_2$", center-center
+:::
+
+
+I 1. kvadrant så er én løsning til likningen gitt ved 
+
+$$
+x = \dfrac{\pi}{6}
+$$
+
+Én annen løsning får vi ved å speile punktet på enhetssirkelen om $x$-aksen som gir 
+
+$$
+x = -\dfrac{\pi}{6}
+$$
+
+Vi kan legge til eller trekke fra $2\pi$ så mange ganger vi vil og fortsatt ende opp på samme punkter på enhetssirkelen. Dermed er de generelle løsningene til likningen
+
+$$
+x = \dfrac{\pi}{6} + 2\pi \cdot k \or x = -\dfrac{\pi}{6} + 2\pi \cdot k
+$$
+
+for alle heltall $k \in \integer$.
+
+::::
+:::::
+
 
 :::::::::::::
 
