@@ -1472,7 +1472,7 @@ $$
 
 
 :::::::::::::{part} f
-Finn $\cos(\pi - \varphi)$ og $\sin(\varphi - \pi)$.
+Finn $\cos(\pi - \varphi)$ og $\sin(\pi - \varphi)$.
 
 
 
