@@ -15,7 +15,7 @@ Vi har sett at enhetssirkelen medfører at sinus og cosinus repeterer seg period
 ## Grunnlikninger
 
 
-:::::::::::::::{summary} Likningen $\cos x = k$
+:::::::::::::::{summary} Likningen $\cos x = a$
 
 :::{plot}
 width: 100%
@@ -43,14 +43,14 @@ text: 0.45 * cos(v/2), 0.45 * sin(v/2), "$x_2$", center-center
 Likningen 
 
 $$
-\cos x = k
+\cos x = a
 $$
 
 har i hvert omløp av enhetssirkelen
 
-* to løsninger så lenge $k \in \langle -1, 1\rangle$
-* når $k = -1$ eller $k = 1$ har likningen én løsning
-* når $\abs{k} > 1$ har likningen ingen løsning
+* to løsninger så lenge $a \in \langle -1, 1\rangle$
+* når $a = -1$ eller $a = 1$ har likningen én løsning
+* når $\abs{a} > 1$ har likningen ingen løsning
 
 
 Hvis $x_1$ er en løsning i positiv omløpsretning, så er $x_2 = -x_1$ en annen løsning. 
@@ -165,7 +165,7 @@ Vi kan utføre vilkårlig mange omløp $n$ rundt enhetssirkelen i begge retninge
 For den første løsningen betyr det 
 
 $$
-x = \dfrac{\pi}{3} + 2\pi \cdot n \qfor n \in \mathbb{Z}
+x = \dfrac{\pi}{3} + 2\pi \cdot k \qfor k \in \mathbb{Z}
 $$
 
 
@@ -174,7 +174,7 @@ $$
 For den andre løsningen betyr det at:
 
 $$
-x = -\dfrac{\pi}{3} + 2\pi \cdot n \qfor n \in \mathbb{Z}
+x = -\dfrac{\pi}{3} + 2\pi \cdot k \qfor k \in \mathbb{Z}
 $$
 
 
@@ -187,7 +187,7 @@ $$
 
 
 
-:::::::::::::::{summary} Likningen $\sin x = k$
+:::::::::::::::{summary} Likningen $\sin x = a$
 
 :::{plot}
 width: 100%
@@ -214,14 +214,14 @@ text: 0.45 * cos(v/2), 0.45 * sin(v/2), "$x_2$", center-center
 Likningen 
 
 $$
-\sin x = k
+\sin x = a
 $$
 
 har i hvert omløp av enhetssirkelen
 
-* to løsninger så lenge $k \in \langle -1, 1\rangle$
-* når $k = -1$ eller $k = 1$ har likningen én løsning
-* når $\abs{k} > 1$ har likningen ingen løsning
+* to løsninger så lenge $a \in \langle -1, 1\rangle$
+* når $a = -1$ eller $a = 1$ har likningen én løsning
+* når $\abs{a} > 1$ har likningen ingen løsning
 
 
 Hvis $x_1$ er en løsning i positiv omløpsretning, så er $x_2 = \pi - x_1$ også en løsning.
@@ -290,18 +290,18 @@ $$
 Vi kan ta så mange omløp vi vil i positiv eller negativ omløpsretning som svarer til å legge til eller trekke fra $2\pi$ til vinklene. Altså blir de generelle løsningene
 
 $$
-x = -\dfrac{\pi}{3} + 2\pi \cdot n \or x = \dfrac{4\pi}{3} + 2\pi \cdot n \qfor n \in \mathbb{Z}
+x = -\dfrac{\pi}{3} + 2\pi \cdot k \or x = \dfrac{4\pi}{3} + 2\pi \cdot k \qfor k \in \mathbb{Z}
 $$
 
 
-Men siden vi skal finne løsningene $x \in \langle -\pi, \pi\rangle$, må prøve ut ulike verdier for $n$ for å sjekke hvilke løsninger som faller innenfor intervallet. For den første av løsningene får vi:
+Men siden vi skal finne løsningene $x \in \langle -\pi, \pi\rangle$, må prøve ut ulike verdier for $k$ for å sjekke hvilke løsninger som faller innenfor intervallet. For den første av løsningene får vi:
 
 
 :::{table}
 ---
 width: 70%
 ---
-labels: $n$, $x = -\dfrac{\pi}{3} + 2\pi \cdot n$
+labels: $k$, $x = -\dfrac{\pi}{3} + 2\pi \cdot k$
 $-1$, $-\dfrac{\pi}{3} - 2\pi = -\dfrac{7\pi}{3}$
 $0$, $-\dfrac{\pi}{3}$
 $1$, $-\dfrac{\pi}{3} + 2\pi = \dfrac{5\pi}{3}$
@@ -312,7 +312,10 @@ Vi finner at det bare er $x = -\dfrac{\pi}{3}$ som faller innenfor intervallet $
 Så sjekker vi den andre løsningen:
 
 :::{table}
-labels: $n$, $x = \dfrac{4\pi}{3} + 2\pi \cdot n$
+---
+width: 70%
+---
+labels: $k$, $x = \dfrac{4\pi}{3} + 2\pi \cdot k$
 $-1$, $\dfrac{4\pi}{3} - 2\pi = -\dfrac{2\pi}{3}$
 $0$, $\dfrac{4\pi}{3}$
 $1$, $\dfrac{4\pi}{3} + 2\pi = \dfrac{10\pi}{3}$
@@ -390,19 +393,19 @@ $$
 Men dette er bare spesielle løsninger for $u$. Vi kan legge til eller trekke fra $2\pi$ så mange ganger vi vil og fortsatt få samme sinusverdi. Dermed er de generelle løsningene:
 
 $$
-u = \dfrac{\pi}{4} + 2\pi \cdot n \or u = \dfrac{3\pi}{4} + 2\pi \cdot n \qfor n \in \mathbb{Z}
+u = \dfrac{\pi}{4} + 2\pi \cdot k \or u = \dfrac{3\pi}{4} + 2\pi \cdot k \qfor k \in \mathbb{Z}
 $$
 
 Nå setter vi tilbake definisjonen av variabelen $u$ for å løse likningene for $x$:
 
 $$
-\pi x - \dfrac{\pi}{2} = \dfrac{\pi}{4} + 2\pi \cdot n \or \pi x - \dfrac{\pi}{2} = \dfrac{3\pi}{4} + 2\pi \cdot n
+\pi x - \dfrac{\pi}{2} = \dfrac{\pi}{4} + 2\pi \cdot k \or \pi x - \dfrac{\pi}{2} = \dfrac{3\pi}{4} + 2\pi \cdot k
 $$
 
 som gir
 
 $$
-\pi x = \dfrac{\pi}{4} + \dfrac{\pi}{2} + 2\pi \cdot n \or \pi x = \dfrac{3\pi}{4} + \dfrac{\pi}{2} + 2\pi \cdot n
+\pi x = \dfrac{\pi}{4} + \dfrac{\pi}{2} + 2\pi \cdot k \or \pi x = \dfrac{3\pi}{4} + \dfrac{\pi}{2} + 2\pi \cdot k
 $$
 
 som vi forenkler til:
@@ -414,7 +417,7 @@ $$
 Så deler vi begge likningene med $\pi$ for å få $x$ alene:
 
 $$
-x = \dfrac{3}{4} + 2 \cdot n \or x = \dfrac{5}{4} + 2 \cdot n \qfor n \in \mathbb{Z}
+x = \dfrac{3}{4} + 2 \cdot k \or x = \dfrac{5}{4} + 2 \cdot k \qfor k \in \mathbb{Z}
 $$
 
 Så sjekker vi hvilke løsninger som ligger i intervallet $\langle -2, 2 \rangle$. For den første løsningen får vi:
@@ -424,7 +427,7 @@ Så sjekker vi hvilke løsninger som ligger i intervallet $\langle -2, 2 \rangle
 ---
 width: 70%
 ---
-labels: $n$, $x = \dfrac{3}{4} + 2 \cdot n$
+labels: $k$, $x = \dfrac{3}{4} + 2 \cdot k$
 $-2$, $\dfrac{3}{4} - 4 = -\dfrac{13}{4}$
 $-1$, $\dfrac{3}{4} - 2 = -\dfrac{5}{4}$
 $0$, $\dfrac{3}{4}$
@@ -440,7 +443,7 @@ Så sjekker vi den andre løsningen:
 ---
 width: 70%
 ---
-labels: $n$, $x = \dfrac{5}{4} + 2 \cdot n$
+labels: $k$, $x = \dfrac{5}{4} + 2 \cdot k$
 $-2$, $\dfrac{5}{4} - 4 = -\dfrac{11}{4}$
 $-1$, $\dfrac{5}{4} - 2 = -\dfrac{3}{4}$
 $0$, $\dfrac{5}{4}$
@@ -503,19 +506,19 @@ $$
 Vi løser likningen for $u$ som gir oss:
 
 $$
-u = -\dfrac{\pi}{3} + 2\pi \cdot n \or u = \dfrac{\pi}{3} + 2\pi \cdot n \qfor n \in \mathbb{Z}
+u = -\dfrac{\pi}{3} + 2\pi \cdot k \or u = \dfrac{\pi}{3} + 2\pi \cdot k \qfor k \in \mathbb{Z}
 $$
 
 Så setter vi tilbake definisjonen av $u$:
 
 $$
-2\pi x = -\dfrac{\pi}{3} + 2\pi \cdot n \or 2\pi x = \dfrac{\pi}{3} + 2\pi \cdot n
+2\pi x = -\dfrac{\pi}{3} + 2\pi \cdot k \or 2\pi x = \dfrac{\pi}{3} + 2\pi \cdot k
 $$
 
 Så deler vi med $2\pi$ for å få $x$ alene:
 
 $$
-x = -\dfrac{1}{6} + n \or x = \dfrac{1}{6} + n \qfor n \in \mathbb{Z}
+x = -\dfrac{1}{6} + k \or x = \dfrac{1}{6} + k \qfor k \in \mathbb{Z}
 $$
 
 Vi skal bare finne spesielle løsninger for $x \in \langle 0, 1\rangle$. For den første løsningen får vi:
@@ -524,7 +527,7 @@ Vi skal bare finne spesielle løsninger for $x \in \langle 0, 1\rangle$. For den
 ---
 width: 70%
 ---
-labels: $n$, $x = -\dfrac{1}{6} + n$
+labels: $k$, $x = -\dfrac{1}{6} + k$
 $0$, $-\dfrac{1}{6}$
 $1$, $-\dfrac{1}{6} + 1 = \dfrac{5}{6}$
 $2$, $-\dfrac{1}{6} + 2 = \dfrac{11}{6}$
@@ -538,7 +541,7 @@ Så sjekker vi den andre løsningen:
 ---
 width: 70%
 ---
-labels: $n$, $x = \dfrac{1}{6} + n$
+labels: $k$, $x = \dfrac{1}{6} + k$
 $0$, $\dfrac{1}{6}$
 $1$, $\dfrac{1}{6} + 1 = \dfrac{7}{6}$
 :::

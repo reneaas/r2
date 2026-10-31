@@ -1612,25 +1612,531 @@ $$
 
 
 
-<!-- :::::::::::::::{exercise} Oppgave 7
+
+---
+
+
+
+:::::::::::::::{exercise} Oppgave 7
+:::::::::::::{part} a
+Løs likningen
+
+$$
+2 \sin^2 x + 3 \cos x = 0 \qfor  x\in [-\pi, \pi\rangle
+$$
+
+
+:::::{answer}
+
+$$
+x = -\dfrac{2\pi}{3} \or x = \dfrac{2\pi}{3}
+$$
+
+::::{solution}
+Vi bruker Pytagoras' identitet til å skrive om likningen slik at vi bare har $\cos x$ og $\cos^2 x$ i likningen:
+
+$$
+2 (1 - \cos^2 x) + 3\cos x = 0
+$$
+
+$$
+2 - 2\cos^2 x + 3\cos x  = 0
+$$
+
+$$
+-2\cos^2 x + 3\cos x + 2 = 0
+$$
+
+$$
+2\cos^2 x - 3\cos x - 2 = 0
+$$
+
+Så gjør vi variabelskifte $u = \cos x$ som gir oss andregradslikningen
+
+$$
+2u^2 - 3u - 2 = 0
+$$
+
+Vi bruker $abc$-formelen til å finne $u$:
+
+$$
+u = \dfrac{3 \pm \sqrt{9 + 16}}{4} = \dfrac{3 \pm 5}{4} = \begin{cases} 2 \\ \\ -\dfrac{1}{2} \end{cases}
+$$
+
+Altså får vi 
+
+$$
+u = 2 \or u = -\dfrac{1}{2}
+$$
+
+$$
+\cos x = 2 \or \cos x = -\dfrac{1}{2}
+$$
+
+Den første likningen har ingen løsning siden $\abs{\cos x} \leq 1$. Dermed har vi kun at 
+
+$$
+\cos x = -\dfrac{1}{2}
+$$
+
+som har de generelle løsningene
+
+$$
+x = \dfrac{2\pi}{3} + 2\pi k \or x = -\dfrac{2\pi}{3} + 2\pi k
+$$
+
+De spesielle løsningene som ligger i intervallet $[-\pi, \pi\rangle$ er da
+
+$$
+x = -\dfrac{2\pi}{3} \or x = \dfrac{2\pi}{3}
+$$
+
+siden intervallet beskriver én full periode på enhetssirkelen. 
+
+::::
+:::::
+
+:::::::::::::
+
+
+
+:::::::::::::{part} b
+Løs likningen
+
+$$
+\sqrt{3}\cos x + 3 \sin x = 0 \qfor x\in [0, 4\pi\rangle
+$$
+
+
+:::::{answer}
+
+$$
+x \in \left\{\dfrac{5\pi}{6}, \dfrac{11\pi}{6}, \dfrac{17\pi}{6}, \dfrac{23\pi}{6}\right\}
+$$
+
+
+::::{solution}
+Vi skriver om likningen:
+
+$$
+3 \sin x = - \sqrt{3} \cos x
+$$
+
+
+$$
+\sin x = -\dfrac{\sqrt{3}}{3} \cos x
+$$
+
+$$
+\dfrac{\sin x}{\cos x} = -\dfrac{\sqrt{3}}{3} \liff \tan x = -\dfrac{\sqrt{3}}{3}
+$$
+
+Siden $\tan x \lt 0$ så må $x$ ligge i 2. kvadrant eller 4. kvadrant.
+
+For å finne de mulige løsningene kvadrerer vi likningen 
+
+$$
+3 \sin x = - \sqrt{3} \cos x \limplies 9 \sin^2 x = 3\cos^2 x
+$$
+
+Så brukes vi Pytagoras' identitet til å løse for $\sin^2 x$: 
+
+$$
+9\sin^2 x = 3 (1 - \sin^2 x)
+$$
+
+$$
+9 \sin^2 x = 3 - 3\sin^2 x 
+$$
+
+$$
+12 \sin^2 x = 3 \liff \sin^2 x = \dfrac{1}{4}
+$$
+
+$$
+\sin x = \pm \dfrac{1}{2}
+$$
+
+Vi løser først $\sin x = \dfrac{1}{2}$ i 2. kvadrant. Én løsning er
+
+$$
+x = \dfrac{5\pi}{6}
+$$
+
+Så løser vi $\sin x = -\dfrac{1}{2}$ i 4. kvadrant. Én løsning er da:
+
+$$
+x = \dfrac{11\pi}{6}
+$$
+
+Dermed blir de generelle løsningene til likningen
+
+$$
+x = \dfrac{5\pi}{6} + 2\pi k \or x = \dfrac{11\pi}{6} + 2\pi k
+$$
+
+De spesielle løsningene må ligge i intervallet $[0, 4\pi\rangle$ som tilsvarer to perioder på enhetssirkelen, altså for $k = 0$ og $k = 1$. Dermed får vi
+
+:::{table}
+labels: $k$, $x = \dfrac{5\pi}{6} + 2\pi k$, $x = \dfrac{11\pi}{6} + 2\pi k$
+0, $\dfrac{5\pi}{6}$, $\dfrac{11\pi}{6}$
+1, $\dfrac{17\pi}{6}$, $\dfrac{23\pi}{6}$
+:::
+
+Dermed er løsningsmengden til likningen
+
+$$
+x \in \left\{\dfrac{5\pi}{6}, \dfrac{11\pi}{6}, \dfrac{17\pi}{6}, \dfrac{23\pi}{6}\right\}
+$$
+
+
+::::
+:::::
+
+
+:::::::::::::
+
+
+:::::::::::::{part} c
+Løs likningen
+
+$$
+\sin \left(\dfrac{x}{2}\right) - \sin x = 0 \qfor x \in [-\pi, \pi\rangle
+$$
+
+
+:::{hint} Hint
+Bruk identiteten 
+
+$$
+\sin 2x = 2 \sin x \cos x
+$$ 
+
+til å skrive om $\sin x$ i likningen ved å sette $2x \to x$ på begge sider av identiteten. 
+:::
+
+
+
+:::::{answer}
+
+$$
+x \in \left\{-\dfrac{2\pi}{3}, 0, \dfrac{2\pi}{3}\right\}
+$$
+
+::::{solution}
+Siden vi har at 
+
+$$
+\sin 2x = 2\sin x \cos x
+$$
+
+får vi et uttrykk for $\sin x$ ved å sette $2x \to x$ på begge sider av identiteten:
+
+$$
+\sin x = 2 \sin\left(\dfrac{x}{2}\right) \cos\left(\dfrac{x}{2}\right)
+$$
+
+Dermed kan vi skrive om likningen
+
+$$
+\sin \left(\dfrac{x}{2}\right) - \sin x = 0
+$$ 
+
+til
+
+$$
+\sin \left(\dfrac{x}{2}\right) - 2 \sin\left(\dfrac{x}{2}\right) \cos\left(\dfrac{x}{2}\right) = 0
+$$
+
+som vi kan faktorisere til 
+
+$$
+\sin \left(\dfrac{x}{2}\right) \left(1 - 2 \cos\left(\dfrac{x}{2}\right)\right) = 0
+$$
+
+som gir at 
+
+$$
+\sin \left(\dfrac{x}{2}\right) = 0 \or 1 - 2 \cos\left(\dfrac{x}{2}\right) = 0
+$$
+
+Vi lar $u = \dfrac{x}{2}$ slik at vi får likningene
+
+$$
+\sin u = 0 \or 1 - 2 \cos u = 0
+$$
+
+Den første likningen har den generelle løsningen
+
+$$
+u = \pi k \qfor k \in \integer
+$$
+
+som gir at 
+
+$$
+\dfrac{x}{2} = \pi k \qfor k \in \integer
+$$
+
+$$
+x = 2 \pi k \qfor k \in \integer
+$$
+
+Innenfor intervallet $[-\pi, \pi\rangle$ får vi bare én løsning
+
+$$
+x = 0
+$$
+
+
+Den andre likningen kan vi skrive om til
+
+$$
+\cos u = \dfrac{1}{2}
+$$
+
+som har de generelle løsningene
+
+$$
+u = \pm \dfrac{\pi}{3} + 2\pi k \qfor k \in \integer
+$$
+
+Så setter vi inn $u = \dfrac{x}{2}$ og løser for $x$:
+
+$$
+\dfrac{x}{2} = \pm \dfrac{\pi}{3} + 2\pi k \qfor k \in \integer
+$$
+
+$$
+x = \pm \dfrac{2\pi}{3} + 4\pi k \qfor k \in \integer
+$$
+
+Innenfor intervallet $[-\pi, \pi\rangle$ får vi løsningene
+
+$$
+x = -\dfrac{2\pi}{3} \or x = \dfrac{2\pi}{3}
+$$
+
+Dermed er løsningsmengden 
+
+$$
+x \in \left\{-\dfrac{2\pi}{3}, 0, \dfrac{2\pi}{3}\right\}
+$$
+::::
+:::::
+
+:::::::::::::
+
+
+:::::::::::::::
+
+
+
+
+---
+
+
+
+
+
+:::::::::::::::{exercise} Oppgave 8
 
 
 :::::::::::::{part} a
 Gitt likningen
 
 $$
-4 \sin x \cos x = \sqrt{3}
+\left(\cos x + \dfrac{1}{2}\right) \cdot \left(\cos x - a\right) = 0 \qfor x \in [0, 2\pi \rangle \qog a \in \real
 $$
 
 
-Bestem $a$ slik at likningen har $4$ løsninger i intervallet $[-a\pi, a\pi\rangle$ der $a$ er et positivt heltall.
+Bestem $a$ slik at likningen har $3$ løsninger. 
 
+
+:::::{answer}
+$$
+a = \pm 1
+$$
+
+::::{solution}
+Vi har at 
+
+$$
+\left(\cos x + \dfrac{1}{2}\right) \cdot \left(\cos x - a\right) = 0
+$$
+
+betyr at 
+
+$$
+\cos x = -\dfrac{1}{2} \or \cos x = a
+$$
+
+Den første av de to likningene har to løsninger i intervallet $[0, 2\pi\rangle$. Den andre likningen har nøyaktig én løsning dersom $a = \pm 1$ siden $\cos x = 1$ eller $\cos x = -1$ gir kun én løsning i intervallet $[0, 2\pi\rangle$. Dermed er svaret
+
+$$
+a = \pm 1
+$$
+::::
+:::::
 
 
 :::::::::::::
 
 
 :::::::::::::{part} b
+Gitt likningen
+
+$$
+4 \sin x \cos x = \sqrt{3} \qfor [-a\pi, a\pi\rangle
+$$
+
+der $a$ er et positivt heltall.
+
+
+Bestem $a$ slik at likningen har $8$ løsninger.
+
+
+
+::::::{answer}
+
+$$
+a = 2
+$$
+
+:::::{solution}
+Vi skriver om likningen med $2 \sin x \cos x = \sin (2x)$ som gir
+
+$$
+2 \sin(2x) = \sqrt{3}
+$$
+
+$$
+\sin (2x) = \dfrac{\sqrt{3}}{2}
+$$
+
+
+:::{plot}
+width: 350px
+align: right
+axis: equal
+ticks: off
+xlabel: $\cos u$
+ylabel: $\sin u$
+circle: (0, 0), 1, black
+let: phi = pi/3
+let: theta = pi - phi
+line-segment: (cos(theta), sin(theta)), (cos(phi), sin(phi)), dashed, red
+point: (cos(phi), sin(phi))
+point: (cos(theta), sin(theta))
+line-segment: (0, 0), (cos(phi), sin(phi)), solid, blue
+line-segment: (0, 0), (cos(theta), sin(theta)), solid, blue
+angle-arc: (0, 0), 0.4, 0, phi * 180 / pi, red, arrow
+angle-arc: (0, 0), 0.3, 0, theta * 180 / pi, red, arrow
+text: 0.5 * cos(phi/2), 0.5 * sin(phi/2), "$u_1$", center-center
+text: 0.4 * cos(theta/2), 0.4 * sin(theta/2), "$u_2$", top-left
+fontsize: 24
+:::
+
+
+Så gjør vi variabelskiftet $u = 2x$ som gir oss grunnlikningen
+
+$$
+\sin u = \dfrac{\sqrt{3}}{2}
+$$
+
+Da har vi at en løsning i 1. kvadrant er
+
+$$
+u = \dfrac{\pi}{3}
+$$
+
+som gir den generelle løsningen
+
+$$
+u = \dfrac{\pi}{3} + 2\pi k
+$$
+
+En løsning i 2. kvadrant er gitt ved
+
+$$
+u = \pi - \dfrac{\pi}{3} = \dfrac{2\pi}{3}
+$$
+
+som gir den generelle løsningen
+
+$$
+u = \dfrac{2\pi}{3} + 2\pi k
+$$
+
+Så setter vi tilbake $u = 2x$ og løser de generelle løsningene for $x$:
+
+
+$$
+2x = \dfrac{\pi}{3} + 2\pi k \or 2x = \dfrac{2\pi}{3} + 2\pi k
+$$
+
+$$
+x = \dfrac{\pi}{6} + \pi k \or x = \dfrac{\pi}{3} + \pi k
+$$
+
+
+Vi kan tegne inn løsningene i enhetssirkelen og merke oss at hver generelle løsning gir $2$ løsninger i hvert omløp på enhetssirkelen:
+
+::::{multi-plot2}
+---
+rows: 1
+cols: 2
+---
+:::{plot}
+width: 100%
+axis: equal
+ticks: off
+xlabel: $\cos x$
+ylabel: $\sin x$
+circle: (0, 0), 1, black
+let: phi = pi/6
+let: theta = pi + phi
+point: (cos(phi), sin(phi))
+point: (cos(phi + pi), sin(phi + pi))
+line-segment: (0, 0), (cos(phi), sin(phi)), solid, blue
+line-segment: (0, 0), (cos(phi + pi), sin(phi + pi)), solid, blue
+angle-arc: (0, 0), 0.4, 0, phi * 180 / pi, red, arrow
+angle-arc: (0, 0), 0.3, phi * 180 / pi, phi * 180 / pi + 180, red, arrow
+text: 0.5 * cos(phi/2), 0.5 * sin(phi/2), "$x = \frac{\pi}{6}$", right-center
+text: 0.4 * cos(theta/2), 0.4 * sin(theta/2), "$\pi$", center-center
+fontsize: 24
+:::
+
+:::{plot}
+width: 100%
+axis: equal
+ticks: off
+xlabel: $\cos x$
+ylabel: $\sin x$
+circle: (0, 0), 1, black
+let: phi = pi/3
+let: theta = pi + phi
+point: (cos(phi), sin(phi))
+point: (cos(phi + pi), sin(phi + pi))
+line-segment: (0, 0), (cos(phi), sin(phi)), solid, blue
+line-segment: (0, 0), (cos(phi + pi), sin(phi + pi)), solid, blue
+angle-arc: (0, 0), 0.4, 0, phi * 180 / pi, red, arrow
+angle-arc: (0, 0), 0.3, phi * 180 / pi, phi * 180 / pi + 180, red, arrow
+text: 0.5 * cos(phi/2), 0.5 * sin(phi/2), "$x = \frac{\pi}{3}$", right-center
+text: 0.4 * cos(theta/2), 0.4 * sin(theta/2), "$\pi$", center-center
+fontsize: 24
+:::
+::::
+
+Dermed får vi $4$ løsninger for $a = 1$. For å få $8$ løsninger må vi sette $a = 2$.
+
+:::::
+::::::
+
+:::::::::::::
+
+
+:::::::::::::{part} c
 En likning er gitt ved 
 
 $$
@@ -1678,5 +2184,4 @@ $$
 :::::::::::::
 
 
-::::::::::::::: -->
-
+:::::::::::::::
