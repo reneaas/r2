@@ -2,10 +2,8 @@
 
 
 
-:::{goals} Læringsmål
-* Kunne løse grunnleggende trigonometriske likninger
-* Kunne løse trigonometriske likninger ved å forenkle dem med variabelskifte
-* Kunne bruke trigonometriske identiteter til å forenkle likninger til grunnleggende trigonometriske likninger
+:::{goals}
+* utforske egenskaper ved radianer og trigonometriske funksjoner og identiteter og anvende disse egenskapene til å løse praktiske problemer
 :::
 
 
