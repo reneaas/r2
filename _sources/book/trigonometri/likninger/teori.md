@@ -547,7 +547,7 @@ $1$, $\dfrac{1}{6} + 1 = \dfrac{7}{6}$
 
 Altså er det bare $x = \dfrac{1}{6}$ som ligger i intervallet $\langle 0, 1\rangle$. 
 
-Den fullstendige løseningen til likningen er dermed
+Den fullstendige løsningen til likningen er dermed
 
 $$
 x \in \left\{\dfrac{1}{6}, \dfrac{5}{6}\right\}

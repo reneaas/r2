@@ -1249,7 +1249,7 @@ Faktoriser venstresiden av likningen så mye som mulig først.
 :::::{answer}
 
 $$
-x \in \left\{-\dfrac{\pi}{2}, -\dfrac{\pi}{3}, \dfrac{\pi}{3}, \dfrac{\pi}{2}, \dfrac{3\pi}{2}\right\}
+x \in \left\{-\dfrac{\pi}{2}, -\dfrac{\pi}{3}, \dfrac{\pi}{3}, \dfrac{\pi}{2}, \dfrac{3\pi}{2}, \dfrac{5\pi}{3}\right\}
 $$
 
 ::::{solution}
@@ -1286,13 +1286,13 @@ $$
 Løsningene av denne likningen som ligger i intervallet $[-\pi, 2\pi\rangle$ er da 
 
 $$
-x \in \left\{-\dfrac{\pi}{3}, \dfrac{\pi}{3}\right\}
+x \in \left\{-\dfrac{\pi}{3}, \dfrac{\pi}{3}, \dfrac{5\pi}{3}\right\}
 $$
 
 Den fullstendige løsningsmengden til likningen er da 
 
 $$
-x \in \left\{-\dfrac{\pi}{2}, -\dfrac{\pi}{3}, \dfrac{\pi}{3}, \dfrac{\pi}{2}, \dfrac{3\pi}{2}\right\}
+x \in \left\{-\dfrac{\pi}{2}, -\dfrac{\pi}{3}, \dfrac{\pi}{3}, \dfrac{\pi}{2}, \dfrac{3\pi}{2}, \dfrac{5\pi}{3}\right\}
 $$
 
 
@@ -1987,7 +1987,7 @@ $$
 Gitt likningen
 
 $$
-4 \sin x \cos x = \sqrt{3} \qfor [-a\pi, a\pi\rangle
+4 \sin x \cos x = \sqrt{3} \qfor x\in [-a\pi, a\pi\rangle
 $$
 
 der $a$ er et positivt heltall.
