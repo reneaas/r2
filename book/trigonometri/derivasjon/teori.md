@@ -10,6 +10,9 @@
 
 
 
+## Derivasjon av trigonometriske funksjoner
+
+
 :::::::::::::::{summary} De deriverte til sinus og cosinus
 
 De deriverte til sinus og cosinus er gitt ved 
@@ -62,21 +65,33 @@ $$
 \vec{v}(x) = \vec{r}'(x) = [(\cos x)', (\sin x)']
 $$
 
-
-Vi vet også at banefarten $\abs{\vec{v}(x)}$ til punktet på sirkelen er gitt ved 
-
-$$
-v = \omega r \liff \abs{\vec{v}(x)} = \omega \cdot \abs{\vec{r}(x)}
-$$
-
-
-Siden både vinkelfarten $\omega = 1$ og radiusen til enhetssirkelen $\abs{\vec{r}(x)} = 1$, så vil banefarten være $\abs{\vec{v}(x)} = 1$. Ved å rotere posisjonsvektoren $90\degree$ mot klokka, får vi en vektor som tangerer sirkelen i punktet og har lengde $1$. Dermed må fartsvektoren være lik:
+Buelengden $s(x) = r\cdot x = x$ siden radius er lik $1$. Banefarten får vi ved å derivere dette uttrykket: 
 
 $$
-\vec{v}(x) = [-\sin x, \cos x]
+v(x) = s'(x) = x' = 1
+$$
+
+Altså er banefarten lik $1$ som betyr at lengden av fartsvektoren er $\abs{\vec v(x)} = 1$.
+
+Vektoren $\vec v(x)$ må være en tangent til sirkelen som betyr at den står ortogonalt på $\vec r(x)$. Vi får en slik vektor ved å rotere $\vec r(x)$ $90\degree$. Vi må rotere den $90\degree$ mot klokka for at vektoren skal peke i riktig retning siden $x$ øker.
+
+$$
+\vec v(x) = [-\sin x, \cos x]
+$$
+
+Denne vektoren har lengde $1$ siden 
+
+$$
+\abs{\vec v(x)} = \sqrt{(-\sin x)^2 + (\cos x)^2} = \sqrt{\sin^2 x + \cos^2 x} = \sqrt{1} = 1
 $$
 
 Sammenligner vi de to uttrykkene for fartsvektoren, så får vi at
+
+$$
+[(\cos x)', (\sin x)'] = [-\sin x, \cos x]
+$$
+
+som gir oss derivasjonsreglene vi skulle vise:
 
 $$
 \begin{align*}
@@ -95,7 +110,7 @@ $$
 ---
 
 
-:::::::::::::::{example} Eksempel 1
+:::::::::::::::{example} Eksempel 1 
 Funksjonen $f$ er gitt ved
 
 $$
@@ -161,3 +176,4 @@ $$
 ::::
 
 :::::::::::::::
+
