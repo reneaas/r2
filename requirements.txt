@@ -18,3 +18,4 @@ signchart==0.2.2
 svgutils==0.3.4
 munchboka-edutools[notebook]>=0.10.4
 sphinx-sitemap
+tqdm
