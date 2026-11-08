@@ -1,26 +1,34 @@
 # Trigonometriske funksjoner
 
+:::{goals}
+* utforske egenskaper ved radianer og trigonometriske funksjoner og identiteter og anvende disse egenskapene til å løse praktiske problemer
+:::
 
 ## Sinus- og cosinusfunksjonen
 
-Sinusfunksjonen $\sin x$ og cosinusfunksjonen $\cos x$ får vi ved å la $x$ være vinkelen til ulike punkter på enhetssirkelen. Hvis vi tegner punktene $(x, \cos x)$ og $(x, \sin x)$ i et koordinatsystem, får vi grafene til sinusfunksjonen og cosinusfunksjonen. Se den interaktive figuren nedenfor:
+Sinusfunksjonen $\sin x$ og cosinusfunksjonen $\cos x$ får vi ved å la $x$ være vinkelen til ulike punkter på enhetssirkelen. Hvis vi tegner punktene $(x, \cos x)$ og $(x, \sin x)$ i et koordinatsystem, får vi grafene til sinusfunksjonen og cosinusfunksjonen. 
+
+I de interaktive figurene nedenfor kan du se sammenhengen mellom grafen og punktene på enhetssirkelen.
+
+* Den blå grafen viser grafen til $y = \cos x$
+* Den rød grafen viser grafen til $y = \sin x$
 
 ::::{multi-interactive-graph}
 ---
 rows: 1
 cols: 2
-interactive-var: u, 0, 4*pi, 128
+interactive-var: x, 0, 4*pi, 128
 interactive-var-start: pi/4
 ---
 
 :::{interactive-graph} 
 circle: (0, 0), 1, dashed, gray
-point: (cos(u), sin(u))
-line-segment: (0, 0), (cos(u), sin(u)), solid, black
-angle-arc: (0, 0), 0.2, 0, u * 180 / pi, purple, arrow
-curve: cos(t), sin(t), (0, u), solid, black
-hline: sin(u), 0, cos(u), dashed, red
-vline: cos(u), 0, sin(u), dashed, blue
+point: (cos(x), sin(x))
+line-segment: (0, 0), (cos(x), sin(x)), solid, black
+angle-arc: (0, 0), 0.2, 0, x * 180 / pi, purple, arrow
+curve: cos(t), sin(t), (0, x), solid, black
+hline: sin(x), 0, cos(x), dashed, red
+vline: cos(x), 0, sin(x), dashed, blue
 axis: equal
 grid: off
 ticks: off
@@ -30,17 +38,16 @@ fontsize: 24
 :::
 
 :::{interactive-graph} 
-function: cos(x), (0, u), $y = \cos x$, blue
-function: sin(x), (0, u), $y = \sin x$, red
+curve: t, cos(t), (0, x), solid, blue
+curve: t, sin(t), (0, x), solid, red
 xmin: 0
 xmax: 16
 ymin: -1.5
 ymax: 1.5
 xtick-format: pi
 xmin: 0
-xmax: 5*pi
+xmax: 4*pi
 xstep: pi/2
-nocache:
 fontsize: 24
 :::
 ::::
