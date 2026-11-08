@@ -94,43 +94,9 @@ Periode, $2\pi$, $2\pi$
 
 
 
-
-## Tangensfunksjonen
-
-
-
-:::::::::::::::{summary} Tangensfunksjonen
-:::{plot}
-width: 350px
-align: right
-function: tan(x), (-2*pi, 2*pi)
-repeat: n=-2..2; vline: n*pi + pi/2, dashed, red
-xtick-format: pi
-xmin: -2*pi
-xmax: 2*pi
-xstep: pi/2
-fontsize: 26
-:::
-
-
-
-Tangensfunksjonen 
-
-$$
-f(x) = \tan x
-$$
-
-har følgende egenskaper:
-* Periode på $\pi$.
-* Vertikale asymptoter i $x = \dfrac{\pi}{2} + \pi \cdot k$, der $k \in \mathbb{Z}$.
-* Nullpunkter i $x = \pi \cdot k$, der $k \in \mathbb{Z}$.
-:::::::::::::::
-
-
-
 ## Generelle cosinusfunksjoner
 
-Vi kan beskrive mer generelle trigonometriske funksjoner ved å bruke generelle cosinusfunksjoner.
+Vi kan beskrive mer generelle trigonometriske funksjoner ved å bruke generelle cosinusfunksjoner. Grafene til slike funksjoner kaller for **harmoniske svingninger** fordi de har konstant periode og amplitude. 
 
 
 :::::::::::::::{summary} Cosinusfunksjoner
@@ -194,38 +160,6 @@ Fasevinkel $\varphi$, Gir en horisontal **faseforskyvning** lik $\dfrac{\varphi}
 
 
 
-
-:::::::::::::::{explore} Utforsk 1
-Nedenfor vises grafen til $y = \cos x$ som en grå stiplet linje. Den blå grafen viser grafen til 
-
-$$
-f(x) = A \cos (\omega x - \varphi) + d
-$$
-
-der $A$, $\omega$, $\varphi$ og $d$ kan justeres.
-
-
-:::{interactive-graph} 
-width: 70%
-interactive-var: A, 1, 4, 4
-interactive-var: omega, 1, 5, 5
-interactive-var: varphi, -2*pi, 2*pi, 11
-interactive-var: d, -5, 5, 11
-interactive-var-start: A=1, d=0, omega=1, varphi=0
-function: A*cos(omega * x - varphi) + d, blue 
-curve: t, cos(t), (-6, 6), dashed, gray
-ymin: -4
-ymax: 4
-:::
-
-:::::::::::::::
-
-
-
-
-
-
----
 
 Vi tar et eksempel:
 
@@ -404,7 +338,7 @@ $$
 
 ## Generelle sinusfunksjoner
 
-Siden $\cos u = \sin \left(u + \dfrac{\pi}{2}\right)$, kan vi også beskrive trigonometriske funksjoner ved å bruke generelle sinusfunksjoner.
+Siden $\sin x = \cos\left(x - \dfrac{\pi}{2}\right)$, kan vi også beskrive trigonometriske funksjoner ved å bruke generelle sinusfunksjoner.
 
 
 :::::::::::::::{summary} Sinusfunksjoner
@@ -445,6 +379,10 @@ $$
 f(x) = A \sin (\omega x - \varphi) + d
 $$
 
+
+Parameterne i generelle sinusfunksjoner er tilsvarende som for generelle cosinusfunksjoner. 
+
+Én viktig forskjell er at faseforskyvningen $\varphi / \omega$ nå gir $x$-koordinaten til det første skjærinkgspunktet mellom grafen og likevektslinja når grafen er på vei opp, forutsatt at $\varphi \in [0, 2\pi\rangle$.
 
 
 :::::::::::::::
@@ -621,7 +559,364 @@ $$
 :::::::::::::::
 
 
+
+
 ---
+
+
+
+
+
+## Topp- og bunnpunkter
+
+
+
+
+:::::::::::::::{summary} Topp- og bunnpunkter for sinus- og cosinusfunksjoner 
+
+
+:::{plot}
+nocache:
+ticks: off
+fontsize: 24
+width: 380px
+align: right
+let: A = 2
+let: d = 3
+let: T = 3
+let: omega = 2 * pi / T
+let: phi = -3.5*pi / 3
+function: A * sin(omega * x + phi) + d
+ymin: 0
+xmin: 0
+hline: d, dashed, gray
+text: 0, d, $d$, center-left
+vline: (pi/2 - phi + 2*pi) / omega, d, d + A, dashed, gray
+text: (pi/2 - phi + 2*pi) / omega, 0.5 * (d + d + A), $A$, center-left
+hline: d - A, 0, (-pi/2 - phi) / omega, dashed, red
+text: 0, d - A, "$d - A$", center-left
+hline: d + A, 0, (pi/2 - phi) / omega, dashed, red
+text: 0, d + A, "$d + A$", center-left
+::: 
+
+Toppunktene til en sinus- eller cosinusfunksjon finner vi ved å løse likningen
+
+$$
+f(x) = d + A
+$$
+
+Bunnpunktene til en sinus- eller cosinusfunksjon finner vi ved å løse likningen
+
+$$
+f(x) = d - A
+$$
+
+
+Med variabelskifte $u = \omega x + \varphi$, svarer det til å løse likningene:
+
+:::{table}
+labels: Type punkt, Sinusfunksjoner, Cosinusfunksjoner
+Toppunkter, $\sin u = 1$, $\cos u = 1$
+Bunnpunkter, $\sin u = -1$, $\cos u = -1$
+:::
+
+
+
+:::::{proof} Vis forklaring
+For en sinusfunksjon på formen
+
+$$
+f(x) = A \sin (\omega x + \varphi) + d
+$$
+
+vil toppunktene være gitt ved å løse likningen 
+
+$$
+f(x) = d + A 
+$$
+
+$$
+A \sin (\omega x + \varphi) + d = d + A 
+$$
+
+$$
+\sin (\omega x + \varphi) = 1
+$$
+
+Tilsvarende vil bunnpunktene være gitt ved å løse likningen
+
+$$
+f(x) = d - A \liff A \sin (\omega x + \varphi) + d = d - A \liff \sin (\omega x + \varphi) = -1
+$$
+
+Definerer vi variabelen $u = \omega x + \varphi$, så får vi likningene
+
+$$
+\begin{align*}
+\sin u &= 1 && \mathrm{Toppunkter} \\
+\\
+\sin u &= -1 && \mathrm{Bunnpunkter}
+\end{align*}
+$$
+
+
+For cosinusfunksjoner på formen 
+
+$$
+f(x) = A \cos (\omega x + \varphi) + d
+$$
+
+får vi at toppunkter er gitt ved å løse likningen
+
+$$
+f(x) = d + A \liff A \cos (\omega x + \varphi) + d = d + A \liff \cos (\omega x + \varphi) = 1
+$$
+
+Tilsvarende vil bunnpunktene være gitt ved å løse likningen
+
+$$
+f(x) = d - A \liff A \cos (\omega x + \varphi) + d = d - A \liff \cos (\omega x + \varphi) = -1
+$$
+
+Definerer vi variabelen $u = \omega x - \varphi$, så får vi likningene
+
+$$
+\begin{align*}
+\cos u &= 1 && \mathrm{Toppunkter} \\
+\\
+\cos u &= -1 && \mathrm{Bunnpunkter}
+\end{align*}
+$$
+
+
+:::::
+
+
+:::::::::::::::
+
+
+---
+
+
+
+:::::::::::::::{example} Eksempel 3
+En trigonometrisk funksjon $f$ er gitt ved
+
+$$
+f(x) = 2 \sin \left(2x - \frac{\pi}{2}\right) + 3
+$$
+
+
+Finn koordinatene til topp- og bunnpunktene til $f$ for $x \in [0, 4\pi]$.
+
+
+
+::::{solution}
+---
+open:
+---
+Først merker vi oss at amplituden er $A = 2$ og likevektslinja er $d = 3$. 
+
+**Toppunktene**:
+
+Vi setter $u = 2x - \dfrac{\pi}{2}$ og løser likningen for toppunktene:
+
+$$
+\sin u = 1 \liff u = \dfrac{\pi}{2} + 2k\pi \qfor k \in \mathbb{Z}
+$$
+
+Vi setter tilbake definisjonen av $u$ og løser for $x$:
+
+:::{table}
+---
+transpose:
+width: 70%
+---
+labels: $k$, $x = \dfrac{\pi}{2} + k\pi$
+$0$, $\dfrac{\pi}{2}$
+$1$, $\dfrac{3\pi}{2}$
+$2$, $\dfrac{5\pi}{2}$
+$3$, $\dfrac{7\pi}{2}$
+:::
+
+Vi har at $y$-koordinaten til toppunktene er gitt ved
+
+$$
+y_\mathrm{maks} = d + A = 3 + 2 = 5
+$$
+
+Toppunktene er derfor gitt ved mengden
+
+$$
+T = \left\{\left(\dfrac{\pi}{2}, 5\right), \left(\dfrac{3\pi}{2}, 5\right), \left(\dfrac{5\pi}{2}, 5\right), \left(\dfrac{7\pi}{2}, 5\right)\right\}
+$$
+
+
+**Bunnpunktene**:
+
+Vi setter $u = 2x - \dfrac{\pi}{2}$ og løser likningen for bunnpunktene:
+
+$$
+\sin u = -1 \liff u = -\dfrac{\pi}{2} + 2k\pi \qfor k \in \mathbb{Z}
+$$
+
+Vi setter tilbake definisjonen av $u$ og løser for $x$:
+
+$$
+2x - \dfrac{\pi}{2} = -\dfrac{\pi}{2} + 2k\pi \liff 2x = 2k\pi \liff x = k\pi
+$$
+
+Altså har vi 
+
+:::{table}
+---
+transpose:
+width: 70%
+---
+labels: $k$, $x = k\pi$
+$0$, $0$
+$1$, $\pi$
+$2$, $2\pi$
+$3$, $3\pi$
+$4$, $4\pi$
+:::
+
+Her vil $y$-koordinaten til bunnpunktene være gitt ved
+
+$$
+y_\mathrm{min} = d - A = 3 - 2 = 1
+$$
+
+Altså er mengden av bunnpunkter gitt ved
+
+$$
+B = \left\{(0, 1), (\pi, 1), (2\pi, 1), (3\pi, 1), (4\pi, 1)\right\}
+$$
+
+
+::::
+
+
+:::::::::::::::
+
+
+---
+
+
+
+:::::::::::::::{exercise} Underveisoppgave 3
+En trigonometrisk funksjon $f$ er gitt ved
+
+$$
+f(x) = 3 \cos \left(\pi x + \pi\right) - 2
+$$
+
+
+Finn koordinatene til topp- og bunnpunktene til $f$ i intervallet $\langle -3, 3\rangle$.
+
+
+:::::{answer}
+
+* Toppunkter: $T = \{(-1, 1), (1, 1)\}$
+* Bunnpunkter: $B = \{(-2, -5), (0, -5), (2, -5)\}$
+
+::::{solution}
+Amplituden og likevektslinja er gitt ved
+
+$$
+A = 3 \and d = -2
+$$
+
+Da er $y$-koordinatene til topp- og bunnpunktene gitt ved 
+
+$$
+\begin{align*}
+y_\mathrm{topp} &= d + A = -2 + 3 = 1\\
+\\
+y_\mathrm{bunn} &= d - A = -2 - 3 = -5
+\end{align*}
+$$
+
+
+**Toppunkter**:
+
+For å finne toppunktene setter vi $u = \pi x + \pi$ og løser likningen
+
+$$
+\cos u = 1 \liff u = 2k\pi \qfor k \in \mathbb{Z}
+$$
+
+Så setter vi tilbake definisjonen av $u$ og løser for $x$:
+
+$$
+\pi x + \pi = 2k\pi \liff \pi x = 2k\pi - \pi \liff x = 2k - 1
+$$
+
+Så finner vi de aktuelle løsningene for $x \in \langle -3, 3\rangle$:
+
+:::{table}
+---
+transpose:
+width: 70%
+---
+labels: $k$, $x = 2k - 1$
+$-1$, $-3$
+$0$, $-1$
+$1$, $1$
+$2$, $3$
+:::
+
+Vi ser at det bare er $x = -1$ og $x = 1$ som er i intervallet $\langle -3, 3\rangle$. Dermed får vi toppunktene
+
+$$
+T = \{(-1, 1), (1, 1)\}
+$$
+
+**Bunnpunkter**:
+
+For å finne bunnpunktene setter vi $u = \pi x + \pi$ og løser likningen
+
+$$
+\cos u = -1 \liff u = \pi + 2k\pi \qfor k \in \mathbb{Z}
+$$
+
+Så setter vi tilbake definisjonen av $u$ og løser for $x$:
+
+$$
+\pi x + \pi = \pi + 2k\pi \liff \pi x = 2k\pi \liff x = 2k
+$$
+
+Så finner vi de aktuelle løsningene for $x \in \langle -3, 3\rangle$:
+
+:::{table}
+---
+transpose:
+width: 70%
+---
+labels: $k$, $x = 2k$
+$-1$, $-2$
+$0$, $0$
+$1$, $2$
+:::
+
+Dermed får vi bunnpunktene
+
+$$
+B = \{(-2, -5), (0, -5), (2, -5)\}
+$$
+
+
+::::
+:::::
+
+
+:::::::::::::::
+
+
+
+---
+
+
 
 
 
@@ -756,7 +1051,7 @@ $$
 
 
 
-:::::::::::::::{example} Eksempel 3
+:::::::::::::::{example} Eksempel 4
 Funksjonen $f$ er gitt ved
 
 $$
@@ -821,7 +1116,7 @@ $$
 
 
 
-:::::::::::::::{exercise} Underveisoppgave 3
+:::::::::::::::{exercise} Underveisoppgave 4
 Funksjonen $f$ er gitt ved
 
 $$
@@ -878,128 +1173,96 @@ $$
 ---
 
 
-
-## Topp- og bunnpunkter
-
+## Derivasjon av trigonometriske funksjoner
 
 
+:::::::::::::::{summary} De deriverte til sinus og cosinus
 
-:::::::::::::::{summary} Topp- og bunnpunkter for sinus- og cosinusfunksjoner 
-
-
-:::{plot}
-nocache:
-ticks: off
-fontsize: 24
-width: 380px
-align: right
-let: A = 2
-let: d = 3
-let: T = 3
-let: omega = 2 * pi / T
-let: phi = -3.5*pi / 3
-function: A * sin(omega * x + phi) + d
-ymin: 0
-xmin: 0
-hline: d, dashed, gray
-text: 0, d, $d$, center-left
-vline: (pi/2 - phi + 2*pi) / omega, d, d + A, dashed, gray
-text: (pi/2 - phi + 2*pi) / omega, 0.5 * (d + d + A), $A$, center-left
-hline: d - A, 0, (-pi/2 - phi) / omega, dashed, red
-text: 0, d - A, "$d - A$", center-left
-hline: d + A, 0, (pi/2 - phi) / omega, dashed, red
-text: 0, d + A, "$d + A$", center-left
-::: 
-
-Toppunktene til en sinus- eller cosinusfunksjon finner vi ved å løse likningen
+De deriverte til sinus og cosinus er gitt ved 
 
 $$
-f(x) = d + A
+\begin{align*}
+(\cos x)' &= -\sin x \\
+\\
+(\sin x)' &= \cos x
+\end{align*}
 $$
-
-Bunnpunktene til en sinus- eller cosinusfunksjon finner vi ved å løse likningen
-
-$$
-f(x) = d - A
-$$
-
-
-Med variabelskifte $u = \omega x + \varphi$, svarer det til å løse likningene:
-
-:::{table}
-labels: Type punkt, Sinusfunksjoner, Cosinusfunksjoner
-Toppunkter, $\sin u = 1$, $\cos u = 1$
-Bunnpunkter, $\sin u = -1$, $\cos u = -1$
-:::
 
 
 
 :::::{proof} Vis forklaring
-For en sinusfunksjon på formen
+:::{plot}
+nocache:
+width: 100%
+align: right
+fontsize: 26
+axis: equal
+ticks: off
+circle: (0, 0), 1
+let: u = 120 * pi/180
+curve: cos(t), sin(t), (0, u), solid, red
+let: dx = 40 * pi/180
+point: (cos(u), sin(u))
+xlabel: $\cos \varphi$
+ylabel: $\sin \varphi$
+vector: (0, 0), (cos(u), sin(u)), blue
+text: 0.5 * cos(u) - 0.1, 0.5 * sin(u) - 0.1, "$\vec{r}$", center-center
+angle-arc: (0, 0), 0.3, 0, u*180/pi, red, arrow
+text: 0.4 * cos(u/2), 0.4 * sin(u/2), "$x$", center-center
+vector: (cos(u), sin(u)), (cos(u) - l * sin(u), sin(u) + l * cos(u)), blue 
+let: l = 1
+text: 0.5 * (cos(u) - l * sin(u) + cos(u)), 0.5 * (sin(u) + l * cos(u) + sin(u)) + 0.2, "$\vec{v}$", center-center
+text: 1.2 * cos(u/2), 1.2 * sin(u/2), "$s(x)$", center-center
+:::
+
+
+Vi tenker oss et punkt på enhetssirkelen der vi har rotert en vinkel $x$ som beveger seg med en konstant vinkelfart lik $1$. Posisjonsvektoren til dette punktet vil være gitt ved:
 
 $$
-f(x) = A \sin (\omega x + \varphi) + d
+\vec{r}(x) = [\cos x, \sin x]
 $$
 
-vil toppunktene være gitt ved å løse likningen 
+Fra vektorregningen vet vi at fartsvektoren er lik en tangentvektor til sirkelen i punktet gitt ved: 
 
 $$
-f(x) = d + A 
+\vec{v}(x) = \vec{r}'(x) = [(\cos x)', (\sin x)']
 $$
 
-$$
-A \sin (\omega x + \varphi) + d = d + A 
-$$
+Buelengden $s(x) = r\cdot x = x$ siden radius er lik $1$. Banefarten får vi ved å derivere dette uttrykket: 
 
 $$
-\sin (\omega x + \varphi) = 1
+v(x) = s'(x) = x' = 1
 $$
 
-Tilsvarende vil bunnpunktene være gitt ved å løse likningen
+Altså er banefarten lik $1$ som betyr at lengden av fartsvektoren er $\abs{\vec v(x)} = 1$.
+
+Vektoren $\vec v(x)$ må være en tangent til sirkelen som betyr at den står ortogonalt på $\vec r(x)$. Vi får en slik vektor ved å rotere $\vec r(x)$ $90\degree$. Vi må rotere den $90\degree$ mot klokka for at vektoren skal peke i riktig retning siden $x$ øker.
 
 $$
-f(x) = d - A \liff A \sin (\omega x + \varphi) + d = d - A \liff \sin (\omega x + \varphi) = -1
+\vec v(x) = [-\sin x, \cos x]
 $$
 
-Definerer vi variabelen $u = \omega x + \varphi$, så får vi likningene
+Denne vektoren har lengde $1$ siden 
+
+$$
+\abs{\vec v(x)} = \sqrt{(-\sin x)^2 + (\cos x)^2} = \sqrt{\sin^2 x + \cos^2 x} = \sqrt{1} = 1
+$$
+
+Sammenligner vi de to uttrykkene for fartsvektoren, så får vi at
+
+$$
+[(\cos x)', (\sin x)'] = [-\sin x, \cos x]
+$$
+
+som gir oss derivasjonsreglene vi skulle vise:
 
 $$
 \begin{align*}
-\sin u &= 1 && \mathrm{Toppunkter} \\
+(\cos x)' &= -\sin x \\
 \\
-\sin u &= -1 && \mathrm{Bunnpunkter}
+(\sin x)' &= \cos x
 \end{align*}
 $$
-
-
-For cosinusfunksjoner på formen 
-
-$$
-f(x) = A \cos (\omega x + \varphi) + d
-$$
-
-får vi at toppunkter er gitt ved å løse likningen
-
-$$
-f(x) = d + A \liff A \cos (\omega x + \varphi) + d = d + A \liff \cos (\omega x + \varphi) = 1
-$$
-
-Tilsvarende vil bunnpunktene være gitt ved å løse likningen
-
-$$
-f(x) = d - A \liff A \cos (\omega x + \varphi) + d = d - A \liff \cos (\omega x + \varphi) = -1
-$$
-
-Definerer vi variabelen $u = \omega x - \varphi$, så får vi likningene
-
-$$
-\begin{align*}
-\cos u &= 1 && \mathrm{Toppunkter} \\
-\\
-\cos u &= -1 && \mathrm{Bunnpunkter}
-\end{align*}
-$$
-
 
 :::::
 
@@ -1007,16 +1270,18 @@ $$
 :::::::::::::::
 
 
+---
 
-:::::::::::::::{example} Eksempel 4
-En trigonometrisk funksjon $f$ er gitt ved
+
+:::::::::::::::{example} Eksempel 5
+Funksjonen $f$ er gitt ved
 
 $$
-f(x) = 2 \sin \left(2x - \frac{\pi}{2}\right) + 3
+f(x) = 4 \cos \left(4x - 2\right) + 3
 $$
 
 
-Finn koordinatene til topp- og bunnpunktene til $f$ for $x \in [0, 4\pi]$.
+Finn $f'(x)$.
 
 
 
@@ -1024,85 +1289,19 @@ Finn koordinatene til topp- og bunnpunktene til $f$ for $x \in [0, 4\pi]$.
 ---
 open:
 ---
-Først merker vi oss at amplituden er $A = 2$ og likevektslinja er $d = 3$. 
-
-**Toppunktene**:
-
-Vi setter $u = 2x - \frac{\pi}{2}$ og løser likningen for toppunktene:
+Vi bruker kjernereglene med $u = 4x - 2$. Da har vi at $u' = 4$ og $(\cos u)' = -\sin u$. Dermed får vi at
 
 $$
-\sin u = 1 \liff u = \frac{\pi}{2} + 2k\pi \qfor k \in \mathbb{Z}
+\begin{align*}
+f'(x) &= \left(4 \cos \left(4x - 2\right) + 3 \right)' \\
+\\
+&= 4 \cdot (\cos u)' \cdot u' + 0 \\
+\\
+&= 4 \cdot (-\sin u) \cdot 4 \\
+\\
+&= -16 \sin \left(4x - 2\right)
+\end{align*}
 $$
-
-Vi setter tilbake definisjonen av $u$ og løser for $x$:
-
-:::{table}
----
-transpose:
-width: 70%
----
-labels: $k$, $x = \dfrac{\pi}{2} + k\pi$
-$0$, $\dfrac{\pi}{2}$
-$1$, $\dfrac{3\pi}{2}$
-$2$, $\dfrac{5\pi}{2}$
-$3$, $\dfrac{7\pi}{2}$
-:::
-
-Vi har at $y$-koordinaten til toppunktene er gitt ved
-
-$$
-y_\mathrm{maks} = d + A = 3 + 2 = 5
-$$
-
-Toppunktene er derfor gitt ved mengden
-
-$$
-T = \left\{\left(\dfrac{\pi}{2}, 5\right), \left(\dfrac{3\pi}{2}, 5\right), \left(\dfrac{5\pi}{2}, 5\right), \left(\dfrac{7\pi}{2}, 5\right)\right\}
-$$
-
-
-**Bunnpunktene**:
-
-Vi setter $u = 2x - \frac{\pi}{2}$ og løser likningen for bunnpunktene:
-
-$$
-\sin u = -1 \liff u = -\frac{\pi}{2} + 2k\pi \qfor k \in \mathbb{Z}
-$$
-
-Vi setter tilbake definisjonen av $u$ og løser for $x$:
-
-$$
-2x - \dfrac{\pi}{2} = -\dfrac{\pi}{2} + 2k\pi \liff 2x = 2k\pi \liff x = k\pi
-$$
-
-Altså har vi 
-
-:::{table}
----
-transpose:
-width: 70%
----
-labels: $k$, $x = k\pi$
-$0$, $0$
-$1$, $\pi$
-$2$, $2\pi$
-$3$, $3\pi$
-$4$, $4\pi$
-:::
-
-Her vil $y$-koordinaten til bunnpunktene være gitt ved
-
-$$
-y_\mathrm{min} = d - A = 3 - 2 = 1
-$$
-
-Altså er mengden av bunnpunkter gitt ved
-
-$$
-B = \left\{(0, 1), (\pi, 1), (2\pi, 1), (3\pi, 1), (4\pi, 1)\right\}
-$$
-
-
 ::::
 
 
@@ -1113,111 +1312,31 @@ $$
 
 
 
-:::::::::::::::{exercise} Underveisoppgave 4
-En trigonometrisk funksjon $f$ er gitt ved
+:::::::::::::::{example} Eksempel 6
+Funksjonen $f$ er gitt ved 
 
 $$
-f(x) = 3 \cos \left(\pi x + \pi\right) - 2
+f(x) = 3 \sin x + 4 \cos (2x)
 $$
 
-
-Finn koordinatene til topp- og bunnpunktene til $f$ i intervallet $\langle -3, 3\rangle$.
-
-
-:::::{answer}
-
-* Toppunkter: $T = \{(-1, 1), (1, 1)\}$
-* Bunnpunkter: $B = \{(-2, -5), (0, -5), (2, -5)\}$
+Finn $f'(x)$.
 
 ::::{solution}
-Amplituden og likevektslinja er gitt ved
-
-$$
-A = 3 \and d = -2
-$$
-
-Da er $y$-koordinatene til topp- og bunnpunktene gitt ved 
+---
+open:
+---
+Vi vet at $(\sin x)' = \cos x$ og $(\cos x)' = -\sin x$. Dermed får vi at
 
 $$
 \begin{align*}
-y_\mathrm{topp} &= d + A = -2 + 3 = 1\\
+f'(x) &= 3 (\sin x)' + 4 (\cos (2x))' \\
 \\
-y_\mathrm{bunn} &= d - A = -2 - 3 = -5
+&= 3 \cos x + 4 \cdot (-\sin (2x)) \cdot (2x)' \\
+\\
+&= 3 \cos x - 8 \sin (2x)
 \end{align*}
 $$
-
-
-**Toppunkter**:
-
-For å finne toppunktene setter vi $u = \pi x + \pi$ og løser likningen
-
-$$
-\cos u = 1 \liff u = 2k\pi \qfor k \in \mathbb{Z}
-$$
-
-Så setter vi tilbake definisjonen av $u$ og løser for $x$:
-
-$$
-\pi x + \pi = 2k\pi \liff \pi x = 2k\pi - \pi \liff x = 2k - 1
-$$
-
-Så finner vi de aktuelle løsningene for $x \in \langle -3, 3\rangle$:
-
-:::{table}
----
-transpose:
-width: 70%
----
-labels: $k$, $x = 2k - 1$
-$-1$, $-3$
-$0$, $-1$
-$1$, $1$
-$2$, $3$
-:::
-
-Vi ser at det bare er $x = -1$ og $x = 1$ som er i intervallet $\langle -3, 3\rangle$. Dermed får vi toppunktene
-
-$$
-T = \{(-1, 1), (1, 1)\}
-$$
-
-**Bunnpunkter**:
-
-For å finne bunnpunktene setter vi $u = \pi x + \pi$ og løser likningen
-
-$$
-\cos u = -1 \liff u = \pi + 2k\pi \qfor k \in \mathbb{Z}
-$$
-
-Så setter vi tilbake definisjonen av $u$ og løser for $x$:
-
-$$
-\pi x + \pi = \pi + 2k\pi \liff \pi x = 2k\pi \liff x = 2k
-$$
-
-Så finner vi de aktuelle løsningene for $x \in \langle -3, 3\rangle$:
-
-:::{table}
----
-transpose:
-width: 70%
----
-labels: $k$, $x = 2k$
-$-1$, $-2$
-$0$, $0$
-$1$, $2$
-:::
-
-Dermed får vi bunnpunktene
-
-$$
-B = \{(-2, -5), (0, -5), (2, -5)\}
-$$
-
-
 ::::
-:::::
-
 
 :::::::::::::::
 

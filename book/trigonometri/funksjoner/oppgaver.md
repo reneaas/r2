@@ -250,11 +250,46 @@ Grafen til en trigonometrisk funksjon $f$ er vist i figuren til høyre.
 :::::::::::::{part} a
 Bestem amplituden til $f$.
 
+
+:::::{answer}
+$$
+A = 5
+$$
+
+
+::::{solution}
+Vi har at $y_\mathrm{topp} = 4$ og $y_\mathrm{bunn} = -6$ som gir at 
+
+$$
+A = \dfrac{y_\mathrm{topp} - y_\mathrm{bunn}}{2} = \dfrac{4 - (-6)}{2} = 5
+$$
+
+
+::::
+
+:::::
+
+
 :::::::::::::
 
 
 :::::::::::::{part} b
 Finn likevektslinja til $f$.
+
+
+:::::{answer}
+$$
+d = -1
+$$
+
+::::{solution}
+Vi har at $y_\mathrm{topp} = 4$ og $y_\mathrm{bunn} = -6$ som gir at 
+
+$$
+d = \dfrac{y_\mathrm{topp} + y_\mathrm{bunn}}{2} = \dfrac{4 + (-6)}{2} = -1
+$$
+::::
+:::::
 
 
 :::::::::::::
@@ -263,18 +298,72 @@ Finn likevektslinja til $f$.
 :::::::::::::{part} c
 Finn perioden til $f$.
 
+
+:::::{answer}
+$$
+T = 4
+$$
+
+::::{solution}
+To nabo-toppunkter på grafen til $f$ er $(-2, 4)$ og $(2, 4)$ som betyr at perioden er 
+
+$$
+T = 2 - (-2) = 4
+$$
+::::
+:::::
+
 :::::::::::::
 
 
 :::::::::::::{part} d
 Finn vinkelfrekvensen til $f$.
 
+:::::{answer}
+$$
+\omega = \dfrac{\pi}{2}
+$$
+
+::::{solution}
+Vinkelfrekvensen er gitt ved
+
+$$
+\omega = \dfrac{2 \pi}{T} = \dfrac{2 \pi}{4} = \dfrac{\pi}{2}
+$$
+
+::::
+:::::
+
 :::::::::::::
 
 
 :::::::::::::{part} e
-Finn en fasevinkel for $f$.
+Bestem et mulig funksjonsuttrykk på formen
 
+$$
+f(x) = A \cos (\omega x - \varphi) + d
+$$
+
+
+:::::{answer}
+$$
+f(x) = 5\cos \left(\dfrac{\pi}{2} x - \pi\right) - 1
+$$
+
+::::{solution}
+Vi har at $\varphi / \omega$ gir oss $x$-koordinaten til det første toppunktet når $x \geq 0$. Dette er i $x = 2$ som gir 
+
+$$
+\dfrac{\varphi}{\omega} = 2 \limplies \varphi = 2\omega = 2\cdot\dfrac{\pi}{2} = \pi
+$$
+
+Dermed er 
+
+$$
+f(x) = A\cos (\omega x - \varphi) + d = 5\cos \left(\dfrac{\pi}{2} x - \pi\right) - 1
+$$
+::::
+:::::
 
 :::::::::::::
 
@@ -283,8 +372,31 @@ Finn en fasevinkel for $f$.
 Bestem et mulig funksjonsuttrykk på formen
 
 $$
-f(x) = A \cos (\omega x - \varphi) + d
+f(x) = A\sin (\omega x - \varphi) + d
 $$
+
+
+:::::{answer}
+$$
+f(x) = 5\sin \left(\dfrac{\pi}{2} x - \dfrac{\pi}{2}\right) - 1
+$$
+
+::::{solution}
+For en generell sinusfunksjon, så er faseforskyvningen $\varphi / \omega$ lik $x$-koordinaten til der grafen skjærer likevektslinja så på vei opp *første* gang når $x \geq 0$. Dette skjer når $x = 1$ som gir
+
+$$
+\dfrac{\varphi}{\omega} = 1 \limplies \varphi = \omega = \dfrac{\pi}{2}
+$$
+
+Altså er 
+
+$$
+f(x) = A\sin (\omega x - \varphi) + d = 5\sin \left(\dfrac{\pi}{2} x - \dfrac{\pi}{2}\right) - 1
+$$
+::::
+:::::
+
+
 :::::::::::::
 
 
@@ -316,11 +428,7 @@ ymax: 6
 
 Funksjonen $f$ er vist i figuren til høyre.
 
-Bestem et mulig funksjonsuttrykk på formen
-
-$$
-f(x) = A \cos (\omega x - \varphi) + d
-$$
+Bestem et mulig uttrykk for $f(x)$.
 
 
 :::::::::::::
@@ -334,221 +442,24 @@ align: right
 fontsize: 24
 let: A = 1
 let: d = 3
-let: T = 2
+let: T = pi
 let: omega = 2 * pi / T
-let: x0 = 2
+let: x0 = pi/4
 let: phi = - omega * x0
 function: A * cos(omega * x + phi) + d, g
 ymin: 0
 ymax: 6
+xtick-format: pi
+xmin: 0
+xmax: 2*pi
+xstep: pi/4
 :::
 
 Funksjonen $g$ er vist i figuren til høyre.
 
-Bestem et mulig funksjonsuttrykk på formen
-
-$$
-g(x) = A \cos (\omega x - \varphi) + d
-$$
+Bestem et mulig uttrykk for $g(x)$.
 :::::::::::::
 
-
-
-:::::::::::::{part} c
-:::{plot}
-nocache:
-width: 380px
-align: right
-fontsize: 24
-let: A = 5
-let: d = -1
-let: T = 1
-let: omega = 2 * pi / T
-let: x0 = 1/2
-let: phi = - omega * x0
-function: A * cos(omega * x + phi) + d, h
-ymin: -7
-ymax: 7
-xmin: -4
-xmax: 4
-:::
-
-Funksjonen $h$ er vist i figuren til høyre.
-
-Bestem et mulig funksjonsuttrykk på formen
-
-$$
-h(x) = A \cos (\omega x - \varphi) + d
-$$
-:::::::::::::
-
-
-:::::::::::::{part} d
-:::{plot}
-nocache:
-width: 380px
-align: right
-fontsize: 24
-let: A = 3
-let: d = 1
-let: T = 1/2
-let: omega = 2 * pi / T
-let: x0 = 3/2
-let: phi = - omega * x0
-function: A * cos(omega * x + phi) + d, p
-ymin: -4
-ymax: 7
-xmin: -2
-xmax: 2
-:::
-
-Funksjonen $p$ er vist i figuren til høyre.
-
-Bestem et mulig funksjonsuttrykk på formen
-
-$$
-p(x) = A \cos (\omega x - \varphi) + d
-$$
-:::::::::::::
-
-
-:::::::::::::::
-
-
----
-
-
-:::::::::::::::{exercise} Oppgave 4
-
-
-:::::::::::::{part} a
-:::{plot}
-nocache:
-width: 380px
-align: right
-fontsize: 24
-let: A = 1
-let: d = 2
-let: T = 2
-let: omega = 2 * pi / T
-let: x0 = 1/2
-let: phi = - omega * x0
-function: A * sin(omega * x + phi) + d, f
-ymin: 0
-ymax: 5
-:::
-
-Funksjonen $f$ er vist i figuren til høyre.
-
-Bestem et mulig funksjonsuttrykk på formen
-
-$$
-f(x) = A \sin (\omega x - \varphi) + d
-$$
-:::::::::::::
-
-
-:::::::::::::{part} b
-:::{plot}
-nocache:
-width: 380px
-align: right
-fontsize: 24
-let: A = 3
-let: d = 1
-let: T = 3
-let: omega = 2 * pi / T
-let: x0 = 1/4
-let: phi = - omega * x0
-function: A * sin(omega * x + phi) + d, g
-:::
-
-
-
-En trigonometrisk funksjon $g$ er vist i figuren til høyre.
-
-Bestem et funksjonsuttrykk på formen
-
-$$
-g(x) = A \sin (\omega x - \varphi) + d
-$$
-
-
-:::::{answer}
-$$
-g(x) = 3 \sin \left(\frac{2 \pi}{3} x - \frac{\pi}{6}\right) + 1
-$$
-
-::::{solution}
-Vi kan først merke oss at 
-
-$$
-\begin{align*}
-y_\mathrm{topp} &= 4 \\
-\\
-y_\mathrm{bunn} &= -2 \\
-\end{align*}
-$$
-
-Da er amplituden gir ved 
-
-$$
-A = \frac{y_\mathrm{topp} - y_\mathrm{bunn}}{2} = \frac{4 - (-2)}{2} = 3
-$$
-
-Likevektslinja er gitt ved
-
-$$
-d = \frac{y_\mathrm{topp} + y_\mathrm{bunn}}{2} = \frac{4 + (-2)}{2} = 1
-$$
-
-Perioden $T$ finner ved å se på den horisontale avstanden mellom to toppunkter som vi kan se er $T = 3$ siden grafen har et toppunkt både i $T = 1$ og $T = 4$. Vinkelfrekvensen er da 
-
-$$
-\omega = \frac{2 \pi}{T} = \frac{2 \pi}{3}
-$$
-
-Nå må vi bestemme fasevinkelen $\varphi$. Vi har nå at 
-
-$$
-g(x) = 3 \sin \left(\frac{2 \pi}{3} x + \varphi\right) + 1
-$$
-
-For å finne fasevinkelen trenger vi ett punkt på grafen til $g$. Vi velger punktet $(1, 4)$ som gir oss likningen
-
-$$
-g(1) = 4 \liff 3 \sin \left(\frac{2 \pi}{3} + \varphi\right) + 1 = 4
-$$
-
-Vi setter $u = \frac{2 \pi}{3} + \varphi$ og får da den enkleste likningen som:
-
-$$
-\sin u = 1 \liff u = \frac{\pi}{2}
-$$
-
-Så setter vi tilbake definisjonen av $u$: 
-
-$$
-\frac{2 \pi}{3} + \varphi = \frac{\pi}{2}
-$$
-
-som gir
-
-$$
-\varphi = \frac{\pi}{2} - \frac{2 \pi}{3} = - \frac{\pi}{6}
-$$
-
-Altså er et mulig funksjonsuttrykk for $g$ gitt ved
-
-$$
-g(x) = 3 \sin \left(\frac{2 \pi}{3} x - \frac{\pi}{6}\right) + 1
-$$
-
-::::
-:::::
-
-
-:::::::::::::
 
 
 :::::::::::::{part} c
@@ -570,20 +481,11 @@ ymax: 5
 
 Funksjonen $h$ er vist i figuren til høyre.
 
-Finn et mulig funksjonsuttrykk på formen
-
-$$
-h(x) = A \sin (\omega x - \varphi) + d
-$$
+Bestem et mulig uttrykk for $h(x)$.
 
 
-:::{hint} Hint: Hvordan lese av perioden?
-Når vi ikke kan tydelig lese av toppunktet eller bunnpunktet til grafen, kan vi for eksempel se etter der grafen til $f$ skjærer likevektslinja på vei opp. Den horisontale avstanden mellom to slike punkter er lik perioden $T$.
-
-:::
 
 :::::::::::::
-
 
 
 :::::::::::::{part} d
@@ -592,25 +494,71 @@ nocache:
 width: 380px
 align: right
 fontsize: 24
-let: A = 4
-let: d = -2
-let: T = 4
+let: A = 3
+let: d = 1
+let: T = pi/2
 let: omega = 2 * pi / T
-let: x0 = 1
+let: x0 = 0
 let: phi = - omega * x0
-function: A * sin(omega * x + phi) + d, p
-ymin: -8
-ymax: 6
+function: A * cos(omega * x + phi) + d, p
+ymin: -4
+ymax: 7
+xtick-format: pi
+xmin: -2 * pi
+xmax: 2 * pi
+xstep: pi
 :::
 
 Funksjonen $p$ er vist i figuren til høyre.
 
-Finn et mulig funksjonsuttrykk på formen
+Bestem et mulig uttrykk for $p(x)$.
+:::::::::::::
+
+
+:::::::::::::::
+
+
+
+
+---
+
+
+
+:::::::::::::::{exercise} Oppgave 4
+Funksjonen $f$ er gitt ved 
 
 $$
-p(x) = A \sin (\omega x - \varphi) + d
+f(x) = 2 \cos\left(\dfrac{\pi}{2}x - \dfrac{\pi}{4}\right) + 1 \qder D_f = [0, 8\rangle
 $$
 
+
+
+:::::::::::::{part} a
+Bestem amplituden, likevektslinja, perioden og faseforskyvningen til grafen til $f$.
+
+
+:::::::::::::
+
+
+
+:::::::::::::{part} b
+Bestem nullpunktene til grafen til $f$.
+
+
+:::::::::::::
+
+
+:::::::::::::{part} c
+Bestem koordinatene til $f$ sine topp- og bunnpunkter.
+
+
+:::::::::::::
+
+
+:::::::::::::{part} d
+Tegn en skisse av grafen til $f$. 
+
+> En **skisse** skal inneholde sentrale egenskaper som riktig amplitude, periode, faseforskyvning, nullpunkter og ekstremalpunkter.
 :::::::::::::
 
 
