@@ -619,84 +619,13 @@ f(x) = d - A
 $$
 
 
-Med variabelskifte $u = \omega x + \varphi$, svarer det til å løse likningene:
+Med variabelskifte $u = \omega x - \varphi$, svarer det til å løse likningene:
 
 :::{table}
 labels: Type punkt, Sinusfunksjoner, Cosinusfunksjoner
 Toppunkter, $\sin u = 1$, $\cos u = 1$
 Bunnpunkter, $\sin u = -1$, $\cos u = -1$
 :::
-
-
-
-:::::{proof} Vis forklaring
-For en sinusfunksjon på formen
-
-$$
-f(x) = A \sin (\omega x + \varphi) + d
-$$
-
-vil toppunktene være gitt ved å løse likningen 
-
-$$
-f(x) = d + A 
-$$
-
-$$
-A \sin (\omega x + \varphi) + d = d + A 
-$$
-
-$$
-\sin (\omega x + \varphi) = 1
-$$
-
-Tilsvarende vil bunnpunktene være gitt ved å løse likningen
-
-$$
-f(x) = d - A \liff A \sin (\omega x + \varphi) + d = d - A \liff \sin (\omega x + \varphi) = -1
-$$
-
-Definerer vi variabelen $u = \omega x + \varphi$, så får vi likningene
-
-$$
-\begin{align*}
-\sin u &= 1 && \mathrm{Toppunkter} \\
-\\
-\sin u &= -1 && \mathrm{Bunnpunkter}
-\end{align*}
-$$
-
-
-For cosinusfunksjoner på formen 
-
-$$
-f(x) = A \cos (\omega x + \varphi) + d
-$$
-
-får vi at toppunkter er gitt ved å løse likningen
-
-$$
-f(x) = d + A \liff A \cos (\omega x + \varphi) + d = d + A \liff \cos (\omega x + \varphi) = 1
-$$
-
-Tilsvarende vil bunnpunktene være gitt ved å løse likningen
-
-$$
-f(x) = d - A \liff A \cos (\omega x + \varphi) + d = d - A \liff \cos (\omega x + \varphi) = -1
-$$
-
-Definerer vi variabelen $u = \omega x - \varphi$, så får vi likningene
-
-$$
-\begin{align*}
-\cos u &= 1 && \mathrm{Toppunkter} \\
-\\
-\cos u &= -1 && \mathrm{Bunnpunkter}
-\end{align*}
-$$
-
-
-:::::
 
 
 :::::::::::::::
