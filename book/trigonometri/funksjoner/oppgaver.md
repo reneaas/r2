@@ -433,7 +433,7 @@ Bestem et mulig uttrykk for $f(x)$.
 
 :::::{answer}
 $$
-f(x) = 3 \sin\left(\dfrac{\pi}{2}x\right) - 1
+f(x) = 3 \sin\left(\dfrac{\pi}{2}x\right) - 1 \qeller f(x) = 3 \cos\left(\dfrac{\pi}{2}x - \dfrac{\pi}{2}\right) - 1
 $$
 
 
@@ -498,7 +498,7 @@ Bestem et mulig uttrykk for $g(x)$.
 
 :::::{answer}
 $$
-g(x) = \cos\left(2x - \dfrac{\pi}{2}\right) + 3
+g(x) = \cos\left(2x - \dfrac{\pi}{2}\right) + 3 \qeller g(x) = \sin(2x) + 3
 $$
 
 ::::{solution}
@@ -1107,7 +1107,7 @@ $$
 x = 10 + 24k
 $$
 
-Her vil bare $x = 10$ ligge innenfor definsjonsmengden. Maksverdien til $g(x)$ vil være $y_\mathrm{topp} = A + d = 4 - 2 = 2$. Dermed er grafens eneste toppunkt $(10, 2)$.
+Her vil bare $x = 10$ ligge innenfor definisjonsmengden. Maksverdien til $g(x)$ vil være $y_\mathrm{topp} = A + d = 4 - 2 = 2$. Dermed er grafens eneste toppunkt $(10, 2)$.
 
 Det nærmeste bunnpunktet ligger en halv periode unna toppunktet som gir oss 
 
@@ -1699,20 +1699,709 @@ $$
 
 
 
-<!-- 
+
 :::::::::::::::{exercise} Oppgave 8
 
 
 :::::::::::::{part} a
+:::{plot}
+width: 100%
+align: right
+let: A = 6
+let: omega = pi/3
+let: phi = 2 * pi / 3
+let: d = 2
+function: A * cos(omega * x - phi) + d, f, (0, 7)
+ticks: off
+xmin: -1
+xmax: 7
+point: (2, 8)
+text: 2, 8, "$(2, 8)$", top-center
+point: (5, -4)
+text: 5, -4, "$(5, -4)$", bottom-center
+fontsize: 26
+ymax: 9
+:::
+
+
 Om en trigonometrisk funksjon $f$ får du vite følgende:
 
-* Grafen til $f$ har et toppunkt i $(2, 8)$.
-* Grafen til $f$ har et bunnpunkt i $(4, -2)$.
+* Definisjonsmengden er $D_f = [0, 7]$
+* Grafen til $f$ har ett toppunkt i $(2, 8)$.
+* Grafen til $f$ har ett bunnpunkt i $(5, -4)$.
 
 Bestem et mulig uttrykk for $f(x)$.
 
 
+:::::{answer}
+$$
+f(x) = 6 \cos \left(\dfrac{\pi}{3}x - \dfrac{2\pi}{3}\right) + 2
+$$
+
+
+::::{solution}
+Grafen har et toppunkt i $(2, 8)$ og et bunnpunkt i $(5, -4)$. Avstanden (langs $x$-aksen) mellom et toppunkt og et bunnpunkt vil være en halv periode som betyr at 
+
+$$
+\dfrac{T}{2} = 5 - 2 = 3 \limplies T = 6
+$$
+
+Dermed er 
+
+$$
+\omega = \dfrac{2\pi}{6} = \dfrac{\pi}{3}
+$$
+
+Fra ekstremalpunktene får vi at $y_\mathrm{topp} = 8$ og $y_\mathrm{bunn} = -4$ som gir at amplituden er 
+
+$$
+A = \dfrac{y_\mathrm{topp} - y_\mathrm{bunn}}{2} = \dfrac{8 - (-4)}{2} = 6
+$$
+
+og likevektslinje 
+
+$$
+d = \dfrac{y_\mathrm{topp} + y_\mathrm{bunn}}{2} = \dfrac{8 - 4}{2} = 2
+$$
+
+Vi kan bruke en generell cosinusfunksjon siden vi kjenner til det første toppunktet til høyre for $y$-aksen. Faseforskyvningen blir da 
+
+$$
+\dfrac{\varphi}{\omega} = 2 \limplies \varphi = 2\omega = \dfrac{2\pi}{3}
+$$
+
+Dermed er et mulig uttrykk for $f(x)$ gitt ved 
+
+$$
+f(x) = 6 \cos \left(\dfrac{\pi}{3}x - \dfrac{2\pi}{3}\right) + 2
+$$
+
+::::
+
+
+:::::
+
 
 :::::::::::::
 
-::::::::::::::: -->
+
+
+:::::::::::::{part} b
+:::{plot}
+width: 100%
+align: right
+let: A = 3
+let: omega = pi/4
+let: phi = 5 * pi / 4
+let: d = 1
+function: A * cos(omega * x - phi) + d, g, (0, 10)
+ticks: off
+xmin: -1
+xmax: 11
+fontsize: 26
+ymax: 6
+ymin: -4
+point: (3, d)
+text: 3, d, "$(3, 1)$", top-left
+point: (5, 4)
+text: 5, 4, "$(5, 4)$", top-center
+hline: 1, dashed, gray
+:::
+
+
+Om en trigonometrisk funksjon $g$ får du vite at 
+* Definsjonsmengden er $D_g = [0, 10]$
+* Grafen til $g$ skjærer likevektslinja si i $(3, 1)$
+* Grafen har ett toppunkt i $(5, 4)$
+
+Bestem et mulig uttrykk for $g(x)$.
+
+
+:::::{answer}
+$$
+g(x) = 3 \sin\left(\dfrac{\pi}{4}x - \dfrac{3\pi}{4}\right) + 1
+$$
+
+eller
+
+$$
+g(x) = 3 \cos \left(\dfrac{\pi}{4}x - \dfrac{5\pi}{4}\right) + 1
+$$
+
+
+::::{solution}
+Siden grafen skjærer likevektslinja i $(3, 1)$ på vei opp, og deretter har et toppunkt i $(5, 4)$ kan vi finne perioden ved å erkjenne at avstanden mellom de to punktene langs $x$-aksen må være en kvart periode, altså at 
+
+$$
+\dfrac{T}{4} = 5 - 3 = 2 \limplies T = 8
+$$
+
+Dermed er vinkelfrekvensen
+
+$$
+\omega = \dfrac{2\pi}{T} = \dfrac{2\pi}{8} = \dfrac{\pi}{4}
+$$
+
+Likevektslinja er gitt fra punktet $(3, 1)$ som $d = 1$. Amplituden vil være avstanden fra likevektslinja til toppunktet som er 
+
+$$
+A = 4 - 1 = 3
+$$
+
+Vi kan her velge fritt mellom sinus eller cosinus. Vi velger sinus her som gir at faseforskyvningen er avstanden fra $y$-aksen til første gang grafen skjærer likevektslinja si på vei opp. Denne avstanden er $3$ som betyr at 
+
+$$
+\dfrac{\varphi}{\omega} = 3 \limplies \varphi = 3\omega = \dfrac{3\pi}{4}
+$$
+
+Altså er et mulig uttrykk gitt ved 
+
+$$
+g(x) = 3 \sin\left(\dfrac{\pi}{4}x - \dfrac{3\pi}{4}\right) + 1
+$$
+
+Hvis vi i stedet valgte oss en cosinusfunksjon, så vil faseforskyvningen være lik avstanden fra $y$-aksen til første toppunkt som er lik $5$. Dermed ville vi i stedet fått 
+
+$$
+\dfrac{\varphi}{\omega} = 5 \limplies \varphi = 5\omega = \dfrac{5\pi}{4}
+$$
+
+og da ville uttrykket i stedet blitt 
+
+$$
+g(x) = 3 \cos\left(\dfrac{\pi}{4}x - \dfrac{5\pi}{4}\right) + 1
+$$
+
+::::
+
+
+:::::
+:::::::::::::
+
+
+:::::::::::::{part} c
+:::{plot}
+width: 100%
+align: right
+let: A = 6
+let: omega = pi/6
+let: phi = pi / 3
+let: d = -2
+function: A * cos(omega * x - phi) + d, h, (0, 12)
+ticks: off
+xmin: -1
+xmax: 13
+fontsize: 26
+ymax: 6
+ymin: -10
+point: (5, -2)
+text: 5, -2, "$(5, -2)$", top-right
+point: (8, -8)
+text: 8, -8, "$(8, -8)$", bottom-center
+hline: -2, dashed, gray
+:::
+
+
+Om en trigonometrisk funksjon $h$ får du vite:
+
+* Definisjonsmengden er $D_h = [0, 12]$
+* Grafen skjærer likevektslinja i $(5, -2)$
+* Grafen har ett bunnpunkt i $(8, -8)$
+
+Bestem et mulig uttrykk for $h(x)$.
+
+
+:::::{answer}
+$$
+h(x) = 6 \cos\left(\dfrac{\pi}{6}x - \dfrac{\pi}{3}\right) - 2
+$$
+
+eller
+
+$$
+h(x) = 6\sin\left(\dfrac{\pi}{6}x - \dfrac{11\pi}{6}\right) - 2
+$$
+
+
+::::{solution}
+Fra skjæringen med likevektslinja til bunnpunktet er det en kvart periode, som betyr at 
+
+$$
+\dfrac{T}{4} = 8 - 5 = 3 \limplies T = 12
+$$
+
+som gir at vinkelfrekvensen er 
+
+$$
+\omega = \dfrac{2\pi}{T} = \dfrac{2\pi}{12} = \dfrac{\pi}{6}
+$$
+
+Likevektslinja er $d = -2$ siden grafen skjærer likevektslinja i $(5, -2)$. Avstanden fra likevektslinja til bunnpunktet vil være lik amplituden som gir 
+
+$$
+A = \abs{-8 - (-2)} = \abs{-8 + 2} = \abs{-6} = 6
+$$
+
+Vi kan finne $x$-koordinaten til toppunktet til grafen ved å gå en halv periode fra bunnpunktet som gir 
+
+$$
+x_\mathrm{topp} = 8 - \dfrac{T}{2} = 8 - 6 = 2
+$$
+
+Ved å bruke en cosinusfunksjon får vi da at faseforskyvningen er 
+
+$$
+\dfrac{\varphi}{\omega} = 2 \limplies \varphi = 2\omega = \dfrac{\pi}{3}
+$$
+
+Dermed er et mulig funksjonsuttrykk gitt ved 
+
+$$
+h(x) = 6 \cos\left(\dfrac{\pi}{6}x - \dfrac{\pi}{3}\right) - 2
+$$
+
+Hvis vi heller vil bruke en sinusfunksjon, så er det også mulig med opplysningene. Vi kan da bruke at $x$-koordinaten til første skjæring mellom grafen og likevektslinja på vei opp vil ligge en halv periode fra skjæringspunktet med likevektslinja når grafen er på vei, som blir:
+
+$$
+x_\mathrm{skjæring} = 5 + \dfrac{T}{2} = 5 + 6 = 11
+$$
+
+Faseforskyvningen til sinusfunksjonen er da
+
+$$
+\dfrac{\varphi}{\omega} = 11 \limplies \varphi = 11\omega = \dfrac{11\pi}{6}
+$$
+
+Dermed er et annet mulig funksjonsuttrykk gitt ved 
+
+$$
+h(x) = 6\sin\left(\dfrac{\pi}{6}x - \dfrac{11\pi}{6}\right) - 2
+$$
+
+
+
+
+::::
+:::::
+
+
+:::::::::::::
+
+:::::::::::::::
+
+
+
+---
+
+
+
+:::::::::::::::{exercise} Oppgave 9
+En likning er gitt ved 
+
+$$
+-4\cos\left(\dfrac{\pi}{12}x\right) + 4\sqrt{3}\sin\left(\dfrac{\pi}{12}x\right) = A \cos(\omega x - \varphi)
+$$
+
+:::::::::::::{part} a
+Bestem $A$, $\omega$ og $\varphi$ slik at likningen er en identitet.
+
+
+
+:::::{answer}
+
+$$
+A = 8 \and \omega = \dfrac{\pi}{12} \and \varphi = \dfrac{2\pi}{3}
+$$
+
+::::{solution}
+Vi har at 
+
+$$
+a = -4 \and b = 4\sqrt{3}
+$$
+
+som gir at amplituden er 
+
+$$
+A = \sqrt{a^2 + b^2} = \sqrt{(-4)^2 + (4\sqrt{3})^2} = \sqrt{16 + 48} = \sqrt{64} = 8
+$$
+
+Vinkelfrekvensen er som vanlig lik på hver side, så $\omega = \dfrac{\pi}{12}$.
+
+
+Til slutt finner vi fasevinkelen $\varphi$ ved å bruke at 
+
+$$
+a = A \cos \varphi \and b = A \sin \varphi
+$$
+
+$$
+-4 = 8 \cos \varphi \and 4\sqrt{3} = 8 \sin \varphi
+$$
+
+$$
+\cos \varphi = -\dfrac{1}{2} \and \sin \varphi = \dfrac{\sqrt{3}}{2}
+$$
+
+Dermed vil $\varphi$ ligge i 2. kvadrant og være gitt ved 
+
+$$
+\varphi = \dfrac{2\pi}{3}
+$$
+
+Dermed er likningen en identitet dersom
+
+$$
+A = 8 \and \omega = \dfrac{\pi}{12} \and \varphi = \dfrac{2\pi}{3}
+$$
+
+::::
+:::::
+
+
+:::::::::::::
+
+
+Funksjonen $f$ er gitt ved 
+
+$$
+f(x) = -4\cos\left(\dfrac{\pi}{12}x\right) + 4\sqrt{3}\sin\left(\dfrac{\pi}{12}x\right) \qder D_f = [-24, 24]
+$$
+
+
+:::::::::::::{part} b
+Bestem nullpunktene til $f$.
+
+
+:::::{answer}
+$$
+x \in \{-22, -10, 2, 14\}
+$$
+
+::::{solution}
+Fra identiteten i oppgave **a)**, så vil $f(x)$ også være gitt ved 
+
+$$
+f(x) = 8 \cos\left(\dfrac{\pi}{12}x - \dfrac{2\pi}{3}\right)
+$$
+
+Nullpunktene finner vi ved å løse $f(x) = 0$. Vi gjør et variabelskifte $u = \dfrac{\pi}{12}x - \dfrac{2\pi}{3}$ som da gir oss likningen
+
+$$
+\cos u = 0 \limplies u = \dfrac{\pi}{2} + \pi k
+$$
+
+Så setter vi tilbake $u$ og løser for $x$:
+
+$$
+\dfrac{\pi}{12}x - \dfrac{2\pi}{3} = \dfrac{\pi}{2} + \pi k
+$$
+
+$$
+\pi x - 8\pi = 6\pi + 12\pi k
+$$
+
+$$
+\pi x = 14\pi + 12\pi k
+$$
+
+$$
+x = 14 + 12k
+$$
+
+Deretter er det å finne alle løsningene $x \in D_f$. Da får vi 
+
+$$
+x \in \{-22, -10, 2, 14\}
+$$
+::::
+:::::
+
+:::::::::::::
+
+
+
+:::::::::::::{part} c
+Bestem koordinatene til grafens topp- og bunnpunkter.
+
+
+
+:::::{answer}
+
+* Toppunkter: $(-16, 8)$ og $(8, 8)$
+* Bunnpunkter: $(-4, -8)$ og $(20, -8)$
+
+
+
+::::{solution}
+$x$-koordinaten til det første toppunktet til høyre for $y$-aksen er gitt ved faseforskyvningen:
+
+$$
+x_\mathrm{topp} = \dfrac{\varphi}{\omega} = \dfrac{2\pi/3}{\pi/12} = \dfrac{2\pi}{3} \cdot \dfrac{12}{\pi} = 8
+$$
+
+Resten av toppunktene finner vi ved å legge til eller trekke fra en periode. Siden $\omega = \dfrac{\pi}{12}$, så vil perioden være 
+
+$$
+\omega = \dfrac{2\pi}{T} \limplies T = \dfrac{2\pi}{\omega} = \dfrac{2\pi}{\pi/12} = 24
+$$
+
+
+Dermed blir $x$-koordinatene som gir toppunkter 
+
+$$
+x_\mathrm{topp} \in \{-16, 8\}
+$$
+
+Siden amplituden er $A = 8$ og likevektslinja er $d = 0$, så blir toppunktene gitt ved 
+
+$$
+\mathrm{Toppunkter} = \{(-16, 8), (8, 8)\}
+$$
+
+
+Et bunnpunkt vil ligge en halv periode unna et toppunkt. $x$-koordinaten til ett slikt punkt er derfor 
+
+$$
+x_\mathrm{bunn} = 8 + \dfrac{T}{2} = 8 + 12 = 20
+$$
+
+Alle andre bunnpunkter ligger en full periode $T = 24$ unna som betyr at $x$-koordinatene som gir bunnpunkter i $D_f$ er 
+
+$$
+x_\mathrm{bunn} \in \{-4, 20\}
+$$
+
+Siden $A = 8$ og $d = 0$, vil $y_\mathrm{bunn} = -8$, så alle bunnpunktene til grafen er 
+
+$$
+\mathrm{Bunnpunkter} = \{(-4, -8), (20, -8)\}
+$$
+
+::::
+:::::
+
+
+:::::::::::::
+
+
+
+
+:::::::::::::::
+
+
+---
+
+
+
+:::::::::::::::{exercise} Oppgave 10
+
+Funksjonen $f$ er gitt ved 
+
+$$
+f(x) = 3 \cos(2x) + 3\sqrt{3} \sin(2x) - 3 \qder D_f = [0, 2\pi\rangle
+$$
+
+
+:::::::::::::{part} a
+Bestem nullpunktene til $f$.
+
+
+:::::{answer}
+
+$$
+x \in \left\{0, \dfrac{\pi}{3}, \pi, \dfrac{4\pi}{3}\right\}
+$$
+
+::::{solution}
+Vi skriver om funksjonsuttrykket til formen
+
+$$
+f(x) = A \cos(\omega x - \varphi) - 3
+$$
+
+Vi har at 
+
+$$
+a = 3 \and b = 3\sqrt{3} \and  A = \sqrt{a^2 + b^2}
+$$
+
+Dermed får vi at 
+
+$$
+A = \sqrt{3^2 + 3^2 \cdot 3} = \sqrt{3^2} \cdot \sqrt{1 + 3} = 3 \cdot 2 = 6
+$$
+
+Videre får vi fasevinkelen ved 
+
+$$
+a = A \cos \varphi \and b = A \sin \varphi
+$$
+
+$$
+3 = 6 \cos \varphi \and 3 \sqrt{3} = 6 \sin \varphi
+$$
+
+$$
+\cos \varphi = \dfrac{1}{2} \and \sin \varphi = \dfrac{\sqrt{3}}{2}
+$$
+
+Ergo er en mulighet for fasevinkelen 
+
+$$
+\varphi = \dfrac{\pi}{3}
+$$
+
+Dermed kan vi skrive om funksjonen som
+
+$$
+f(x) = 6 \cos\left(2x - \dfrac{\pi}{3}\right) - 3
+$$
+
+Så løser vi $f(x) = 0$ for å finne nullpunktene som gir 
+
+$$
+f(x) = 0
+$$
+
+$$
+6 \cos\left(2x - \dfrac{\pi}{3}\right) - 3 = 0
+$$
+
+$$
+\cos\left(2x - \dfrac{\pi}{3}\right) = \dfrac{1}{2}
+$$
+
+Vi setter $u = 2x - \dfrac{\pi}{3}$, som gir 
+
+$$
+\cos u = \dfrac{1}{2}
+$$
+
+Løsningen til denne likningen er 
+
+$$
+u = \dfrac{\pi}{3} + 2\pi k \or u = -\dfrac{\pi}{3} + 2\pi k
+$$
+
+Så setter vi tilbake $u = 2x - \dfrac{\pi}{3}$, som gir 
+
+$$
+2x - \dfrac{\pi}{3} = \dfrac{\pi}{3} + 2\pi k \or 2x - \dfrac{\pi}{3} = -\dfrac{\pi}{3} + 2\pi k
+$$
+
+$$
+2x = \dfrac{2\pi}{3} + 2\pi k \or 2x = 0 + 2\pi k
+$$
+
+$$
+x = \dfrac{\pi}{3} + \pi k \or x = \pi k
+$$
+
+Så må vi bare finne alle løsningene som ligger i definisjonsmengden $D_f = [0, 2\pi\rangle$.
+
+
+Fra den første løsningen får vi at 
+
+$$
+x \in \left\{\dfrac{\pi}{3}, \dfrac{4\pi}{3}\right\}
+$$
+
+Fra den andre løsningen får vi at 
+
+$$
+x \in \left\{0, \pi\right\}
+$$
+
+
+Dermed er nullpunktene til $f$ gitt ved 
+
+$$
+x \in \left\{0, \dfrac{\pi}{3}, \pi, \dfrac{4\pi}{3}\right\}
+$$
+
+::::
+:::::
+
+
+:::::::::::::
+
+
+:::::::::::::{part} b
+Bestem koordinatene til grafens topp- og bunnpunkter.
+
+
+
+:::::{answer}
+* Toppunkter: $(\pi/6, 3)$ og $(7\pi/6, 3)$
+* Bunnpunkter: $(2\pi/3, -9)$ og $(5\pi/3, -9)$
+
+::::{solution}
+Vi finner toppunktene ved å løse 
+
+$$
+\cos u = 1 \qder u = 2x - \dfrac{\pi}{3}
+$$
+
+som gir oss de generelle løsningene 
+
+$$
+u = 2\pi k
+$$
+
+Så setter vi tilbake $u = 2x - \dfrac{\pi}{3}$, som gir 
+
+$$
+2x - \dfrac{\pi}{3} = 2\pi k
+$$
+
+$$
+2x = \dfrac{\pi}{3} + 2\pi k
+$$
+
+$$
+x = \dfrac{\pi}{6} + \pi k
+$$
+
+Dermed er $x$-koordinatene til toppunktene gitt ved 
+
+$$
+x \in \left\{\dfrac{\pi}{6}, \dfrac{7\pi}{6}\right\}
+$$
+
+Vi har at $A = 6$ og $d = -3$ slik at $y_\mathrm{topp} = A + d = 6 - 3 = 3$. Dermed er toppunktene gitt ved 
+
+$$
+\mathrm{Toppunkter} = \left\{\left(\dfrac{\pi}{6}, 3\right), \left(\dfrac{7\pi}{6}, 3\right)\right\}
+$$
+
+Bunnpunktene ligger en halv periode etter toppunktene. Perioden til funksjonen er 
+
+$$
+T = \dfrac{2\pi}{\omega} = \dfrac{2\pi}{2} = \pi
+$$
+
+Dermed er $x$-koordinatene til ett bunnpunkt gitt ved 
+
+$$
+x_\mathrm{bunn} = x_\mathrm{topp} + \dfrac{T}{2} = \dfrac{\pi}{6} + \dfrac{\pi}{2} = \dfrac{2\pi}{3}
+$$
+
+Alle andre bunnpunkter får vi ved å legge til hele perioder $T = \pi$, altså 
+
+$$
+x_\mathrm{bunn} \in \left\{\dfrac{2\pi}{3}, \dfrac{5\pi}{3}\right\}
+$$
+
+Siden $A = 6$ og $d = -3$ slik at $y_\mathrm{bunn} = -A + d = -6 - 3 = -9$, er bunnpunktene gitt ved 
+
+$$
+\mathrm{Bunnpunkter} = \left\{\left(\dfrac{2\pi}{3}, -9\right), \left(\dfrac{5\pi}{3}, -9\right)\right\}
+$$
+::::
+:::::
+
+:::::::::::::
+
+
+:::::::::::::::
