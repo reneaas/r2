@@ -64,7 +64,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/munchboka/css/notebook.css?v=00170ee0" />
     <link rel="stylesheet" type="text/css" href="../../_static/munchboka/css/popup_code.css?v=b88b7ace" />
     <link rel="stylesheet" type="text/css" href="../../_static/munchboka/css/quiz.css?v=bc8164d8" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=6a604523" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css" />
     <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css" />
@@ -180,7 +180,7 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script data-sd-tabs-storage-prefix="sphinx-design-tab-id-" src="../../_static/design-tabs.js?v=fcb327ea"></script>
     <script src="../../_static/munchboka/js/popup.js?v=5db611f4"></script>
     <script src="../../_static/munchboka/js/timedQuiz/utils.js?v=2c6f871c"></script>
     <script src="../../_static/munchboka/js/timedQuiz/multipleChoiceQuestion.js?v=c6ce1ca2"></script>
@@ -681,8 +681,8 @@ document.write(`
 <p>For å få et bestemt kodeskall, skriver du nøkkelordet som vises i gif-ene og trykker på Enter. Deretter bruker du <em>TAB</em>-knappen for å hoppe mellom de ulike delene av kodeskallet som må fylles ut.</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-0">
-<code class="code docutils literal highlight highlight-python"><span class="nb">print</span></code>-utsagn</label><div class="sd-tab-content docutils">
+<label aria-controls="sd-tab-item-0-content" class="sd-tab-label" for="sd-tab-item-0">
+<code class="code docutils literal highlight highlight-python"><span class="nb">print</span></code>-utsagn</label><div class="sd-tab-content docutils" id="sd-tab-item-0-content">
 <p>Nøkkelord: <code class="code docutils literal highlight highlight-python"><span class="nb">print</span></code></p>
 <figure class="align-default">
 <a class="no-click adaptive-figure reference internal image-reference" href="../../_images/print.gif"><img alt="../../_images/print.gif" class="no-click adaptive-figure" src="../../_images/print.gif" style="width: 100%;" />
@@ -690,8 +690,8 @@ document.write(`
 </figure>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-1">
-<code class="code docutils literal highlight highlight-python"><span class="k">for</span></code>-løkker</label><div class="sd-tab-content docutils">
+<label aria-controls="sd-tab-item-1-content" class="sd-tab-label" for="sd-tab-item-1">
+<code class="code docutils literal highlight highlight-python"><span class="k">for</span></code>-løkker</label><div class="sd-tab-content docutils" id="sd-tab-item-1-content">
 <p>Nøkkelord: <code class="code docutils literal highlight highlight-python"><span class="k">for</span></code></p>
 <figure class="align-default">
 <a class="no-click adaptive-figure reference internal image-reference" href="../../_images/for-loop.gif"><img alt="../../_images/for-loop.gif" class="no-click adaptive-figure" src="../../_images/for-loop.gif" style="width: 100%;" />
@@ -699,8 +699,8 @@ document.write(`
 </figure>
 </div>
 <input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-2">
-Summere tall</label><div class="sd-tab-content docutils">
+<label aria-controls="sd-tab-item-2-content" class="sd-tab-label" for="sd-tab-item-2">
+Summere tall</label><div class="sd-tab-content docutils" id="sd-tab-item-2-content">
 <p>Nøkkelord: <code class="code docutils literal highlight highlight-python"><span class="nb">sum</span></code></p>
 <figure class="align-default">
 <a class="adaptive-figure no-click reference internal image-reference" href="../../_images/sum.gif"><img alt="../../_images/sum.gif" class="adaptive-figure no-click" src="../../_images/sum.gif" style="width: 100%;" />
@@ -708,8 +708,8 @@ Summere tall</label><div class="sd-tab-content docutils">
 </figure>
 </div>
 <input id="sd-tab-item-3" name="sd-tab-set-0" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-3">
-<code class="code docutils literal highlight highlight-python"><span class="k">if</span></code>-test</label><div class="sd-tab-content docutils">
+<label aria-controls="sd-tab-item-3-content" class="sd-tab-label" for="sd-tab-item-3">
+<code class="code docutils literal highlight highlight-python"><span class="k">if</span></code>-test</label><div class="sd-tab-content docutils" id="sd-tab-item-3-content">
 <p>Nøkkelord: <code class="code docutils literal highlight highlight-python"><span class="k">if</span></code></p>
 <figure class="align-default">
 <a class="no-click adaptive-figure reference internal image-reference" href="../../_images/if_test.gif"><img alt="../../_images/if_test.gif" class="no-click adaptive-figure" src="../../_images/if_test.gif" style="width: 100%;" />
@@ -717,8 +717,8 @@ Summere tall</label><div class="sd-tab-content docutils">
 </figure>
 </div>
 <input id="sd-tab-item-4" name="sd-tab-set-0" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-4">
-<code class="code docutils literal highlight highlight-python"><span class="k">if</span></code>-<code class="code docutils literal highlight highlight-python"><span class="k">else</span></code>-test</label><div class="sd-tab-content docutils">
+<label aria-controls="sd-tab-item-4-content" class="sd-tab-label" for="sd-tab-item-4">
+<code class="code docutils literal highlight highlight-python"><span class="k">if</span></code>-<code class="code docutils literal highlight highlight-python"><span class="k">else</span></code>-test</label><div class="sd-tab-content docutils" id="sd-tab-item-4-content">
 <p>Nøkkelord: <code class="code docutils literal highlight highlight-python"><span class="k">if</span><span class="o">-</span><span class="k">else</span></code></p>
 <figure class="align-default">
 <a class="no-click adaptive-figure reference internal image-reference" href="../../_images/if_else.gif"><img alt="../../_images/if_else.gif" class="no-click adaptive-figure" src="../../_images/if_else.gif" style="width: 100%;" />
@@ -726,8 +726,8 @@ Summere tall</label><div class="sd-tab-content docutils">
 </figure>
 </div>
 <input id="sd-tab-item-5" name="sd-tab-set-0" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-5">
-Funksjoner</label><div class="sd-tab-content docutils">
+<label aria-controls="sd-tab-item-5-content" class="sd-tab-label" for="sd-tab-item-5">
+Funksjoner</label><div class="sd-tab-content docutils" id="sd-tab-item-5-content">
 <p>Nøkkelord: <code class="code docutils literal highlight highlight-python"><span class="n">funksjon</span></code></p>
 <figure class="align-default">
 <a class="no-click adaptive-figure reference internal image-reference" href="../../_images/funksjoner.gif"><img alt="../../_images/funksjoner.gif" class="no-click adaptive-figure" src="../../_images/funksjoner.gif" style="width: 100%;" />
@@ -737,7 +737,7 @@ Funksjoner</label><div class="sd-tab-content docutils">
 </div>
 </div>
 
-        <div id="container-code-a85fa5d4"></div>
+        <div id="container-code-86db07fa"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -748,7 +748,7 @@ Funksjoner</label><div class="sd-tab-content docutils">
 `;
 
                 makeInteractiveCode(
-                    "container-code-a85fa5d4",
+                    "container-code-86db07fa",
                     code,
                 );
             });

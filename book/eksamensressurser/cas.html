@@ -64,7 +64,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/munchboka/css/notebook.css?v=00170ee0" />
     <link rel="stylesheet" type="text/css" href="../../_static/munchboka/css/popup_code.css?v=b88b7ace" />
     <link rel="stylesheet" type="text/css" href="../../_static/munchboka/css/quiz.css?v=bc8164d8" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=6a604523" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css" />
     <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css" />
@@ -180,7 +180,7 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script data-sd-tabs-storage-prefix="sphinx-design-tab-id-" src="../../_static/design-tabs.js?v=fcb327ea"></script>
     <script src="../../_static/munchboka/js/popup.js?v=5db611f4"></script>
     <script src="../../_static/munchboka/js/timedQuiz/utils.js?v=2c6f871c"></script>
     <script src="../../_static/munchboka/js/timedQuiz/multipleChoiceQuestion.js?v=c6ce1ca2"></script>
@@ -681,8 +681,8 @@ document.write(`
 <p class="admonition-title">Oversikt over CAS-funksjoner</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-0">
-Løs</label><div class="sd-tab-content docutils">
+<label aria-controls="sd-tab-item-0-content" class="sd-tab-label" for="sd-tab-item-0">
+Løs</label><div class="sd-tab-content docutils" id="sd-tab-item-0-content">
 <dl class="simple myst">
 <dt>Likninger</dt><dd><a class="no-click adaptive-figure reference internal image-reference" href="../../_images/likning.png"><img alt="likning" class="no-click adaptive-figure" src="../../_images/likning.png" style="width: 100%;" />
 </a>
@@ -696,8 +696,8 @@ Løs</label><div class="sd-tab-content docutils">
 </dl>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-1">
-Funksjoner</label><div class="sd-tab-content docutils">
+<label aria-controls="sd-tab-item-1-content" class="sd-tab-label" for="sd-tab-item-1">
+Funksjoner</label><div class="sd-tab-content docutils" id="sd-tab-item-1-content">
 <dl class="simple myst">
 <dt>Definere funksjon</dt><dd><a class="no-click adaptive-figure reference internal image-reference" href="../../_images/definere_funksjon.png"><img alt="definere_funksjon" class="no-click adaptive-figure" src="../../_images/definere_funksjon.png" style="width: 100%;" />
 </a>
@@ -717,8 +717,8 @@ Funksjoner</label><div class="sd-tab-content docutils">
 </dl>
 </div>
 <input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-2">
-Algebra</label><div class="sd-tab-content docutils">
+<label aria-controls="sd-tab-item-2-content" class="sd-tab-label" for="sd-tab-item-2">
+Algebra</label><div class="sd-tab-content docutils" id="sd-tab-item-2-content">
 <dl class="simple myst">
 <dt>Faktorisering</dt><dd><a class="no-click adaptive-figure reference internal image-reference" href="../../_images/faktoriser.png"><img alt="faktorisering" class="no-click adaptive-figure" src="../../_images/faktoriser.png" style="width: 100%;" />
 </a>
@@ -736,7 +736,7 @@ Algebra</label><div class="sd-tab-content docutils">
 <!-- :::{cas} 800 800
 ::: -->
 
-<div id="ggb-cas-12b2e7c5" style="width: 800px; height: 800px;" class="ggb-window"></div>
+<div id="ggb-cas-058268f8" style="width: 800px; height: 800px;" class="ggb-window"></div>
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     var options = {
@@ -755,13 +755,13 @@ document.addEventListener("DOMContentLoaded", function() {
         rounding: 2,
         showKeyboardOnFocus: false,
         preventFocus: true,
-        id: 'ggb-cas-12b2e7c5',
+        id: 'ggb-cas-058268f8',
         material_id: 'mexebm4g',
         '': '',
     };
 
     var applet = new GGBApplet(options, true);
-    applet.inject('ggb-cas-12b2e7c5');
+    applet.inject('ggb-cas-058268f8');
 });
 </script>
         </section>
