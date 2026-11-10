@@ -389,7 +389,7 @@ $$
 
 Parameterne i generelle sinusfunksjoner er tilsvarende som for generelle cosinusfunksjoner. 
 
-Én viktig forskjell er at faseforskyvningen $\varphi / \omega$ nå gir $x$-koordinaten til det første skjærinkgspunktet mellom grafen og likevektslinja når grafen er på vei opp, forutsatt at $\varphi \in [0, 2\pi\rangle$.
+Én viktig forskjell er at faseforskyvningen $\varphi / \omega$ nå gir $x$-koordinaten til det første skjæringspunktet mellom grafen og likevektslinja når grafen er på vei opp, forutsatt at $\varphi \in [0, 2\pi\rangle$.
 
 
 :::::::::::::::
