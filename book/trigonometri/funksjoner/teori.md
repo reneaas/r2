@@ -619,7 +619,7 @@ f(x) = d - A
 $$
 
 
-Med variabelskifte $u = \omega x + \varphi$, svarer det til å løse likningene:
+Med variabelskifte $u = \omega x - \varphi$, svarer det til å løse likningene:
 
 :::{table}
 labels: Type punkt, Sinusfunksjoner, Cosinusfunksjoner
