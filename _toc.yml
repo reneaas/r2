@@ -67,10 +67,10 @@ parts:
       - file: book/trigonometri/funksjoner/oppgaver.md
         title: Oppgaver
 
-    # - file: book/trigonometri/derivasjon/teori.md
-    #   sections:
-    #   - file: book/trigonometri/derivasjon/oppgaver.md
-    #     title: Oppgaver
+    - file: book/trigonometri/derivasjon/teori.md
+      sections:
+      - file: book/trigonometri/derivasjon/oppgaver.md
+        title: Oppgaver
 
 
 
@@ -175,6 +175,8 @@ parts:
     chapters:
     - file: book/jeopardy/romgeometri.md
       title: Romgeometri
+    - file: book/oppgavesamling/trigonometri.md
+      title: Trigonometri
 
   # - caption: Escape room
   #   numbered: false
