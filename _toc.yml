@@ -168,6 +168,8 @@ parts:
     chapters:
     - file: book/oppgavesamling/romgeometri.md
       title: Romgeometri
+    # - file: book/oppgavesamling/trigonometri.md
+    #   title: Trigonometri
 
 
   - caption: Jeopardy
@@ -175,8 +177,6 @@ parts:
     chapters:
     - file: book/jeopardy/romgeometri.md
       title: Romgeometri
-    - file: book/oppgavesamling/trigonometri.md
-      title: Trigonometri
 
   # - caption: Escape room
   #   numbered: false
