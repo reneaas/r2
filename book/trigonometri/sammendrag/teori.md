@@ -33,7 +33,31 @@ $$
 
 :::::::::
 
-:::::::::{masonry-card} Enhetssirkelen og eksakte verdier
+:::::::::{masonry-card} Enhetssirkelen
+
+:::{plot}
+width: 100% 
+fontsize: 28
+axis: equal
+ticks: off
+circle: (0, 0), 1
+let: u = 60
+vector: (0, 0), (cos(u*pi/180), sin(u*pi/180)), blue
+angle-arc: (0, 0), 0.35, 0, u, red, arrow
+text: 0.45 * cos(u*pi/360), 0.45 * sin(u*pi/360), "$\varphi$", center-center
+point: (cos(u*pi/180), sin(u*pi/180))
+text: 1.2 * cos(u*pi/180), 1.2 * sin(u*pi/180), "$\vec{r}(\varphi)$", center-center
+xlabel: $\cos \varphi$
+ylabel: $\sin \varphi$
+:::
+
+$$
+\vec{r}(\varphi) = [\cos \varphi, \sin \varphi]
+$$
+
+:::::::::
+
+:::::::::{masonry-card} Eksakte verdier
 
 :::{plot}
 width: 100%
