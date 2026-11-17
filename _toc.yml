@@ -72,6 +72,9 @@ parts:
       - file: book/trigonometri/derivasjon/oppgaver.md
         title: Oppgaver
 
+    - file: book/trigonometri/sammendrag/teori.md
+      title: Sammendrag
+
 
 
   # - caption: III. Følger og rekker
