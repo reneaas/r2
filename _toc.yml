@@ -168,8 +168,8 @@ parts:
     chapters:
     - file: book/oppgavesamling/romgeometri.md
       title: Romgeometri
-    # - file: book/oppgavesamling/trigonometri.md
-    #   title: Trigonometri
+    - file: book/oppgavesamling/trigonometri.md
+      title: Trigonometri
 
 
   - caption: Jeopardy
