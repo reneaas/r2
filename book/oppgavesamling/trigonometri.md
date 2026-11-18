@@ -1545,8 +1545,52 @@ $$
 ---
 
 
-
 :::::::::::::::{exercise} Oppgave 9
+
+:::::::::::::{part} a
+Funksjonen $f$ er gitt ved 
+
+$$
+f(x) = 3 \sin \left(2x - 4\right) - 1
+$$
+
+Bestem likningen til tangenten til grafen til $f$ i $(2, f(2))$.
+
+:::::{answer}
+$$
+y = 6x - 13
+$$
+:::::
+
+:::::::::::::
+
+
+:::::::::::::{part} b
+Funksjonen $g$ er gitt ved 
+
+$$
+g(x) = A \sin(3x - 9) + d
+$$
+
+En tangent til grafen til $g$ har likningen $y = 6x - 14$ og tangerer grafen i $(3, g(3))$. 
+
+Bestem $A$ og $d$.
+
+:::::{answer}
+$$
+A = 2 \and d = 4
+$$
+:::::
+:::::::::::::
+
+:::::::::::::::
+
+
+---
+
+
+
+:::::::::::::::{exercise} Oppgave 10
 
 En sinusfunksjon $f$ kan beskrives som
 
