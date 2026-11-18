@@ -269,7 +269,9 @@ p'(x) &= (\cos^2 x \sin x)' \\
 \\
 &= (\cos^2 x)' \sin x + \cos^2 x (\sin x)' \\
 \\
-&= -2 \cos x (\cos x)' \sin x + \cos^2 x \cos x \\
+&= 2 \cos x (\cos x)' \sin x + \cos^2 x \cos x \\
+\\
+&= 2 \cos x (-\sin x) \sin x + \cos^2 x \cos x \\
 \\
 &= -2 \cos x \sin^2 x + \cos^3 x
 \end{align*}
